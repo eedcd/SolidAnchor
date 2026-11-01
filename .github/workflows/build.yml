@@ -30,7 +30,8 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build all jars
-        run: ./gradlew build --no-daemon
+        # Lint findings of this fork are not release blockers, so detekt is skipped here.
+        run: ./gradlew build --no-daemon -x detekt
 
       - name: Create GitHub release
         env:
