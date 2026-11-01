@@ -99,6 +99,7 @@ class ClickGuiScreen(
         val min: Double,
         val max: Double,
         val secondHandle: Boolean,
+        val colorChannel: Int? = null,
     )
 
     private class SettingsDrag(
@@ -936,7 +937,7 @@ class ClickGuiScreen(
                 val channelIndex = index
                 hits += HitArea(startX, rowY, endX, rowY + 10, {
                     editingText = null
-                    drag = SliderDrag(value, startX, endX, 0.0, 255.0, false)
+                    drag = SliderDrag(value, startX, endX, 0.0, 255.0, false, channelIndex)
                 })
 
                 consumed += 12F
@@ -1082,6 +1083,20 @@ class ClickGuiScreen(
 
         @Suppress("UNCHECKED_CAST")
         val value = active.value as Value<Any>
+
+        val channel = active.colorChannel
+        if (channel != null) {
+            val color = value.get() as? Color4b ?: return true
+            val level = newValue.roundToInt().coerceIn(0, 255)
+            val updated = when (channel) {
+                0 -> Color4b(level, color.g, color.b, color.a)
+                1 -> Color4b(color.r, level, color.b, color.a)
+                2 -> Color4b(color.r, color.g, level, color.a)
+                else -> Color4b(color.r, color.g, color.b, level)
+            }
+            value.set(updated as Any)
+            return true
+        }
 
         when (val current = value.get()) {
             is ClosedFloatingPointRange<*> -> {
