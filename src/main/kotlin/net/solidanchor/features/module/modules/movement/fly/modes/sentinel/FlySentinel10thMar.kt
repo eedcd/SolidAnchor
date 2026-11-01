@@ -1,0 +1,76 @@
+/*
+ * This file is part of SolidAnchor
+ *
+ * Copyright (c) 2015 - 2026 CCBlueX
+ *
+ * SolidAnchor is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * SolidAnchor is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+package net.solidanchor.features.module.modules.movement.fly.modes.sentinel
+
+import net.solidanchor.config.types.group.Mode
+import net.solidanchor.config.types.group.ModeValueGroup
+import net.solidanchor.event.events.MovementInputEvent
+import net.solidanchor.event.events.PacketEvent
+import net.solidanchor.event.handler
+import net.solidanchor.event.tickHandler
+import net.solidanchor.event.waitTicks
+import net.solidanchor.features.module.modules.movement.fly.ModuleFly
+import net.solidanchor.utils.entity.withStrafe
+import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket
+
+/**
+ * @anticheat Sentinel
+ * @anticheatVersion 10.03.2024
+ * @testedOn cubecraft.net
+ *
+ * @note Tested in SkyWars and EggWars, works fine and no automatic ban.
+ * It will auto-ban only when flying very large distances.
+ *
+ * Thanks to icewormy3
+ */
+internal object FlySentinel10thMar : Mode("Sentinel10thMar") {
+
+    private val jumpHeight by float("Height", 0.42f, 0.1f..1f)
+    private val jumpSpeed by float("Speed", 0.35f, 0.1f..1f)
+    private val ticks by int("Ticks", 11, 1..20)
+
+    private var spoofOnGround = false
+
+    override val parent: ModeValueGroup<*>
+        get() = ModuleFly.modes
+
+    val repeatable = tickHandler {
+        player.deltaMovement.y = jumpHeight.toDouble()
+        player.deltaMovement = player.deltaMovement.withStrafe(speed = jumpSpeed.toDouble())
+        spoofOnGround = true
+        waitTicks(ticks)
+    }
+
+    val moveHandler = handler<MovementInputEvent> {
+        it.jump = false
+    }
+
+    val packetHandler = handler<PacketEvent> { event ->
+        val packet = event.packet
+
+        if (packet is ServerboundMovePlayerPacket) {
+            if (spoofOnGround) {
+                packet.onGround = true
+                spoofOnGround = false
+            }
+        }
+    }
+
+}

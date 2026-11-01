@@ -1,0 +1,53 @@
+/*
+ * This file is part of SolidAnchor
+ *
+ * Copyright (c) 2015 - 2026 CCBlueX
+ *
+ * SolidAnchor is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * SolidAnchor is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
+ */
+package net.solidanchor.features.module.modules.combat.crystalaura.trigger
+
+import net.solidanchor.config.types.Value
+import net.solidanchor.event.EventListener
+import net.minecraft.network.protocol.Packet
+
+/**
+ * Options Define when the CA should run. Only tick is the most legit.
+ */
+abstract class Trigger(val name: String, val default: Boolean) : EventListener {
+
+    lateinit var option: Value<Boolean>
+
+    val enabled
+        get() = option.get()
+
+    open val allowsCaching
+        get() = false
+
+    override val running: Boolean
+        get() = CrystalAuraTriggerer.running && enabled
+
+}
+
+abstract class PostPacketTrigger<T : Packet<*>>(name: String, default: Boolean) : Trigger(name, default) {
+
+    fun notify(packet: T) {
+        if (running) {
+            postPacketHandler(packet)
+        }
+    }
+
+    protected abstract fun postPacketHandler(packet: T)
+
+}

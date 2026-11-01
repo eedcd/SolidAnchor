@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "solidanchor-gametest",
+  "version": "1.0.0",
+  "name": "SolidAnchor Game Tests",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-client-gametest": [
+      "net.solidanchor.gametest.AutoRodRequirementsGameTest",
+      "net.solidanchor.gametest.CommandGameTest",
+      "net.solidanchor.gametest.ConfigPersistenceGameTest",
+      "net.solidanchor.gametest.PortalPositionGameTest",
+      "net.solidanchor.gametest.HoleFillerBudgetGameTest",
+      "net.solidanchor.gametest.FallDamageTrackerGameTest",
+      "net.solidanchor.gametest.TeleportDisconnectGameTest",
+      "net.solidanchor.gametest.EnchantCommandGameTest",
+      "net.solidanchor.gametest.HitFXSoundRegistryGameTest",
+      "net.solidanchor.gametest.NoRotateSetGameTest"
+    ]
+  },
+  "depends": {
+    "solidanchor": "*",
+    "fabric-client-gametest-api-v1": "*"
+  }
+}

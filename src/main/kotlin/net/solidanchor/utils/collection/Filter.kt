@@ -1,0 +1,49 @@
+/*
+ * This file is part of SolidAnchor
+ *
+ * Copyright (c) 2015 - 2026 CCBlueX
+ *
+ * SolidAnchor is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * SolidAnchor is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
+ */
+package net.solidanchor.utils.collection
+
+import net.solidanchor.config.types.list.Tagged
+import net.solidanchor.utils.inventory.HotbarItemSlot
+import net.solidanchor.utils.inventory.Slots
+import net.solidanchor.utils.inventory.findClosestSlot
+import net.solidanchor.utils.item.getBlock
+import net.minecraft.world.level.block.Block
+
+enum class Filter(override val tag: String) : Tagged {
+    WHITELIST("Whitelist") {
+        override fun <T> invoke(item: T, collection: Collection<T>): Boolean = item in collection
+    },
+    BLACKLIST("Blacklist") {
+        override fun <T> invoke(item: T, collection: Collection<T>): Boolean = item !in collection
+    };
+
+    /**
+     * @return true if the [item] should be included according to the filter.
+     */
+    abstract operator fun <T> invoke(item: T, collection: Collection<T>): Boolean
+}
+
+fun Filter.getSlot(blocks: Set<Block>, offhand: Boolean = true): HotbarItemSlot? {
+    val slots = if (offhand) Slots.OffhandWithHotbar else Slots.Hotbar
+
+    return slots.findClosestSlot {
+        val block = it.getBlock() ?: return@findClosestSlot false
+        this(block, blocks)
+    }
+}

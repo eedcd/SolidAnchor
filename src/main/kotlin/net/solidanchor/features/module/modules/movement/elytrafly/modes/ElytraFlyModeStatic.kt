@@ -1,0 +1,85 @@
+/*
+ * This file is part of SolidAnchor
+ *
+ * Copyright (c) 2015 - 2026 CCBlueX
+ *
+ * SolidAnchor is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * SolidAnchor is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
+ */
+package net.solidanchor.features.module.modules.movement.elytrafly.modes
+
+import net.solidanchor.config.types.group.ToggleableValueGroup
+import net.solidanchor.event.events.PlayerMoveEvent
+import net.solidanchor.event.handler
+import net.solidanchor.features.module.modules.movement.elytrafly.ModuleElytraFly
+import net.solidanchor.utils.entity.withStrafe
+import net.solidanchor.utils.math.copy
+
+internal object ElytraFlyModeStatic : ElytraFlyMode("Static") {
+
+    /**
+     * Only runs the exploit while the player isn't moving.
+     * This might save some durability points
+     * while not moving as some anti-cheats just detect this exploit when you move.
+     */
+    val durabilityExploitNotWhileMove by boolean("DurabilityExploitNotWhileNoMove", false)
+
+    /**
+     * Allows you to add a glide effect when you're not moving.
+     * This can prevent you from getting kicked for "flying is not enabled on this server" when you're not moving.
+     */
+    object Glide : ToggleableValueGroup(this, "Glide", false) {
+
+        /**
+         * How fast the static glide should be.
+         */
+        val verticalGlide by float("Vertical", 0.01f, 0f..1f)
+        val horizontalGlide by float("Horizontal", 0f, 0f..1f)
+
+    }
+
+    init {
+        tree(Glide)
+    }
+
+    @Suppress("unused")
+    private val moveHandler = handler<PlayerMoveEvent> { event ->
+        if (ModuleElytraFly.shouldNotOperate() || !player.isFallFlying) {
+            return@handler
+        }
+
+        val speed = ModuleElytraFly.Speed.enabled
+        val input = player.input.keyPresses
+        val isMoving = input.forward || input.backward || input.left || input.right
+        if (speed && isMoving) {
+            event.movement = event.movement.withStrafe(speed = ModuleElytraFly.Speed.horizontal.toDouble())
+        } else {
+            var glideX = 0.0
+            var glideZ = 0.0
+            if (Glide.running) {
+                val normalized = event.movement.normalize()
+                glideX = normalized.x * Glide.horizontalGlide.toDouble()
+                glideZ = normalized.z * Glide.horizontalGlide.toDouble()
+            }
+
+            event.movement = event.movement.copy(x = glideX, z = glideZ)
+        }
+
+        event.movement.y = when {
+            mc.options.keyJump.isDown && speed -> ModuleElytraFly.Speed.vertical.toDouble()
+            mc.options.keyShift.isDown && speed -> -ModuleElytraFly.Speed.vertical.toDouble()
+            else -> if (Glide.running) -Glide.verticalGlide.toDouble() else 0.0
+        }
+    }
+
+}

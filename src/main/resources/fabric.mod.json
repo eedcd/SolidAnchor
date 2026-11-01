@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "solidanchor",
+  "version": "${version}",
+  "name": "SolidAnchor",
+  "description": "A free mixin-based injection hacked-client for Minecraft using the Fabric modding toolchain.",
+  "authors": [
+    "eedcd"
+  ],
+  "contributors": $contributors,
+  "license": "GNU General Public License v3.0",
+  "icon": "resources/solidanchor/icon_64x64.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": []
+  },
+  "mixins": [
+    "solidanchor.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ["${minecraft_version}"],
+    "fabricloader": ">=${min_loader_version}",
+    "fabric-language-kotlin": ">=${fabric_kotlin_version}"
+  },
+  "suggests": {
+    "fabric": ">=${fabric_version}",
+    "viafabricplus": ">=${viafabricplus_version}"
+  },
+  "breaks": {
+    "viafabricplus": "<${viafabricplus_version}"
+  },
+  "accessWidener": "solidanchor.accesswidener"
+}
