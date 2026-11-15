@@ -55,7 +55,7 @@ lwjgl = "3.4.3"
 # Other plugins
 detekt = "2.0.0-alpha.6"
 gradleGitProperties = "4.0.1"
-dokka = "2.2.0"
+dokka = "2.3.0"
 
 [libraries]
 minecraft = { group = "com.mojang", name = "minecraft", version.ref = "minecraft" }
