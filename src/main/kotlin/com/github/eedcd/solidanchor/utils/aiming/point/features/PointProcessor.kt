@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.aiming.point.features
+package com.github.eedcd.solidanchor.utils.aiming.point.features
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.utils.aiming.point.PointInsideBox
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.utils.aiming.point.PointInsideBox
 
 /*
  * This file is part of SolidAnchor

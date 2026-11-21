@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.network
+package com.github.eedcd.solidanchor.utils.network
 
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.kotlin.EventPriorityConvention.READ_FINAL_STATE
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.READ_FINAL_STATE
 import net.minecraft.tags.DamageTypeTags
 
 /**

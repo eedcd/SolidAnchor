@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.inventory
+package com.github.eedcd.solidanchor.utils.inventory
 
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.types.list.Tagged
 import net.minecraft.core.component.DataComponents
 import net.minecraft.util.ARGB.opaque
 import net.minecraft.world.entity.EquipmentSlot

@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.speed.modes.watchdog
+package com.github.eedcd.solidanchor.features.module.modules.movement.speed.modes.watchdog
 
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.PlayerJumpEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.sequenceHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.movement.speed.modes.SpeedBHopBase
-import net.solidanchor.utils.entity.horizontalSpeed
-import net.solidanchor.utils.entity.withStrafe
-import net.solidanchor.utils.kotlin.EventPriorityConvention.CRITICAL_MODIFICATION
-import net.solidanchor.utils.network.isMovementYFallDamage
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.PlayerJumpEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.sequenceHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.movement.speed.modes.SpeedBHopBase
+import com.github.eedcd.solidanchor.utils.entity.horizontalSpeed
+import com.github.eedcd.solidanchor.utils.entity.withStrafe
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.CRITICAL_MODIFICATION
+import com.github.eedcd.solidanchor.utils.network.isMovementYFallDamage
 import net.minecraft.network.protocol.game.ClientboundPlayerPositionPacket
 import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket
 import net.minecraft.world.effect.MobEffects

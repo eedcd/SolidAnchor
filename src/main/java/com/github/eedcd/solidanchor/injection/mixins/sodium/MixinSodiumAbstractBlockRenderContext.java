@@ -16,26 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.sodium;
+package com.github.eedcd.solidanchor.injection.mixins.sodium;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleXRay;
+import com.github.eedcd.solidanchor.interfaces.AbstractBlockRenderContextAddition;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.caffeinemc.mods.sodium.client.model.light.LightMode;
 import net.caffeinemc.mods.sodium.client.model.light.data.QuadLightData;
 import net.caffeinemc.mods.sodium.client.render.model.AbstractBlockRenderContext;
 import net.caffeinemc.mods.sodium.client.render.model.MutableQuadViewImpl;
 import net.caffeinemc.mods.sodium.client.render.model.SodiumShadeMode;
-import net.solidanchor.features.module.modules.render.ModuleXRay;
-import net.solidanchor.interfaces.AbstractBlockRenderContextAddition;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jspecify.annotations.Nullable;
-import org.spongepowered.asm.mixin.Final;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Pseudo;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -45,22 +41,17 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(AbstractBlockRenderContext.class)
 public abstract class MixinSodiumAbstractBlockRenderContext implements AbstractBlockRenderContextAddition {
 
+    @Unique
+    private static final int FULL_BRIGHT_LIGHTMAP = 0x00F000F0;
     @Shadow
     protected BlockState state;
-
     @Shadow
     protected BlockPos pos;
-
     @Shadow
     protected BlockAndTintGetter level;
-
     @Shadow
     @Final
     protected QuadLightData quadLightData;
-
-    @Unique
-    private static final int FULL_BRIGHT_LIGHTMAP = 0x00F000F0;
-
     @Unique
     @Nullable
     private Boolean solidAnchor$xrayActive;
@@ -101,7 +92,7 @@ public abstract class MixinSodiumAbstractBlockRenderContext implements AbstractB
 
     @Inject(method = "shadeQuad", at = @At("RETURN"))
     private void injectXRayFullBright(MutableQuadViewImpl quad, LightMode lightMode, boolean emissive,
-            SodiumShadeMode shadeMode, CallbackInfo ci) {
+                                      SodiumShadeMode shadeMode, CallbackInfo ci) {
         ModuleXRay module = ModuleXRay.INSTANCE;
         if (!this.solidAnchor$xrayActive() || !module.getFullBright() || this.state == null || this.pos == null) {
             return;

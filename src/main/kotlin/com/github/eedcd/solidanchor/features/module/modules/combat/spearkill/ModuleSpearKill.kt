@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.spearkill
+package com.github.eedcd.solidanchor.features.module.modules.combat.spearkill
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.entity.PositionExtrapolation
-import net.solidanchor.utils.entity.useItem
-import net.solidanchor.utils.item.isSpear
-import net.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.entity.PositionExtrapolation
+import com.github.eedcd.solidanchor.utils.entity.useItem
+import com.github.eedcd.solidanchor.utils.item.isSpear
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
 import net.minecraft.core.component.DataComponents
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon

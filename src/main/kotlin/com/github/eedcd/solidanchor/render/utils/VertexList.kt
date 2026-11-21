@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.utils
+package com.github.eedcd.solidanchor.render.utils
 
 import it.unimi.dsi.fastutil.floats.FloatArrayList
-import net.solidanchor.render.engine.type.Vec3f
+import com.github.eedcd.solidanchor.render.engine.type.Vec3f
 import net.minecraft.client.Camera
 import net.minecraft.world.phys.Vec3
 import org.joml.Vector3f

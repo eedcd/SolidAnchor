@@ -17,15 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.input;
+package com.github.eedcd.solidanchor.utils.input;
 
 import com.mojang.blaze3d.platform.InputConstants;
-import org.lwjgl.sdl.SDLKeyboard;
-import org.lwjgl.sdl.SDLEvents;
-import org.lwjgl.sdl.SDLKeycode;
-import org.lwjgl.sdl.SDLVideo;
-import org.lwjgl.sdl.SDL_KeyboardEvent;
-import org.lwjgl.sdl.SDL_Event;
+import org.lwjgl.sdl.*;
 import org.slf4j.LoggerFactory;
 
 /**
@@ -37,7 +32,8 @@ public final class WindowsShiftCompatibility {
     private static int recoveredWindow;
     private static boolean reportedRecovery;
 
-    private WindowsShiftCompatibility() { }
+    private WindowsShiftCompatibility() {
+    }
 
     public static void repair(SDL_KeyboardEvent event) {
         boolean recovered = event.scancode() == 0 && event.key() == 0

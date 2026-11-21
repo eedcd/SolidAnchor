@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.esp.ModuleESP
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.render.entity
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.esp.ModuleESP
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.render.entity
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState
 import net.minecraft.world.entity.LivingEntity
 

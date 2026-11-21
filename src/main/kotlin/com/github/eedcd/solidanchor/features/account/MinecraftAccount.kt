@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.account
+package com.github.eedcd.solidanchor.features.account
 
 import com.google.gson.JsonObject
 import com.mojang.authlib.GameProfile
@@ -25,9 +25,9 @@ import com.mojang.authlib.minecraft.SessionService
 import com.mojang.authlib.services.MinecraftServicesDiscoveryService
 import com.mojang.authlib.services.MinecraftServicesEnvironment
 import com.mojang.util.UndashedUuid
-import net.solidanchor.config.gson.util.boolean
-import net.solidanchor.config.gson.util.obj
-import net.solidanchor.config.gson.util.string
+import com.github.eedcd.solidanchor.config.gson.util.boolean
+import com.github.eedcd.solidanchor.config.gson.util.obj
+import com.github.eedcd.solidanchor.config.gson.util.string
 import java.net.Proxy
 import java.util.Optional
 import java.util.UUID

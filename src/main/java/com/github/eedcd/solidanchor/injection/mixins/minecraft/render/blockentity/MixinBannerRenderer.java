@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.render.blockentity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render.blockentity;
 
-import net.solidanchor.features.module.modules.render.ModuleItemChams;
-import net.solidanchor.utils.render.FirstPersonShieldTint;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleItemChams;
+import com.github.eedcd.solidanchor.utils.render.FirstPersonShieldTint;
 import net.minecraft.client.renderer.blockentity.BannerRenderer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

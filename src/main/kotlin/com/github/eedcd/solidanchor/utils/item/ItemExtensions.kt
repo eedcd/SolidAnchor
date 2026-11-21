@@ -19,17 +19,17 @@
 
 @file:Suppress("TooManyFunctions")
 
-package net.solidanchor.utils.item
+package com.github.eedcd.solidanchor.utils.item
 
 import com.mojang.brigadier.StringReader
-import net.solidanchor.utils.client.isOlderThanOrEqual1_8
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.entity.handItems
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.kotlin.unmodifiable
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.utils.client.isOlderThanOrEqual1_8
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.entity.handItems
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.kotlin.unmodifiable
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.client.multiplayer.ClientLevel
 import net.minecraft.client.player.LocalPlayer
 import net.minecraft.commands.arguments.item.ItemInput

@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.interceptors
+package com.github.eedcd.solidanchor.api.interceptors
 
 import okhttp3.CacheControl
 import okhttp3.Interceptor

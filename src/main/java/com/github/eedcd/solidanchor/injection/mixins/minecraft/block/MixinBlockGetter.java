@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.block;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.block;
 
-import net.solidanchor.common.TweakedMethods;
+import com.github.eedcd.solidanchor.common.TweakedMethods;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ClipContext;

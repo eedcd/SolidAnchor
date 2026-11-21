@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.world.stronghold
+package com.github.eedcd.solidanchor.utils.world.stronghold
 
 import it.unimi.dsi.fastutil.longs.LongDoubleImmutablePair
 import net.ccbluex.fastutil.component1
 import net.ccbluex.fastutil.component2
 import net.ccbluex.fastutil.longDoubleHashMapOf
 import net.ccbluex.fastutil.mapToArray
-import net.solidanchor.utils.math.yaw
+import com.github.eedcd.solidanchor.utils.math.yaw
 import net.minecraft.util.Mth.wrapDegrees
 import net.minecraft.world.level.ChunkPos
 import net.minecraft.world.level.ChunkPos.getX

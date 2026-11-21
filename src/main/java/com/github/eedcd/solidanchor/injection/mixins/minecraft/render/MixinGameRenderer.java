@@ -16,8 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.render;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.GameRenderEvent;
+import com.github.eedcd.solidanchor.event.events.PerspectiveEvent;
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent;
+import com.github.eedcd.solidanchor.features.module.modules.fun.ModuleDankBobbing;
+import com.github.eedcd.solidanchor.features.module.modules.render.*;
+import com.github.eedcd.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience;
+import com.github.eedcd.solidanchor.render.engine.ItemChamsEffectRenderer;
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager;
+import com.github.eedcd.solidanchor.utils.collection.Pools;
+import com.github.eedcd.solidanchor.utils.render.WorldToScreen;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
@@ -25,17 +36,6 @@ import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.pipeline.RenderTarget;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.GameRenderEvent;
-import net.solidanchor.event.events.PerspectiveEvent;
-import net.solidanchor.event.events.WorldRenderEvent;
-import net.solidanchor.features.module.modules.fun.ModuleDankBobbing;
-import net.solidanchor.features.module.modules.render.*;
-import net.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience;
-import net.solidanchor.render.engine.ItemChamsEffectRenderer;
-import net.solidanchor.utils.aiming.RotationManager;
-import net.solidanchor.utils.collection.Pools;
-import net.solidanchor.utils.render.WorldToScreen;
 import net.minecraft.client.Camera;
 import net.minecraft.client.CameraType;
 import net.minecraft.client.DeltaTracker;
@@ -65,17 +65,15 @@ public abstract class MixinGameRenderer {
     @Shadow
     @Final
     private Camera mainCamera;
-
-    @Shadow
-    public abstract void tick();
-
     @Shadow
     @Final
     private RenderTarget mainRenderTarget;
-
     @Shadow
     @Final
     private Lightmap lightmap;
+
+    @Shadow
+    public abstract void tick();
 
     /**
      * Hook game render event
@@ -189,7 +187,7 @@ public abstract class MixinGameRenderer {
 
     /**
      * Keeps the vanilla 26.1 walk interpolation inputs while applying the custom bobbing strength.
-     *
+     * <p>
      * {@code GameRenderer#bobView(CameraRenderState, PoseStack)} is private, so it cannot be referenced via {@code @see}.
      *
      * @see net.minecraft.client.Camera#extractRenderState(net.minecraft.client.renderer.state.level.CameraRenderState, net.minecraft.client.DeltaTracker)
@@ -236,10 +234,10 @@ public abstract class MixinGameRenderer {
     }
 
     @ModifyExpressionValue(method = "extractOptions",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/client/Options;getCameraType()Lnet/minecraft/client/CameraType;"
-            )
+        at = @At(
+            value = "INVOKE",
+            target = "Lnet/minecraft/client/Options;getCameraType()Lnet/minecraft/client/CameraType;"
+        )
     )
     private CameraType hookPerspectiveEventOnCamera(CameraType original) {
         return PerspectiveEvent.INSTANCE.getPerspective();

@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.ingame.creative
+package com.github.eedcd.solidanchor.features.command.commands.ingame.creative
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.arguments.IntegerArgumentType
-import net.solidanchor.features.command.CommandException
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.CmdI18n
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.features.command.brigadier.suggestions
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.variable
-import net.solidanchor.utils.item.setInventoryItemCreative
+import com.github.eedcd.solidanchor.features.command.CommandException
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdI18n
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.features.command.brigadier.suggestions
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.utils.item.setInventoryItemCreative
 
 object CommandItemStack : MinecraftShortcuts, CommandRegistrar {
     override fun register(dispatcher: CommandDispatcher<ClientCommandSource>) {

@@ -17,24 +17,24 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.blink.esp
+package com.github.eedcd.solidanchor.features.blink.esp
 
 import com.mojang.blaze3d.vertex.PoseStack
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.GameRenderEvent
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.render.WireframePlayer
-import net.solidanchor.utils.render.isCustom
-import net.solidanchor.utils.render.scaleLightCoords
-import net.solidanchor.utils.render.setPosition
-import net.solidanchor.utils.render.setRotation
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.GameRenderEvent
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.render.WireframePlayer
+import com.github.eedcd.solidanchor.utils.render.isCustom
+import com.github.eedcd.solidanchor.utils.render.scaleLightCoords
+import com.github.eedcd.solidanchor.utils.render.setPosition
+import com.github.eedcd.solidanchor.utils.render.setRotation
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState
 import net.minecraft.network.chat.Component
 import net.minecraft.world.entity.Entity

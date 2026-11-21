@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.account
+package com.github.eedcd.solidanchor.features.account
 
 import com.google.gson.JsonObject
 import com.mojang.authlib.services.MinecraftServicesDiscoveryService
 import com.thealtening.api.TheAltening
 import com.thealtening.api.TheAlteningException
-import net.solidanchor.config.gson.util.int
-import net.solidanchor.config.gson.util.string
+import com.github.eedcd.solidanchor.config.gson.util.int
+import com.github.eedcd.solidanchor.config.gson.util.string
 
 const val ALTENING_AUTH = "http://authserver.thealtening.com"
 const val ALTENING_SESSION = "http://sessionserver.thealtening.com"

@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.math.geometry
+package com.github.eedcd.solidanchor.utils.math.geometry
 
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.distanceToSqr
-import net.solidanchor.utils.math.dot
-import net.solidanchor.utils.math.isLikelyZero
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.distanceToSqr
+import com.github.eedcd.solidanchor.utils.math.dot
+import com.github.eedcd.solidanchor.utils.math.isLikelyZero
 import net.minecraft.core.Direction
 import net.minecraft.util.Mth
 import net.minecraft.world.phys.AABB

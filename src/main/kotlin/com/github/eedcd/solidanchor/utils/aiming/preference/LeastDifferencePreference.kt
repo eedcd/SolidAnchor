@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.aiming.preference
+package com.github.eedcd.solidanchor.utils.aiming.preference
 
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.entity.rotation
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.geometry.Ray
-import net.solidanchor.utils.math.minus
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.geometry.Ray
+import com.github.eedcd.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3
 

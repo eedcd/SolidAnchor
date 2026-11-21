@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.`fun`.notebot
+package com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot
 
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.`fun`.notebot.ModuleNotebot.NotebotStage
-import net.solidanchor.features.module.modules.`fun`.notebot.ModuleNotebot.NotebotStageHandler
-import net.solidanchor.features.module.modules.`fun`.notebot.ModuleNotebot.renderer
-import net.solidanchor.features.module.modules.`fun`.notebot.nbs.SongData
-import net.solidanchor.features.module.modules.`fun`.notebot.stages.NotebotTestStageHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.ModuleNotebot.NotebotStage
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.ModuleNotebot.NotebotStageHandler
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.ModuleNotebot.renderer
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.nbs.SongData
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.stages.NotebotTestStageHandler
 import net.minecraft.core.BlockPos
 import net.minecraft.network.protocol.game.ClientboundSoundPacket
 import net.minecraft.sounds.SoundSource

@@ -16,30 +16,30 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.nofall
+package com.github.eedcd.solidanchor.features.module.modules.player.nofall
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallBlink
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallBlocksMC
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallCancel
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallForceJump
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallGrim2371
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallHypixel
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallHypixelPacket
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallMLG
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallNoGround
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallPacket
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallPacketJump
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallRettungsplatform
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallSpartan524Flag
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallSpoofGround
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallSpoofLanding
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallMount
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallVerus
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallVulcan
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallVulcanTP
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallBlink
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallBlocksMC
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallCancel
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallForceJump
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallGrim2371
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallHypixel
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallHypixelPacket
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallMLG
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallNoGround
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallPacket
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallPacketJump
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallRettungsplatform
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallSpartan524Flag
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallSpoofGround
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallSpoofLanding
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallMount
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallVerus
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallVulcan
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallVulcanTP
 import net.minecraft.world.entity.Pose
 import net.minecraft.world.item.Items
 import java.util.function.BooleanSupplier

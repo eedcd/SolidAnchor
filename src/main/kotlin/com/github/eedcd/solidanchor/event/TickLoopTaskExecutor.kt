@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.event
+package com.github.eedcd.solidanchor.event
 
-import net.solidanchor.SolidAnchor.CLIENT_NAME
-import net.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.SolidAnchor.CLIENT_NAME
+import com.github.eedcd.solidanchor.utils.client.mc
 import net.minecraft.ReportedException
 import org.slf4j.LoggerFactory
 

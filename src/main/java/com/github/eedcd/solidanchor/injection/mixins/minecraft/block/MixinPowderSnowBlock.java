@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.block;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.block;
 
-import net.solidanchor.features.module.modules.movement.noslow.modes.powdersnow.NoSlowPowderSnow;
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.powdersnow.NoSlowPowderSnow;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.InsideBlockEffectApplier;

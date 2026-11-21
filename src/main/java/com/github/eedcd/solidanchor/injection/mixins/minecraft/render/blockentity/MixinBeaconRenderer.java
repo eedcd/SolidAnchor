@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.render.blockentity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render.blockentity;
 
-import net.solidanchor.features.module.modules.render.DoRender;
-import net.solidanchor.features.module.modules.render.ModuleAntiBlind;
+import com.github.eedcd.solidanchor.features.module.modules.render.DoRender;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleAntiBlind;
 import net.minecraft.client.renderer.blockentity.BeaconRenderer;
 import net.minecraft.world.level.block.entity.BeaconBeamOwner;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -32,9 +32,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(BeaconRenderer.class)
 public abstract class MixinBeaconRenderer<T extends BlockEntity & BeaconBeamOwner> {
     @Inject(
-            method = "submit*",
-            at = @At("HEAD"),
-            cancellable = true
+        method = "submit*",
+        at = @At("HEAD"),
+        cancellable = true
     )
     private void hookRenderBeaconBlock(CallbackInfo ci) {
         if (!ModuleAntiBlind.canRender(DoRender.BEACON_BEAMS)) {

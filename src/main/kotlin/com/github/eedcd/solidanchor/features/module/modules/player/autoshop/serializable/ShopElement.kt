@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.autoshop.serializable
+package com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable
 
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonParseException
-import net.solidanchor.features.module.modules.player.autoshop.serializable.conditions.ConditionNode
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable.conditions.ConditionNode
 
 data class ShopElement(
     val item: ItemInfo,

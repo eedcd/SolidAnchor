@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
 import com.mojang.blaze3d.vertex.DefaultVertexFormat.COLOR_FORMAT
 import com.mojang.blaze3d.vertex.DefaultVertexFormat.COLOR_SEMANTIC_NAME
@@ -58,7 +58,7 @@ object ClientVertexFormats {
      * Vertex format for GUI circle LUT shader.
      *
      * - UV0: Quad-local UV (0..1). Shader remaps this to [-1,1] to evaluate circle SDF.
-     * - UV2.x: LUT row index in [net.solidanchor.render.gui.GuiCircleLutAtlas].
+     * - UV2.x: LUT row index in [com.github.eedcd.solidanchor.render.gui.GuiCircleLutAtlas].
      * - UV2.y: Encoded inner radius ratio (0..32767 => 0..1).
      */
     @JvmField

@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold.tower
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.tower
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.towerMode
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.towerMode
 import net.minecraft.core.BlockPos
 
 sealed class ScaffoldTower(name: String) : Mode(name) {

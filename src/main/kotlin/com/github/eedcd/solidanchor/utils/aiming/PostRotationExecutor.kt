@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.aiming
+package com.github.eedcd.solidanchor.utils.aiming
 
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.EventState
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PlayerNetworkMovementTickEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.kotlin.EventPriorityConvention
-import net.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.EventState
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PlayerNetworkMovementTickEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
 
 /**
  * Executes code right after the client sent the normal movement packet or at the start of the next tick.

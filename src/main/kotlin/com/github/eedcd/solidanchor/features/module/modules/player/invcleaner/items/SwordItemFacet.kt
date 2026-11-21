@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.invcleaner.items
+package com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.items
 
-import net.solidanchor.features.module.modules.player.invcleaner.ItemCategory
-import net.solidanchor.features.module.modules.player.invcleaner.ItemType
-import net.solidanchor.utils.inventory.ItemSlot
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemCategory
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemType
+import com.github.eedcd.solidanchor.utils.inventory.ItemSlot
 
 /**
  * Specialization of weapon type. Used in order to allow the user to specify that they want a sword and not an axe

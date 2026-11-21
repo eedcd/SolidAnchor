@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.entity;
 
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.PlayerStrideEvent;
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.PlayerStrideEvent;
 import net.minecraft.client.entity.ClientAvatarState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.interfaces;
+package com.github.eedcd.solidanchor.interfaces;
 
 import net.minecraft.world.entity.Entity;
 import org.jspecify.annotations.NullMarked;

@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.input
+package com.github.eedcd.solidanchor.utils.input
 
 import com.mojang.blaze3d.platform.InputConstants
 import com.mojang.brigadier.StringReader
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleManager
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.item.getOrNull
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleManager
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.item.getOrNull
 import net.minecraft.core.Registry
 import net.minecraft.resources.Identifier
 import net.minecraft.resources.ResourceKey

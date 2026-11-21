@@ -16,19 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.clicking
+package com.github.eedcd.solidanchor.utils.clicking
 
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.KeybindIsPressedEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.entity.hasCooldown
-import net.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.KeybindIsPressedEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.entity.hasCooldown
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
 import net.minecraft.client.KeyMapping
 import net.minecraft.client.Minecraft
 import net.minecraft.util.Util

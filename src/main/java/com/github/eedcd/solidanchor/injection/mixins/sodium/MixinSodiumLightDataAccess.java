@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.sodium;
+package com.github.eedcd.solidanchor.injection.mixins.sodium;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleXRay;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.caffeinemc.mods.sodium.client.model.light.data.LightDataAccess;
-import net.solidanchor.features.module.modules.render.ModuleXRay;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.core.BlockPos;
 import org.spongepowered.asm.mixin.*;
@@ -30,18 +30,16 @@ import org.spongepowered.asm.mixin.injection.At;
 @Mixin(LightDataAccess.class)
 public abstract class MixinSodiumLightDataAccess {
 
-    @Shadow
-    @Final
-    private BlockPos.MutableBlockPos pos;
-
-    @Shadow
-    protected BlockAndTintGetter level;
-
     /**
      * Maximum light level for all three 4-bit light channels.
      */
     @Unique
     private static final int MAX_LIGHT_LEVEL = 15 | 15 << 4 | 15 << 8;
+    @Shadow
+    protected BlockAndTintGetter level;
+    @Shadow
+    @Final
+    private BlockPos.MutableBlockPos pos;
 
     @ModifyReturnValue(method = "compute", at = @At("RETURN"))
     private int modifyLightLevel(int original) {

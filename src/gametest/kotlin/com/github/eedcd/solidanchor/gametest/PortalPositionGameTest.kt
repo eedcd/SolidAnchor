@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.gametest
+package com.github.eedcd.solidanchor.gametest
 
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.features.module.modules.world.autobuild.ModuleAutoBuild
-import net.solidanchor.features.module.modules.world.autobuild.PortalMode
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.features.module.modules.world.autobuild.ModuleAutoBuild
+import com.github.eedcd.solidanchor.features.module.modules.world.autobuild.PortalMode
 import net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest
 import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext
 import net.minecraft.client.Minecraft

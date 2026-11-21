@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.gson.adapter
+package com.github.eedcd.solidanchor.config.gson.adapter
 
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
@@ -25,8 +25,8 @@ import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import com.google.gson.JsonSerializationContext
 import com.google.gson.JsonSerializer
-import net.solidanchor.utils.render.Alignment
-import net.solidanchor.utils.render.Alignment.ScreenAxisX
+import com.github.eedcd.solidanchor.utils.render.Alignment
+import com.github.eedcd.solidanchor.utils.render.Alignment.ScreenAxisX
 import java.lang.reflect.Type
 
 object AlignmentAdapter : JsonDeserializer<Alignment>, JsonSerializer<Alignment> {

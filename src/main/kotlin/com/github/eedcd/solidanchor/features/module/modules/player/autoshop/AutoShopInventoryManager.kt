@@ -16,19 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.autoshop
+package com.github.eedcd.solidanchor.features.module.modules.player.autoshop
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet
 import net.ccbluex.fastutil.fastIterator
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.entity.armorItems
-import net.solidanchor.utils.item.getPotionEffects
-import net.solidanchor.utils.kotlin.sumValues
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.entity.armorItems
+import com.github.eedcd.solidanchor.utils.item.getPotionEffects
+import com.github.eedcd.solidanchor.utils.kotlin.sumValues
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.tags.ItemTags
 import net.minecraft.world.item.ItemStack

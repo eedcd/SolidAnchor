@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.spoofer
+package com.github.eedcd.solidanchor.features.spoofer
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.utils.kotlin.toUndashedString
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.utils.kotlin.toUndashedString
 
 object SpooferBungeeCord : ToggleableValueGroup(name = "BungeecordSpoofer", enabled = false) {
 

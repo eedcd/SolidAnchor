@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.murdermystery
+package com.github.eedcd.solidanchor.features.module.modules.render.murdermystery
 
 import net.ccbluex.fastutil.referenceArraySetOf
 import net.ccbluex.fastutil.referenceHashSetOf
-import net.solidanchor.utils.item.isMiningTool
-import net.solidanchor.utils.item.isSword
+import com.github.eedcd.solidanchor.utils.item.isMiningTool
+import com.github.eedcd.solidanchor.utils.item.isSword
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.BoatItem
 import net.minecraft.world.item.ItemStack

@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.traps
+package com.github.eedcd.solidanchor.features.module.modules.world.traps
 
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTarget
-import net.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTarget
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
 import net.minecraft.core.Direction
 import net.minecraft.core.Vec3i
 import net.minecraft.world.item.Item

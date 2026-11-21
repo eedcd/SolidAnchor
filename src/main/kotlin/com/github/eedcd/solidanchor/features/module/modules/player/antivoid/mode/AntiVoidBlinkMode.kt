@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.antivoid.mode
+package com.github.eedcd.solidanchor.features.module.modules.player.antivoid.mode
 
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.BlinkPacketEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.event.handler
-import net.solidanchor.features.blink.BlinkManager
-import net.solidanchor.features.blink.BlinkManager.Action
-import net.solidanchor.features.blink.BlinkManager.positions
-import net.solidanchor.features.module.modules.player.antivoid.ModuleAntiVoid
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.BlinkPacketEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.blink.BlinkManager
+import com.github.eedcd.solidanchor.features.blink.BlinkManager.Action
+import com.github.eedcd.solidanchor.features.blink.BlinkManager.positions
+import com.github.eedcd.solidanchor.features.module.modules.player.antivoid.ModuleAntiVoid
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
 
 object AntiVoidBlinkMode : AntiVoidMode("Blink") {
 

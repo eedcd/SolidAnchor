@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.spider.modes
+package com.github.eedcd.solidanchor.features.module.modules.movement.spider.modes
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.BlockShapeEvent
-import net.solidanchor.event.events.PlayerJumpEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.movement.spider.ModuleSpider
-import net.solidanchor.utils.math.shrink
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.BlockShapeEvent
+import com.github.eedcd.solidanchor.event.events.PlayerJumpEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.movement.spider.ModuleSpider
+import com.github.eedcd.solidanchor.utils.math.shrink
 
 /**
  * Shrinks the block collision shape and allows you to walk on it.

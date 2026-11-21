@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.utils
+package com.github.eedcd.solidanchor.render.utils
 
 import com.mojang.renderpearl.api.commands.RenderPass
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.render.ClientUniformDefine
-import net.solidanchor.utils.render.writeStd140
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.render.ClientUniformDefine
+import com.github.eedcd.solidanchor.utils.render.writeStd140
 
 class DistanceFadeUniformValueGroup : ValueGroup("DistanceFade") {
 

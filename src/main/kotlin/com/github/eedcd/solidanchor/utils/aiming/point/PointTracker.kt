@@ -16,23 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.aiming.point
+package com.github.eedcd.solidanchor.utils.aiming.point
 
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.aiming.point.exempts.ExemptBestHitVector
-import net.solidanchor.utils.aiming.point.exempts.ExemptBoxPart
-import net.solidanchor.utils.aiming.point.exempts.ExemptContext
-import net.solidanchor.utils.aiming.point.features.PointProcessorDelay
-import net.solidanchor.utils.aiming.point.features.PointProcessorGaussian
-import net.solidanchor.utils.aiming.point.features.PointProcessorLazy
-import net.solidanchor.utils.aiming.utils.projectPointsOnBox
-import net.solidanchor.utils.entity.PositionExtrapolation
-import net.solidanchor.utils.entity.getBoundingBoxAt
-import net.solidanchor.utils.math.getNearestPoint
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.aiming.point.exempts.ExemptBestHitVector
+import com.github.eedcd.solidanchor.utils.aiming.point.exempts.ExemptBoxPart
+import com.github.eedcd.solidanchor.utils.aiming.point.exempts.ExemptContext
+import com.github.eedcd.solidanchor.utils.aiming.point.features.PointProcessorDelay
+import com.github.eedcd.solidanchor.utils.aiming.point.features.PointProcessorGaussian
+import com.github.eedcd.solidanchor.utils.aiming.point.features.PointProcessorLazy
+import com.github.eedcd.solidanchor.utils.aiming.utils.projectPointsOnBox
+import com.github.eedcd.solidanchor.utils.entity.PositionExtrapolation
+import com.github.eedcd.solidanchor.utils.entity.getBoundingBoxAt
+import com.github.eedcd.solidanchor.utils.math.getNearestPoint
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3

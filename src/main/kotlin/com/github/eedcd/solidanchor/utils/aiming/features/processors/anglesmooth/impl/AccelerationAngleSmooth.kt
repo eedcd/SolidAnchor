@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.aiming.features.processors.anglesmooth.impl
+package com.github.eedcd.solidanchor.utils.aiming.features.processors.anglesmooth.impl
 
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationTarget
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.aiming.data.RotationDelta
-import net.solidanchor.utils.aiming.features.processors.anglesmooth.AngleSmooth
-import net.solidanchor.utils.aiming.utils.RotationUtil
-import net.solidanchor.utils.entity.boxedDistanceTo
-import net.solidanchor.utils.entity.lastRotation
-import net.solidanchor.utils.kotlin.random
-import net.solidanchor.utils.math.component1
-import net.solidanchor.utils.math.component2
-import net.solidanchor.utils.raytracing.isLookingAtEntity
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationTarget
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.aiming.data.RotationDelta
+import com.github.eedcd.solidanchor.utils.aiming.features.processors.anglesmooth.AngleSmooth
+import com.github.eedcd.solidanchor.utils.aiming.utils.RotationUtil
+import com.github.eedcd.solidanchor.utils.entity.boxedDistanceTo
+import com.github.eedcd.solidanchor.utils.entity.lastRotation
+import com.github.eedcd.solidanchor.utils.kotlin.random
+import com.github.eedcd.solidanchor.utils.math.component1
+import com.github.eedcd.solidanchor.utils.math.component2
+import com.github.eedcd.solidanchor.utils.raytracing.isLookingAtEntity
 import net.minecraft.util.Mth
 import net.minecraft.world.phys.Vec2
 import kotlin.math.abs

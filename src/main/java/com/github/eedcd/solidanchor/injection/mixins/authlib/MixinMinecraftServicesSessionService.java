@@ -17,8 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.authlib;
+package com.github.eedcd.solidanchor.injection.mixins.authlib;
 
+import com.github.eedcd.solidanchor.features.module.modules.exploit.ModuleYggdrasilSignatureFix;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.mojang.authlib.SignatureState;
@@ -27,7 +28,6 @@ import com.mojang.authlib.minecraft.MinecraftProfileTextures;
 import com.mojang.authlib.properties.Property;
 import com.mojang.authlib.services.MinecraftServicesDiscoveryService;
 import com.mojang.authlib.services.MinecraftServicesSessionService;
-import net.solidanchor.features.module.modules.exploit.ModuleYggdrasilSignatureFix;
 import net.minecraft.world.entity.player.PlayerModelType;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -39,10 +39,10 @@ import java.util.Map;
 @Mixin(MinecraftServicesSessionService.class)
 public abstract class MixinMinecraftServicesSessionService {
     @Inject(
-            method = "getPropertySignatureState",
-            at = @At("HEAD"),
-            cancellable = true,
-            remap = false
+        method = "getPropertySignatureState",
+        at = @At("HEAD"),
+        cancellable = true,
+        remap = false
     )
     private void bypassSignature(Property property, CallbackInfoReturnable<SignatureState> cir) {
         if (ModuleYggdrasilSignatureFix.INSTANCE.getRunning()) {
@@ -51,12 +51,12 @@ public abstract class MixinMinecraftServicesSessionService {
     }
 
     @WrapOperation(
-            method = "unpackTextures",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lcom/mojang/authlib/services/MinecraftServicesDiscoveryService;isAllowedTextureDomain(Ljava/lang/String;)Z"
-            ),
-            remap = false
+        method = "unpackTextures",
+        at = @At(
+            value = "INVOKE",
+            target = "Lcom/mojang/authlib/services/MinecraftServicesDiscoveryService;isAllowedTextureDomain(Ljava/lang/String;)Z"
+        ),
+        remap = false
     )
     private boolean bypassUrlCheck(MinecraftServicesDiscoveryService instance, String url, Operation<Boolean> original) {
         return ModuleYggdrasilSignatureFix.INSTANCE.getRunning() || original.call(instance, url);
@@ -75,10 +75,10 @@ public abstract class MixinMinecraftServicesSessionService {
         if (!url.contains("127.0.0.1")) return;
 
         MinecraftProfileTextures forced = new MinecraftProfileTextures(
-                new MinecraftProfileTexture(url, Map.of("model", PlayerModelType.SLIM.getSerializedName())),
-                original.cape(),
-                original.elytra(),
-                original.signatureState()
+            new MinecraftProfileTexture(url, Map.of("model", PlayerModelType.SLIM.getSerializedName())),
+            original.cape(),
+            original.elytra(),
+            original.signatureState()
         );
 
         cir.setReturnValue(forced);

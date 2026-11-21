@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.autoshop.purchasemode
+package com.github.eedcd.solidanchor.features.module.modules.player.autoshop.purchasemode
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.modules.player.autoshop.ModuleAutoShop
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.ModuleAutoShop
 
 object QuickPurchaseMode : Mode("Quick") {
     override val parent: ModeValueGroup<*>

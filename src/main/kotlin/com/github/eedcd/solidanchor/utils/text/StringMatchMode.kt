@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.text
+package com.github.eedcd.solidanchor.utils.text
 
-import net.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.types.list.Tagged
 import java.util.function.BiPredicate
 
 /**

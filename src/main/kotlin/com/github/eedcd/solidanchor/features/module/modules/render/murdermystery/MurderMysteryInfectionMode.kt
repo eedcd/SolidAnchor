@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.murdermystery
+package com.github.eedcd.solidanchor.features.module.modules.render.murdermystery
 
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.entity.handItems
-import net.solidanchor.utils.entity.usingItemOrNull
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.entity.handItems
+import com.github.eedcd.solidanchor.utils.entity.usingItemOrNull
 import net.minecraft.client.player.AbstractClientPlayer
 import net.minecraft.world.item.BowItem
 import net.minecraft.world.item.Items

@@ -16,23 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.packetmine.tool
+package com.github.eedcd.solidanchor.features.module.modules.world.packetmine.tool
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.features.module.modules.world.ModuleAutoTool
-import net.solidanchor.features.module.modules.world.packetmine.MineTarget
-import net.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.client.usesViaFabricPlus
-import net.solidanchor.utils.client.warning
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.InventoryAction
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.network.PickFromInventoryPacket
-import net.solidanchor.utils.network.sendPacket
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.features.module.modules.world.ModuleAutoTool
+import com.github.eedcd.solidanchor.features.module.modules.world.packetmine.MineTarget
+import com.github.eedcd.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.client.usesViaFabricPlus
+import com.github.eedcd.solidanchor.utils.client.warning
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.InventoryAction
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.network.PickFromInventoryPacket
+import com.github.eedcd.solidanchor.utils.network.sendPacket
 
 enum class SwitchMethod(override val tag: String, val shouldSync: Boolean) : Tagged, MinecraftShortcuts {
 

@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.client.client
+package com.github.eedcd.solidanchor.features.command.commands.client.client
 
-import net.solidanchor.features.command.arguments.BooleanArgumentType
-import net.solidanchor.features.command.brigadier.CmdLiteralScope
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.misc.SelfDestruct.destructClient
-import net.solidanchor.features.misc.SelfDestruct.wipeClient
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.features.command.arguments.BooleanArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdLiteralScope
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct.destructClient
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct.wipeClient
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.client.regular
 
 object CommandClientDestructSubcommand {
     fun CmdLiteralScope.destruct() {

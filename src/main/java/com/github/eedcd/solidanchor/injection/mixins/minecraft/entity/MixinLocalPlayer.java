@@ -16,37 +16,34 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.entity;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.EventState;
+import com.github.eedcd.solidanchor.event.events.*;
+import com.github.eedcd.solidanchor.features.module.modules.exploit.ModulePortalMenu;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleEntityControl;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleNoPush;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleSprint;
+import com.github.eedcd.solidanchor.features.module.modules.movement.NoPushBy;
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.ModuleNoSlow;
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleNoEntityInteract;
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleReach;
+import com.github.eedcd.solidanchor.features.module.modules.render.DoRender;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleAntiBlind;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleFreeCam;
+import com.github.eedcd.solidanchor.features.module.modules.world.ModuleLiquidPlace;
+import com.github.eedcd.solidanchor.interfaces.LocalPlayerAddition;
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager;
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation;
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput;
+import com.github.eedcd.solidanchor.utils.raytracing.EntityRaytracingKt;
+import com.github.eedcd.solidanchor.utils.raytracing.RaytracingKt;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.EventState;
-import net.solidanchor.event.events.*;
-import net.solidanchor.features.module.modules.exploit.ModulePortalMenu;
-import net.solidanchor.features.module.modules.movement.ModuleEntityControl;
-import net.solidanchor.features.module.modules.movement.ModuleNoPush;
-import net.solidanchor.features.module.modules.movement.ModuleSprint;
-import net.solidanchor.features.module.modules.movement.NoPushBy;
-import net.solidanchor.features.module.modules.movement.noslow.ModuleNoSlow;
-import net.solidanchor.features.module.modules.player.ModuleNoEntityInteract;
-import net.solidanchor.features.module.modules.player.ModuleReach;
-import net.solidanchor.features.module.modules.render.DoRender;
-import net.solidanchor.features.module.modules.render.ModuleAntiBlind;
-import net.solidanchor.features.module.modules.render.ModuleFreeCam;
-import net.solidanchor.features.module.modules.world.ModuleLiquidPlace;
-import net.solidanchor.interfaces.LocalPlayerAddition;
-import net.solidanchor.utils.aiming.RotationManager;
-import net.solidanchor.utils.aiming.data.Rotation;
-import net.solidanchor.utils.movement.DirectionalInput;
-import net.solidanchor.utils.raytracing.EntityRaytracingKt;
-import net.solidanchor.utils.raytracing.RaytracingKt;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Gui;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.client.player.ClientInput;
 import net.minecraft.client.player.LocalPlayer;
@@ -78,17 +75,74 @@ public abstract class MixinLocalPlayer extends MixinPlayer implements LocalPlaye
     @Shadow
     @Final
     public ClientPacketListener connection;
-
-    @Shadow
-    public abstract boolean isUnderWater();
-
     @Unique
     private PlayerNetworkMovementTickEvent eventMotion;
-
     @Unique
     private int onGroundTicks = 0;
     @Unique
     private int airTicks = 0;
+
+    /**
+     * We change crossHairTarget according to server side rotations
+     */
+    @ModifyExpressionValue(method = "pick(Lnet/minecraft/world/entity/Entity;DDF)Lnet/minecraft/world/phys/HitResult;", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;pick(DFZ)Lnet/minecraft/world/phys/HitResult;"))
+    private static HitResult hookRaycast(HitResult original, Entity camera, double blockInteractionRange, double entityInteractionRange, float tickDelta) {
+        if (camera != Minecraft.getInstance().player) {
+            return original;
+        }
+
+        var cameraRotation = new Rotation(camera.getViewYRot(tickDelta), camera.getViewXRot(tickDelta), true);
+
+        Rotation rotation;
+        if (ModuleFreeCam.INSTANCE.getRunning()) {
+            var serverRotation = RotationManager.INSTANCE.getServerRotation();
+            rotation = ModuleFreeCam.INSTANCE.shouldDisableCameraInteract() ? serverRotation : cameraRotation;
+        } else if (RotationManager.INSTANCE.getCurrentRotation() != null) {
+            rotation = RotationManager.INSTANCE.getCurrentRotation();
+        } else {
+            rotation = cameraRotation;
+        }
+
+        // Through Walls Reach
+        if (ModuleReach.INSTANCE.getRunning()) {
+            var throughWallsRange = ModuleReach.INSTANCE.getEntity().getInteractionThroughWallsRange();
+
+            if (throughWallsRange > 0.0) {
+                var hitEntityResult = EntityRaytracingKt.findEntityInCrosshair(throughWallsRange, rotation, null);
+
+                if (hitEntityResult != null && hitEntityResult.getType() == HitResult.Type.ENTITY) {
+                    return hitEntityResult;
+                }
+            }
+        }
+
+
+        return RaytracingKt.traceFromPlayer(
+            rotation,
+            Math.max(blockInteractionRange, entityInteractionRange),
+            ClipContext.Block.OUTLINE,
+            ModuleLiquidPlace.INSTANCE.getRunning() ? ClipContext.Fluid.ANY : ClipContext.Fluid.NONE,
+            tickDelta
+        );
+    }
+
+    @ModifyExpressionValue(method = "pick(Lnet/minecraft/world/entity/Entity;DDF)Lnet/minecraft/world/phys/HitResult;", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;getViewVector(F)Lnet/minecraft/world/phys/Vec3;"))
+    private static Vec3 hookRotationVector(Vec3 original, Entity camera, double blockInteractionRange, double entityInteractionRange, float tickDelta) {
+        if (camera != Minecraft.getInstance().player) {
+            return original;
+        }
+
+        var rotation = RotationManager.INSTANCE.getCurrentRotation();
+        return rotation != null ? rotation.directionVector() : original;
+    }
+
+    @ModifyExpressionValue(method = "pick(Lnet/minecraft/world/entity/Entity;DDF)Lnet/minecraft/world/phys/HitResult;", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/projectile/ProjectileUtil;getEntityHitResult(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/AABB;Ljava/util/function/Predicate;D)Lnet/minecraft/world/phys/EntityHitResult;"))
+    private static @Nullable EntityHitResult hookEntityHitResult(@Nullable EntityHitResult original) {
+        return original == null || !ModuleNoEntityInteract.INSTANCE.test(original) ? null : original;
+    }
+
+    @Shadow
+    public abstract boolean isUnderWater();
 
     @Inject(method = "displayItemActivation", at = @At("HEAD"), cancellable = true)
     private void hookShowFloatingItem(ItemStack floatingItem, CallbackInfo ci) {
@@ -101,10 +155,10 @@ public abstract class MixinLocalPlayer extends MixinPlayer implements LocalPlaye
      * Hook entity tick event
      */
     @Inject(method = "tick", at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/client/player/AbstractClientPlayer;tick()V",
-            shift = At.Shift.BEFORE,
-            ordinal = 0),
-            cancellable = true)
+        target = "Lnet/minecraft/client/player/AbstractClientPlayer;tick()V",
+        shift = At.Shift.BEFORE,
+        ordinal = 0),
+        cancellable = true)
     private void hookTickEvent(CallbackInfo ci) {
         var tickEvent = new PlayerTickEvent();
         EventManager.INSTANCE.callEvent(tickEvent);
@@ -115,9 +169,9 @@ public abstract class MixinLocalPlayer extends MixinPlayer implements LocalPlaye
     }
 
     @Inject(method = "tick", at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/client/player/AbstractClientPlayer;tick()V",
-            shift = At.Shift.AFTER,
-            ordinal = 0))
+        target = "Lnet/minecraft/client/player/AbstractClientPlayer;tick()V",
+        shift = At.Shift.AFTER,
+        ordinal = 0))
     private void hookPostTickEvent(CallbackInfo ci) {
         EventManager.INSTANCE.callEvent(PlayerPostTickEvent.INSTANCE);
     }
@@ -240,65 +294,6 @@ public abstract class MixinLocalPlayer extends MixinPlayer implements LocalPlaye
     }
 
     /**
-     * We change crossHairTarget according to server side rotations
-     */
-    @ModifyExpressionValue(method = "pick(Lnet/minecraft/world/entity/Entity;DDF)Lnet/minecraft/world/phys/HitResult;", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;pick(DFZ)Lnet/minecraft/world/phys/HitResult;"))
-    private static HitResult hookRaycast(HitResult original, Entity camera, double blockInteractionRange, double entityInteractionRange, float tickDelta) {
-        if (camera != Minecraft.getInstance().player) {
-            return original;
-        }
-
-        var cameraRotation = new Rotation(camera.getViewYRot(tickDelta), camera.getViewXRot(tickDelta), true);
-
-        Rotation rotation;
-        if (ModuleFreeCam.INSTANCE.getRunning()) {
-            var serverRotation = RotationManager.INSTANCE.getServerRotation();
-            rotation = ModuleFreeCam.INSTANCE.shouldDisableCameraInteract() ? serverRotation : cameraRotation;
-        } else if (RotationManager.INSTANCE.getCurrentRotation() != null) {
-            rotation = RotationManager.INSTANCE.getCurrentRotation();
-        } else {
-            rotation = cameraRotation;
-        }
-
-        // Through Walls Reach
-        if (ModuleReach.INSTANCE.getRunning()) {
-            var throughWallsRange = ModuleReach.INSTANCE.getEntity().getInteractionThroughWallsRange();
-
-            if (throughWallsRange > 0.0) {
-                var hitEntityResult = EntityRaytracingKt.findEntityInCrosshair(throughWallsRange, rotation, null);
-
-                if (hitEntityResult != null && hitEntityResult.getType() == HitResult.Type.ENTITY) {
-                    return hitEntityResult;
-                }
-            }
-        }
-
-
-        return RaytracingKt.traceFromPlayer(
-            rotation,
-            Math.max(blockInteractionRange, entityInteractionRange),
-            ClipContext.Block.OUTLINE,
-            ModuleLiquidPlace.INSTANCE.getRunning() ? ClipContext.Fluid.ANY : ClipContext.Fluid.NONE,
-            tickDelta
-        );
-    }
-
-    @ModifyExpressionValue(method = "pick(Lnet/minecraft/world/entity/Entity;DDF)Lnet/minecraft/world/phys/HitResult;", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;getViewVector(F)Lnet/minecraft/world/phys/Vec3;"))
-    private static Vec3 hookRotationVector(Vec3 original, Entity camera, double blockInteractionRange, double entityInteractionRange, float tickDelta) {
-        if (camera != Minecraft.getInstance().player) {
-            return original;
-        }
-
-        var rotation = RotationManager.INSTANCE.getCurrentRotation();
-        return rotation != null ? rotation.directionVector() : original;
-    }
-
-    @ModifyExpressionValue(method = "pick(Lnet/minecraft/world/entity/Entity;DDF)Lnet/minecraft/world/phys/HitResult;", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/projectile/ProjectileUtil;getEntityHitResult(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/AABB;Ljava/util/function/Predicate;D)Lnet/minecraft/world/phys/EntityHitResult;"))
-    private static @Nullable EntityHitResult hookEntityHitResult(@Nullable EntityHitResult original) {
-        return original == null || !ModuleNoEntityInteract.INSTANCE.test(original) ? null : original;
-    }
-
-    /**
      * Hook custom sneaking multiplier
      */
     @ModifyExpressionValue(method = "modifyInput", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;getAttributeValue(Lnet/minecraft/core/Holder;)D"))
@@ -386,7 +381,7 @@ public abstract class MixinLocalPlayer extends MixinPlayer implements LocalPlaye
     private boolean hookFreeCamPreventRotations(boolean bl4) {
         // Prevent rotation changes when free cam is active, unless a rotation is being set via the rotation manager
         return (!ModuleFreeCam.INSTANCE.getRunning() ||
-                RotationManager.INSTANCE.getCurrentRotation() != null) && bl4;
+            RotationManager.INSTANCE.getCurrentRotation() != null) && bl4;
     }
 
     @ModifyExpressionValue(method = "aiStep", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;canStartSprinting()Z"))
@@ -417,6 +412,7 @@ public abstract class MixinLocalPlayer extends MixinPlayer implements LocalPlaye
      * ViaFabricPlus injects at HEAD of shouldStopRunSprinting with cancellable=true,
      * bypassing the RETURN instruction so @ModifyReturnValue never fires.
      * Intercepting the call site within aiStep works around this.
+     *
      * @see <a href="https://github.com/ViaVersion/ViaFabricPlus/blob/618332d/src/main/java/com/viaversion/viafabricplus/injection/mixin/features/movement/sprinting_and_sneaking/MixinLocalPlayer.java#L262-L270">ViaFabricPlus changeStopSprintingConditions</a>
      */
     @ModifyExpressionValue(
@@ -448,15 +444,15 @@ public abstract class MixinLocalPlayer extends MixinPlayer implements LocalPlaye
         float movementForward = input.getMoveVector().y;
         float movementSideways = input.getMoveVector().x;
         var hasMovement = Math.abs(movementForward) > 1.0E-5F ||
-                Math.abs(movementSideways) > 1.0E-5F;
+            Math.abs(movementSideways) > 1.0E-5F;
         var isWalking = (double) Math.abs(movementForward) >= 0.8 ||
-                (double) Math.abs(movementSideways) >= 0.8;
+            (double) Math.abs(movementSideways) >= 0.8;
         return this.isUnderWater() ? hasMovement : isWalking;
     }
 
     @ModifyExpressionValue(method = "sendIsSprintingIfNeeded", at = @At(
-            value = "INVOKE",
-            target = "Lnet/minecraft/client/player/LocalPlayer;isSprinting()Z")
+        value = "INVOKE",
+        target = "Lnet/minecraft/client/player/LocalPlayer;isSprinting()Z")
     )
     private boolean hookNetworkSprint(boolean original) {
         var event = new SprintEvent(new DirectionalInput(input), original, SprintEvent.Source.NETWORK);

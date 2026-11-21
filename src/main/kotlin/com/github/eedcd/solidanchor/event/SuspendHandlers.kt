@@ -16,8 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.event
+package com.github.eedcd.solidanchor.event
 
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
 import kotlinx.coroutines.CompletionHandler
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
@@ -26,7 +27,6 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.Runnable
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withTimeoutOrNull
-import net.solidanchor.event.events.GameTickEvent
 import java.util.function.Consumer
 import java.util.function.Predicate
 import kotlin.coroutines.ContinuationInterceptor
@@ -128,8 +128,8 @@ suspend fun <T : Event> EventListener.waitMatches(
  * Wait an event of type [T] which matches given [predicate].
  *
  * The continuation resumes on the event handler thread. For example:
- * - [net.solidanchor.event.events.PacketEvent]: client Netty IO (EventLoopGroup)
- * - [net.solidanchor.event.events.GameTickEvent]: client render thread
+ * - [com.github.eedcd.solidanchor.event.events.PacketEvent]: client Netty IO (EventLoopGroup)
+ * - [com.github.eedcd.solidanchor.event.events.GameTickEvent]: client render thread
  *
  * @param priority The priority of the event hook.
  * @param predicate The predicate to match the event.

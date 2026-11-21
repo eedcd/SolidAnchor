@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.client;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.KeybindChangeEvent;
+import com.github.eedcd.solidanchor.event.events.KeybindIsPressedEvent;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.mojang.blaze3d.platform.InputConstants;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.KeybindChangeEvent;
-import net.solidanchor.event.events.KeybindIsPressedEvent;
 import net.minecraft.client.KeyMapping;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -34,16 +34,6 @@ import java.util.function.Consumer;
 @Mixin(KeyMapping.class)
 public abstract class MixinKeyMapping {
 
-    @Inject(method = "setKey", at = @At("RETURN"))
-    private void hookSetBoundKey(InputConstants.Key boundKey, CallbackInfo ci) {
-        EventManager.INSTANCE.callEvent(KeybindChangeEvent.INSTANCE);
-    }
-
-    @ModifyReturnValue(method = "isDown", at = @At("RETURN"))
-    private boolean isPressed(boolean original) {
-        return EventManager.INSTANCE.callEvent(new KeybindIsPressedEvent((KeyMapping) (Object) this, original)).isPressed();
-    }
-
     /**
      * TODO(26.4): remove this after 26.4-snapshot-2
      */
@@ -52,6 +42,16 @@ public abstract class MixinKeyMapping {
         if (key.equals(InputConstants.UNKNOWN)) {
             ci.cancel();
         }
+    }
+
+    @Inject(method = "setKey", at = @At("RETURN"))
+    private void hookSetBoundKey(InputConstants.Key boundKey, CallbackInfo ci) {
+        EventManager.INSTANCE.callEvent(KeybindChangeEvent.INSTANCE);
+    }
+
+    @ModifyReturnValue(method = "isDown", at = @At("RETURN"))
+    private boolean isPressed(boolean original) {
+        return EventManager.INSTANCE.callEvent(new KeybindIsPressedEvent((KeyMapping) (Object) this, original)).isPressed();
     }
 
 }

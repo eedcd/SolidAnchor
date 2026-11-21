@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.buffers
+package com.github.eedcd.solidanchor.render.buffers
 
 import com.mojang.renderpearl.api.buffers.GpuBuffer
 import com.mojang.blaze3d.systems.RenderSystem
-import net.solidanchor.utils.text.formatAsCapacity
+import com.github.eedcd.solidanchor.utils.text.formatAsCapacity
 
 /**
  * Reuses dynamic GPU buffers after the frame that referenced them has completed on the GPU.

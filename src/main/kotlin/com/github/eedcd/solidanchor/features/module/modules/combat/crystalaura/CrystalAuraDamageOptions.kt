@@ -16,19 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura
 
 import it.unimi.dsi.fastutil.floats.FloatFloatImmutablePair
 import it.unimi.dsi.fastutil.floats.FloatFloatPair
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.features.misc.FriendManager
-import net.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura.player
-import net.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura.targetTracker
-import net.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura.world
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer
-import net.solidanchor.utils.combat.getEntitiesBoxInRange
-import net.solidanchor.utils.entity.getDamageFromExplosion
-import net.solidanchor.utils.collection.LruCache
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.features.misc.FriendManager
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura.player
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura.targetTracker
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura.world
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer
+import com.github.eedcd.solidanchor.utils.combat.getEntitiesBoxInRange
+import com.github.eedcd.solidanchor.utils.entity.getDamageFromExplosion
+import com.github.eedcd.solidanchor.utils.collection.LruCache
 import net.minecraft.core.BlockPos
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.player.Player

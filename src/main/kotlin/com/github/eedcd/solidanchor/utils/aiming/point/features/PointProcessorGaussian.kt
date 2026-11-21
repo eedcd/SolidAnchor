@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.aiming.point.features
+package com.github.eedcd.solidanchor.utils.aiming.point.features
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.utils.percentageChance
-import net.solidanchor.event.EventListener
-import net.solidanchor.utils.aiming.point.PointInsideBox
-import net.solidanchor.utils.entity.horizontalSpeed
-import net.solidanchor.utils.kotlin.random
-import net.solidanchor.utils.math.equals
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.utils.percentageChance
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.utils.aiming.point.PointInsideBox
+import com.github.eedcd.solidanchor.utils.entity.horizontalSpeed
+import com.github.eedcd.solidanchor.utils.kotlin.random
+import com.github.eedcd.solidanchor.utils.math.equals
 import net.minecraft.util.Mth.lerp
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.phys.Vec3

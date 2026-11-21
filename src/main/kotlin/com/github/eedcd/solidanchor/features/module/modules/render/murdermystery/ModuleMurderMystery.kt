@@ -16,23 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.murdermystery
+package com.github.eedcd.solidanchor.features.module.modules.render.murdermystery
 
 import net.ccbluex.fastutil.forEachIsInstance
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.TagEntityEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.entity.interpolateCurrentPosition
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.TagEntityEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.entity.interpolateCurrentPosition
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 import net.minecraft.client.player.AbstractClientPlayer
 import net.minecraft.client.resources.sounds.SimpleSoundInstance
 import net.minecraft.network.protocol.game.ClientboundLoginPacket

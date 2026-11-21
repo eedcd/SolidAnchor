@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.types
+package com.github.eedcd.solidanchor.config.types
 
-import net.solidanchor.config.utils.AutoCompletionProvider
-import net.solidanchor.utils.input.HumanInputDeserializer
-import net.solidanchor.utils.input.HumanInputDeserializer.registryItemDeserializer
+import com.github.eedcd.solidanchor.config.utils.AutoCompletionProvider
+import com.github.eedcd.solidanchor.utils.input.HumanInputDeserializer
+import com.github.eedcd.solidanchor.utils.input.HumanInputDeserializer.registryItemDeserializer
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.core.registries.Registries
 

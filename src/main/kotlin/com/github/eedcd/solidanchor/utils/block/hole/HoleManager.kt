@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block.hole
+package com.github.eedcd.solidanchor.utils.block.hole
 
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.PlayerPostTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.block.ChunkScanner
-import net.solidanchor.utils.block.MovableRegionScanner
-import net.solidanchor.utils.math.expandToBoundingBox
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.PlayerPostTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.block.ChunkScanner
+import com.github.eedcd.solidanchor.utils.block.MovableRegionScanner
+import com.github.eedcd.solidanchor.utils.math.expandToBoundingBox
 import net.minecraft.core.BlockPos
 
 object HoleManager : EventListener, MinecraftShortcuts {

@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.thirdparty.mojang.service
+package com.github.eedcd.solidanchor.api.thirdparty.mojang.service
 
-import net.solidanchor.api.thirdparty.mojang.model.JoinServerRequest
-import net.solidanchor.api.thirdparty.mojang.model.SessionProfile
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.JoinServerRequest
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.SessionProfile
 import retrofit2.Response
 import retrofit2.http.*
 

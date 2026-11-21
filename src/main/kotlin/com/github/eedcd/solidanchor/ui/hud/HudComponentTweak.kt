@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.ui.hud
+package com.github.eedcd.solidanchor.ui.hud
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.addon.AddonApi
 
 /**
  * A set of tweaks that can be applied to the Original HUD by the component

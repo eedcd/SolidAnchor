@@ -17,18 +17,18 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.invcleaner.items
+package com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.items
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet
 import net.ccbluex.fastutil.asIntList
 import net.ccbluex.fastutil.mapToIntArray
-import net.solidanchor.features.module.modules.player.invcleaner.ItemCategory
-import net.solidanchor.features.module.modules.player.invcleaner.ItemType
-import net.solidanchor.utils.inventory.ItemSlot
-import net.solidanchor.utils.item.getPotionEffects
-import net.solidanchor.utils.sorting.ComparatorChain
-import net.solidanchor.utils.sorting.Tier
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemCategory
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemType
+import com.github.eedcd.solidanchor.utils.inventory.ItemSlot
+import com.github.eedcd.solidanchor.utils.item.getPotionEffects
+import com.github.eedcd.solidanchor.utils.sorting.ComparatorChain
+import com.github.eedcd.solidanchor.utils.sorting.Tier
 import net.minecraft.core.Holder
 import net.minecraft.world.effect.MobEffect
 import net.minecraft.world.effect.MobEffects

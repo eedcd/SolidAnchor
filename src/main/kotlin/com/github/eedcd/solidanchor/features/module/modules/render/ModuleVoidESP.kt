@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet
 import it.unimi.dsi.fastutil.longs.LongSet
 import it.unimi.dsi.fastutil.longs.LongSets
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.event.events.PlayerTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.render.placement.PlacementRenderer
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.event.events.PlayerTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.render.placement.PlacementRenderer
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.world.level.block.SupportType

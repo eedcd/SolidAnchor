@@ -16,26 +16,26 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player
+package com.github.eedcd.solidanchor.features.module.modules.player
 
 import com.mojang.blaze3d.platform.InputConstants
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.tickConditional
-import net.solidanchor.event.tickHandler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.player.ModuleAutoWindCharge.Rotate.rotations
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.combat.CombatManager
-import net.solidanchor.utils.entity.FallingPlayer
-import net.solidanchor.utils.entity.getMovementDirectionOfInput
-import net.solidanchor.utils.input.isPressed
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.useHotbarSlotOrOffhand
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.kotlin.random
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.tickConditional
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleAutoWindCharge.Rotate.rotations
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.combat.CombatManager
+import com.github.eedcd.solidanchor.utils.entity.FallingPlayer
+import com.github.eedcd.solidanchor.utils.entity.getMovementDirectionOfInput
+import com.github.eedcd.solidanchor.utils.input.isPressed
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.useHotbarSlotOrOffhand
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.kotlin.random
 import net.minecraft.world.item.Items
 
 /**

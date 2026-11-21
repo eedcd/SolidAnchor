@@ -16,28 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat
+package com.github.eedcd.solidanchor.features.module.modules.combat
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.PlayerTickEvent
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
-import net.solidanchor.features.module.modules.player.ModuleBlink
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.render.drawLineStrip
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.utils.MutableVertexList
-import net.solidanchor.utils.combat.findEnemy
-import net.solidanchor.utils.entity.PlayerSimulationCache
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.PlayerTickEvent
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleBlink
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.render.drawLineStrip
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.utils.MutableVertexList
+import com.github.eedcd.solidanchor.utils.combat.findEnemy
+import com.github.eedcd.solidanchor.utils.entity.PlayerSimulationCache
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.network.protocol.game.ClientboundPlayerPositionPacket
 import net.minecraft.world.phys.Vec3
 import kotlin.math.min

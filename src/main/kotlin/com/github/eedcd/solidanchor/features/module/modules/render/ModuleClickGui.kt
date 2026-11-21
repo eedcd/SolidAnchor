@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
 import com.mojang.blaze3d.platform.InputConstants
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.ClickGuiScaleChangeEvent
-import net.solidanchor.event.events.ClickGuiValueChangeEvent
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.ui.clickgui.ClickGuiScreen
-import net.solidanchor.utils.client.inGame
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.ClickGuiScaleChangeEvent
+import com.github.eedcd.solidanchor.event.events.ClickGuiValueChangeEvent
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.ui.clickgui.ClickGuiScreen
+import com.github.eedcd.solidanchor.utils.client.inGame
 
 /**
  * ClickGUI module

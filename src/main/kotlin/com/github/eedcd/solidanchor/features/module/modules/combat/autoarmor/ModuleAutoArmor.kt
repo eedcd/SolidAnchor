@@ -16,28 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.autoarmor
+package com.github.eedcd.solidanchor.features.module.modules.combat.autoarmor
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.ScheduleInventoryActionEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.combat.autoarmor.AutoArmorSaveArmor.durabilityThreshold
-import net.solidanchor.features.module.modules.combat.autoarmor.ModuleAutoArmor.performMoveOrHotbarClick
-import net.solidanchor.utils.inventory.ArmorItemSlot
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.InventoryAction
-import net.solidanchor.utils.inventory.InventoryManager
-import net.solidanchor.utils.inventory.PlayerInventoryConstraints
-import net.solidanchor.utils.inventory.hasInventorySpace
-import net.solidanchor.utils.item.armor.ArmorComparatorMode
-import net.solidanchor.utils.item.armor.ArmorEvaluation
-import net.solidanchor.utils.item.armor.ArmorPiece
-import net.solidanchor.utils.item.isGlider
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.ScheduleInventoryActionEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.combat.autoarmor.AutoArmorSaveArmor.durabilityThreshold
+import com.github.eedcd.solidanchor.features.module.modules.combat.autoarmor.ModuleAutoArmor.performMoveOrHotbarClick
+import com.github.eedcd.solidanchor.utils.inventory.ArmorItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.InventoryAction
+import com.github.eedcd.solidanchor.utils.inventory.InventoryManager
+import com.github.eedcd.solidanchor.utils.inventory.PlayerInventoryConstraints
+import com.github.eedcd.solidanchor.utils.inventory.hasInventorySpace
+import com.github.eedcd.solidanchor.utils.item.armor.ArmorComparatorMode
+import com.github.eedcd.solidanchor.utils.item.armor.ArmorEvaluation
+import com.github.eedcd.solidanchor.utils.item.armor.ArmorPiece
+import com.github.eedcd.solidanchor.utils.item.isGlider
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 
 /**
  * AutoArmor module

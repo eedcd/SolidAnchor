@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.gson.serializer.minecraft
+package com.github.eedcd.solidanchor.config.gson.serializer.minecraft
 
 import com.google.gson.JsonPrimitive
 import com.google.gson.JsonSerializationContext

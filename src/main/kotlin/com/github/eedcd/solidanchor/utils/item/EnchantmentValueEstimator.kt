@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.item
+package com.github.eedcd.solidanchor.utils.item
 
-import net.solidanchor.annotations.ValueClassCandidate
+import com.github.eedcd.solidanchor.annotations.ValueClassCandidate
 import net.minecraft.core.component.DataComponentGetter
 import net.minecraft.core.component.DataComponents
 import net.minecraft.core.registries.Registries

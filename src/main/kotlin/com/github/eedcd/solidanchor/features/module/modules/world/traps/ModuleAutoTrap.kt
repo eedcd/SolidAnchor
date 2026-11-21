@@ -16,29 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.traps
+package com.github.eedcd.solidanchor.features.module.modules.world.traps
 
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
-import net.solidanchor.features.module.modules.combat.criticals.ModuleCriticals
-import net.solidanchor.features.module.modules.world.traps.traps.IgnitionTrapPlanner
-import net.solidanchor.features.module.modules.world.traps.traps.TrapPlayerSimulation
-import net.solidanchor.features.module.modules.world.traps.traps.WebTrapPlanner
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.block.doPlacement
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.combat.CombatManager
-import net.solidanchor.utils.combat.TargetTracker
-import net.solidanchor.utils.entity.rotation
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.raytracing.traceFromPlayer
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.ModuleCriticals
+import com.github.eedcd.solidanchor.features.module.modules.world.traps.traps.IgnitionTrapPlanner
+import com.github.eedcd.solidanchor.features.module.modules.world.traps.traps.TrapPlayerSimulation
+import com.github.eedcd.solidanchor.features.module.modules.world.traps.traps.WebTrapPlanner
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.block.doPlacement
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.combat.CombatManager
+import com.github.eedcd.solidanchor.utils.combat.TargetTracker
+import com.github.eedcd.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.raytracing.traceFromPlayer
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 
 /**

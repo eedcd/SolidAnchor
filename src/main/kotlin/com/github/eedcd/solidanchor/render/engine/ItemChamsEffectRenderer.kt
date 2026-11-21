@@ -17,25 +17,25 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine
+package com.github.eedcd.solidanchor.render.engine
 
 import com.mojang.blaze3d.pipeline.RenderTarget
 import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.renderpearl.api.buffers.GpuBufferSlice
 import com.mojang.renderpearl.api.textures.FilterMode
 import com.mojang.renderpearl.api.textures.GpuTextureView
-import net.solidanchor.SolidAnchor
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.features.module.modules.render.ModuleItemChams
-import net.solidanchor.render.ClientRenderPipelines
-import net.solidanchor.render.ClientUniformDefine
-import net.solidanchor.render.buffers.CachedUniform
-import net.solidanchor.render.createRenderPass
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.setPipeline
-import net.solidanchor.utils.math.toRadians
-import net.solidanchor.utils.render.clearColorAndDepth
-import net.solidanchor.utils.render.putVec4
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleItemChams
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines
+import com.github.eedcd.solidanchor.render.ClientUniformDefine
+import com.github.eedcd.solidanchor.render.buffers.CachedUniform
+import com.github.eedcd.solidanchor.render.createRenderPass
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.setPipeline
+import com.github.eedcd.solidanchor.utils.math.toRadians
+import com.github.eedcd.solidanchor.utils.render.clearColorAndDepth
+import com.github.eedcd.solidanchor.utils.render.putVec4
 import net.minecraft.client.renderer.feature.FeatureRenderDispatcher
 import net.minecraft.util.Util
 import org.joml.Vector4f

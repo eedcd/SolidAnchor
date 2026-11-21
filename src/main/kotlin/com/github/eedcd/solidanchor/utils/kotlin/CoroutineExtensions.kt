@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.kotlin
+package com.github.eedcd.solidanchor.utils.kotlin
 
 import com.google.common.base.Suppliers
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.Job
-import net.solidanchor.utils.client.error.ErrorHandler
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.client.error.ErrorHandler
+import com.github.eedcd.solidanchor.utils.client.logger
 import net.minecraft.ReportedException
 import org.apache.logging.log4j.Logger
 import java.util.function.Supplier

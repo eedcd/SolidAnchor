@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.network
+package com.github.eedcd.solidanchor.utils.network
 
 import com.viaversion.viabackwards.protocol.v1_12to1_11_1.Protocol1_12To1_11_1
 import com.viaversion.viaversion.api.protocol.packet.PacketWrapper

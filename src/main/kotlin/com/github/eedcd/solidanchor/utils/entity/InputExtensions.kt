@@ -18,7 +18,7 @@
  */
 @file:Suppress("NOTHING_TO_INLINE", "LongParameterList")
 
-package net.solidanchor.utils.entity
+package com.github.eedcd.solidanchor.utils.entity
 
 import net.minecraft.client.player.ClientInput
 import net.minecraft.world.entity.player.Input

@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autoshop
+package com.github.eedcd.solidanchor.features.module.modules.player.autoshop
 
 fun String.isItemWithTiers() : Boolean {
     return this.contains(TIER_ID)

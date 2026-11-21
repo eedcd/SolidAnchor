@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.invcleaner
+package com.github.eedcd.solidanchor.features.module.modules.player.invcleaner
 
 import it.unimi.dsi.fastutil.objects.ObjectLinkedOpenHashSet
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet
-import net.solidanchor.utils.inventory.ItemSlot
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.inventory.ItemSlot
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 import net.minecraft.core.Holder
 import net.minecraft.core.TypedInstance
 import net.minecraft.core.component.DataComponentPatch

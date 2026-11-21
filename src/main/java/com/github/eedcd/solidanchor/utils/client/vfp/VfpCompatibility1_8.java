@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.client.vfp;
+package com.github.eedcd.solidanchor.utils.client.vfp;
 
 import com.viaversion.viafabricplus.ViaFabricPlus;
 import com.viaversion.viaversion.api.minecraft.BlockPosition;
@@ -59,11 +59,11 @@ public enum VfpCompatibility1_8 {
             packet.write(Types.FLOAT, forwards);
             byte b = 0;
             if (jumping) {
-                b = (byte)(b | 1);
+                b = (byte) (b | 1);
             }
 
             if (sneaking) {
-                b = (byte)(b | 2);
+                b = (byte) (b | 2);
             }
             packet.write(Types.BYTE, b);
         });

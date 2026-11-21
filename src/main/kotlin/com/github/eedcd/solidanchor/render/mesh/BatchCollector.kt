@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.mesh
+package com.github.eedcd.solidanchor.render.mesh
 
 import com.mojang.renderpearl.api.buffers.GpuBufferSlice
 import com.mojang.renderpearl.api.pipeline.RenderPipeline
@@ -27,16 +27,16 @@ import com.mojang.blaze3d.vertex.ByteBufferBuilder
 import it.unimi.dsi.fastutil.objects.Object2ObjectFunction
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
-import net.solidanchor.render.ClientTesselator
-import net.solidanchor.render.bindDefaultUniforms
-import net.solidanchor.render.bindDynamicTransformsUniform
-import net.solidanchor.render.setUniforms
-import net.solidanchor.render.createRenderPass
-import net.solidanchor.render.engine.RenderDrawKey
-import net.solidanchor.render.mesh.MeshDraw.DefaultUploader.bindAndDraw
-import net.solidanchor.render.mesh.MeshDraw.DefaultUploader.toMeshDraw
-import net.solidanchor.render.setPipeline
-import net.solidanchor.render.setupRenderTypeScissor
+import com.github.eedcd.solidanchor.render.ClientTesselator
+import com.github.eedcd.solidanchor.render.bindDefaultUniforms
+import com.github.eedcd.solidanchor.render.bindDynamicTransformsUniform
+import com.github.eedcd.solidanchor.render.setUniforms
+import com.github.eedcd.solidanchor.render.createRenderPass
+import com.github.eedcd.solidanchor.render.engine.RenderDrawKey
+import com.github.eedcd.solidanchor.render.mesh.MeshDraw.DefaultUploader.bindAndDraw
+import com.github.eedcd.solidanchor.render.mesh.MeshDraw.DefaultUploader.toMeshDraw
+import com.github.eedcd.solidanchor.render.setPipeline
+import com.github.eedcd.solidanchor.render.setupRenderTypeScissor
 
 internal class BatchCollector {
 

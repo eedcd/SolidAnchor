@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.cameraclip
+package com.github.eedcd.solidanchor.features.module.modules.render.cameraclip
 
 import com.mojang.blaze3d.platform.InputConstants
 import it.unimi.dsi.fastutil.floats.FloatConsumer
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.MouseScrollEvent
-import net.solidanchor.event.events.MouseScrollInHotbarEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.input.isPressed
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.MouseScrollEvent
+import com.github.eedcd.solidanchor.event.events.MouseScrollInHotbarEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.input.isPressed
 
 /**
  * A configurable for scroll-adjusting values.

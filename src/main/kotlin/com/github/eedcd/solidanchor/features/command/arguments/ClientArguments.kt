@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.arguments
+package com.github.eedcd.solidanchor.features.command.arguments
 
 import com.mojang.brigadier.StringReader
 import com.mojang.brigadier.arguments.ArgumentType
@@ -24,9 +24,9 @@ import com.mojang.brigadier.context.CommandContext
 import com.mojang.brigadier.exceptions.CommandSyntaxException
 import com.mojang.brigadier.suggestion.Suggestions
 import com.mojang.brigadier.suggestion.SuggestionsBuilder
-import net.solidanchor.features.command.CommandException
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.lang.translation
+import com.github.eedcd.solidanchor.features.command.CommandException
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.lang.translation
 import net.minecraft.commands.CommandBuildContext
 import net.minecraft.commands.Commands
 import net.minecraft.commands.SharedSuggestionProvider

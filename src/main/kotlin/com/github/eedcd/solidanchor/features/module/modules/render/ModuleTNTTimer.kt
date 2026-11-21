@@ -16,30 +16,30 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
 import net.ccbluex.fastutil.enumSetAllOf
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.types.CurveValue.Axis.Companion.axis
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.OverlayRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.misc.nameprotect.sanitizeForeignInput
-import net.solidanchor.render.engine.type.BoundingBox2f
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.gui.indicator.IndicatorRenderState
-import net.solidanchor.render.gui.indicator.IndicatorRenderer
-import net.solidanchor.render.gui.indicator.IndicatorStyle
-import net.solidanchor.render.gui.indicator.IndicatorVisibility
-import net.solidanchor.render.gui.indicator.NoneIndicatorStyle
-import net.solidanchor.render.gui.indicator.TriangleIndicatorStyle
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.entity.cameraDistance
-import net.solidanchor.utils.text.withFormat
-import net.solidanchor.utils.world.EntityLookup.Companion.EntityLookup
-import net.solidanchor.utils.world.filterTo
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.types.CurveValue.Axis.Companion.axis
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.misc.nameprotect.sanitizeForeignInput
+import com.github.eedcd.solidanchor.render.engine.type.BoundingBox2f
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.gui.indicator.IndicatorRenderState
+import com.github.eedcd.solidanchor.render.gui.indicator.IndicatorRenderer
+import com.github.eedcd.solidanchor.render.gui.indicator.IndicatorStyle
+import com.github.eedcd.solidanchor.render.gui.indicator.IndicatorVisibility
+import com.github.eedcd.solidanchor.render.gui.indicator.NoneIndicatorStyle
+import com.github.eedcd.solidanchor.render.gui.indicator.TriangleIndicatorStyle
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.entity.cameraDistance
+import com.github.eedcd.solidanchor.utils.text.withFormat
+import com.github.eedcd.solidanchor.utils.world.EntityLookup.Companion.EntityLookup
+import com.github.eedcd.solidanchor.utils.world.filterTo
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.util.FormattedCharSequence
 import net.minecraft.util.Mth

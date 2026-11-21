@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.ingame
+package com.github.eedcd.solidanchor.features.command.commands.ingame
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.arguments.StringArgumentType
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.utils.client.network
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.utils.client.network
 
 object CommandSay : CommandRegistrar {
 

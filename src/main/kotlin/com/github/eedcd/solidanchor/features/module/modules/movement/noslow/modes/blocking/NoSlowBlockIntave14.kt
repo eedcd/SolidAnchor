@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.noslow.modes.blocking
+package com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.blocking
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.entity.moving
-import net.solidanchor.utils.math.center
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.utils.math.center
 import net.minecraft.network.protocol.game.ServerboundUseItemOnPacket
 import net.minecraft.world.phys.BlockHitResult
 

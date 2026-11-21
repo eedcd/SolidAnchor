@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.raytracing
+package com.github.eedcd.solidanchor.utils.raytracing
 
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.entity.rotation
-import net.solidanchor.utils.math.withLength
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.utils.math.withLength
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.world.entity.Entity

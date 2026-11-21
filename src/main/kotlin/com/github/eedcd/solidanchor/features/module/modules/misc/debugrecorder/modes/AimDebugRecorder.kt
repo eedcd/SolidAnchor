@@ -17,20 +17,20 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.misc.debugrecorder.modes
+package com.github.eedcd.solidanchor.features.module.modules.misc.debugrecorder.modes
 
 import com.google.gson.JsonObject
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.misc.debugrecorder.ModuleDebugRecorder
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.combat.shouldBeAttacked
-import net.solidanchor.utils.entity.lastPos
-import net.solidanchor.utils.entity.lastRotation
-import net.solidanchor.utils.entity.rotation
-import net.solidanchor.utils.io.toJsonObject
-import net.solidanchor.utils.math.minus
-import net.solidanchor.utils.world.getEntitiesInCube
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.misc.debugrecorder.ModuleDebugRecorder
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.combat.shouldBeAttacked
+import com.github.eedcd.solidanchor.utils.entity.lastPos
+import com.github.eedcd.solidanchor.utils.entity.lastRotation
+import com.github.eedcd.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.utils.io.toJsonObject
+import com.github.eedcd.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.utils.world.getEntitiesInCube
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.phys.EntityHitResult
 import net.minecraft.world.phys.HitResult

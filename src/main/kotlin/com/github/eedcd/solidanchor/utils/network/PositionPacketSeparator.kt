@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.network
+package com.github.eedcd.solidanchor.utils.network
 
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.DisconnectEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.event.handler
-import net.solidanchor.utils.client.isOlderThan26_3
-import net.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.DisconnectEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.client.isOlderThan26_3
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
 import net.minecraft.network.protocol.game.ServerboundClientTickEndPacket
 import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket
 

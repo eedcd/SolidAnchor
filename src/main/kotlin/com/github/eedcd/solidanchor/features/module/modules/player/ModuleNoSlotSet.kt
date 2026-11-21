@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player
+package com.github.eedcd.solidanchor.features.module.modules.player
 
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.network.sendHeldItemChange
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.network.sendHeldItemChange
 import net.minecraft.network.protocol.game.ClientboundSetHeldSlotPacket
 
 object ModuleNoSlotSet : ClientModule("NoSlotSet", ModuleCategories.PLAYER) {

@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.gui
+package com.github.eedcd.solidanchor.render.gui
 
-import net.solidanchor.render.engine.type.BoundingBox2f
+import com.github.eedcd.solidanchor.render.engine.type.BoundingBox2f
 
 /**
  * Pushes overlapping GUI elements apart so that they stay readable.

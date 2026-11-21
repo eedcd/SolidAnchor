@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.core
+package com.github.eedcd.solidanchor.api.core
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import net.solidanchor.config.gson.util.GSON_DEFAULT
+import com.github.eedcd.solidanchor.config.gson.util.GSON_DEFAULT
 import okhttp3.Response
 import okio.sink
 import java.io.File

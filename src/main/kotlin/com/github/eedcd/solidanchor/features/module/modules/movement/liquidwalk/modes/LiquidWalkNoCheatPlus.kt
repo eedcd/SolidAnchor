@@ -17,21 +17,21 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.liquidwalk.modes
+package com.github.eedcd.solidanchor.features.module.modules.movement.liquidwalk.modes
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.BlockShapeEvent
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.PlayerJumpEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.movement.liquidwalk.ModuleLiquidWalk
-import net.solidanchor.features.module.modules.movement.liquidwalk.ModuleLiquidWalk.collidesWithAnythingElse
-import net.solidanchor.features.module.modules.movement.liquidwalk.ModuleLiquidWalk.standingOnWater
-import net.solidanchor.utils.block.isBlockAtPosition
-import net.solidanchor.utils.entity.box
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.BlockShapeEvent
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.PlayerJumpEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.movement.liquidwalk.ModuleLiquidWalk
+import com.github.eedcd.solidanchor.features.module.modules.movement.liquidwalk.ModuleLiquidWalk.collidesWithAnythingElse
+import com.github.eedcd.solidanchor.features.module.modules.movement.liquidwalk.ModuleLiquidWalk.standingOnWater
+import com.github.eedcd.solidanchor.utils.block.isBlockAtPosition
+import com.github.eedcd.solidanchor.utils.entity.box
 import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket
 import net.minecraft.world.level.block.LiquidBlock
 import net.minecraft.world.phys.shapes.Shapes

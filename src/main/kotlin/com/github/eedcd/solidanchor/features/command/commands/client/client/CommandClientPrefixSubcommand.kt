@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.client.client
+package com.github.eedcd.solidanchor.features.command.commands.client.client
 
-import net.solidanchor.features.command.CommandManager
-import net.solidanchor.features.command.arguments.ClientStringArgumentType
-import net.solidanchor.features.command.brigadier.CmdLiteralScope
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.features.command.CommandManager
+import com.github.eedcd.solidanchor.features.command.arguments.ClientStringArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdLiteralScope
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.variable
 
 object CommandClientPrefixSubcommand {
     fun CmdLiteralScope.prefix() {

@@ -16,23 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura.destroy
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.destroy
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura
-import net.solidanchor.features.module.modules.combat.crystalaura.post.CrystalAuraSpeedDebugger
-import net.solidanchor.features.module.modules.combat.crystalaura.post.SubmoduleSetDead
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.render.FULL_BOX
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.aiming.utils.raytraceBox
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.combat.attackEntity
-import net.solidanchor.utils.math.isHitByLine
-import net.solidanchor.utils.raytracing.isLookingAtEntity
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.post.CrystalAuraSpeedDebugger
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.post.SubmoduleSetDead
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.render.FULL_BOX
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.aiming.utils.raytraceBox
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.combat.attackEntity
+import com.github.eedcd.solidanchor.utils.math.isHitByLine
+import com.github.eedcd.solidanchor.utils.raytracing.isLookingAtEntity
 import net.minecraft.world.entity.boss.enderdragon.EndCrystal
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3

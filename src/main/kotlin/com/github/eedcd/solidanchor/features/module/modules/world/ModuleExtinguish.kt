@@ -16,32 +16,32 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world
+package com.github.eedcd.solidanchor.features.module.modules.world
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.block.doPlacement
-import net.solidanchor.utils.block.liquid.TimedPickupTracker
-import net.solidanchor.utils.block.liquid.planPlacementAtPos
-import net.solidanchor.utils.block.targetfinding.PlacementPlan
-import net.solidanchor.utils.block.targetfinding.verifyClick
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.combat.CombatManager
-import net.solidanchor.utils.entity.PlayerSimulationCache
-import net.solidanchor.utils.entity.rotation
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.findClosestSlot
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.math.toBlockPos
-import net.solidanchor.utils.world.waterEvaporates
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.block.doPlacement
+import com.github.eedcd.solidanchor.utils.block.liquid.TimedPickupTracker
+import com.github.eedcd.solidanchor.utils.block.liquid.planPlacementAtPos
+import com.github.eedcd.solidanchor.utils.block.targetfinding.PlacementPlan
+import com.github.eedcd.solidanchor.utils.block.targetfinding.verifyClick
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.combat.CombatManager
+import com.github.eedcd.solidanchor.utils.entity.PlayerSimulationCache
+import com.github.eedcd.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.findClosestSlot
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.math.toBlockPos
+import com.github.eedcd.solidanchor.utils.world.waterEvaporates
 import net.minecraft.core.BlockPos
 import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.item.Items

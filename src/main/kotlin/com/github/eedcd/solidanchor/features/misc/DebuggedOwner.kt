@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.misc
+package com.github.eedcd.solidanchor.features.misc
 
-import net.solidanchor.utils.text.withFormat
+import com.github.eedcd.solidanchor.utils.text.withFormat
 import net.minecraft.ChatFormatting
 import net.minecraft.util.FormattedCharSequence
 

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.addon
+package com.github.eedcd.solidanchor.features.addon
 
 /**
  * Marks a member that exists for add-ons rather than for the client itself.

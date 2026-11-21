@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.config.gson
+package com.github.eedcd.solidanchor.config.gson
 
 import com.google.gson.Gson
 import com.google.gson.JsonParser
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.test.MinecraftBootstrap
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.test.MinecraftBootstrap
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

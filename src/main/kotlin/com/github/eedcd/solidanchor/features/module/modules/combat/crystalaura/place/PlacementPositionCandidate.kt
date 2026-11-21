@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura.place
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place
 
-import net.solidanchor.features.module.modules.combat.crystalaura.CrystalAuraDamageOptions
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.math.topCenter
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.CrystalAuraDamageOptions
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.math.topCenter
 import net.minecraft.core.BlockPos
 
 class PlacementPositionCandidate(

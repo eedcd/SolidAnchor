@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.utils
+package com.github.eedcd.solidanchor.config.utils
 
 import net.ccbluex.fastutil.mapToArray
-import net.solidanchor.config.types.RangedValue
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.list.ChoiceListValue
-import net.solidanchor.config.types.list.MultiChoiceListValue
+import com.github.eedcd.solidanchor.config.types.RangedValue
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.list.ChoiceListValue
+import com.github.eedcd.solidanchor.config.types.list.MultiChoiceListValue
 
 fun interface AutoCompletionProvider {
 

@@ -16,24 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
 import it.unimi.dsi.fastutil.objects.Reference2FloatOpenHashMap
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.EntityHealthUpdateEvent
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.OverlayRenderEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
-import net.solidanchor.utils.math.Easing
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.render.WorldToScreen
-import net.solidanchor.utils.text.withFormat
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.EntityHealthUpdateEvent
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
+import com.github.eedcd.solidanchor.utils.math.Easing
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.render.WorldToScreen
+import com.github.eedcd.solidanchor.utils.text.withFormat
 import net.minecraft.util.FormattedCharSequence
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.phys.Vec3

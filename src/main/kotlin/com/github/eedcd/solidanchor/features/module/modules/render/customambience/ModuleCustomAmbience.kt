@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.customambience
+package com.github.eedcd.solidanchor.features.module.modules.render.customambience
 
 import com.mojang.renderpearl.api.textures.GpuTexture
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.customambience.worldeffects.WorldParticles
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.render.clearColor
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.customambience.worldeffects.WorldParticles
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.render.clearColor
 import net.minecraft.client.renderer.fog.FogData
 import net.minecraft.client.renderer.state.LightmapRenderState
 import org.joml.Vector4fc
@@ -66,7 +66,7 @@ object ModuleCustomAmbience : ClientModule("CustomAmbience", ModuleCategories.RE
         private val cloudEnd by float("CloudEnd", 20480f, 0f..4096f)
 
         /**
-         * @see net.solidanchor.injection.mixins.minecraft.render.fog.MixinFogRenderer
+         * @see com.github.eedcd.solidanchor.injection.mixins.minecraft.render.fog.MixinFogRenderer
          */
         fun modifyFogData(fogData: FogData) {
             if (!this.running) {
@@ -91,7 +91,7 @@ object ModuleCustomAmbience : ClientModule("CustomAmbience", ModuleCategories.RE
     }
 
     /**
-     * @see net.solidanchor.injection.mixins.minecraft.render.MixinLightmap
+     * @see com.github.eedcd.solidanchor.injection.mixins.minecraft.render.MixinLightmap
      */
     object CustomLightmap : ToggleableValueGroup(this, "CustomLightmap", false) {
         val mode = choices("Mode", 0) {

@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.packetmine
+package com.github.eedcd.solidanchor.features.module.modules.world.packetmine
 
-import net.solidanchor.event.TickLoopTaskExecutor
-import net.solidanchor.render.EMPTY_BOX
-import net.solidanchor.utils.block.stateOrEmpty
-import net.solidanchor.utils.client.network
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.math.distanceToSqr
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.event.TickLoopTaskExecutor
+import com.github.eedcd.solidanchor.render.EMPTY_BOX
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.utils.client.network
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.math.distanceToSqr
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.network.protocol.game.ServerboundPlayerActionPacket

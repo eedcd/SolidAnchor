@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block.liquid
+package com.github.eedcd.solidanchor.utils.block.liquid
 
-import net.solidanchor.utils.block.targetfinding.BlockOffsetOptions
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
-import net.solidanchor.utils.block.targetfinding.CenterTargetPositionFactory
-import net.solidanchor.utils.block.targetfinding.FaceHandlingOptions
-import net.solidanchor.utils.block.targetfinding.PlacementPlan
-import net.solidanchor.utils.block.targetfinding.PlayerLocationOnPlacement
-import net.solidanchor.utils.block.targetfinding.findBestBlockPlacementTarget
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockOffsetOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.CenterTargetPositionFactory
+import com.github.eedcd.solidanchor.utils.block.targetfinding.FaceHandlingOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.PlacementPlan
+import com.github.eedcd.solidanchor.utils.block.targetfinding.PlayerLocationOnPlacement
+import com.github.eedcd.solidanchor.utils.block.targetfinding.findBestBlockPlacementTarget
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
 import net.minecraft.core.BlockPos
 import net.minecraft.world.phys.Vec3
 

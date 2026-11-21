@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement
+package com.github.eedcd.solidanchor.features.module.modules.movement
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.injection.mixins.minecraft.entity.MixinEntity
-import net.solidanchor.injection.mixins.minecraft.entity.MixinPlayer
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.entity.MixinEntity
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.entity.MixinPlayer
 import net.minecraft.world.entity.EntityAttachment
 import net.minecraft.world.entity.EntityAttachments
 import net.minecraft.world.entity.EntityDimensions

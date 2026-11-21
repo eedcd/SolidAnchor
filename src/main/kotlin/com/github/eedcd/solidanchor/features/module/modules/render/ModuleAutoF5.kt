@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
-import net.solidanchor.event.events.PerspectiveEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.inventory.CheckScreenHandlerTypeValueGroup
-import net.solidanchor.utils.inventory.CheckScreenTitleValueGroup
+import com.github.eedcd.solidanchor.event.events.PerspectiveEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.inventory.CheckScreenHandlerTypeValueGroup
+import com.github.eedcd.solidanchor.utils.inventory.CheckScreenTitleValueGroup
 import net.minecraft.client.CameraType
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 

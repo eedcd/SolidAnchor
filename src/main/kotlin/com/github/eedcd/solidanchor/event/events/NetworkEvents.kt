@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.event.events
+package com.github.eedcd.solidanchor.event.events
 
 import io.netty.channel.ChannelPipeline
-import net.solidanchor.annotations.Tag
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.CancellableEvent
-import net.solidanchor.event.Event
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.blink.BlinkManager
+import com.github.eedcd.solidanchor.annotations.Tag
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.CancellableEvent
+import com.github.eedcd.solidanchor.event.Event
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.blink.BlinkManager
 import net.minecraft.network.protocol.Packet
 
 @Tag("pipeline")

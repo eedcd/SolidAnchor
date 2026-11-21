@@ -16,37 +16,35 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.client;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client;
 
+import com.github.eedcd.solidanchor.SolidAnchor;
+import com.github.eedcd.solidanchor.event.CoroutineTicker;
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.TickLoopTaskExecutor;
+import com.github.eedcd.solidanchor.event.events.*;
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct;
+import com.github.eedcd.solidanchor.features.module.modules.combat.ModuleAutoClicker;
+import com.github.eedcd.solidanchor.features.module.modules.combat.ModuleNoMissCooldown;
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.features.KillAuraAutoBlock;
+import com.github.eedcd.solidanchor.features.module.modules.exploit.ModuleMultiActions;
+import com.github.eedcd.solidanchor.features.module.modules.misc.ModuleMiddleClickAction;
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleNoBlockInteract;
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleReach;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleFreeCam;
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.entity.MixinEntityAccessor;
+import com.github.eedcd.solidanchor.render.ClientTesselator;
+import com.github.eedcd.solidanchor.render.buffers.StaticGpuBufferPool;
+import com.github.eedcd.solidanchor.render.mesh.MeshDraw;
+import com.github.eedcd.solidanchor.render.utils.RenderingDebug;
+import com.github.eedcd.solidanchor.utils.client.vfp.VfpCompatibility;
+import com.github.eedcd.solidanchor.utils.combat.CombatManager;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReceiver;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.platform.Window;
-import net.solidanchor.SolidAnchor;
-import net.solidanchor.event.CoroutineTicker;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.TickLoopTaskExecutor;
-import net.solidanchor.event.events.*;
-import net.solidanchor.features.misc.SelfDestruct;
-import net.solidanchor.features.module.modules.combat.ModuleAutoClicker;
-import net.solidanchor.features.module.modules.combat.ModuleNoMissCooldown;
-import net.solidanchor.features.module.modules.combat.killaura.features.KillAuraAutoBlock;
-import net.solidanchor.features.module.modules.exploit.ModuleMultiActions;
-import net.solidanchor.features.module.modules.misc.ModuleMiddleClickAction;
-import net.solidanchor.features.module.modules.player.ModuleAutoBreak;
-import net.solidanchor.features.module.modules.player.ModuleNoBlockInteract;
-import net.solidanchor.features.module.modules.player.ModuleReach;
-import net.solidanchor.features.module.modules.render.ModuleFreeCam;
-import net.solidanchor.injection.mixins.minecraft.entity.MixinEntityAccessor;
-import net.solidanchor.render.ClientTesselator;
-import net.solidanchor.render.buffers.StaticGpuBufferPool;
-import net.solidanchor.render.mesh.MeshDraw;
-import net.solidanchor.render.utils.RenderingDebug;
-import net.solidanchor.utils.client.vfp.VfpCompatibility;
-import net.solidanchor.utils.combat.CombatManager;
 import net.minecraft.SharedConstants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Options;
@@ -59,7 +57,6 @@ import net.minecraft.client.multiplayer.ServerData;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.client.server.IntegratedServer;
-import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.component.AttackRange;
@@ -76,9 +73,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
-import static net.solidanchor.utils.client.ProtocolUtilKt.getUsesViaFabricPlus;
+import static com.github.eedcd.solidanchor.utils.client.ProtocolUtilKt.getUsesViaFabricPlus;
 
 @Mixin(Minecraft.class)
 public abstract class MixinMinecraft {
@@ -94,12 +90,18 @@ public abstract class MixinMinecraft {
     public Options options;
     @Shadow
     @Nullable
+    public MultiPlayerGameMode gameMode;
+    @Shadow
+    @Nullable
+    public ClientLevel level;
+    @Shadow
+    @Final
+    public Gui gui;
+    @Shadow
+    @Nullable
     private IntegratedServer singleplayerServer;
     @Shadow
     private int rightClickDelay;
-    @Shadow
-    @Nullable
-    public MultiPlayerGameMode gameMode;
 
     @Shadow
     @Nullable
@@ -119,14 +121,6 @@ public abstract class MixinMinecraft {
 
     @Shadow
     protected abstract void continueAttack(boolean breaking);
-
-    @Shadow
-    @Nullable
-    public ClientLevel level;
-
-    @Shadow
-    @Final
-    public Gui gui;
 
     /**
      * Entry point
@@ -158,13 +152,13 @@ public abstract class MixinMinecraft {
      *
      * @param callback our window title
      *                 <p>
-     *                 todo: modify constant Minecraft instead
+     *                                 todo: modify constant Minecraft instead
      */
     @Inject(method = "createTitle", at = @At(
-            value = "INVOKE",
-            target = "Ljava/lang/StringBuilder;append(Ljava/lang/String;)Ljava/lang/StringBuilder;",
-            ordinal = 1),
-            cancellable = true)
+        value = "INVOKE",
+        target = "Ljava/lang/StringBuilder;append(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+        ordinal = 1),
+        cancellable = true)
     private void getClientTitle(CallbackInfoReturnable<String> callback) {
         if (SelfDestruct.INSTANCE.isDestructed()) {
             return;
@@ -286,7 +280,7 @@ public abstract class MixinMinecraft {
     }
 
     @ModifyExpressionValue(method = "startAttack",
-            at = @At(value = "FIELD", target = "Lnet/minecraft/client/Minecraft;missTime:I", ordinal = 0, opcode = Opcodes.GETFIELD))
+        at = @At(value = "FIELD", target = "Lnet/minecraft/client/Minecraft;missTime:I", ordinal = 0, opcode = Opcodes.GETFIELD))
     private int injectNoMissCooldown(int original) {
         if (ModuleNoMissCooldown.INSTANCE.getRunning() && ModuleNoMissCooldown.INSTANCE.getRemoveAttackCooldown()) {
             return 0;
@@ -399,7 +393,7 @@ public abstract class MixinMinecraft {
         if (blockHitResult == null) return; // it should never be null
 
         if (ModuleNoBlockInteract.INSTANCE.getRunning() &&
-                ModuleNoBlockInteract.INSTANCE.shouldSneak(blockHitResult)) {
+            ModuleNoBlockInteract.INSTANCE.shouldSneak(blockHitResult)) {
 
             ModuleNoBlockInteract.INSTANCE.startSneaking();
             ci.cancel();

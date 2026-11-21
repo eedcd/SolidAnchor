@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.entity;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.PlayerFluidCollisionCheckEvent;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleNoPush;
+import com.github.eedcd.solidanchor.features.module.modules.movement.NoPushBy;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.PlayerFluidCollisionCheckEvent;
-import net.solidanchor.features.module.modules.movement.ModuleNoPush;
-import net.solidanchor.features.module.modules.movement.NoPushBy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;

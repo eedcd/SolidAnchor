@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.`fun`.notebot
+package com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot
 
-import net.solidanchor.features.module.modules.`fun`.notebot.ModuleNotebot.NotebotStage
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.render.placement.PlacementRenderer
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.ModuleNotebot.NotebotStage
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.render.placement.PlacementRenderer
 
 object NotebotRenderer : PlacementRenderer("Render", true, ModuleNotebot) {
     private const val TRANSITION_TIME = 300L

@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.ingame.fakeplayer
+package com.github.eedcd.solidanchor.features.command.commands.ingame.fakeplayer
 
 import com.mojang.authlib.GameProfile
-import net.solidanchor.event.EventManager.callEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.event.EventManager.callEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
 import net.minecraft.client.multiplayer.ClientLevel
 import net.minecraft.client.player.RemotePlayer
 import net.minecraft.network.protocol.game.ClientboundEntityEventPacket

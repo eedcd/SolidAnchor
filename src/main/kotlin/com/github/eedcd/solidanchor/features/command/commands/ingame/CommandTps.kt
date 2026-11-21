@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.ingame
+package com.github.eedcd.solidanchor.features.command.commands.ingame
 
 import com.mojang.brigadier.CommandDispatcher
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.utils.client.MessageMetadata
-import net.solidanchor.utils.client.ServerObserver
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.variable
-import net.solidanchor.utils.math.roundToDecimalPlaces
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.utils.client.MessageMetadata
+import com.github.eedcd.solidanchor.utils.client.ServerObserver
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.utils.math.roundToDecimalPlaces
 import net.minecraft.network.protocol.game.ClientboundSetTimePacket
 
 /**

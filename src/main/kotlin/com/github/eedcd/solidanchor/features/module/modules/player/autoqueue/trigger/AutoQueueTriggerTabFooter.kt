@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autoqueue.trigger
+package com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.trigger
 
 /**
  * Can be used for different server that use paper to join a game

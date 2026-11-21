@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.gui
+package com.github.eedcd.solidanchor.render.gui
 
-import net.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
 
 /**
  * Background of an [ItemStackListRenderState], see [GuiPanel] for the rounded panel most lists use.

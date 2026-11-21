@@ -16,24 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.injection.mixins.minecraft.render.MixinLevelRenderer
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.drawBoxSide
-import net.solidanchor.render.drawShape
-import net.solidanchor.render.drawShapeSide
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.math.Easing
-import net.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.render.MixinLevelRenderer
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.drawBoxSide
+import com.github.eedcd.solidanchor.render.drawShape
+import com.github.eedcd.solidanchor.render.drawShapeSide
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.math.Easing
+import com.github.eedcd.solidanchor.utils.math.minus
 import net.minecraft.core.Direction
 import net.minecraft.util.Mth
 import net.minecraft.world.phys.AABB

@@ -16,19 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.translate
+package com.github.eedcd.solidanchor.features.command.commands.translate
 
 import com.mojang.brigadier.CommandDispatcher
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.features.command.CommandException
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.arguments.ClientStringArgumentType
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.features.command.brigadier.suggestions
-import net.solidanchor.utils.client.MessageMetadata
-import net.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.features.command.CommandException
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.arguments.ClientStringArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.features.command.brigadier.suggestions
+import com.github.eedcd.solidanchor.utils.client.MessageMetadata
+import com.github.eedcd.solidanchor.utils.client.chat
 
 object CommandAutoTranslate : ValueGroup("AutoTranslate"), CommandRegistrar {
     var languageCode by text("LanguageCode", "en")

@@ -18,7 +18,7 @@
  */
 @file:Suppress("NOTHING_TO_INLINE", "detekt:TooManyFunctions")
 
-package net.solidanchor.utils.kotlin
+package com.github.eedcd.solidanchor.utils.kotlin
 
 import it.unimi.dsi.fastutil.doubles.DoubleIterable
 import net.ccbluex.fastutil.forEachDouble

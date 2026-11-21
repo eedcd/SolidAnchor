@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.misc.debugrecorder.modes
+package com.github.eedcd.solidanchor.features.module.modules.misc.debugrecorder.modes
 
 import com.google.gson.JsonObject
-import net.solidanchor.event.events.MouseButtonEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.misc.debugrecorder.ModuleDebugRecorder
+import com.github.eedcd.solidanchor.event.events.MouseButtonEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.misc.debugrecorder.ModuleDebugRecorder
 import net.minecraft.network.protocol.game.ServerboundPunchPacket
 
 object DebugCPSRecorder : ModuleDebugRecorder.DebugRecorderMode<JsonObject>("CPS") {

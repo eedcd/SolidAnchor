@@ -16,27 +16,27 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.misc.debugrecorder
+package com.github.eedcd.solidanchor.features.module.modules.misc.debugrecorder
 
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.gson.adapter.toUnderlinedString
-import net.solidanchor.config.gson.fileGson
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.misc.debugrecorder.modes.AimDebugRecorder
-import net.solidanchor.features.module.modules.misc.debugrecorder.modes.BoxDebugRecorder
-import net.solidanchor.features.module.modules.misc.debugrecorder.modes.DebugCPSRecorder
-import net.solidanchor.features.module.modules.misc.debugrecorder.modes.GenericDebugRecorder
-import net.solidanchor.utils.text.asText
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.client.onClick
-import net.solidanchor.utils.client.onHover
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.underline
-import net.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.gson.adapter.toUnderlinedString
+import com.github.eedcd.solidanchor.config.gson.fileGson
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.misc.debugrecorder.modes.AimDebugRecorder
+import com.github.eedcd.solidanchor.features.module.modules.misc.debugrecorder.modes.BoxDebugRecorder
+import com.github.eedcd.solidanchor.features.module.modules.misc.debugrecorder.modes.DebugCPSRecorder
+import com.github.eedcd.solidanchor.features.module.modules.misc.debugrecorder.modes.GenericDebugRecorder
+import com.github.eedcd.solidanchor.utils.text.asText
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.client.onClick
+import com.github.eedcd.solidanchor.utils.client.onHover
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.underline
+import com.github.eedcd.solidanchor.utils.client.variable
 import net.minecraft.network.chat.ClickEvent
 import net.minecraft.network.chat.HoverEvent
 import java.io.File

@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.nofall.modes
+package com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes
 
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.player.nofall.ModuleNoFall
-import net.solidanchor.utils.client.Timer
-import net.solidanchor.utils.entity.doesNotCollideBelow
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.network.MovePacketType
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.ModuleNoFall
+import com.github.eedcd.solidanchor.utils.client.Timer
+import com.github.eedcd.solidanchor.utils.entity.doesNotCollideBelow
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.network.MovePacketType
 
 internal object NoFallHypixelPacket : NoFallMode("HypixelPacket") {
 

@@ -17,18 +17,18 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.render
+package com.github.eedcd.solidanchor.utils.render
 
-import net.solidanchor.annotations.ValueClassCandidate
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.WorldFeatureSubmitEvent
-import net.solidanchor.event.handler
-import net.solidanchor.injection.mixins.minecraft.network.MixinMultiPlayerGameModeAccessor
-import net.solidanchor.render.withPush
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.submitTextAlwaysOnTop
-import net.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.annotations.ValueClassCandidate
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.WorldFeatureSubmitEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.network.MixinMultiPlayerGameModeAccessor
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.submitTextAlwaysOnTop
+import com.github.eedcd.solidanchor.utils.client.mc
 import net.minecraft.client.gui.Font
 import net.minecraft.client.multiplayer.MultiPlayerGameMode
 import net.minecraft.client.renderer.entity.EntityRenderer

@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.item
+package com.github.eedcd.solidanchor.utils.item
 
-import net.solidanchor.features.module.modules.world.scaffold.ScaffoldBlockItemSelection
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.sorting.ComparatorChain
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ScaffoldBlockItemSelection
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.sorting.ComparatorChain
 import net.minecraft.core.BlockPos
 import net.minecraft.resources.ResourceKey
 import net.minecraft.world.item.BlockItem

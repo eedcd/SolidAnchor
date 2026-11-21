@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.killaura.features
+package com.github.eedcd.solidanchor.features.module.modules.combat.killaura.features
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
 import it.unimi.dsi.fastutil.objects.ObjectLongMutablePair
 import net.ccbluex.fastutil.component1
 import net.ccbluex.fastutil.component2
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.modules.combat.killaura.features.KillAuraFailSwing.enabled
-import net.solidanchor.features.module.modules.combat.killaura.features.KillAuraFailSwing.mode
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.utils.rainbow
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.features.KillAuraFailSwing.enabled
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.features.KillAuraFailSwing.mode
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.utils.rainbow
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.math.fma
 import net.minecraft.sounds.SoundEvents
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.phys.AABB

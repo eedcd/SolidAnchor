@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.nofall.modes
+package com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes
 
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.math.anyNotEmpty
-import net.solidanchor.utils.math.copy
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.math.anyNotEmpty
+import com.github.eedcd.solidanchor.utils.math.copy
 import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket
 
 /**

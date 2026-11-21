@@ -17,16 +17,16 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.gson.serializer
+package com.github.eedcd.solidanchor.config.gson.serializer
 
 import com.google.gson.JsonObject
 import com.google.gson.JsonSerializationContext
 import com.google.gson.JsonSerializer
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.render.Alignment
-import net.solidanchor.utils.text.toLowerCamelCase
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.render.Alignment
+import com.github.eedcd.solidanchor.utils.text.toLowerCamelCase
 import java.lang.reflect.Type
 
 class ValueGroupSerializer(

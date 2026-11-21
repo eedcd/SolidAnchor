@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.network;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.*;
+import com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.ModuleAutoBow;
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.ClientBlockBreakTrigger;
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.*;
-import net.solidanchor.features.module.modules.combat.aimbot.ModuleAutoBow;
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.ClientBlockBreakTrigger;
-import net.solidanchor.utils.client.SilentHotbar;
 import net.minecraft.client.multiplayer.MultiPlayerGameMode;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -70,7 +70,7 @@ public abstract class MixinMultiPlayerGameMode {
 
     @Inject(method = "startDestroyBlock", at = @At("HEAD"), cancellable = true)
     private void hookAttackBlock(BlockPos pos, Direction direction, CallbackInfoReturnable<Boolean> cir) {
-        final var event =  EventManager.INSTANCE.callEvent(new BlockAttackEvent(pos));
+        final var event = EventManager.INSTANCE.callEvent(new BlockAttackEvent(pos));
         if (event.isCancelled()) cir.setReturnValue(false);
     }
 

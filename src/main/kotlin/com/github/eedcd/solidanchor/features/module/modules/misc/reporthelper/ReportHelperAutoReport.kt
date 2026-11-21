@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.misc.reporthelper
+package com.github.eedcd.solidanchor.features.module.modules.misc.reporthelper
 
 import it.unimi.dsi.fastutil.objects.ObjectRBTreeSet
 import kotlinx.coroutines.Dispatchers
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.ChatReceiveEvent
-import net.solidanchor.event.events.DisconnectEvent
-import net.solidanchor.event.events.SessionEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.sequenceHandler
-import net.solidanchor.event.suspendHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.misc.FriendManager
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.ChatReceiveEvent
+import com.github.eedcd.solidanchor.event.events.DisconnectEvent
+import com.github.eedcd.solidanchor.event.events.SessionEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.sequenceHandler
+import com.github.eedcd.solidanchor.event.suspendHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.misc.FriendManager
 import kotlin.random.Random
 
 internal object ReportHelperAutoReport : ToggleableValueGroup(ModuleReportHelper, "AutoReport", false) {

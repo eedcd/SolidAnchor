@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.aiming.projectiles
+package com.github.eedcd.solidanchor.utils.aiming.projectiles
 
-import net.solidanchor.features.module.modules.combat.aimbot.ModuleProjectileAimbot
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.utils.aiming.utils.findVisiblePointFromVirtualEye
+import com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.ModuleProjectileAimbot
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.utils.aiming.utils.findVisiblePointFromVirtualEye
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3
 import java.text.DecimalFormat

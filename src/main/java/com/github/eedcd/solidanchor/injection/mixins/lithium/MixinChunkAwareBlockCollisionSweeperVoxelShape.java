@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.lithium;
+package com.github.eedcd.solidanchor.injection.mixins.lithium;
 
+import com.github.eedcd.solidanchor.common.ShapeFlag;
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.BlockShapeEvent;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.caffeinemc.mods.lithium.common.entity.movement.ChunkAwareBlockCollisionSweeper;
 import net.caffeinemc.mods.lithium.common.entity.movement.ChunkAwareBlockCollisionSweeperVoxelShape;
-import net.solidanchor.common.ShapeFlag;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.BlockShapeEvent;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -59,8 +59,8 @@ public abstract class MixinChunkAwareBlockCollisionSweeperVoxelShape extends Chu
      * @return possibly modified voxel shape
      */
     @ModifyExpressionValue(method = "computeNext()Lnet/minecraft/world/phys/shapes/VoxelShape;", at = @At(
-            value = "INVOKE",
-            target = "Lnet/minecraft/world/phys/shapes/CollisionContext;getCollisionShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/CollisionGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;"
+        value = "INVOKE",
+        target = "Lnet/minecraft/world/phys/shapes/CollisionContext;getCollisionShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/CollisionGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;"
     ))
     private VoxelShape hookCollisionShape(VoxelShape original, @Local(name = "state") BlockState blockState) {
         if (this.pos == null || ShapeFlag.noShapeChange) {

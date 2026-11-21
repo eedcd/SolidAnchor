@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.traps.traps
+package com.github.eedcd.solidanchor.features.module.modules.world.traps.traps
 
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.features.module.modules.world.traps.ModuleAutoTrap
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.entity.PlayerSimulationCache
-import net.solidanchor.utils.math.average
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.features.module.modules.world.traps.ModuleAutoTrap
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.entity.PlayerSimulationCache
+import com.github.eedcd.solidanchor.utils.math.average
 import net.minecraft.world.entity.EntityDimensions
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.player.Player

@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold.features
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.features
 
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTarget
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.entity.isCloseToEdge
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTarget
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.entity.isCloseToEdge
 import kotlin.math.max
 
 @JvmRecord

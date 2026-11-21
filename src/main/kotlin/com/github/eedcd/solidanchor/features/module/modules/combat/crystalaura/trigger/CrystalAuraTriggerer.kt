@@ -16,24 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura.trigger
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger
 
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer.notWhileUsingItem
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.BlockChangeTrigger
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.ClientBlockBreakTrigger
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.CrystalDestroyTrigger
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.CrystalSpawnTrigger
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.EntityMoveTrigger
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.ExplodeSoundTrigger
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.SelfMoveTrigger
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.TickTrigger
-import net.solidanchor.injection.mixins.minecraft.network.MixinClientPacketListener
-import net.solidanchor.injection.mixins.minecraft.network.MixinMultiPlayerGameMode
-import net.solidanchor.utils.combat.CombatManager
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer.notWhileUsingItem
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.BlockChangeTrigger
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.ClientBlockBreakTrigger
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.CrystalDestroyTrigger
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.CrystalSpawnTrigger
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.EntityMoveTrigger
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.ExplodeSoundTrigger
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.SelfMoveTrigger
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.TickTrigger
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.network.MixinClientPacketListener
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.network.MixinMultiPlayerGameMode
+import com.github.eedcd.solidanchor.utils.combat.CombatManager
 import java.util.concurrent.Executors
 import java.util.concurrent.Future
 import java.util.function.BooleanSupplier

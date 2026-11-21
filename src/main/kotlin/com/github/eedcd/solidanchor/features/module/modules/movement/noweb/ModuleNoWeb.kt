@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.noweb
+package com.github.eedcd.solidanchor.features.module.modules.movement.noweb
 
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.movement.ModuleAvoidHazards
-import net.solidanchor.features.module.modules.movement.noweb.modes.NoWebAir
-import net.solidanchor.features.module.modules.movement.noweb.modes.NoWebGrimBreak
-import net.solidanchor.features.module.modules.movement.noweb.modes.NoWebIntave14
-import net.solidanchor.features.module.modules.movement.noweb.modes.NoWebPlaceWater
-import net.solidanchor.features.module.modules.movement.noweb.modes.NoWebStrafe
-import net.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleAvoidHazards
+import com.github.eedcd.solidanchor.features.module.modules.movement.noweb.modes.NoWebAir
+import com.github.eedcd.solidanchor.features.module.modules.movement.noweb.modes.NoWebGrimBreak
+import com.github.eedcd.solidanchor.features.module.modules.movement.noweb.modes.NoWebIntave14
+import com.github.eedcd.solidanchor.features.module.modules.movement.noweb.modes.NoWebPlaceWater
+import com.github.eedcd.solidanchor.features.module.modules.movement.noweb.modes.NoWebStrafe
+import com.github.eedcd.solidanchor.utils.client.notification
 import net.minecraft.core.BlockPos
 import net.minecraft.world.level.block.WebBlock
 

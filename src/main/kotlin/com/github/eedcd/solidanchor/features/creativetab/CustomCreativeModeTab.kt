@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.creativetab
+package com.github.eedcd.solidanchor.features.creativetab
 
-import net.solidanchor.SolidAnchor
-import net.solidanchor.utils.text.asPlainText
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.utils.client.logger
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries

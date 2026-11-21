@@ -17,16 +17,16 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.gui.element
+package com.github.eedcd.solidanchor.render.gui.element
 
 import com.mojang.blaze3d.vertex.VertexConsumer
 import com.mojang.renderpearl.api.pipeline.RenderPipeline
 import it.unimi.dsi.fastutil.floats.FloatArrayList
 import it.unimi.dsi.fastutil.ints.IntArrayList
-import net.solidanchor.render.engine.font.GlyphPage
-import net.solidanchor.utils.collection.GenericPools
-import net.solidanchor.utils.collection.Pools
-import net.solidanchor.utils.render.textureSetup
+import com.github.eedcd.solidanchor.render.engine.font.GlyphPage
+import com.github.eedcd.solidanchor.utils.collection.GenericPools
+import com.github.eedcd.solidanchor.utils.collection.Pools
+import com.github.eedcd.solidanchor.utils.render.textureSetup
 import net.minecraft.client.gui.navigation.ScreenRectangle
 import net.minecraft.client.gui.render.TextureSetup
 import org.joml.Matrix3x2f

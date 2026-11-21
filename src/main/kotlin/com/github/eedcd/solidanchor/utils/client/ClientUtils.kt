@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.client
+package com.github.eedcd.solidanchor.utils.client
 
 import com.mojang.blaze3d.Blaze3D
-import net.solidanchor.SolidAnchor.CLIENT_NAME
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.client.NullableBypass.mc
+import com.github.eedcd.solidanchor.SolidAnchor.CLIENT_NAME
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.client.NullableBypass.mc
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import java.net.URI

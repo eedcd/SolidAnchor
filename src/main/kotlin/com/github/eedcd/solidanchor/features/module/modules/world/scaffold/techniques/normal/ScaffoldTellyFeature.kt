@@ -16,19 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold.techniques.normal
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.techniques.normal
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.PlayerAfterJumpEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
-import net.solidanchor.features.module.modules.world.scaffold.techniques.ScaffoldNormalTechnique
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.entity.airTicks
-import net.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.PlayerAfterJumpEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.techniques.ScaffoldNormalTechnique
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.entity.airTicks
+import com.github.eedcd.solidanchor.utils.entity.moving
 
 /**
  * Telly feature

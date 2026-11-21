@@ -16,30 +16,30 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement
+package com.github.eedcd.solidanchor.features.module.modules.movement
 
-import net.solidanchor.additions.forceSneak
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.EventState
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.PlayerNetworkMovementTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.client.isNewerThanOrEquals1_21_6
-import net.solidanchor.utils.client.notification
-import net.solidanchor.utils.network.send1_21_5StartSneaking
-import net.solidanchor.utils.network.send1_21_5StopSneaking
-import net.solidanchor.utils.client.usesViaFabricPlus
-import net.solidanchor.utils.entity.SimulatedPlayer
-import net.solidanchor.utils.entity.immuneToMagmaBlocks
-import net.solidanchor.utils.entity.isOnMagmaBlock
-import net.solidanchor.utils.entity.moving
-import net.solidanchor.utils.entity.set
-import net.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.additions.forceSneak
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.EventState
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.PlayerNetworkMovementTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.client.isNewerThanOrEquals1_21_6
+import com.github.eedcd.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.utils.network.send1_21_5StartSneaking
+import com.github.eedcd.solidanchor.utils.network.send1_21_5StopSneaking
+import com.github.eedcd.solidanchor.utils.client.usesViaFabricPlus
+import com.github.eedcd.solidanchor.utils.entity.SimulatedPlayer
+import com.github.eedcd.solidanchor.utils.entity.immuneToMagmaBlocks
+import com.github.eedcd.solidanchor.utils.entity.isOnMagmaBlock
+import com.github.eedcd.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.utils.entity.set
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
 import net.minecraft.network.protocol.game.ServerboundPlayerInputPacket
 
 /**

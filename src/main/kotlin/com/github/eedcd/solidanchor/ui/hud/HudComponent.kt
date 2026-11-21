@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.ui.hud
+package com.github.eedcd.solidanchor.ui.hud
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.module.modules.render.ModuleHud
-import net.solidanchor.utils.render.Alignment
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleHud
+import com.github.eedcd.solidanchor.utils.render.Alignment
 import java.util.UUID
 
 /**

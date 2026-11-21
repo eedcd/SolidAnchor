@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.`fun`.notebot.nbs
+package com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.nbs
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument
 

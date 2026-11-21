@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.thirdparty.mojang
+package com.github.eedcd.solidanchor.api.thirdparty.mojang
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.Strictness
-import net.solidanchor.api.interceptors.TokenInterceptor
-import net.solidanchor.api.thirdparty.mojang.service.MinecraftServicesApi
-import net.solidanchor.api.thirdparty.mojang.service.MojangApi
-import net.solidanchor.api.thirdparty.mojang.service.SessionServerApi
+import com.github.eedcd.solidanchor.api.interceptors.TokenInterceptor
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.service.MinecraftServicesApi
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.service.MojangApi
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.service.SessionServerApi
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -33,7 +33,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory
 
 /**
  * The Microsoft/Xbox Live/XSTS token chain is not part of this client - MinecraftAuth implements it,
- * see [net.solidanchor.features.account.MicrosoftAccount].
+ * see [com.github.eedcd.solidanchor.features.account.MicrosoftAccount].
  *
  * ```kotlin
  * val client = MojangApiClient.Builder().httpClient(HttpClient.defaultClient).build()

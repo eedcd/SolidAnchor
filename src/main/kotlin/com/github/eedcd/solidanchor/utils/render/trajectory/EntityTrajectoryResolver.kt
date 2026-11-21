@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.render.trajectory
+package com.github.eedcd.solidanchor.utils.render.trajectory
 
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.projectile.FireworkRocketEntity

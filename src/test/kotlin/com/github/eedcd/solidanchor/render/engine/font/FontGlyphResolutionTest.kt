@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.font
+package com.github.eedcd.solidanchor.render.engine.font
 
 import kotlinx.coroutines.test.runTest
-import net.solidanchor.render.FontFace
+import com.github.eedcd.solidanchor.render.FontFace
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
 import kotlin.test.assertNotNull

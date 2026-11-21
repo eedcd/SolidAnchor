@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.esp.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.esp.modes
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
 import net.ccbluex.fastutil.Pool
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.render.esp.ModuleESP
-import net.solidanchor.features.module.modules.render.esp.ModuleESP.modes
-import net.solidanchor.render.EMPTY_BOX
-import net.solidanchor.utils.entity.RenderedEntities
-import net.solidanchor.utils.entity.interpolateCurrentPosition
-import net.solidanchor.utils.entity.cameraDistanceSq
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.render.esp.ModuleESP
+import com.github.eedcd.solidanchor.features.module.modules.render.esp.ModuleESP.modes
+import com.github.eedcd.solidanchor.render.EMPTY_BOX
+import com.github.eedcd.solidanchor.utils.entity.RenderedEntities
+import com.github.eedcd.solidanchor.utils.entity.interpolateCurrentPosition
+import com.github.eedcd.solidanchor.utils.entity.cameraDistanceSq
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.phys.AABB

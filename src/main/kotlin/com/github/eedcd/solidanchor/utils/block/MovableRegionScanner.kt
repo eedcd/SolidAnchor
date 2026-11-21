@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block
+package com.github.eedcd.solidanchor.utils.block
 
-import net.solidanchor.utils.math.contains
+import com.github.eedcd.solidanchor.utils.math.contains
 import net.minecraft.core.BlockPos
 import net.minecraft.world.level.levelgen.structure.BoundingBox
 

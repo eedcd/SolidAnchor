@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.misc.antibot
+package com.github.eedcd.solidanchor.features.module.modules.misc.antibot
 
 import com.mojang.authlib.GameProfile
-import net.solidanchor.event.events.TagEntityEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.misc.antibot.modes.CustomAntiBotMode
-import net.solidanchor.features.module.modules.misc.antibot.modes.HorizonAntiBotMode
-import net.solidanchor.features.module.modules.misc.antibot.modes.IntaveHeavyAntiBotMode
-import net.solidanchor.features.module.modules.misc.antibot.modes.MatrixAntiBotMode
+import com.github.eedcd.solidanchor.event.events.TagEntityEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.misc.antibot.modes.CustomAntiBotMode
+import com.github.eedcd.solidanchor.features.module.modules.misc.antibot.modes.HorizonAntiBotMode
+import com.github.eedcd.solidanchor.features.module.modules.misc.antibot.modes.IntaveHeavyAntiBotMode
+import com.github.eedcd.solidanchor.features.module.modules.misc.antibot.modes.MatrixAntiBotMode
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.player.Player
 

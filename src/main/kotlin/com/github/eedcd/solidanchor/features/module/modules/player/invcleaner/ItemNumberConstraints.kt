@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.invcleaner
+package com.github.eedcd.solidanchor.features.module.modules.player.invcleaner
 
 import java.util.Objects
 

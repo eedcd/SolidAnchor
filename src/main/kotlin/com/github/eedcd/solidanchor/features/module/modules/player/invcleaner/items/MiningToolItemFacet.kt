@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.invcleaner.items
+package com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.items
 
-import net.solidanchor.features.module.modules.player.invcleaner.ItemCategory
-import net.solidanchor.features.module.modules.player.invcleaner.ItemType
-import net.solidanchor.utils.inventory.ItemSlot
-import net.solidanchor.utils.item.EnchantmentValueEstimator
-import net.solidanchor.utils.item.asHolderComparator
-import net.solidanchor.utils.item.isAxe
-import net.solidanchor.utils.item.isHoe
-import net.solidanchor.utils.item.isPickaxe
-import net.solidanchor.utils.item.isShovel
-import net.solidanchor.utils.item.toolComponent
-import net.solidanchor.utils.sorting.ComparatorChain
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemCategory
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemType
+import com.github.eedcd.solidanchor.utils.inventory.ItemSlot
+import com.github.eedcd.solidanchor.utils.item.EnchantmentValueEstimator
+import com.github.eedcd.solidanchor.utils.item.asHolderComparator
+import com.github.eedcd.solidanchor.utils.item.isAxe
+import com.github.eedcd.solidanchor.utils.item.isHoe
+import com.github.eedcd.solidanchor.utils.item.isPickaxe
+import com.github.eedcd.solidanchor.utils.item.isShovel
+import com.github.eedcd.solidanchor.utils.item.toolComponent
+import com.github.eedcd.solidanchor.utils.sorting.ComparatorChain
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.ToolMaterial
 import net.minecraft.world.item.component.Tool

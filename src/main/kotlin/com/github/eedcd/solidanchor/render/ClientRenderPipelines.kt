@@ -18,7 +18,7 @@
  */
 
 @file:Suppress("NOTHING_TO_INLINE", "TooManyFunctions")
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
 import com.mojang.renderpearl.api.GpuFormat
 import com.mojang.renderpearl.api.pipeline.PrimitiveTopology
@@ -31,10 +31,10 @@ import com.mojang.blaze3d.vertex.DefaultVertexFormat
 import com.mojang.renderpearl.api.pipeline.UniformType
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap
 import net.ccbluex.fastutil.fastIterator
-import net.solidanchor.SolidAnchor
-import net.solidanchor.utils.client.gpuDevice
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.kotlin.optional
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.utils.client.gpuDevice
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.kotlin.optional
 import net.minecraft.client.renderer.BindGroupLayouts
 import net.minecraft.client.renderer.RenderPipelines
 import net.minecraft.resources.Identifier
@@ -305,8 +305,8 @@ object ClientRenderPipelines {
     fun relativeQuads(useColor: Boolean) = if (useColor) QuadsRelativeToCamera else QuadsRelativeToCameraNoColor
 
     /**
-     * @see net.solidanchor.features.module.modules.render.ModuleStorageESP
-     * @see net.solidanchor.features.module.modules.render.ModuleBlockESP
+     * @see com.github.eedcd.solidanchor.features.module.modules.render.ModuleStorageESP
+     * @see com.github.eedcd.solidanchor.features.module.modules.render.ModuleBlockESP
      */
     private val OutlineQuads = newPipeline("outline_quads") {
         withSnippet(RenderPipelines.DEBUG_FILLED_SNIPPET)

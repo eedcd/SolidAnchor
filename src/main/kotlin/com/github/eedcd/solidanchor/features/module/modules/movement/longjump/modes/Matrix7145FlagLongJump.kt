@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.longjump.modes
+package com.github.eedcd.solidanchor.features.module.modules.movement.longjump.modes
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.tickUntil
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.movement.longjump.ModuleLongJump
-import net.solidanchor.utils.entity.airTicks
-import net.solidanchor.utils.entity.withStrafe
-import net.solidanchor.utils.math.copy
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.tickUntil
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.movement.longjump.ModuleLongJump
+import com.github.eedcd.solidanchor.utils.entity.airTicks
+import com.github.eedcd.solidanchor.utils.entity.withStrafe
+import com.github.eedcd.solidanchor.utils.math.copy
 import net.minecraft.network.protocol.game.ClientboundPlayerPositionPacket
 
 /**

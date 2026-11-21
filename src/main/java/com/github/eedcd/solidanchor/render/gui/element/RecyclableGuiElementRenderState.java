@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.gui.element;
+package com.github.eedcd.solidanchor.render.gui.element;
 
 import net.minecraft.client.renderer.state.gui.GuiElementRenderState;
 

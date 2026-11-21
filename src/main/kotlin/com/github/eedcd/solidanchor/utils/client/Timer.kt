@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.client
+package com.github.eedcd.solidanchor.utils.client
 
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.utils.client.Timer.requestTimerSpeed
-import net.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.utils.client.Timer.requestTimerSpeed
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 
 /** Global minecraft timer */
 @AddonApi

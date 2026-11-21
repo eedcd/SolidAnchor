@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player
+package com.github.eedcd.solidanchor.features.module.modules.player
 
-import net.solidanchor.event.events.ScheduleInventoryActionEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.collection.Filter
-import net.solidanchor.utils.collection.itemSortedSetOf
-import net.solidanchor.utils.inventory.CheckScreenHandlerTypeValueGroup
-import net.solidanchor.utils.inventory.CheckScreenTitleValueGroup
-import net.solidanchor.utils.inventory.InventoryAction
-import net.solidanchor.utils.inventory.PlayerInventoryConstraints
-import net.solidanchor.utils.inventory.findItemsInContainer
+import com.github.eedcd.solidanchor.event.events.ScheduleInventoryActionEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.collection.Filter
+import com.github.eedcd.solidanchor.utils.collection.itemSortedSetOf
+import com.github.eedcd.solidanchor.utils.inventory.CheckScreenHandlerTypeValueGroup
+import com.github.eedcd.solidanchor.utils.inventory.CheckScreenTitleValueGroup
+import com.github.eedcd.solidanchor.utils.inventory.InventoryAction
+import com.github.eedcd.solidanchor.utils.inventory.PlayerInventoryConstraints
+import com.github.eedcd.solidanchor.utils.inventory.findItemsInContainer
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 import net.minecraft.client.gui.screens.inventory.InventoryScreen
 

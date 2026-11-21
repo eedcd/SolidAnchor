@@ -16,31 +16,31 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement
+package com.github.eedcd.solidanchor.features.module.modules.movement
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.NoneMode
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.config.utils.asRefreshable
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.PlayerSafeWalkEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.entity.PlayerSimulationCache
-import net.solidanchor.utils.entity.horizontalSpeed
-import net.solidanchor.utils.entity.isCloseToEdge
-import net.solidanchor.utils.entity.wouldBeCloseToFallOff
-import net.solidanchor.utils.kotlin.EventPriorityConvention
-import net.solidanchor.utils.math.bottomCenter
-import net.solidanchor.utils.movement.DirectionalInput
-import net.solidanchor.utils.movement.getDegreesRelativeToView
-import net.solidanchor.utils.movement.getDirectionalInputForDegrees
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.NoneMode
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.utils.asRefreshable
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.PlayerSafeWalkEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.entity.PlayerSimulationCache
+import com.github.eedcd.solidanchor.utils.entity.horizontalSpeed
+import com.github.eedcd.solidanchor.utils.entity.isCloseToEdge
+import com.github.eedcd.solidanchor.utils.entity.wouldBeCloseToFallOff
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.utils.math.bottomCenter
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.utils.movement.getDegreesRelativeToView
+import com.github.eedcd.solidanchor.utils.movement.getDirectionalInputForDegrees
 import net.minecraft.world.phys.Vec3
 import kotlin.math.min
 

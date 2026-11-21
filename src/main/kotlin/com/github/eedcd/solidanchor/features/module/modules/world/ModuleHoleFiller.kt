@@ -16,29 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world
+package com.github.eedcd.solidanchor.features.module.modules.world
 
 import it.unimi.dsi.fastutil.booleans.BooleanDoubleImmutablePair
 import it.unimi.dsi.fastutil.doubles.DoubleLongPair
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.block.hole.Hole
-import net.solidanchor.utils.block.hole.HoleManager
-import net.solidanchor.utils.block.hole.HoleManagerSubscriber
-import net.solidanchor.utils.block.hole.HoleTracker
-import net.solidanchor.utils.block.placer.BlockPlacer
-import net.solidanchor.utils.collection.Filter
-import net.solidanchor.utils.collection.blockSortedSetOf
-import net.solidanchor.utils.collection.getSlot
-import net.solidanchor.utils.combat.shouldBeAttacked
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.item.getBlock
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.math.expandToBoundingBox
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.block.hole.Hole
+import com.github.eedcd.solidanchor.utils.block.hole.HoleManager
+import com.github.eedcd.solidanchor.utils.block.hole.HoleManagerSubscriber
+import com.github.eedcd.solidanchor.utils.block.hole.HoleTracker
+import com.github.eedcd.solidanchor.utils.block.placer.BlockPlacer
+import com.github.eedcd.solidanchor.utils.collection.Filter
+import com.github.eedcd.solidanchor.utils.collection.blockSortedSetOf
+import com.github.eedcd.solidanchor.utils.collection.getSlot
+import com.github.eedcd.solidanchor.utils.combat.shouldBeAttacked
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.item.getBlock
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.math.expandToBoundingBox
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.core.BlockPos
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.level.block.Blocks

@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.font
+package com.github.eedcd.solidanchor.render.engine.font
 
 /**
  * The vertical metrics of a font in one style: the line box it occupies and where its decorations sit.

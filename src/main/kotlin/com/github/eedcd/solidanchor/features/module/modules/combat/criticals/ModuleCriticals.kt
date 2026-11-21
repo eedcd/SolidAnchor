@@ -16,29 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.criticals
+package com.github.eedcd.solidanchor.features.module.modules.combat.criticals
 
-import net.solidanchor.config.types.group.NoneMode
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.AttackEntityEvent
-import net.solidanchor.event.events.SprintEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.combat.criticals.modes.CriticalsBlink
-import net.solidanchor.features.module.modules.combat.criticals.modes.CriticalsJump
-import net.solidanchor.features.module.modules.combat.criticals.modes.CriticalsNoGround
-import net.solidanchor.features.module.modules.combat.criticals.modes.CriticalsPacket
-import net.solidanchor.features.module.modules.combat.criticals.modes.CriticalsTimer
-import net.solidanchor.features.module.modules.movement.fly.ModuleFly
-import net.solidanchor.features.module.modules.movement.liquidwalk.ModuleLiquidWalk
-import net.solidanchor.utils.block.collideBlockIntersects
-import net.solidanchor.utils.clicking.Clicker
-import net.solidanchor.utils.network.sendStopSprinting
-import net.solidanchor.utils.combat.findEnemy
-import net.solidanchor.utils.entity.box
-import net.solidanchor.utils.kotlin.EventPriorityConvention.CRITICAL_MODIFICATION
+import com.github.eedcd.solidanchor.config.types.group.NoneMode
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.AttackEntityEvent
+import com.github.eedcd.solidanchor.event.events.SprintEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.modes.CriticalsBlink
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.modes.CriticalsJump
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.modes.CriticalsNoGround
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.modes.CriticalsPacket
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.modes.CriticalsTimer
+import com.github.eedcd.solidanchor.features.module.modules.movement.fly.ModuleFly
+import com.github.eedcd.solidanchor.features.module.modules.movement.liquidwalk.ModuleLiquidWalk
+import com.github.eedcd.solidanchor.utils.block.collideBlockIntersects
+import com.github.eedcd.solidanchor.utils.clicking.Clicker
+import com.github.eedcd.solidanchor.utils.network.sendStopSprinting
+import com.github.eedcd.solidanchor.utils.combat.findEnemy
+import com.github.eedcd.solidanchor.utils.entity.box
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.CRITICAL_MODIFICATION
 import net.minecraft.world.effect.MobEffects.BLINDNESS
 import net.minecraft.world.effect.MobEffects.LEVITATION
 import net.minecraft.world.effect.MobEffects.SLOW_FALLING

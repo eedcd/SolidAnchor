@@ -16,26 +16,26 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.translate
+package com.github.eedcd.solidanchor.features.command.commands.translate
 
 import com.google.common.collect.Sets
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.arguments.StringArgumentType
-import net.solidanchor.features.command.arguments.ClientStringArgumentType
-import net.solidanchor.api.thirdparty.translator.TranslateLanguage
-import net.solidanchor.api.thirdparty.translator.TranslationResult
-import net.solidanchor.features.command.CommandException
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.features.command.brigadier.suggestions
-import net.solidanchor.features.global.GlobalSettingsAutoTranslate
-import net.solidanchor.lang.translation
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.copyable
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.features.command.arguments.ClientStringArgumentType
+import com.github.eedcd.solidanchor.api.thirdparty.translator.TranslateLanguage
+import com.github.eedcd.solidanchor.api.thirdparty.translator.TranslationResult
+import com.github.eedcd.solidanchor.features.command.CommandException
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.features.command.brigadier.suggestions
+import com.github.eedcd.solidanchor.features.global.GlobalSettingsAutoTranslate
+import com.github.eedcd.solidanchor.lang.translation
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.copyable
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.variable
 
 object CommandTranslate : CommandRegistrar {
     @Suppress("detekt:LongMethod", "detekt:CognitiveComplexMethod")

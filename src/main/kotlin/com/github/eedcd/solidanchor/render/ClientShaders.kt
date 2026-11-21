@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
+import com.github.eedcd.solidanchor.SolidAnchor
 import com.mojang.renderpearl.api.pipeline.ShaderSource
 import com.mojang.renderpearl.api.pipeline.ShaderType
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap
-import net.solidanchor.SolidAnchor
 import net.minecraft.resources.Identifier
 
 sealed class ClientShaders(val type: ShaderType) : ShaderSource {

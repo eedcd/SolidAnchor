@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.client;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client;
 
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleSprint;
+import com.github.eedcd.solidanchor.interfaces.ClientInputAddition;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import net.solidanchor.features.module.modules.movement.ModuleSprint;
-import net.solidanchor.interfaces.ClientInputAddition;
 import net.minecraft.client.player.ClientInput;
 import net.minecraft.world.entity.player.Input;
 import net.minecraft.world.phys.Vec2;

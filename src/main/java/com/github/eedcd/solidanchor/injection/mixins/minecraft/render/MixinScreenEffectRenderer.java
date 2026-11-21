@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.render;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.DoRender;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleAntiBlind;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.solidanchor.features.module.modules.render.DoRender;
-import net.solidanchor.features.module.modules.render.ModuleAntiBlind;
 import net.minecraft.client.renderer.ScreenEffectRenderer;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;

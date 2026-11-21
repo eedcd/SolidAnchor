@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.autoshop
+package com.github.eedcd.solidanchor.features.module.modules.player.autoshop
 
-import net.solidanchor.utils.kotlin.contains
+import com.github.eedcd.solidanchor.utils.kotlin.contains
 import net.minecraft.client.gui.screens.inventory.ContainerScreen
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.world.item.BlockItem

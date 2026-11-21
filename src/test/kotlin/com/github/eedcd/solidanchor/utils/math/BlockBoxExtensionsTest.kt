@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.math
+package com.github.eedcd.solidanchor.utils.math
 
-import net.solidanchor.test.assertVec3Equals
+import com.github.eedcd.solidanchor.test.assertVec3Equals
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.world.level.levelgen.structure.BoundingBox

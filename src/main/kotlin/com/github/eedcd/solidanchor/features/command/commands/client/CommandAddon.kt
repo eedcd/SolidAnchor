@@ -16,24 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.client
+package com.github.eedcd.solidanchor.features.command.commands.client
 
 import com.mojang.brigadier.CommandDispatcher
-import net.solidanchor.features.addon.AddonManager
-import net.solidanchor.features.addon.SolidAnchorAddon
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.arguments.ClientStringArgumentType
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.CmdChainScope
-import net.solidanchor.features.command.brigadier.CmdI18n
-import net.solidanchor.features.command.brigadier.CmdLiteralScope
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.features.command.brigadier.suggestions
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.variable
-import net.solidanchor.utils.text.joinToText
+import com.github.eedcd.solidanchor.features.addon.AddonManager
+import com.github.eedcd.solidanchor.features.addon.SolidAnchorAddon
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.arguments.ClientStringArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdChainScope
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdI18n
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdLiteralScope
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.features.command.brigadier.suggestions
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.utils.text.joinToText
 import net.minecraft.network.chat.ComponentUtils.DEFAULT_SEPARATOR
 
 object CommandAddon : CommandRegistrar {

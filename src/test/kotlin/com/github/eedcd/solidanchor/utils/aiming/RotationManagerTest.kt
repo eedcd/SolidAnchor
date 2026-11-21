@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.aiming
+package com.github.eedcd.solidanchor.utils.aiming
 
-import net.solidanchor.utils.aiming.features.MovementCorrection
+import com.github.eedcd.solidanchor.utils.aiming.features.MovementCorrection
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

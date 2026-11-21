@@ -17,26 +17,26 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.entity;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.PlayerSafeWalkEvent;
+import com.github.eedcd.solidanchor.features.command.commands.ingame.fakeplayer.FakePlayer;
+import com.github.eedcd.solidanchor.features.module.modules.combat.ModuleAutoWeapon;
+import com.github.eedcd.solidanchor.features.module.modules.combat.ModuleKeepSprint;
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.modes.CriticalsNoGround;
+import com.github.eedcd.solidanchor.features.module.modules.exploit.ModuleAntiReducedDebugInfo;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleNoClip;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleSprint;
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleReach;
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallNoGround;
+import com.github.eedcd.solidanchor.features.module.modules.render.hitfx.ModuleHitFX;
+import com.github.eedcd.solidanchor.features.module.modules.world.ModuleNoSlowBreak;
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager;
+import com.github.eedcd.solidanchor.utils.aiming.features.MovementCorrection;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.PlayerSafeWalkEvent;
-import net.solidanchor.features.command.commands.ingame.fakeplayer.FakePlayer;
-import net.solidanchor.features.module.modules.combat.ModuleAutoWeapon;
-import net.solidanchor.features.module.modules.combat.ModuleKeepSprint;
-import net.solidanchor.features.module.modules.combat.criticals.modes.CriticalsNoGround;
-import net.solidanchor.features.module.modules.exploit.ModuleAntiReducedDebugInfo;
-import net.solidanchor.features.module.modules.movement.ModuleNoClip;
-import net.solidanchor.features.module.modules.movement.ModuleSprint;
-import net.solidanchor.features.module.modules.player.ModuleReach;
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallNoGround;
-import net.solidanchor.features.module.modules.render.hitfx.ModuleHitFX;
-import net.solidanchor.features.module.modules.world.ModuleNoSlowBreak;
-import net.solidanchor.utils.aiming.RotationManager;
-import net.solidanchor.utils.aiming.features.MovementCorrection;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -109,9 +109,9 @@ public abstract class MixinPlayer extends MixinLivingEntity {
     }
 
     @Inject(method = "tick", at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/world/entity/player/Player;isSpectator()Z",
-            ordinal = 1,
-            shift = At.Shift.BEFORE))
+        target = "Lnet/minecraft/world/entity/player/Player;isSpectator()Z",
+        ordinal = 1,
+        shift = At.Shift.BEFORE))
     private void hookNoClip(CallbackInfo ci) {
         var clip = ModuleNoClip.INSTANCE;
         if (!this.noPhysics && clip.getRunning() && !clip.paused()) {
@@ -120,7 +120,7 @@ public abstract class MixinPlayer extends MixinLivingEntity {
     }
 
     @ModifyExpressionValue(method = "getDestroySpeed", at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/world/entity/player/Player;hasEffect(Lnet/minecraft/core/Holder;)Z"))
+        target = "Lnet/minecraft/world/entity/player/Player;hasEffect(Lnet/minecraft/core/Holder;)Z"))
     private boolean injectFatigueNoSlow(boolean original) {
         if (solid_anchor$isClientPlayer() && ModuleNoSlowBreak.getMiningFatigue()) {
             return false;
@@ -131,7 +131,7 @@ public abstract class MixinPlayer extends MixinLivingEntity {
 
 
     @ModifyExpressionValue(method = "getDestroySpeed", at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/world/entity/player/Player;isEyeInFluid(Lnet/minecraft/tags/TagKey;)Z"))
+        target = "Lnet/minecraft/world/entity/player/Player;isEyeInFluid(Lnet/minecraft/tags/TagKey;)Z"))
     private boolean injectWaterNoSlow(boolean original) {
         if (solid_anchor$isClientPlayer() && ModuleNoSlowBreak.getWater()) {
             return false;
@@ -141,7 +141,7 @@ public abstract class MixinPlayer extends MixinLivingEntity {
     }
 
     @ModifyExpressionValue(method = "getDestroySpeed", at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/world/entity/player/Player;onGround()Z"))
+        target = "Lnet/minecraft/world/entity/player/Player;onGround()Z"))
     private boolean injectOnAirNoSlow(boolean original) {
         if (solid_anchor$isClientPlayer()) {
             if (ModuleNoSlowBreak.getOnAir()) {
@@ -246,14 +246,14 @@ public abstract class MixinPlayer extends MixinLivingEntity {
 
     @Inject(method = "attackVisualEffects", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;playServerSideSound(Lnet/minecraft/sounds/SoundEvent;)V", ordinal = 1))
     private void hookPlaySound3(Entity target, boolean criticalHit, boolean sweeping, boolean cooldownPassed, boolean pierce, float enchantDamage, CallbackInfo ci) {
-        if(!ModuleHitFX.INSTANCE.getRunning()) {
+        if (!ModuleHitFX.INSTANCE.getRunning()) {
             solid_anchor$playSoundIfFakePlayer(target, cooldownPassed ? SoundEvents.PLAYER_ATTACK_STRONG : SoundEvents.PLAYER_ATTACK_WEAK);
         }
     }
 
     @Inject(method = "doSweepAttack", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;playServerSideSound(Lnet/minecraft/sounds/SoundEvent;)V", ordinal = 0))
     private void hookPlaySound4(Entity target, float damage, DamageSource damageSource, float cooldownProgress, CallbackInfo ci) {
-        if(!ModuleHitFX.INSTANCE.getRunning()) {
+        if (!ModuleHitFX.INSTANCE.getRunning()) {
             solid_anchor$playSoundIfFakePlayer(target, SoundEvents.PLAYER_ATTACK_SWEEP);
         }
     }

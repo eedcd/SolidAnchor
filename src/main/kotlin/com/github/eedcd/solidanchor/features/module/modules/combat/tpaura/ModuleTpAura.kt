@@ -16,28 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.tpaura
+package com.github.eedcd.solidanchor.features.module.modules.combat.tpaura
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.combat.tpaura.modes.AStarMode
-import net.solidanchor.features.module.modules.combat.tpaura.modes.ImmediateMode
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.clicking.Clicker
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.combat.TargetPriority
-import net.solidanchor.utils.combat.TargetSelector
-import net.solidanchor.utils.combat.attackEntity
-import net.solidanchor.utils.entity.rotation
-import net.solidanchor.utils.entity.squaredBoxedDistanceTo
-import net.solidanchor.utils.render.WireframePlayer
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.combat.tpaura.modes.AStarMode
+import com.github.eedcd.solidanchor.features.module.modules.combat.tpaura.modes.ImmediateMode
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.clicking.Clicker
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.combat.TargetPriority
+import com.github.eedcd.solidanchor.utils.combat.TargetSelector
+import com.github.eedcd.solidanchor.utils.combat.attackEntity
+import com.github.eedcd.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.utils.entity.squaredBoxedDistanceTo
+import com.github.eedcd.solidanchor.utils.render.WireframePlayer
 import net.minecraft.world.phys.Vec3
 
 object ModuleTpAura : ClientModule("TpAura", ModuleCategories.COMBAT, disableOnQuit = true) {

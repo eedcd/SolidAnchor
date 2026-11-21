@@ -17,23 +17,23 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.aimbot.autobow
+package com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.autobow
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.combat.aimbot.ModuleAutoBow
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.aiming.projectiles.SituationalProjectileAngleCalculator
-import net.solidanchor.utils.combat.TargetPriority
-import net.solidanchor.utils.combat.TargetTracker
-import net.solidanchor.utils.entity.handItems
-import net.solidanchor.utils.entity.usingItemOrNull
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.render.TargetRenderer
-import net.solidanchor.utils.render.trajectory.HeldItemTrajectoryResolver
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.ModuleAutoBow
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.aiming.projectiles.SituationalProjectileAngleCalculator
+import com.github.eedcd.solidanchor.utils.combat.TargetPriority
+import com.github.eedcd.solidanchor.utils.combat.TargetTracker
+import com.github.eedcd.solidanchor.utils.entity.handItems
+import com.github.eedcd.solidanchor.utils.entity.usingItemOrNull
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.render.TargetRenderer
+import com.github.eedcd.solidanchor.utils.render.trajectory.HeldItemTrajectoryResolver
 import net.minecraft.world.item.BowItem
 import net.minecraft.world.item.CrossbowItem
 import net.minecraft.world.item.TridentItem

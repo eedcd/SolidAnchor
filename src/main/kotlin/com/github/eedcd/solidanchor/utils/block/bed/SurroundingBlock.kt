@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block.bed
+package com.github.eedcd.solidanchor.utils.block.bed
 
-import net.solidanchor.utils.block.UnbreakableFirst
-import net.solidanchor.utils.sorting.ComparatorChain
+import com.github.eedcd.solidanchor.utils.block.UnbreakableFirst
+import com.github.eedcd.solidanchor.utils.sorting.ComparatorChain
 import net.minecraft.world.level.block.Block
 
 @JvmRecord

@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.packetmine.tool
+package com.github.eedcd.solidanchor.features.module.modules.world.packetmine.tool
 
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.SelectHotbarSlotSilentlyEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.world.ModuleAutoTool
-import net.solidanchor.features.module.modules.world.packetmine.MineTarget
-import net.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.SelectHotbarSlotSilentlyEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.world.ModuleAutoTool
+import com.github.eedcd.solidanchor.features.module.modules.world.packetmine.MineTarget
+import com.github.eedcd.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
 import net.minecraft.network.protocol.game.ClientboundSetHeldSlotPacket
 import net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket
 

@@ -17,9 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine;
-
-import static java.util.Collections.emptyMap;
+package com.github.eedcd.solidanchor.render.engine;
 
 import com.mojang.renderpearl.api.buffers.GpuBufferSlice;
 import com.mojang.renderpearl.api.pipeline.RenderPipeline;
@@ -28,6 +26,8 @@ import net.minecraft.client.renderer.texture.AbstractTexture;
 
 import java.util.Comparator;
 import java.util.Map;
+
+import static java.util.Collections.emptyMap;
 
 public record RenderDrawKey(
     RenderPipeline pipeline,

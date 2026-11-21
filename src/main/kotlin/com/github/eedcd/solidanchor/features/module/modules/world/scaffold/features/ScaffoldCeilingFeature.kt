@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold.features
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.features
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.features.module.modules.world.scaffold.techniques.ScaffoldNormalTechnique
-import net.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.techniques.ScaffoldNormalTechnique
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
 
 object ScaffoldCeilingFeature : ToggleableValueGroup(ScaffoldNormalTechnique, "Ceiling", false) {
     fun canConstructCeiling() = !player.blockPosition().below().stateOrEmpty.isAir

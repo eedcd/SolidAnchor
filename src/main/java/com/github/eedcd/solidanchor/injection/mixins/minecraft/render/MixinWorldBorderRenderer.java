@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.render;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.DoRender;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleAntiBlind;
 import com.mojang.renderpearl.api.commands.RenderPass;
-import net.solidanchor.features.module.modules.render.DoRender;
-import net.solidanchor.features.module.modules.render.ModuleAntiBlind;
 import net.minecraft.client.renderer.WorldBorderRenderer;
 import net.minecraft.client.renderer.state.level.WorldBorderRenderState;
 import net.minecraft.world.phys.Vec3;

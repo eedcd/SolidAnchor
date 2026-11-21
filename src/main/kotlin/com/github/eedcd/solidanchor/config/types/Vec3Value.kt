@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.types
+package com.github.eedcd.solidanchor.config.types
 
-import net.solidanchor.config.gson.stategies.Exclude
+import com.github.eedcd.solidanchor.config.gson.stategies.Exclude
 
 internal class Vec3Value<T : Any>(
     name: String,

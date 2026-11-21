@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.config.gson.adapter
+package com.github.eedcd.solidanchor.config.gson.adapter
 
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonParseException
-import net.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
 import kotlin.test.assertFailsWith
 import kotlin.test.assertEquals
 import kotlin.test.assertNull

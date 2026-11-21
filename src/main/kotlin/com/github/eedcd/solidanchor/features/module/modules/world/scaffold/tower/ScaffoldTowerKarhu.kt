@@ -17,16 +17,16 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.world.scaffold.tower
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.tower
 
-import net.solidanchor.event.events.PlayerJumpEvent
-import net.solidanchor.event.sequenceHandler
-import net.solidanchor.event.tickUntil
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.isBlockBelow
-import net.solidanchor.utils.client.Timer
-import net.solidanchor.utils.kotlin.EventPriorityConvention.READ_FINAL_STATE
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.event.events.PlayerJumpEvent
+import com.github.eedcd.solidanchor.event.sequenceHandler
+import com.github.eedcd.solidanchor.event.tickUntil
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.isBlockBelow
+import com.github.eedcd.solidanchor.utils.client.Timer
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.READ_FINAL_STATE
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 
 object ScaffoldTowerKarhu : ScaffoldTower("Karhu") {
 

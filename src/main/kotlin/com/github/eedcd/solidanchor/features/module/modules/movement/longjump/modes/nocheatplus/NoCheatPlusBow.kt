@@ -17,23 +17,23 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.longjump.modes.nocheatplus
+package com.github.eedcd.solidanchor.features.module.modules.movement.longjump.modes.nocheatplus
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.KeybindIsPressedEvent
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.movement.longjump.ModuleLongJump
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.entity.withStrafe
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.KeybindIsPressedEvent
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.movement.longjump.ModuleLongJump
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.entity.withStrafe
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
 import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket
 
 /**

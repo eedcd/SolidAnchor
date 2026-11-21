@@ -16,23 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.navigation
+package com.github.eedcd.solidanchor.utils.navigation
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.AllowAutoJumpEvent
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.SprintEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.entity.getMovementDirectionOfInput
-import net.solidanchor.utils.kotlin.EventPriorityConvention.CRITICAL_MODIFICATION
-import net.solidanchor.utils.movement.DirectionalInput
-import net.solidanchor.utils.movement.getDegreesRelativeToView
-import net.solidanchor.utils.movement.getDirectionalInputForDegrees
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.AllowAutoJumpEvent
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.SprintEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.entity.getMovementDirectionOfInput
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.CRITICAL_MODIFICATION
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.utils.movement.getDegreesRelativeToView
+import com.github.eedcd.solidanchor.utils.movement.getDirectionalInputForDegrees
 import net.minecraft.world.phys.Vec3
 
 /**

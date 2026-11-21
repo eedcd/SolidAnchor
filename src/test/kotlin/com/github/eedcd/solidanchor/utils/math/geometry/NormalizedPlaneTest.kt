@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.math.geometry
+package com.github.eedcd.solidanchor.utils.math.geometry
 
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull

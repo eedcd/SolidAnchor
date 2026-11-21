@@ -16,19 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.esp.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.esp.modes
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.OverlayRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.render.esp.ModuleESP.getColor
-import net.solidanchor.render.drawHorizontalLine
-import net.solidanchor.render.drawQuad
-import net.solidanchor.render.drawVerticalLine
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.entity.getActualHealth
-import net.solidanchor.utils.render.WorldToScreen
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.render.esp.ModuleESP.getColor
+import com.github.eedcd.solidanchor.render.drawHorizontalLine
+import com.github.eedcd.solidanchor.render.drawQuad
+import com.github.eedcd.solidanchor.render.drawVerticalLine
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.entity.getActualHealth
+import com.github.eedcd.solidanchor.utils.render.WorldToScreen
 
 object Esp2DMode : EspMode.BoxBased("2D") {
 

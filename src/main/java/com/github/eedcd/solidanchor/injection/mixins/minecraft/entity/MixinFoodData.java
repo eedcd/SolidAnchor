@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.entity;
 
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleSprint;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import net.solidanchor.features.module.modules.movement.ModuleSprint;
 import net.minecraft.world.food.FoodData;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

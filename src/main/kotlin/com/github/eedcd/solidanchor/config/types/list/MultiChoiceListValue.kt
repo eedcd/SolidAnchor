@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.config.types.list
+package com.github.eedcd.solidanchor.config.types.list
 
 import com.google.gson.Gson
 import com.google.gson.JsonArray
 import com.google.gson.JsonElement
 import com.google.gson.JsonPrimitive
-import net.solidanchor.config.gson.stategies.Exclude
-import net.solidanchor.config.gson.stategies.ProtocolExclude
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.ValueType
-import net.solidanchor.config.types.list.Tagged.Companion.makeLookupTable
+import com.github.eedcd.solidanchor.config.gson.stategies.Exclude
+import com.github.eedcd.solidanchor.config.gson.stategies.ProtocolExclude
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.ValueType
+import com.github.eedcd.solidanchor.config.types.list.Tagged.Companion.makeLookupTable
 import java.util.SequencedSet
 
 class MultiChoiceListValue<T : Tagged>(

@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.`fun`
+package com.github.eedcd.solidanchor.features.module.modules.`fun`
 
-import net.solidanchor.event.events.ScheduleInventoryActionEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.inventory.InventoryAction
-import net.solidanchor.utils.inventory.PlayerInventoryConstraints
-import net.solidanchor.utils.inventory.findEmptyStorageSlotsInInventory
-import net.solidanchor.utils.inventory.findItemsInContainer
-import net.solidanchor.utils.inventory.findNonEmptyStorageSlotsInInventory
+import com.github.eedcd.solidanchor.event.events.ScheduleInventoryActionEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.inventory.InventoryAction
+import com.github.eedcd.solidanchor.utils.inventory.PlayerInventoryConstraints
+import com.github.eedcd.solidanchor.utils.inventory.findEmptyStorageSlotsInInventory
+import com.github.eedcd.solidanchor.utils.inventory.findItemsInContainer
+import com.github.eedcd.solidanchor.utils.inventory.findNonEmptyStorageSlotsInInventory
 import net.minecraft.client.gui.screens.inventory.ContainerScreen
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.util.RandomSource

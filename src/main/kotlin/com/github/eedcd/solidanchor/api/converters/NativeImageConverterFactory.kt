@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.converters
+package com.github.eedcd.solidanchor.api.converters
 
 import com.mojang.blaze3d.platform.NativeImage
-import net.solidanchor.api.core.HttpClient
-import net.solidanchor.api.core.asRequestBody
-import net.solidanchor.utils.render.readNativeImage
+import com.github.eedcd.solidanchor.api.core.HttpClient
+import com.github.eedcd.solidanchor.api.core.asRequestBody
+import com.github.eedcd.solidanchor.utils.render.readNativeImage
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
 import okio.Buffer

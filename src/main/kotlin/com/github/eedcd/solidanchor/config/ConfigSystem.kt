@@ -16,23 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.config
+package com.github.eedcd.solidanchor.config
 
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.config.gson.fileGson
+import com.github.eedcd.solidanchor.config.gson.util.parseTree
+import com.github.eedcd.solidanchor.config.types.Config
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
+import com.github.eedcd.solidanchor.utils.client.clientLogger
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.io.atomicMoveTo
+import com.github.eedcd.solidanchor.utils.io.createZipArchive
 import com.google.gson.Gson
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
-import net.solidanchor.SolidAnchor
-import net.solidanchor.config.gson.fileGson
-import net.solidanchor.config.gson.util.parseTree
-import net.solidanchor.config.types.Config
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
-import net.solidanchor.utils.client.clientLogger
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.io.atomicMoveTo
-import net.solidanchor.utils.io.createZipArchive
 import java.io.File
 import java.io.Reader
 import java.io.Writer

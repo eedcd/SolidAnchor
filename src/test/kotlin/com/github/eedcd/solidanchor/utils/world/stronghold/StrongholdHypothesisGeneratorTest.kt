@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.world.stronghold
+package com.github.eedcd.solidanchor.utils.world.stronghold
 
-import net.solidanchor.test.MinecraftBootstrap
+import com.github.eedcd.solidanchor.test.MinecraftBootstrap
 import kotlin.test.Test
 import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals

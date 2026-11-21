@@ -19,7 +19,7 @@
 
 @file:Suppress("TooManyFunctions", "NOTHING_TO_INLINE")
 
-package net.solidanchor.config.gson.util
+package com.github.eedcd.solidanchor.config.gson.util
 
 import com.google.gson.Gson
 import com.google.gson.JsonArray
@@ -30,7 +30,7 @@ import com.google.gson.JsonParser
 import com.google.gson.JsonPrimitive
 import com.google.gson.reflect.TypeToken
 import com.google.gson.stream.JsonReader
-import net.solidanchor.config.gson.publicGson
+import com.github.eedcd.solidanchor.config.gson.publicGson
 import org.apache.commons.io.input.CharSequenceReader
 import java.io.File
 import java.io.InputStream

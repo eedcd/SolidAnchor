@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.aimbot.autobow
+package com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.autobow
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.combat.aimbot.ModuleAutoBow
-import net.solidanchor.utils.entity.moving
-import net.solidanchor.utils.entity.usingItemOrNull
-import net.solidanchor.utils.network.MovePacketType
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.ModuleAutoBow
+import com.github.eedcd.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.utils.entity.usingItemOrNull
+import com.github.eedcd.solidanchor.utils.network.MovePacketType
 import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.item.BowItem
 

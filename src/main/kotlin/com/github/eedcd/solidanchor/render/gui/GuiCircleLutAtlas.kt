@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.gui
+package com.github.eedcd.solidanchor.render.gui
 
 import com.mojang.blaze3d.platform.NativeImage
 import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.renderpearl.api.textures.FilterMode
 import it.unimi.dsi.fastutil.floats.Float2IntFunction
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.render.uploadRect
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.render.uploadRect
 import net.minecraft.client.gui.render.TextureSetup
 import net.minecraft.client.renderer.texture.DynamicTexture
 import net.minecraft.util.Mth

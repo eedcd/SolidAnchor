@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.clicking
+package com.github.eedcd.solidanchor.utils.clicking
 
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.kotlin.random
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.kotlin.random
 import net.minecraft.world.entity.player.Player
 
 open class ItemCooldown : ValueGroup("ItemCooldown", aliases = listOf("Cooldown")) {

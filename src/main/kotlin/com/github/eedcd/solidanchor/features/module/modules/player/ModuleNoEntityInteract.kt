@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player
+package com.github.eedcd.solidanchor.features.module.modules.player
 
 import net.ccbluex.fastutil.objectRBTreeSetOf
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.collection.Filter
-import net.solidanchor.utils.collection.asComparator
-import net.solidanchor.utils.collection.itemSortedSetOf
-import net.solidanchor.utils.item.isMiningTool
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.collection.Filter
+import com.github.eedcd.solidanchor.utils.collection.asComparator
+import com.github.eedcd.solidanchor.utils.collection.itemSortedSetOf
+import com.github.eedcd.solidanchor.utils.item.isMiningTool
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.world.entity.EntityType
 import net.minecraft.world.entity.EntityTypes

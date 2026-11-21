@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
+import com.github.eedcd.solidanchor.render.engine.font.FontId
+import com.github.eedcd.solidanchor.render.engine.font.FontRenderer
+import com.github.eedcd.solidanchor.render.engine.font.FontStyle
+import com.github.eedcd.solidanchor.render.engine.font.GlyphPage.Companion.fontRasterizationLock
+import com.github.eedcd.solidanchor.render.engine.font.TextMetrics
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import net.solidanchor.render.engine.font.FontId
-import net.solidanchor.render.engine.font.FontRenderer
-import net.solidanchor.render.engine.font.FontStyle
-import net.solidanchor.render.engine.font.GlyphPage.Companion.fontRasterizationLock
-import net.solidanchor.render.engine.font.TextMetrics
 import okio.ByteString
 import java.awt.Font
 import java.awt.image.BufferedImage

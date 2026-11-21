@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.ingame.fakeplayer
+package com.github.eedcd.solidanchor.features.command.commands.ingame.fakeplayer
 
 import com.mojang.authlib.GameProfile
 import net.minecraft.client.multiplayer.ClientLevel

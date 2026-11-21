@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.client;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client;
 
-import net.solidanchor.common.ChunkUpdateFlag;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.BlockChangeEvent;
-import net.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience;
-import net.solidanchor.utils.block.BlockExtensionsKt;
+import com.github.eedcd.solidanchor.common.ChunkUpdateFlag;
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.BlockChangeEvent;
+import com.github.eedcd.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience;
+import com.github.eedcd.solidanchor.utils.block.BlockExtensionsKt;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;

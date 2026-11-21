@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.aiming.point
+package com.github.eedcd.solidanchor.utils.aiming.point
 
-import net.solidanchor.utils.math.getNearestPoint
-import net.solidanchor.utils.math.minus
-import net.solidanchor.utils.math.plus
+import com.github.eedcd.solidanchor.utils.math.getNearestPoint
+import com.github.eedcd.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.utils.math.plus
 import net.minecraft.core.Position
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3

@@ -18,23 +18,23 @@
  */
 @file:Suppress("All")
 
-package net.solidanchor.utils.entity
+package com.github.eedcd.solidanchor.utils.entity
 
-import net.solidanchor.event.EventManager.callEvent
-import net.solidanchor.event.events.PlayerMoveEvent
-import net.solidanchor.event.events.PlayerSafeWalkEvent
-import net.solidanchor.injection.mixins.minecraft.entity.MixinEntityFluidInteractionAccessor
-import net.solidanchor.utils.block.getBlock
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.math.fastCos
-import net.solidanchor.utils.math.fastSin
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.math.toRadians
-import net.solidanchor.utils.math.plus
-import net.solidanchor.utils.math.toBlockPos
-import net.solidanchor.utils.movement.DirectionalInput
-import net.solidanchor.utils.movement.getDegreesRelativeToView
-import net.solidanchor.utils.movement.getDirectionalInputForDegrees
+import com.github.eedcd.solidanchor.event.EventManager.callEvent
+import com.github.eedcd.solidanchor.event.events.PlayerMoveEvent
+import com.github.eedcd.solidanchor.event.events.PlayerSafeWalkEvent
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.entity.MixinEntityFluidInteractionAccessor
+import com.github.eedcd.solidanchor.utils.block.getBlock
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.math.fastCos
+import com.github.eedcd.solidanchor.utils.math.fastSin
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.math.toRadians
+import com.github.eedcd.solidanchor.utils.math.plus
+import com.github.eedcd.solidanchor.utils.math.toBlockPos
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.utils.movement.getDegreesRelativeToView
+import com.github.eedcd.solidanchor.utils.movement.getDirectionalInputForDegrees
 import net.minecraft.client.player.ClientInput
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Holder

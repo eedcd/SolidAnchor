@@ -17,21 +17,21 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.fly.modes.vulcan
+package com.github.eedcd.solidanchor.features.module.modules.movement.fly.modes.vulcan
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.BlockShapeEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.PlayerTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.movement.fly.ModuleFly
-import net.solidanchor.features.module.modules.movement.fly.ModuleFly.message
-import net.solidanchor.features.module.modules.movement.fly.ModuleFly.modes
-import net.solidanchor.utils.client.Timer
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.BlockShapeEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.PlayerTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.movement.fly.ModuleFly
+import com.github.eedcd.solidanchor.features.module.modules.movement.fly.ModuleFly.message
+import com.github.eedcd.solidanchor.features.module.modules.movement.fly.ModuleFly.modes
+import com.github.eedcd.solidanchor.utils.client.Timer
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 import net.minecraft.network.protocol.game.ClientboundPlayerPositionPacket
 import net.minecraft.world.phys.Vec3
 import net.minecraft.world.phys.shapes.Shapes

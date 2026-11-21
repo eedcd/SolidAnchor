@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.packetmine.tool
+package com.github.eedcd.solidanchor.features.module.modules.world.packetmine.tool
 
-import net.solidanchor.features.module.modules.world.packetmine.MineTarget
+import com.github.eedcd.solidanchor.features.module.modules.world.packetmine.MineTarget
 
 object NeverToolMode : MineToolMode("Never", switchesNever = true) {
 

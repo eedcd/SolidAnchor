@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.hats
+package com.github.eedcd.solidanchor.features.module.modules.render.hats
 
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
 import net.minecraft.util.Mth
 
 class HatsColorSettings : ValueGroup("Colors") {

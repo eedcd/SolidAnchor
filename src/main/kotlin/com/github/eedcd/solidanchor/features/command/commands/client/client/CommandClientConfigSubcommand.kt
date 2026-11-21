@@ -16,27 +16,27 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.client.client
+package com.github.eedcd.solidanchor.features.command.commands.client.client
 
 import com.mojang.blaze3d.Blaze3D
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.autoconfig.AutoConfig
-import net.solidanchor.config.gson.adapter.toUnderlinedString
-import net.solidanchor.config.types.Config
-import net.solidanchor.features.command.CommandManager
-import net.solidanchor.features.command.arguments.ClientStringArgumentType
-import net.solidanchor.features.command.arguments.MultiSelectArgumentType
-import net.solidanchor.features.command.brigadier.CmdLiteralScope
-import net.solidanchor.features.command.brigadier.CmdI18n
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.suggestions
-import net.solidanchor.features.module.modules.render.ModuleHud
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.variable
-import net.solidanchor.utils.text.joinToText
-import net.solidanchor.utils.text.toLowerCamelCase
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.autoconfig.AutoConfig
+import com.github.eedcd.solidanchor.config.gson.adapter.toUnderlinedString
+import com.github.eedcd.solidanchor.config.types.Config
+import com.github.eedcd.solidanchor.features.command.CommandManager
+import com.github.eedcd.solidanchor.features.command.arguments.ClientStringArgumentType
+import com.github.eedcd.solidanchor.features.command.arguments.MultiSelectArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdLiteralScope
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdI18n
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.suggestions
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleHud
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.utils.text.joinToText
+import com.github.eedcd.solidanchor.utils.text.toLowerCamelCase
 import net.minecraft.network.chat.ComponentUtils.DEFAULT_SEPARATOR
 import net.minecraft.util.Util
 import java.time.LocalDateTime
@@ -49,7 +49,7 @@ import java.time.LocalDateTime
 object CommandClientConfigSubcommand {
     private val defaultConfigs
         get() = listOf(
-            net.solidanchor.features.module.ModuleManager.modulesConfig
+            com.github.eedcd.solidanchor.features.module.ModuleManager.modulesConfig
         )
 
     private val configArg = MultiSelectArgumentType(

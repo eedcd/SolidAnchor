@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block
+package com.github.eedcd.solidanchor.utils.block
 
 import it.unimi.dsi.fastutil.longs.LongArrayList
 import it.unimi.dsi.fastutil.longs.LongImmutableList
 import it.unimi.dsi.fastutil.longs.LongList
-import net.solidanchor.utils.block.CachedBlockPosSpheres.RADIUS
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.utils.block.CachedBlockPosSpheres.RADIUS
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.core.BlockPos
 
 internal object CachedBlockPosSpheres {

@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura
 
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.combat.crystalaura.destroy.SubmoduleCrystalDestroyer
-import net.solidanchor.features.module.modules.combat.crystalaura.place.SubmoduleCrystalPlacer
-import net.solidanchor.features.module.modules.combat.crystalaura.post.CrystalPostAttackTracker
-import net.solidanchor.features.module.modules.combat.crystalaura.post.SubmoduleSetDead
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer
-import net.solidanchor.utils.aiming.NoRotationMode
-import net.solidanchor.utils.aiming.NormalRotationMode
-import net.solidanchor.utils.client.FloatValueProvider
-import net.solidanchor.utils.combat.CombatManager
-import net.solidanchor.utils.combat.TargetTracker
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.render.TargetRenderer
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.destroy.SubmoduleCrystalDestroyer
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.SubmoduleCrystalPlacer
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.post.CrystalPostAttackTracker
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.post.SubmoduleSetDead
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer
+import com.github.eedcd.solidanchor.utils.aiming.NoRotationMode
+import com.github.eedcd.solidanchor.utils.aiming.NormalRotationMode
+import com.github.eedcd.solidanchor.utils.client.FloatValueProvider
+import com.github.eedcd.solidanchor.utils.combat.CombatManager
+import com.github.eedcd.solidanchor.utils.combat.TargetTracker
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.render.TargetRenderer
 
 /**
  * Module CrystalAura

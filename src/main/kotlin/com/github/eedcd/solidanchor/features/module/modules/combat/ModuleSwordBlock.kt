@@ -16,19 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat
+package com.github.eedcd.solidanchor.features.module.modules.combat
 
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.sequenceHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.combat.killaura.features.KillAuraAutoBlock
-import net.solidanchor.utils.client.isBlocksAttacksExisting
-import net.solidanchor.utils.entity.isInHand
-import net.solidanchor.utils.entity.usingItemOrNull
-import net.solidanchor.utils.input.InputTracker.isPressedOnAny
-import net.solidanchor.utils.item.isSword
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.sequenceHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.features.KillAuraAutoBlock
+import com.github.eedcd.solidanchor.utils.client.isBlocksAttacksExisting
+import com.github.eedcd.solidanchor.utils.entity.isInHand
+import com.github.eedcd.solidanchor.utils.entity.usingItemOrNull
+import com.github.eedcd.solidanchor.utils.input.InputTracker.isPressedOnAny
+import com.github.eedcd.solidanchor.utils.item.isSword
 import net.minecraft.network.protocol.game.ServerboundUseItemPacket
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.entity.LivingEntity

@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.misc.antibot.modes
+package com.github.eedcd.solidanchor.features.module.modules.misc.antibot.modes
 
 import net.minecraft.world.entity.player.Player
 

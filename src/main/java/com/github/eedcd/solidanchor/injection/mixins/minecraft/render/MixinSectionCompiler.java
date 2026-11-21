@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.render;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleXRay;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.mojang.blaze3d.vertex.VertexSorting;
-import net.solidanchor.features.module.modules.render.ModuleXRay;
 import net.minecraft.client.renderer.SectionBufferBuilderPack;
 import net.minecraft.client.renderer.chunk.RenderSectionRegion;
 import net.minecraft.client.renderer.chunk.SectionCompiler;
@@ -42,7 +42,7 @@ public abstract class MixinSectionCompiler {
      */
     @WrapMethod(method = "compile")
     private SectionCompiler.Results solidanchor$xrayScope(SectionPos sectionPos, RenderSectionRegion region,
-            VertexSorting vertexSorting, SectionBufferBuilderPack builders, Operation<SectionCompiler.Results> original) {
+                                                          VertexSorting vertexSorting, SectionBufferBuilderPack builders, Operation<SectionCompiler.Results> original) {
         return ScopedValue.where(ModuleXRay.RENDER_ACTIVE, ModuleXRay.INSTANCE.getRunning())
             .call(() -> original.call(sectionPos, region, vertexSorting, builders));
     }

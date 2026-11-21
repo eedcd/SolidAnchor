@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.speed.modes.intave
+package com.github.eedcd.solidanchor.features.module.modules.movement.speed.modes.intave
 
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.movement.speed.ModuleSpeed
-import net.solidanchor.features.module.modules.movement.speed.modes.SpeedBHopBase
-import net.solidanchor.utils.client.Timer
-import net.solidanchor.utils.entity.airTicks
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.math.multiply
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.movement.speed.ModuleSpeed
+import com.github.eedcd.solidanchor.features.module.modules.movement.speed.modes.SpeedBHopBase
+import com.github.eedcd.solidanchor.utils.client.Timer
+import com.github.eedcd.solidanchor.utils.entity.airTicks
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.math.multiply
 
 /**
  * Intave 14 speed (~8.7% faster than vanilla)

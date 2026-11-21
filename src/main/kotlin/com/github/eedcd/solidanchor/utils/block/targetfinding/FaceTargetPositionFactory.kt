@@ -16,24 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block.targetfinding
+package com.github.eedcd.solidanchor.utils.block.targetfinding
 
-import net.solidanchor.features.misc.DebuggedOwner
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.aiming.utils.VisibilityPredicate
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.yaw
-import net.solidanchor.utils.math.toRadians
-import net.solidanchor.utils.math.vertices
-import net.solidanchor.utils.math.geometry.AlignedFace
-import net.solidanchor.utils.math.geometry.Line
-import net.solidanchor.utils.math.geometry.LineSegment
-import net.solidanchor.utils.math.geometry.NormalizedPlane
-import net.solidanchor.utils.math.minus
-import net.solidanchor.utils.math.plus
-import net.solidanchor.utils.math.unaryMinus
+import com.github.eedcd.solidanchor.features.misc.DebuggedOwner
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.aiming.utils.VisibilityPredicate
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.yaw
+import com.github.eedcd.solidanchor.utils.math.toRadians
+import com.github.eedcd.solidanchor.utils.math.vertices
+import com.github.eedcd.solidanchor.utils.math.geometry.AlignedFace
+import com.github.eedcd.solidanchor.utils.math.geometry.Line
+import com.github.eedcd.solidanchor.utils.math.geometry.LineSegment
+import com.github.eedcd.solidanchor.utils.math.geometry.NormalizedPlane
+import com.github.eedcd.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.utils.math.plus
+import com.github.eedcd.solidanchor.utils.math.unaryMinus
 import net.minecraft.core.BlockPos
 import net.minecraft.util.Mth
 import net.minecraft.world.phys.AABB

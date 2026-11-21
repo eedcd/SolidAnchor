@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.velocity.mode
+package com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode
 
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.PlayerTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.entity.moving
-import net.solidanchor.utils.math.multiply
-import net.solidanchor.utils.network.isLocalPlayerVelocity
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.PlayerTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.utils.math.multiply
+import com.github.eedcd.solidanchor.utils.network.isLocalPlayerVelocity
 
 /**
  * A velocity mode that reverses your velocity after a set amount of ticks.

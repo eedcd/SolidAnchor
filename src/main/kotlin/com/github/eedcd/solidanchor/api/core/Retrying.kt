@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.core
+package com.github.eedcd.solidanchor.api.core
 
 import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
@@ -28,7 +28,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.client.logger
 import kotlin.coroutines.cancellation.CancellationException
 import kotlin.time.Duration
 

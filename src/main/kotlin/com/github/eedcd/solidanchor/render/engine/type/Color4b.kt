@@ -18,14 +18,14 @@
  */
 @file:Suppress("TooManyFunctions")
 
-package net.solidanchor.render.engine.type
+package com.github.eedcd.solidanchor.render.engine.type
 
-import net.solidanchor.annotations.ValueClassCandidate
+import com.github.eedcd.solidanchor.annotations.ValueClassCandidate
 import java.awt.Color
 import java.lang.Math.fma
 import java.util.function.ToIntFunction
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.network.chat.TextColor
 import net.minecraft.util.ARGB
 import net.minecraft.world.item.DyeColor

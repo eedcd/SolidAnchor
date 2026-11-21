@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.autodeposit
+package com.github.eedcd.solidanchor.features.module.modules.player.autodeposit
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.aiming.utils.selectBlockTarget
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.block.searchBlocksInRangeSorted
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.collection.blockSortedSetOf
-import net.solidanchor.utils.combat.CombatManager
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.raytracing.raytraceBlock
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.utils.selectBlockTarget
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.block.searchBlocksInRangeSorted
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.collection.blockSortedSetOf
+import com.github.eedcd.solidanchor.utils.combat.CombatManager
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.raytracing.raytraceBlock
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction

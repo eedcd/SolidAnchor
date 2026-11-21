@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.item;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.item;
 
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import net.solidanchor.utils.aiming.RotationManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -33,7 +33,7 @@ import org.spongepowered.asm.mixin.injection.At;
 public abstract class MixinItem {
 
     @ModifyExpressionValue(method = "getPlayerPOVHitResult", at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/world/entity/player/Player;calculateViewVector(FF)Lnet/minecraft/world/phys/Vec3;"))
+        target = "Lnet/minecraft/world/entity/player/Player;calculateViewVector(FF)Lnet/minecraft/world/phys/Vec3;"))
     private static Vec3 hookFixRotation(Vec3 original, Level world, Player player, ClipContext.Fluid fluidHandling) {
         if (player == Minecraft.getInstance().player) {
             var rotation = RotationManager.INSTANCE.getCurrentRotation();

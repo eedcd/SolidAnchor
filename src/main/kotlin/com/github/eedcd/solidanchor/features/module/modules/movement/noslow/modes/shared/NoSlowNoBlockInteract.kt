@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.noslow.modes.shared
+package com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.shared
 
 import com.google.common.base.Predicates
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
 import net.minecraft.network.protocol.game.ServerboundUseItemOnPacket
 import net.minecraft.world.item.ItemUseAnimation
 import java.util.function.Predicate

@@ -16,21 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.client
+package com.github.eedcd.solidanchor.utils.client
 
 import net.ccbluex.fastutil.objectRBTreeSetOf
-import net.solidanchor.api.thirdparty.IpInfoApi
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.DisconnectEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.ServerConnectEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.waitMatchesWithTimeout
-import net.solidanchor.features.module.modules.exploit.ModulePlugins
-import net.solidanchor.features.module.modules.misc.ModuleAntiCheatDetect
-import net.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
-import net.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.api.thirdparty.IpInfoApi
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.DisconnectEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.ServerConnectEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.waitMatchesWithTimeout
+import com.github.eedcd.solidanchor.features.module.modules.exploit.ModulePlugins
+import com.github.eedcd.solidanchor.features.module.modules.misc.ModuleAntiCheatDetect
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
+import com.github.eedcd.solidanchor.utils.text.asPlainText
 import net.minecraft.ChatFormatting
 import net.minecraft.client.gui.screens.ConnectScreen
 import net.minecraft.client.gui.screens.TitleScreen

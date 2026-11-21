@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.text;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.text;
 
-import net.solidanchor.interfaces.GuiMessageAddition;
-import net.solidanchor.interfaces.GuiMessageLineAddition;
+import com.github.eedcd.solidanchor.interfaces.GuiMessageAddition;
+import com.github.eedcd.solidanchor.interfaces.GuiMessageLineAddition;
 import net.minecraft.client.multiplayer.chat.GuiMessage;
 import org.jspecify.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;

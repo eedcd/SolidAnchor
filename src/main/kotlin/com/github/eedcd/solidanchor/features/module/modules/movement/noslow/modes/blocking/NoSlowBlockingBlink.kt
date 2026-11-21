@@ -17,16 +17,16 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.noslow.modes.blocking
+package com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.blocking
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.BlinkPacketEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.event.handler
-import net.solidanchor.features.blink.BlinkManager
-import net.solidanchor.features.module.modules.movement.noslow.modes.blocking.NoSlowBlock.modes
-import net.solidanchor.utils.entity.isBlockAction
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.BlinkPacketEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.blink.BlinkManager
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.blocking.NoSlowBlock.modes
+import com.github.eedcd.solidanchor.utils.entity.isBlockAction
 import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket
 
 internal object NoSlowBlockingBlink : Mode("Blink") {

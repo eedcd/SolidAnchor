@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.antivoid.mode
+package com.github.eedcd.solidanchor.features.module.modules.player.antivoid.mode
 
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.modules.player.antivoid.ModuleAntiVoid
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.utils.collection.itemSortedSetOf
-import net.solidanchor.utils.entity.PlayerSimulationCache
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.findClosestSlot
-import net.solidanchor.utils.inventory.useHotbarSlotOrOffhand
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.player.antivoid.ModuleAntiVoid
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.utils.collection.itemSortedSetOf
+import com.github.eedcd.solidanchor.utils.entity.PlayerSimulationCache
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.findClosestSlot
+import com.github.eedcd.solidanchor.utils.inventory.useHotbarSlotOrOffhand
 import net.minecraft.world.item.Items
 
 /**

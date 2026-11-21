@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.blaze3d;
+package com.github.eedcd.solidanchor.injection.mixins.blaze3d;
 
+import com.github.eedcd.solidanchor.SolidAnchor;
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.FramebufferResizeEvent;
+import com.github.eedcd.solidanchor.event.events.ScaleFactorChangeEvent;
+import com.github.eedcd.solidanchor.event.events.WindowResizeEvent;
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.mojang.blaze3d.platform.IconSet;
 import com.mojang.blaze3d.platform.Window;
-import net.solidanchor.SolidAnchor;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.FramebufferResizeEvent;
-import net.solidanchor.event.events.ScaleFactorChangeEvent;
-import net.solidanchor.event.events.WindowResizeEvent;
-import net.solidanchor.features.misc.SelfDestruct;
 import net.minecraft.server.packs.PackMetadataResources;
 import net.minecraft.server.packs.resources.IoSupplier;
 import org.spongepowered.asm.mixin.Mixin;

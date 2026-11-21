@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold.tower
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.tower
 
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
-import net.solidanchor.lang.translation
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.isEqual1_8
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.client.warning
-import net.solidanchor.utils.entity.horizontalSpeed
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
+import com.github.eedcd.solidanchor.lang.translation
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.isEqual1_8
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.client.warning
+import com.github.eedcd.solidanchor.utils.entity.horizontalSpeed
 
 object ScaffoldTowerHypixel : ScaffoldTower("Hypixel") {
     private var notifiedWrongProtocol = false

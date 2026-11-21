@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.customambience.worldeffects.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.customambience.worldeffects.modes
 
-import net.solidanchor.features.module.modules.render.customambience.worldeffects.WorldParticles.coords
-import net.solidanchor.features.module.modules.render.customambience.worldeffects.WorldParticlesColorSettings
-import net.solidanchor.features.module.modules.render.customambience.worldeffects.WorldParticlesMode
-import net.solidanchor.render.AnchorPoint
-import net.solidanchor.render.BuiltinParticle
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawSquareTexture
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.features.module.modules.render.customambience.worldeffects.WorldParticles.coords
+import com.github.eedcd.solidanchor.features.module.modules.render.customambience.worldeffects.WorldParticlesColorSettings
+import com.github.eedcd.solidanchor.features.module.modules.render.customambience.worldeffects.WorldParticlesMode
+import com.github.eedcd.solidanchor.render.AnchorPoint
+import com.github.eedcd.solidanchor.render.BuiltinParticle
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawSquareTexture
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.math.fma
 import net.minecraft.util.Mth
 import net.minecraft.world.phys.Vec3
 import kotlin.math.cbrt

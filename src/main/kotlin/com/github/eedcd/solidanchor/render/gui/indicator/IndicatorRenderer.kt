@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.gui.indicator
+package com.github.eedcd.solidanchor.render.gui.indicator
 
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.OverlayRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.kotlin.EventPriorityConvention.READ_FINAL_STATE
-import net.solidanchor.utils.render.WorldToScreen
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.READ_FINAL_STATE
+import com.github.eedcd.solidanchor.utils.render.WorldToScreen
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import org.joml.Vector2f
 import kotlin.math.abs
@@ -34,7 +34,7 @@ import kotlin.math.atan2
 /**
  * Draws the arrows and tags modules submit for the current frame.
  *
- * Collection works the way [net.solidanchor.render.gui.ItemStackListRenderer] does it: producers submit from
+ * Collection works the way [com.github.eedcd.solidanchor.render.gui.ItemStackListRenderer] does it: producers submit from
  * their own [OverlayRenderEvent] handler, and this one, registered to run last, draws and then clears the frame.
  *
  * An arrow sits on the projection of its target, and is pulled onto the screen border once that projection leaves the

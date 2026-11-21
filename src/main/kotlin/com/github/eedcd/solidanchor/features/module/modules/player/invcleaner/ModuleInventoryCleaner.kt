@@ -16,27 +16,27 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.invcleaner
+package com.github.eedcd.solidanchor.features.module.modules.player.invcleaner
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap
 import it.unimi.dsi.fastutil.objects.Reference2IntMap
 import net.ccbluex.fastutil.enumMapOf
 import net.ccbluex.fastutil.objectIntArrayMapOf
 import net.ccbluex.fastutil.referenceIntArrayMapOf
-import net.solidanchor.event.events.ScheduleInventoryActionEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.player.invcleaner.items.ItemFacet
-import net.solidanchor.features.module.modules.player.offhand.ModuleOffhand
-import net.solidanchor.utils.collection.itemSortedSetOf
-import net.solidanchor.utils.inventory.ArmorItemSlot
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.InventoryAction
-import net.solidanchor.utils.inventory.ItemSlot
-import net.solidanchor.utils.inventory.PlayerInventoryConstraints
-import net.solidanchor.utils.inventory.findNonEmptySlotsInInventory
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.event.events.ScheduleInventoryActionEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.items.ItemFacet
+import com.github.eedcd.solidanchor.features.module.modules.player.offhand.ModuleOffhand
+import com.github.eedcd.solidanchor.utils.collection.itemSortedSetOf
+import com.github.eedcd.solidanchor.utils.inventory.ArmorItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.InventoryAction
+import com.github.eedcd.solidanchor.utils.inventory.ItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.PlayerInventoryConstraints
+import com.github.eedcd.solidanchor.utils.inventory.findNonEmptySlotsInInventory
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 
 /**
  * InventoryCleaner module

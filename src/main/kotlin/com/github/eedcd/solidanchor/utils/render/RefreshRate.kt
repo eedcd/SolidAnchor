@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.render
+package com.github.eedcd.solidanchor.utils.render
 
-import net.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.mc
 import kotlin.math.max
 import kotlin.math.min
 

@@ -19,14 +19,14 @@
 
 @file:Suppress("NOTHING_TO_INLINE")
 
-package net.solidanchor.utils.raytracing
+package com.github.eedcd.solidanchor.utils.raytracing
 
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.entity.rotation
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.level.BlockGetter
 import net.minecraft.world.level.ClipContext

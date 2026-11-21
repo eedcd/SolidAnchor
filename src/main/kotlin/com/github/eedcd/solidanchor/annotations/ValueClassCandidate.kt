@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.annotations
+package com.github.eedcd.solidanchor.annotations
 
 /**
  * Marks a class which will (or can) be a `value class` after

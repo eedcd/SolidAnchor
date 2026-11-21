@@ -19,20 +19,20 @@
 @file:Suppress("TooManyFunctions", "NOTHING_TO_INLINE")
 @file:JvmName("ClientChat")
 
-package net.solidanchor.utils.client
+package com.github.eedcd.solidanchor.utils.client
 
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.injection.mixins.minecraft.gui.MixinChatScreenAccessor
-import net.solidanchor.interfaces.TextColorAddition
-import net.solidanchor.lang.translation
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.text.RunnableClickEvent
-import net.solidanchor.utils.text.asPlainText
-import net.solidanchor.utils.text.asText
-import net.solidanchor.utils.text.plus
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.gui.MixinChatScreenAccessor
+import com.github.eedcd.solidanchor.interfaces.TextColorAddition
+import com.github.eedcd.solidanchor.lang.translation
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.text.RunnableClickEvent
+import com.github.eedcd.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.utils.text.asText
+import com.github.eedcd.solidanchor.utils.text.plus
 import net.minecraft.ChatFormatting
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.screens.ChatScreen

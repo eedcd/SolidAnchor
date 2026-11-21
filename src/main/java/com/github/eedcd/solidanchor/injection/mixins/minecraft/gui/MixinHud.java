@@ -16,27 +16,26 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.gui;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.OverlayMessageEvent;
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent;
+import com.github.eedcd.solidanchor.event.events.PerspectiveEvent;
+import com.github.eedcd.solidanchor.features.module.modules.combat.ModuleSwordBlock;
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleReach;
+import com.github.eedcd.solidanchor.features.module.modules.render.DoRender;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleAntiBlind;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleFreeCam;
+import com.github.eedcd.solidanchor.features.module.modules.render.crosshair.ModuleCrosshair;
+import com.github.eedcd.solidanchor.ui.hud.HudComponent;
+import com.github.eedcd.solidanchor.ui.hud.HudComponentManager;
+import com.github.eedcd.solidanchor.ui.hud.HudComponentTweak;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReceiver;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.OverlayMessageEvent;
-import net.solidanchor.event.events.OverlayRenderEvent;
-import net.solidanchor.event.events.PerspectiveEvent;
-import net.solidanchor.features.module.modules.combat.ModuleSwordBlock;
-import net.solidanchor.features.module.modules.player.ModuleReach;
-import net.solidanchor.features.module.modules.render.DoRender;
-import net.solidanchor.features.module.modules.render.ModuleAntiBlind;
-import net.solidanchor.features.module.modules.render.ModuleFreeCam;
-import net.solidanchor.features.module.modules.render.ModuleHud;
-import net.solidanchor.features.module.modules.render.crosshair.ModuleCrosshair;
-import net.solidanchor.ui.hud.HudComponent;
-import net.solidanchor.ui.hud.HudComponentManager;
-import net.solidanchor.ui.hud.HudComponentTweak;
 import net.minecraft.client.CameraType;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
@@ -69,14 +68,13 @@ public abstract class MixinHud {
     @Final
     @Shadow
     private static Identifier POWDER_SNOW_OUTLINE_LOCATION;
+    @Shadow
+    @Final
+    private Minecraft minecraft;
 
     @Shadow
     @Nullable
     protected abstract Player getCameraPlayer();
-
-    @Shadow
-    @Final
-    private Minecraft minecraft;
 
     @Shadow
     protected abstract void extractSlot(GuiGraphicsExtractor context, int x, int y, DeltaTracker tickCounter, Player player, ItemStack stack, int seed);
@@ -91,7 +89,7 @@ public abstract class MixinHud {
         // Draw after overlay event
         var component = HudComponentManager.getComponentWithTweak(HudComponentTweak.TWEAK_HOTBAR);
         if (component != null && component.getRunning() &&
-                minecraft.gameMode.getPlayerMode() != GameType.SPECTATOR) {
+            minecraft.gameMode.getPlayerMode() != GameType.SPECTATOR) {
             extractHotbarForHud(context, tickCounter, component);
         }
     }
@@ -122,7 +120,7 @@ public abstract class MixinHud {
     @Inject(method = "extractCrosshair", at = @At("HEAD"), cancellable = true)
     private void hookFreeCamRenderCrosshairInThirdPerson(GuiGraphicsExtractor context, DeltaTracker tickCounter, CallbackInfo ci) {
         if ((ModuleFreeCam.INSTANCE.getRunning() && ModuleFreeCam.INSTANCE.shouldDisableCameraInteract())
-                || HudComponentManager.isTweakEnabled(HudComponentTweak.DISABLE_CROSSHAIR) || ModuleCrosshair.INSTANCE.getEnabled()) {
+            || HudComponentManager.isTweakEnabled(HudComponentTweak.DISABLE_CROSSHAIR) || ModuleCrosshair.INSTANCE.getEnabled()) {
             ci.cancel();
         }
     }
@@ -231,20 +229,20 @@ public abstract class MixinHud {
     }
 
     @ModifyExpressionValue(method = "extractCrosshair",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/client/Options;getCameraType()Lnet/minecraft/client/CameraType;"
-            )
+        at = @At(
+            value = "INVOKE",
+            target = "Lnet/minecraft/client/Options;getCameraType()Lnet/minecraft/client/CameraType;"
+        )
     )
     private CameraType hookPerspectiveEventOnCrosshair(CameraType original) {
         return PerspectiveEvent.INSTANCE.getPerspective();
     }
 
     @ModifyExpressionValue(method = "extractCameraOverlays",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/client/Options;getCameraType()Lnet/minecraft/client/CameraType;"
-            )
+        at = @At(
+            value = "INVOKE",
+            target = "Lnet/minecraft/client/Options;getCameraType()Lnet/minecraft/client/CameraType;"
+        )
     )
     private CameraType hookPerspectiveEventOnMiscOverlays(CameraType original) {
         return PerspectiveEvent.INSTANCE.getPerspective();

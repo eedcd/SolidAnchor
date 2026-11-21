@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.client.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client.network;
 
-import net.solidanchor.features.module.modules.player.ModuleAntiExploit;
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleAntiExploit;
 import net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl;
 import net.minecraft.network.protocol.Packet;
 import org.spongepowered.asm.mixin.Mixin;

@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.item
+package com.github.eedcd.solidanchor.utils.item
 
 import com.mojang.blaze3d.platform.NativeImage
-import net.solidanchor.interfaces.ItemCooldownsAddition
+import com.github.eedcd.solidanchor.interfaces.ItemCooldownsAddition
 import net.minecraft.core.component.DataComponents.MAP_ID
 import net.minecraft.world.item.ItemCooldowns
 import net.minecraft.world.item.ItemStack

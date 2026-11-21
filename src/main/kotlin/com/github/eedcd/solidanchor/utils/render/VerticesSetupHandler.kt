@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.render
+package com.github.eedcd.solidanchor.utils.render
 
 import com.mojang.blaze3d.vertex.VertexConsumer
 import org.joml.Matrix3x2f
 
 /**
- * @see net.solidanchor.render.gui.element.LambdaSimpleGuiElementRenderState
+ * @see com.github.eedcd.solidanchor.render.gui.element.LambdaSimpleGuiElementRenderState
  */
 fun interface VerticesSetupHandler {
     fun VertexConsumer.setupVertices(pose: Matrix3x2f)

@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
 import net.minecraft.core.Direction
 import net.minecraft.world.phys.AABB

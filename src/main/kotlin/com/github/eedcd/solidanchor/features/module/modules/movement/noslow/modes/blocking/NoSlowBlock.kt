@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.noslow.modes.blocking
+package com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.blocking
 
-import net.solidanchor.config.types.group.NoneMode
-import net.solidanchor.features.module.modules.movement.noslow.NoSlowUseActionHandler
-import net.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2360
-import net.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2364MC18
-import net.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2371
-import net.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedInvalidHand
-import net.solidanchor.utils.client.InteractionTracker.isBlocking
-import net.solidanchor.utils.client.inGame
-import net.solidanchor.utils.entity.isBlockingServerside
+import com.github.eedcd.solidanchor.config.types.group.NoneMode
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.NoSlowUseActionHandler
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2360
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2364MC18
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2371
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedInvalidHand
+import com.github.eedcd.solidanchor.utils.client.InteractionTracker.isBlocking
+import com.github.eedcd.solidanchor.utils.client.inGame
+import com.github.eedcd.solidanchor.utils.entity.isBlockingServerside
 import net.minecraft.world.phys.Vec2
 
 internal object NoSlowBlock : NoSlowUseActionHandler("Blocking") {

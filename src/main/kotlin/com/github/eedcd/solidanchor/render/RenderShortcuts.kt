@@ -19,7 +19,7 @@
 
 @file:Suppress("detekt:TooManyFunctions")
 
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
 import com.mojang.renderpearl.api.buffers.GpuBufferSlice
 import com.mojang.renderpearl.api.pipeline.RenderPipeline
@@ -27,16 +27,16 @@ import com.mojang.blaze3d.pipeline.RenderTarget
 import com.mojang.blaze3d.vertex.PoseStack
 import com.mojang.blaze3d.vertex.VertexConsumer
 import net.ccbluex.fastutil.objectObjectMapOf
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.engine.type.Vec3f
-import net.solidanchor.render.utils.DistanceFadeUniformValueGroup
-import net.solidanchor.render.utils.VertexList
-import net.solidanchor.render.utils.forEachVertex
-import net.solidanchor.render.utils.UnitCircle
-import net.solidanchor.utils.client.gpuDevice
-import net.solidanchor.utils.render.writeStd140
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.engine.type.Vec3f
+import com.github.eedcd.solidanchor.render.utils.DistanceFadeUniformValueGroup
+import com.github.eedcd.solidanchor.render.utils.VertexList
+import com.github.eedcd.solidanchor.render.utils.forEachVertex
+import com.github.eedcd.solidanchor.render.utils.UnitCircle
+import com.github.eedcd.solidanchor.utils.client.gpuDevice
+import com.github.eedcd.solidanchor.utils.render.writeStd140
 import net.minecraft.client.renderer.texture.AbstractTexture
 import net.minecraft.core.Direction
 import net.minecraft.core.Vec3i

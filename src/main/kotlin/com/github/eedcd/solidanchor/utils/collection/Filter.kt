@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.collection
+package com.github.eedcd.solidanchor.utils.collection
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.findClosestSlot
-import net.solidanchor.utils.item.getBlock
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.findClosestSlot
+import com.github.eedcd.solidanchor.utils.item.getBlock
 import net.minecraft.world.level.block.Block
 
 enum class Filter(override val tag: String) : Tagged {

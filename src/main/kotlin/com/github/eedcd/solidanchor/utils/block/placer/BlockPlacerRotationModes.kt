@@ -16,19 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block.placer
+package com.github.eedcd.solidanchor.utils.block.placer
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.aiming.PostRotationExecutor
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.block.stateOrEmpty
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTarget
-import net.solidanchor.utils.client.RestrictedSingleUseAction
-import net.solidanchor.utils.raytracing.raytraceBlock
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.aiming.PostRotationExecutor
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTarget
+import com.github.eedcd.solidanchor.utils.client.RestrictedSingleUseAction
+import com.github.eedcd.solidanchor.utils.raytracing.raytraceBlock
 import net.minecraft.core.BlockPos
 import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket
 import net.minecraft.world.phys.HitResult

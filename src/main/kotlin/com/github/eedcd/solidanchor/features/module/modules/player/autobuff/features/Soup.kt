@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autobuff.features
+package com.github.eedcd.solidanchor.features.module.modules.player.autobuff.features
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.player.autobuff.HealthBasedBuff
-import net.solidanchor.features.module.modules.player.autobuff.features.Soup.DropAfterUse.assumeEmptyBowl
-import net.solidanchor.features.module.modules.player.autobuff.features.Soup.DropAfterUse.wait
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.useHotbarSlotOrOffhand
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.player.autobuff.HealthBasedBuff
+import com.github.eedcd.solidanchor.features.module.modules.player.autobuff.features.Soup.DropAfterUse.assumeEmptyBowl
+import com.github.eedcd.solidanchor.features.module.modules.player.autobuff.features.Soup.DropAfterUse.wait
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.useHotbarSlotOrOffhand
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Items
 

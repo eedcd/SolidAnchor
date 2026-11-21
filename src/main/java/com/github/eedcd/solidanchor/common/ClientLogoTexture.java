@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.common;
+package com.github.eedcd.solidanchor.common;
 
+import com.github.eedcd.solidanchor.SolidAnchor;
 import com.mojang.blaze3d.platform.NativeImage;
-import net.solidanchor.SolidAnchor;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.texture.MipmapStrategy;

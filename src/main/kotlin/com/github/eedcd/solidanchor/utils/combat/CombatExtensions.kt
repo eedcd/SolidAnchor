@@ -18,30 +18,30 @@
  */
 @file:Suppress("TooManyFunctions")
 
-package net.solidanchor.utils.combat
+package com.github.eedcd.solidanchor.utils.combat
 
 import it.unimi.dsi.fastutil.objects.ObjectDoubleImmutablePair
 import it.unimi.dsi.fastutil.objects.ObjectDoublePair
 import net.ccbluex.fastutil.component1
 import net.ccbluex.fastutil.component2
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.AttackEntityEvent
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.global.GlobalSettingsTarget
-import net.solidanchor.features.module.modules.combat.criticals.ModuleCriticals
-import net.solidanchor.features.module.modules.render.ModuleFreeCam
-import net.solidanchor.features.module.modules.render.ModuleFreeLook
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.client.interaction
-import net.solidanchor.utils.client.isOlderThanOrEqual1_8
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.network
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.entity.isWithinWorldBorder
-import net.solidanchor.utils.entity.squaredBoxedDistanceTo
-import net.solidanchor.utils.world.getEntitiesInCube
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.AttackEntityEvent
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.global.GlobalSettingsTarget
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.ModuleCriticals
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleFreeCam
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleFreeLook
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.client.interaction
+import com.github.eedcd.solidanchor.utils.client.isOlderThanOrEqual1_8
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.network
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.entity.isWithinWorldBorder
+import com.github.eedcd.solidanchor.utils.entity.squaredBoxedDistanceTo
+import com.github.eedcd.solidanchor.utils.world.getEntitiesInCube
 import net.minecraft.client.CameraType
 import net.minecraft.client.multiplayer.ClientLevel
 import net.minecraft.core.component.DataComponents

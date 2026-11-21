@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.entity
+package com.github.eedcd.solidanchor.utils.entity
 
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.network.useItem
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.network.useItem
 import net.minecraft.client.multiplayer.MultiPlayerGameMode
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResult

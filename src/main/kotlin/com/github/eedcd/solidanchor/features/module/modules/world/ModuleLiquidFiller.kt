@@ -16,30 +16,30 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world
+package com.github.eedcd.solidanchor.features.module.modules.world
 
 import net.ccbluex.fastutil.enumSetAllOf
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.block.hasAnySolidPlacementNeighbor
-import net.solidanchor.utils.block.isUnobstructed
-import net.solidanchor.utils.block.searchBlocksInCuboid
-import net.solidanchor.utils.block.placer.BlockPlacer
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.collection.Filter
-import net.solidanchor.utils.collection.getSlot
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.findClosestSlot
-import net.solidanchor.utils.inventory.findBlocksEndingWith
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.math.BY_Y
-import net.solidanchor.utils.math.BY_Y_DESC
-import net.solidanchor.utils.math.center
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.block.hasAnySolidPlacementNeighbor
+import com.github.eedcd.solidanchor.utils.block.isUnobstructed
+import com.github.eedcd.solidanchor.utils.block.searchBlocksInCuboid
+import com.github.eedcd.solidanchor.utils.block.placer.BlockPlacer
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.collection.Filter
+import com.github.eedcd.solidanchor.utils.collection.getSlot
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.findClosestSlot
+import com.github.eedcd.solidanchor.utils.inventory.findBlocksEndingWith
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.math.BY_Y
+import com.github.eedcd.solidanchor.utils.math.BY_Y_DESC
+import com.github.eedcd.solidanchor.utils.math.center
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.core.Vec3i

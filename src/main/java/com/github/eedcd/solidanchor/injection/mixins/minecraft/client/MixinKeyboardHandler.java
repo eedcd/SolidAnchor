@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.client;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.KeyEvent;
+import com.github.eedcd.solidanchor.event.events.KeyboardCharEvent;
+import com.github.eedcd.solidanchor.event.events.KeyboardKeyEvent;
+import com.github.eedcd.solidanchor.features.module.modules.movement.inventorymove.ModuleInventoryMove;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.platform.InputConstants;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.KeyEvent;
-import net.solidanchor.event.events.KeyboardCharEvent;
-import net.solidanchor.event.events.KeyboardKeyEvent;
-import net.solidanchor.features.module.modules.movement.inventorymove.ModuleInventoryMove;
 import net.minecraft.client.KeyboardHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
@@ -74,7 +74,7 @@ public abstract class MixinKeyboardHandler {
         EventManager.INSTANCE.callEvent(new KeyboardCharEvent(input.codepoint()));
     }
 
-    @WrapOperation(method = "keyPress", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/Gui;screen()Lnet/minecraft/client/gui/screens/Screen;",  ordinal = 2))
+    @WrapOperation(method = "keyPress", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/Gui;screen()Lnet/minecraft/client/gui/screens/Screen;", ordinal = 2))
     private Screen modifyHandlesGameInput(Gui instance, Operation<Screen> original, @Local(name = "event", argsOnly = true) net.minecraft.client.input.KeyEvent event) {
         return ModuleInventoryMove.shouldHandleInputs(event) ? null : original.call(instance);
     }

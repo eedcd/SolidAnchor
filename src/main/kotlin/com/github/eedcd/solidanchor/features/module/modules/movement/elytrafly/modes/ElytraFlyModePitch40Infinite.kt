@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.elytrafly.modes
+package com.github.eedcd.solidanchor.features.module.modules.movement.elytrafly.modes
 
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.features.module.modules.movement.elytrafly.ModuleElytraFly
-import net.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.features.module.modules.movement.elytrafly.ModuleElytraFly
+import com.github.eedcd.solidanchor.utils.client.notification
 
 internal object ElytraFlyModePitch40Infinite : ElytraFlyMode("Pitch40Infinite") {
 

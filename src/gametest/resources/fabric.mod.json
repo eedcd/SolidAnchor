@@ -6,16 +6,16 @@
   "environment": "client",
   "entrypoints": {
     "fabric-client-gametest": [
-      "net.solidanchor.gametest.AutoRodRequirementsGameTest",
-      "net.solidanchor.gametest.CommandGameTest",
-      "net.solidanchor.gametest.ConfigPersistenceGameTest",
-      "net.solidanchor.gametest.PortalPositionGameTest",
-      "net.solidanchor.gametest.HoleFillerBudgetGameTest",
-      "net.solidanchor.gametest.FallDamageTrackerGameTest",
-      "net.solidanchor.gametest.TeleportDisconnectGameTest",
-      "net.solidanchor.gametest.EnchantCommandGameTest",
-      "net.solidanchor.gametest.HitFXSoundRegistryGameTest",
-      "net.solidanchor.gametest.NoRotateSetGameTest"
+      "com.github.eedcd.solidanchor.gametest.AutoRodRequirementsGameTest",
+      "com.github.eedcd.solidanchor.gametest.CommandGameTest",
+      "com.github.eedcd.solidanchor.gametest.ConfigPersistenceGameTest",
+      "com.github.eedcd.solidanchor.gametest.PortalPositionGameTest",
+      "com.github.eedcd.solidanchor.gametest.HoleFillerBudgetGameTest",
+      "com.github.eedcd.solidanchor.gametest.FallDamageTrackerGameTest",
+      "com.github.eedcd.solidanchor.gametest.TeleportDisconnectGameTest",
+      "com.github.eedcd.solidanchor.gametest.EnchantCommandGameTest",
+      "com.github.eedcd.solidanchor.gametest.HitFXSoundRegistryGameTest",
+      "com.github.eedcd.solidanchor.gametest.NoRotateSetGameTest"
     ]
   },
   "depends": {

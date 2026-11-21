@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autoqueue.actions
+package com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.actions
 
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.player.autoqueue.ModuleAutoQueue
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.inventory.SingleItemStackPickMode
-import net.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.ModuleAutoQueue
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.inventory.SingleItemStackPickMode
+import com.github.eedcd.solidanchor.utils.inventory.Slots
 
 object AutoQueueActionUseItem : AutoQueueAction("UseItem") {
 

@@ -16,28 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold.techniques
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.techniques
 
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.getTargetedPosition
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.rawInput
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.block.targetfinding.BlockOffsetOptions
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTarget
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
-import net.solidanchor.utils.block.targetfinding.BlockPosOffsets
-import net.solidanchor.utils.block.targetfinding.CenterTargetPositionFactory
-import net.solidanchor.utils.block.targetfinding.FaceHandlingOptions
-import net.solidanchor.utils.block.targetfinding.PlayerLocationOnPlacement
-import net.solidanchor.utils.block.targetfinding.findBestBlockPlacementTarget
-import net.solidanchor.utils.entity.getMovementDirectionOfInput
-import net.solidanchor.utils.kotlin.EventPriorityConvention
-import net.solidanchor.utils.kotlin.random
-import net.solidanchor.utils.math.geometry.Line
-import net.solidanchor.utils.math.toBlockPos
-import net.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.getTargetedPosition
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.rawInput
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockOffsetOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTarget
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPosOffsets
+import com.github.eedcd.solidanchor.utils.block.targetfinding.CenterTargetPositionFactory
+import com.github.eedcd.solidanchor.utils.block.targetfinding.FaceHandlingOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.PlayerLocationOnPlacement
+import com.github.eedcd.solidanchor.utils.block.targetfinding.findBestBlockPlacementTarget
+import com.github.eedcd.solidanchor.utils.entity.getMovementDirectionOfInput
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.utils.kotlin.random
+import com.github.eedcd.solidanchor.utils.math.geometry.Line
+import com.github.eedcd.solidanchor.utils.math.toBlockPos
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
 import net.minecraft.core.Direction
 import net.minecraft.world.entity.Pose
 import net.minecraft.world.item.ItemStack

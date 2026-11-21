@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.noslow.modes.bow
+package com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.bow
 
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.config.types.group.NoneMode
-import net.solidanchor.features.module.modules.movement.noslow.NoSlowUseActionHandler
-import net.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowNoBlockInteract
-import net.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2360
-import net.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2364MC18
-import net.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2371
-import net.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedInvalidHand
-import net.solidanchor.utils.client.inGame
+import com.github.eedcd.solidanchor.config.types.group.NoneMode
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.NoSlowUseActionHandler
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowNoBlockInteract
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2360
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2364MC18
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedGrim2371
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedInvalidHand
+import com.github.eedcd.solidanchor.utils.client.inGame
 import net.minecraft.world.item.ItemUseAnimation
 
 internal object NoSlowBow : NoSlowUseActionHandler("Bow") {

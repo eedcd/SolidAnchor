@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat
+package com.github.eedcd.solidanchor.features.module.modules.combat
 
-import net.solidanchor.event.tickConditional
-import net.solidanchor.event.tickHandler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.exploit.ModuleKick
+import com.github.eedcd.solidanchor.event.tickConditional
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.exploit.ModuleKick
 import net.minecraft.core.component.DataComponents
 
 /**

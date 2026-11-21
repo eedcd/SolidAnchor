@@ -16,33 +16,33 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.inventorymove
+package com.github.eedcd.solidanchor.features.module.modules.movement.inventorymove
 
 import com.mojang.blaze3d.platform.InputConstants
 import net.ccbluex.fastutil.fastIterable
 import net.ccbluex.fastutil.referenceBooleanArrayMapOf
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.KeyboardKeyEvent
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.PlayerContainerInputEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.movement.inventorymove.features.InventoryMoveBlinkFeature
-import net.solidanchor.features.module.modules.movement.inventorymove.features.InventoryMoveSneakControlFeature
-import net.solidanchor.features.module.modules.movement.inventorymove.features.InventoryMoveSprintControlFeature
-import net.solidanchor.features.module.modules.movement.inventorymove.features.InventoryMoveTimerFeature
-import net.solidanchor.features.module.modules.render.ModuleClickGui
-import net.solidanchor.utils.inventory.InventoryManager
-import net.solidanchor.utils.inventory.isInInventoryScreen
-import net.solidanchor.utils.kotlin.EventPriorityConvention.FINAL_DECISION
-import net.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
-import net.solidanchor.utils.kotlin.drainToArray
-import net.solidanchor.utils.movement.DirectionalInput
-import net.solidanchor.utils.network.isC2SContainerPacket
-import net.solidanchor.utils.network.sendCloseInventory
-import net.solidanchor.utils.network.sendPacketSilently
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.KeyboardKeyEvent
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.PlayerContainerInputEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.movement.inventorymove.features.InventoryMoveBlinkFeature
+import com.github.eedcd.solidanchor.features.module.modules.movement.inventorymove.features.InventoryMoveSneakControlFeature
+import com.github.eedcd.solidanchor.features.module.modules.movement.inventorymove.features.InventoryMoveSprintControlFeature
+import com.github.eedcd.solidanchor.features.module.modules.movement.inventorymove.features.InventoryMoveTimerFeature
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleClickGui
+import com.github.eedcd.solidanchor.utils.inventory.InventoryManager
+import com.github.eedcd.solidanchor.utils.inventory.isInInventoryScreen
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.FINAL_DECISION
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
+import com.github.eedcd.solidanchor.utils.kotlin.drainToArray
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.utils.network.isC2SContainerPacket
+import com.github.eedcd.solidanchor.utils.network.sendCloseInventory
+import com.github.eedcd.solidanchor.utils.network.sendPacketSilently
 import net.minecraft.client.KeyMapping
 import net.minecraft.client.gui.components.EditBox
 import net.minecraft.client.gui.components.MultiLineEditBox

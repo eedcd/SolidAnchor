@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.thirdparty.translator
+package com.github.eedcd.solidanchor.api.thirdparty.translator
 
-import net.solidanchor.utils.client.copyable
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.variable
-import net.solidanchor.utils.text.textOf
+import com.github.eedcd.solidanchor.utils.client.copyable
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.utils.text.textOf
 import net.minecraft.network.chat.Component
 
 sealed class TranslationResult(

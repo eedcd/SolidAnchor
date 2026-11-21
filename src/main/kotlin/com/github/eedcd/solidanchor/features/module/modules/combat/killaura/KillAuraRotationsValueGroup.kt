@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.killaura
+package com.github.eedcd.solidanchor.features.module.modules.combat.killaura
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
 
 object KillAuraRotationsValueGroup : RotationsValueGroup(ModuleKillAura, combatSpecific = true) {
 

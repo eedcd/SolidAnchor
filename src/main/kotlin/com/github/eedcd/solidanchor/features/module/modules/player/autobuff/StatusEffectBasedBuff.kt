@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autobuff
+package com.github.eedcd.solidanchor.features.module.modules.player.autobuff
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.utils.item.getPotionEffects
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.utils.item.getPotionEffects
 import net.minecraft.core.Holder
 import net.minecraft.world.effect.MobEffect
 import net.minecraft.world.effect.MobEffectInstance

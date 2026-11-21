@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.network;
 
+import com.github.eedcd.solidanchor.features.spoofer.SpooferBungeeCord;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import net.solidanchor.features.spoofer.SpooferBungeeCord;
 import net.minecraft.network.protocol.handshake.ClientIntentionPacket;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;

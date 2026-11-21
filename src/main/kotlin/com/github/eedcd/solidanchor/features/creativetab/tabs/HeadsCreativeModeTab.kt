@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.creativetab.tabs
+package com.github.eedcd.solidanchor.features.creativetab.tabs
 
 import com.google.common.collect.ImmutableMultimap
 import com.mojang.authlib.GameProfile
 import com.mojang.authlib.properties.Property
 import com.mojang.authlib.properties.PropertyMap
-import net.solidanchor.api.core.HttpClient
-import net.solidanchor.api.core.HttpMethod
-import net.solidanchor.api.core.bodyAsJson
-import net.solidanchor.api.core.ioScope
-import net.solidanchor.api.core.retrying
-import net.solidanchor.features.creativetab.CustomCreativeModeTab
-import net.solidanchor.utils.text.asPlainText
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.api.core.HttpClient
+import com.github.eedcd.solidanchor.api.core.HttpMethod
+import com.github.eedcd.solidanchor.api.core.bodyAsJson
+import com.github.eedcd.solidanchor.api.core.ioScope
+import com.github.eedcd.solidanchor.api.core.retrying
+import com.github.eedcd.solidanchor.features.creativetab.CustomCreativeModeTab
+import com.github.eedcd.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.utils.client.logger
 import net.minecraft.ChatFormatting
 import net.minecraft.core.component.DataComponentPatch
 import net.minecraft.core.component.DataComponents

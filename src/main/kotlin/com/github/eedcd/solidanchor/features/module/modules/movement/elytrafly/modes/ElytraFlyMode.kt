@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.elytrafly.modes
+package com.github.eedcd.solidanchor.features.module.modules.movement.elytrafly.modes
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.modules.movement.elytrafly.ModuleElytraFly
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.movement.elytrafly.ModuleElytraFly
 
 abstract class ElytraFlyMode(name: String) : Mode(name) {
 

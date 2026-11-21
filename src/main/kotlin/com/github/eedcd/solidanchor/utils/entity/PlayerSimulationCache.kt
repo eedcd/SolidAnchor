@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.entity
+package com.github.eedcd.solidanchor.utils.entity
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
 import it.unimi.dsi.fastutil.objects.ObjectImmutableList
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.kotlin.EventPriorityConvention.CRITICAL_MODIFICATION
-import net.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
-import net.solidanchor.utils.kotlin.EventPriorityConvention.MODEL_STATE
-import net.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.CRITICAL_MODIFICATION
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.MODEL_STATE
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.phys.Vec3
 import java.util.concurrent.ConcurrentHashMap

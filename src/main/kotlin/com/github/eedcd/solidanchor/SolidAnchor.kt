@@ -16,8 +16,49 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor
+package com.github.eedcd.solidanchor
 
+import com.github.eedcd.solidanchor.api.thirdparty.IpInfoApi
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.types.Config
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.ClientShutdownEvent
+import com.github.eedcd.solidanchor.event.events.ClientStartEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.account.AccountManager
+import com.github.eedcd.solidanchor.features.addon.AddonManager
+import com.github.eedcd.solidanchor.features.blink.BlinkManager
+import com.github.eedcd.solidanchor.features.command.CommandManager
+import com.github.eedcd.solidanchor.features.creativetab.tabs.HeadsCreativeModeTab
+import com.github.eedcd.solidanchor.features.global.GlobalManager
+import com.github.eedcd.solidanchor.features.misc.FriendManager
+import com.github.eedcd.solidanchor.features.module.ModuleManager
+import com.github.eedcd.solidanchor.features.spoofer.SpooferManager
+import com.github.eedcd.solidanchor.lang.LanguageManager
+import com.github.eedcd.solidanchor.render.FontManager
+import com.github.eedcd.solidanchor.render.HAS_AMD_VEGA_APU
+import com.github.eedcd.solidanchor.render.atlas.ItemImageAtlas
+import com.github.eedcd.solidanchor.render.engine.BlurEffectRenderer
+import com.github.eedcd.solidanchor.render.gui.ItemStackListRenderer
+import com.github.eedcd.solidanchor.render.gui.indicator.IndicatorRenderer
+import com.github.eedcd.solidanchor.utils.aiming.PostRotationExecutor
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.block.ChunkScanner
+import com.github.eedcd.solidanchor.utils.client.GitInfo
+import com.github.eedcd.solidanchor.utils.client.InteractionTracker
+import com.github.eedcd.solidanchor.utils.client.ServerObserver
+import com.github.eedcd.solidanchor.utils.client.clientIdentifier
+import com.github.eedcd.solidanchor.utils.client.error.ErrorHandler
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.combat.CombatManager
+import com.github.eedcd.solidanchor.utils.entity.RenderedEntities
+import com.github.eedcd.solidanchor.utils.input.InputTracker
+import com.github.eedcd.solidanchor.utils.inventory.EnderChestInventoryTracker
+import com.github.eedcd.solidanchor.utils.inventory.InventoryManager
+import com.github.eedcd.solidanchor.utils.io.readText
+import com.github.eedcd.solidanchor.utils.network.LocalPlayerFallDamageTracker
+import com.github.eedcd.solidanchor.utils.network.PositionPacketSeparator
 import com.mojang.blaze3d.systems.RenderSystem
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineName
@@ -30,56 +71,12 @@ import kotlinx.coroutines.internal.isMissing
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.supervisorScope
 import kotlinx.coroutines.withContext
-import kotlinx.coroutines.withTimeoutOrNull
-import net.solidanchor.api.core.httpException
-import net.solidanchor.api.thirdparty.IpInfoApi
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.types.Config
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.EventManager
-import net.solidanchor.features.addon.AddonManager
-import net.solidanchor.event.events.ClientShutdownEvent
-import net.solidanchor.event.events.ClientStartEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.account.AccountManager
-import net.solidanchor.features.blink.BlinkManager
-import net.solidanchor.features.command.CommandManager
-import net.solidanchor.features.creativetab.tabs.HeadsCreativeModeTab
-import net.solidanchor.features.global.GlobalManager
-import net.solidanchor.features.misc.FriendManager
-import net.solidanchor.features.module.ModuleManager
-import net.solidanchor.features.spoofer.SpooferManager
-import net.solidanchor.lang.LanguageManager
-import net.solidanchor.render.FontManager
-import net.solidanchor.render.HAS_AMD_VEGA_APU
-import net.solidanchor.render.atlas.ItemImageAtlas
-import net.solidanchor.render.engine.BlurEffectRenderer
-import net.solidanchor.render.gui.ItemStackListRenderer
-import net.solidanchor.render.gui.indicator.IndicatorRenderer
-import net.solidanchor.utils.aiming.PostRotationExecutor
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.block.ChunkScanner
-import net.solidanchor.utils.client.GitInfo
-import net.solidanchor.utils.client.InteractionTracker
-import net.solidanchor.utils.client.ServerObserver
-import net.solidanchor.utils.client.clientIdentifier
-import net.solidanchor.utils.client.error.ErrorHandler
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.combat.CombatManager
-import net.solidanchor.utils.entity.RenderedEntities
-import net.solidanchor.utils.input.InputTracker
-import net.solidanchor.utils.inventory.EnderChestInventoryTracker
-import net.solidanchor.utils.inventory.InventoryManager
-import net.solidanchor.utils.io.readText
-import net.solidanchor.utils.network.LocalPlayerFallDamageTracker
-import net.solidanchor.utils.network.PositionPacketSeparator
 import net.minecraft.resources.Identifier
 import net.minecraft.server.packs.resources.PreparableReloadListener
 import net.minecraft.server.packs.resources.ReloadableResourceManager
 import java.io.InputStream
 import java.util.concurrent.CompletableFuture
 import java.util.concurrent.Executor
-import kotlin.time.Duration.Companion.seconds
 import kotlin.time.measureTime
 
 /**
@@ -137,7 +134,7 @@ object SolidAnchor : EventListener {
     /**
      * Client logger to print out console messages
      */
-    val logger get() = net.solidanchor.utils.client.logger
+    val logger get() = com.github.eedcd.solidanchor.utils.client.logger
 
     var isInitialized = false
         private set

@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.packetmine.mode
+package com.github.eedcd.solidanchor.features.module.modules.world.packetmine.mode
 
-import net.solidanchor.features.module.modules.world.ModuleAutoTool
-import net.solidanchor.features.module.modules.world.packetmine.MineTarget
-import net.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
-import net.solidanchor.utils.network.sendHeldItemChange
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.findBestToolToMineBlock
+import com.github.eedcd.solidanchor.features.module.modules.world.ModuleAutoTool
+import com.github.eedcd.solidanchor.features.module.modules.world.packetmine.MineTarget
+import com.github.eedcd.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
+import com.github.eedcd.solidanchor.utils.network.sendHeldItemChange
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.findBestToolToMineBlock
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.network.protocol.game.ServerboundPlayerActionPacket

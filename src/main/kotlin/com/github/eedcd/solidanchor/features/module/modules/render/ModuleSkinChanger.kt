@@ -18,7 +18,7 @@
  */
 @file:OptIn(FlowPreview::class)
 
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
 import com.mojang.authlib.GameProfile
 import kotlinx.coroutines.Dispatchers
@@ -33,26 +33,26 @@ import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import net.solidanchor.SolidAnchor
-import net.solidanchor.api.core.HttpClient
-import net.solidanchor.api.core.ioScope
-import net.solidanchor.api.core.renderScope
-import net.solidanchor.api.thirdparty.lookupUuidByName
-import net.solidanchor.api.thirdparty.mojang.model.ChangeSkinRequest
-import net.solidanchor.api.thirdparty.mojang.service.MinecraftServicesApi
-import net.solidanchor.config.gson.serializer.minecraft.accountType
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.SuspendHandlerBehavior
-import net.solidanchor.event.events.SessionEvent
-import net.solidanchor.event.suspendHandler
-import net.solidanchor.features.account.AccountService
-import net.solidanchor.features.account.SessionWithService
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.render.readNativeImage
-import net.solidanchor.utils.render.registerTexture
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.api.core.HttpClient
+import com.github.eedcd.solidanchor.api.core.ioScope
+import com.github.eedcd.solidanchor.api.core.renderScope
+import com.github.eedcd.solidanchor.api.thirdparty.lookupUuidByName
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.ChangeSkinRequest
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.service.MinecraftServicesApi
+import com.github.eedcd.solidanchor.config.gson.serializer.minecraft.accountType
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.SuspendHandlerBehavior
+import com.github.eedcd.solidanchor.event.events.SessionEvent
+import com.github.eedcd.solidanchor.event.suspendHandler
+import com.github.eedcd.solidanchor.features.account.AccountService
+import com.github.eedcd.solidanchor.features.account.SessionWithService
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.render.readNativeImage
+import com.github.eedcd.solidanchor.utils.render.registerTexture
 import net.minecraft.client.multiplayer.PlayerInfo
 import net.minecraft.client.player.AbstractClientPlayer
 import net.minecraft.core.ClientAsset
@@ -125,7 +125,7 @@ object ModuleSkinChanger : ClientModule("SkinChanger", ModuleCategories.RENDER) 
         }
     }
 
-    private sealed class Mode(name: String) : net.solidanchor.config.types.group.Mode(name) {
+    private sealed class Mode(name: String) : com.github.eedcd.solidanchor.config.types.group.Mode(name) {
         final override val parent: ModeValueGroup<*>
             get() = mode
 

@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.gui.widget;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui.widget;
 
-import net.solidanchor.features.module.modules.misc.ModuleTextFieldProtect;
+import com.github.eedcd.solidanchor.features.module.modules.misc.ModuleTextFieldProtect;
 import net.minecraft.client.gui.components.EditBox;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

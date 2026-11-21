@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.misc
+package com.github.eedcd.solidanchor.features.module.modules.misc
 
 import it.unimi.dsi.fastutil.longs.LongList
 import kotlinx.atomicfu.atomic
@@ -26,18 +26,18 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import net.ccbluex.fastutil.longListOf
-import net.solidanchor.api.core.ioScope
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.io.readUtf8LineAt
-import net.solidanchor.utils.io.scanLineStarts
-import net.solidanchor.utils.kotlin.mapString
-import net.solidanchor.utils.kotlin.random
+import com.github.eedcd.solidanchor.api.core.ioScope
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.io.readUtf8LineAt
+import com.github.eedcd.solidanchor.utils.io.scanLineStarts
+import com.github.eedcd.solidanchor.utils.kotlin.mapString
+import com.github.eedcd.solidanchor.utils.kotlin.random
 import org.apache.commons.lang3.RandomStringUtils
 import java.util.function.UnaryOperator
 import kotlin.random.Random

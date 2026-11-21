@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.`fun`.notebot.stages
+package com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.stages
 
-import net.solidanchor.features.module.modules.`fun`.notebot.ModuleNotebot
-import net.solidanchor.features.module.modules.`fun`.notebot.NoteBlockTracker
-import net.solidanchor.features.module.modules.`fun`.notebot.NotebotEngine
-import net.solidanchor.features.module.modules.`fun`.notebot.nbs.InstrumentNote
-import net.solidanchor.features.module.modules.`fun`.notebot.nbs.SongData
-import net.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.ModuleNotebot
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.NoteBlockTracker
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.NotebotEngine
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.nbs.InstrumentNote
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.nbs.SongData
+import com.github.eedcd.solidanchor.utils.client.chat
 import net.minecraft.ChatFormatting
 
 class NotebotPlayStageHandler(

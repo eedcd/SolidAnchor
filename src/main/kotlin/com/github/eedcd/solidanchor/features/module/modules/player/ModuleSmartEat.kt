@@ -16,26 +16,26 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player
+package com.github.eedcd.solidanchor.features.module.modules.player
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.KeybindIsPressedEvent
-import net.solidanchor.event.events.OverlayRenderEvent
-import net.solidanchor.event.events.PlayerInteractedItemEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.tickUntil
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.combat.CombatManager
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.item.foodComponent
-import net.solidanchor.utils.item.getPotionEffects
-import net.solidanchor.utils.item.isMiningTool
-import net.solidanchor.utils.sorting.ComparatorChain
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.KeybindIsPressedEvent
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
+import com.github.eedcd.solidanchor.event.events.PlayerInteractedItemEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.tickUntil
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.combat.CombatManager
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.item.foodComponent
+import com.github.eedcd.solidanchor.utils.item.getPotionEffects
+import com.github.eedcd.solidanchor.utils.item.isMiningTool
+import com.github.eedcd.solidanchor.utils.sorting.ComparatorChain
 import net.minecraft.client.gui.render.GuiRenderer
 import net.minecraft.client.renderer.RenderPipelines
 import net.minecraft.resources.Identifier

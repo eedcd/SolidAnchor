@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.thirdparty.translator
+package com.github.eedcd.solidanchor.api.thirdparty.translator
 
-import net.solidanchor.features.command.commands.translate.CommandAutoTranslate
+import com.github.eedcd.solidanchor.features.command.commands.translate.CommandAutoTranslate
 
 /**
  * Interface for a translation API that translates text from one language to another.

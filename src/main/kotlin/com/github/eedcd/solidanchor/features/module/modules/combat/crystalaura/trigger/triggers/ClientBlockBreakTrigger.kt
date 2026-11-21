@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers
 
-import net.solidanchor.features.module.modules.combat.crystalaura.place.SubmoduleCrystalPlacer
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer.runPlace
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.Trigger
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.SubmoduleCrystalPlacer
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer.runPlace
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.Trigger
 
 /**
  * Same as block change, but it will run even earlier but just for blocks that are broken client side.

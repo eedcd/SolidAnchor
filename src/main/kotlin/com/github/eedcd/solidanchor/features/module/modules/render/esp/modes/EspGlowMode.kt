@@ -16,6 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.esp.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.esp.modes
 
 object EspGlowMode : EspMode("Glow", requiresTrueSight = true)

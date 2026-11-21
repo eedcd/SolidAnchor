@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.elytratarget
+package com.github.eedcd.solidanchor.features.module.modules.combat.elytratarget
 
-import net.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.types.list.Tagged
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.phys.Vec3
 

@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.thirdparty.translator
+package com.github.eedcd.solidanchor.api.thirdparty.translator
 
-import net.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.Mode
 
 abstract class TranslatorMode(
     name: String

@@ -16,32 +16,32 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.`fun`.notebot
+package com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.`fun`.notebot.nbs.InstrumentNote
-import net.solidanchor.features.module.modules.`fun`.notebot.nbs.NbsLoader
-import net.solidanchor.features.module.modules.`fun`.notebot.nbs.NbsNoteBlock
-import net.solidanchor.features.module.modules.`fun`.notebot.nbs.SongData
-import net.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.client.MessageMetadata
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.inGame
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.removeMessage
-import net.solidanchor.utils.text.textLoadingBar
-import net.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.nbs.InstrumentNote
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.nbs.NbsLoader
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.nbs.NbsNoteBlock
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.nbs.SongData
+import com.github.eedcd.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.client.MessageMetadata
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.inGame
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.removeMessage
+import com.github.eedcd.solidanchor.utils.text.textLoadingBar
+import com.github.eedcd.solidanchor.utils.client.variable
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.MutableComponent
 import net.minecraft.network.protocol.game.ClientboundSoundPacket

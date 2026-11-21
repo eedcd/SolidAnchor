@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.gametest
+package com.github.eedcd.solidanchor.gametest
 
-import net.solidanchor.SolidAnchor
-import net.solidanchor.features.command.CommandManager
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.features.command.CommandManager
 import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.screens.TitleScreen

@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.gui;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui;
 
+import com.github.eedcd.solidanchor.features.module.modules.misc.ModuleItemScroller;
+import com.github.eedcd.solidanchor.features.module.modules.player.cheststealer.features.FeatureSilentScreen;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleBetterInventory;
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.client.MixinMouseHandlerAccessor;
 import com.mojang.blaze3d.platform.InputConstants;
-import net.solidanchor.features.module.modules.misc.ModuleItemScroller;
-import net.solidanchor.features.module.modules.player.cheststealer.features.FeatureSilentScreen;
-import net.solidanchor.features.module.modules.render.ModuleBetterInventory;
-import net.solidanchor.injection.mixins.minecraft.client.MixinMouseHandlerAccessor;
 import net.minecraft.client.MouseHandler;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.Screen;
@@ -50,17 +50,12 @@ public abstract class MixinAbstractContainerScreen<T extends AbstractContainerMe
     @Shadow
     @Final
     protected T menu;
-
     @Shadow
-    @Nullable
-    protected abstract Slot getHoveredSlot(double mouseX, double mouseY);
-
+    protected int leftPos;
+    @Shadow
+    protected int topPos;
     @Shadow
     private ItemStack lastQuickMoved;
-
-    @Shadow
-    protected abstract void slotClicked(Slot slot, int id, int button, ContainerInput actionType);
-
     @Shadow
     private boolean skipNextRelease;
 
@@ -68,10 +63,11 @@ public abstract class MixinAbstractContainerScreen<T extends AbstractContainerMe
     private @Nullable Slot lastClickSlot;
 
     @Shadow
-    protected int leftPos;
+    @Nullable
+    protected abstract Slot getHoveredSlot(double mouseX, double mouseY);
 
     @Shadow
-    protected int topPos;
+    protected abstract void slotClicked(Slot slot, int id, int button, ContainerInput actionType);
 
     @Inject(method = "slotClicked(Lnet/minecraft/world/inventory/Slot;IILnet/minecraft/world/inventory/ContainerInput;)V", at = @At("HEAD"), cancellable = true)
     private void cancelMouseClick(Slot slot, int slotId, int button, ContainerInput actionType, CallbackInfo ci) {

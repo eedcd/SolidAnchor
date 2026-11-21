@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.renderpearl;
+package com.github.eedcd.solidanchor.injection.mixins.renderpearl;
 
+import com.github.eedcd.solidanchor.render.utils.RenderingDebug;
 import com.mojang.renderpearl.frontend.FrontendRenderPass;
-import net.solidanchor.render.utils.RenderingDebug;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

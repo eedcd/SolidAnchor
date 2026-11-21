@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.noslow.modes.sneaking
+package com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.sneaking
 
-import net.solidanchor.config.types.group.NoneMode
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.PlayerSneakMultiplier
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.movement.noslow.ModuleNoSlow
-import net.solidanchor.utils.client.inGame
+import com.github.eedcd.solidanchor.config.types.group.NoneMode
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.PlayerSneakMultiplier
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.ModuleNoSlow
+import com.github.eedcd.solidanchor.utils.client.inGame
 import kotlin.math.max
 
 internal object NoSlowSneaking : ToggleableValueGroup(ModuleNoSlow, "Sneaking", true) {

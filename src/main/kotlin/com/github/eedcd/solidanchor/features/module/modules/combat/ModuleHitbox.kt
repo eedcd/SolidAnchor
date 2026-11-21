@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat
+package com.github.eedcd.solidanchor.features.module.modules.combat
 
-import net.solidanchor.event.events.EntityMarginEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.combat.shouldBeAttacked
+import com.github.eedcd.solidanchor.event.events.EntityMarginEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.combat.shouldBeAttacked
 
 /**
  * Hitbox module

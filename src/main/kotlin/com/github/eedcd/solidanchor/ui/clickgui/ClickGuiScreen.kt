@@ -17,32 +17,32 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.ui.clickgui
+package com.github.eedcd.solidanchor.ui.clickgui
 
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
 import com.mojang.blaze3d.platform.InputConstants
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.types.RangedValue
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.ValueType
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.config.types.list.MultiChoiceListValue
-import net.solidanchor.config.types.list.ChoiceListValue
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategory
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.ModuleManager
-import net.solidanchor.features.global.GlobalManager
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.getBounds
-import net.solidanchor.ui.hud.HudEditorScreen
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.input.InputBind
-import net.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.types.RangedValue
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.ValueType
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.config.types.list.MultiChoiceListValue
+import com.github.eedcd.solidanchor.config.types.list.ChoiceListValue
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategory
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.ModuleManager
+import com.github.eedcd.solidanchor.features.global.GlobalManager
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.getBounds
+import com.github.eedcd.solidanchor.ui.hud.HudEditorScreen
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.input.InputBind
+import com.github.eedcd.solidanchor.utils.text.asPlainText
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.client.input.CharacterEvent

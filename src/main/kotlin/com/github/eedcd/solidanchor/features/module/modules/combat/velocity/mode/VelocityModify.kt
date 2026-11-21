@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.velocity.mode
+package com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.config.utils.percentageChance
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.player.nofall.modes.NoFallBlink
-import net.solidanchor.utils.entity.anyHorizontal
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.utils.percentageChance
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes.NoFallBlink
+import com.github.eedcd.solidanchor.utils.entity.anyHorizontal
 import net.minecraft.network.protocol.common.ServerboundPongPacket
 import net.minecraft.network.protocol.game.ClientboundExplodePacket
 import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket

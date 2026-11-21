@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.types
+package com.github.eedcd.solidanchor.config.types
 
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.ConfigSystem.configs
-import net.solidanchor.config.ConfigSystem.rootFolder
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.ConfigSystem.configs
+import com.github.eedcd.solidanchor.config.ConfigSystem.rootFolder
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.features.addon.AddonApi
 import java.io.File
 
 @AddonApi

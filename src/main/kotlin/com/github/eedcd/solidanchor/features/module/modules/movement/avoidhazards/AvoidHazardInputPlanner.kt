@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.avoidhazards
+package com.github.eedcd.solidanchor.features.module.modules.movement.avoidhazards
 
-import net.solidanchor.utils.math.toDegrees
-import net.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.utils.math.toDegrees
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
 import net.minecraft.util.Mth
 import kotlin.math.abs
 import kotlin.math.atan2

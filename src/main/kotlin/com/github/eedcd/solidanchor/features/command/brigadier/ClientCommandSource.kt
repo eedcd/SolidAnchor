@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.brigadier
+package com.github.eedcd.solidanchor.features.command.brigadier
 
 import com.mojang.brigadier.context.CommandContext
 import com.mojang.brigadier.suggestion.Suggestions
 import com.mojang.brigadier.suggestion.SuggestionsBuilder
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.client.NullableBypass.mc
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.client.NullableBypass.mc
 import net.minecraft.client.multiplayer.ClientLevel
 import net.minecraft.client.player.LocalPlayer
 import net.minecraft.commands.SharedSuggestionProvider
@@ -70,8 +70,8 @@ object ClientCommandSource : SharedSuggestionProvider {
         get() = playerOrNull != null && levelOrNull != null
 
     /**
-     * Registry access shared by command argument factories ([net.solidanchor.features.command.arguments.itemArgument],
-     * [net.solidanchor.features.command.arguments.resourceArgument]):
+     * Registry access shared by command argument factories ([com.github.eedcd.solidanchor.features.command.arguments.itemArgument],
+     * [com.github.eedcd.solidanchor.features.command.arguments.resourceArgument]):
      * the joined world's registries when available, otherwise the
      * static vanilla lookup so parse/suggestions keep working outside a world.
      */

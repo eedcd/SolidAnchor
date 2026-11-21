@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.elytratarget
+package com.github.eedcd.solidanchor.features.module.modules.combat.elytratarget
 
-import net.solidanchor.event.tickHandler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
-import net.solidanchor.utils.combat.TargetTracker
-import net.solidanchor.utils.render.TargetRenderer
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
+import com.github.eedcd.solidanchor.utils.combat.TargetTracker
+import com.github.eedcd.solidanchor.utils.render.TargetRenderer
 import net.minecraft.world.entity.LivingEntity
 
 /**

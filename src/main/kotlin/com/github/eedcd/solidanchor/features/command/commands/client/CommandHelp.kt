@@ -16,23 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.client
+package com.github.eedcd.solidanchor.features.command.commands.client
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.tree.LiteralCommandNode
-import net.solidanchor.features.command.CommandManager
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.features.command.preset.pagedQuery
-import net.solidanchor.lang.translation
-import net.solidanchor.utils.client.bold
-import net.solidanchor.utils.client.onClick
-import net.solidanchor.utils.client.onHover
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.withColor
-import net.solidanchor.utils.text.asText
-import net.solidanchor.utils.text.buildText
+import com.github.eedcd.solidanchor.features.command.CommandManager
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.features.command.preset.pagedQuery
+import com.github.eedcd.solidanchor.lang.translation
+import com.github.eedcd.solidanchor.utils.client.bold
+import com.github.eedcd.solidanchor.utils.client.onClick
+import com.github.eedcd.solidanchor.utils.client.onHover
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.withColor
+import com.github.eedcd.solidanchor.utils.text.asText
+import com.github.eedcd.solidanchor.utils.text.buildText
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.ClickEvent
 import net.minecraft.network.chat.Component

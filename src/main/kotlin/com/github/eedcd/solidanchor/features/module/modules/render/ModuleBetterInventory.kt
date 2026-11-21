@@ -17,22 +17,22 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
-import net.solidanchor.additions.drawBorder
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.injection.mixins.minecraft.gui.MixinHudAccessor
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.gui.ItemStackListBackground
-import net.solidanchor.render.gui.ItemStackListRenderState
-import net.solidanchor.utils.inventory.InventoryManager
-import net.solidanchor.utils.item.getCooldown
-import net.solidanchor.utils.math.toFixed
-import net.solidanchor.utils.text.withFormat
+import com.github.eedcd.solidanchor.additions.drawBorder
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.gui.MixinHudAccessor
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.gui.ItemStackListBackground
+import com.github.eedcd.solidanchor.render.gui.ItemStackListRenderState
+import com.github.eedcd.solidanchor.utils.inventory.InventoryManager
+import com.github.eedcd.solidanchor.utils.item.getCooldown
+import com.github.eedcd.solidanchor.utils.math.toFixed
+import com.github.eedcd.solidanchor.utils.text.withFormat
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.gui.render.GuiRenderer
 import net.minecraft.client.renderer.RenderPipelines
@@ -47,7 +47,7 @@ object ModuleBetterInventory : ClientModule("BetterInventory", ModuleCategories.
             arrayOf(Mode.Border, Mode.Texture)
         }
 
-        sealed class Mode(choiceName: String) : net.solidanchor.config.types.group.Mode(choiceName) {
+        sealed class Mode(choiceName: String) : com.github.eedcd.solidanchor.config.types.group.Mode(choiceName) {
             final override val parent: ModeValueGroup<*>
                 get() = mode
 

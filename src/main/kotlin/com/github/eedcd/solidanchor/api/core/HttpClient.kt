@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.api.core
+package com.github.eedcd.solidanchor.api.core
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import net.solidanchor.SolidAnchor
-import net.solidanchor.api.converters.BufferConverterFactory
-import net.solidanchor.api.converters.NativeImageConverterFactory
-import net.solidanchor.api.interceptors.DefaultHeaderInterceptor
-import net.solidanchor.api.interceptors.SkipCacheInterceptor
-import net.solidanchor.api.interceptors.whenUrl
-import net.solidanchor.api.thirdparty.mojang.MojangApiClient
-import net.solidanchor.config.gson.interopGson
-import net.solidanchor.config.gson.apiGson
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.kotlin.CommonCoroutineExceptionHandler
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.api.converters.BufferConverterFactory
+import com.github.eedcd.solidanchor.api.converters.NativeImageConverterFactory
+import com.github.eedcd.solidanchor.api.interceptors.DefaultHeaderInterceptor
+import com.github.eedcd.solidanchor.api.interceptors.SkipCacheInterceptor
+import com.github.eedcd.solidanchor.api.interceptors.whenUrl
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.MojangApiClient
+import com.github.eedcd.solidanchor.config.gson.interopGson
+import com.github.eedcd.solidanchor.config.gson.apiGson
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.kotlin.CommonCoroutineExceptionHandler
 import okhttp3.Cache
 import okhttp3.Call
 import okhttp3.Dispatcher

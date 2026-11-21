@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.hats.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.hats.modes
 
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.features.module.modules.render.hats.HatsColorSettings
-import net.solidanchor.features.module.modules.render.hats.HatsMode
-import net.solidanchor.render.ClientRenderPipelines
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.addTorusQuad
-import net.solidanchor.render.drawCustomMesh
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.segmentAngle
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.render.hats.HatsColorSettings
+import com.github.eedcd.solidanchor.features.module.modules.render.hats.HatsMode
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.addTorusQuad
+import com.github.eedcd.solidanchor.render.drawCustomMesh
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.segmentAngle
 
 /**
  * @author minecrrrr

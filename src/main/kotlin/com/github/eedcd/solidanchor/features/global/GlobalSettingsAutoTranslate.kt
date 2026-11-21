@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.global
+package com.github.eedcd.solidanchor.features.global
 
 import com.google.common.cache.Cache
 import com.google.common.cache.CacheBuilder
-import net.solidanchor.api.thirdparty.translator.TranslateLanguage
-import net.solidanchor.api.thirdparty.translator.TranslationResult
-import net.solidanchor.api.thirdparty.translator.TranslatorApi
-import net.solidanchor.api.thirdparty.translator.providers.GoogleTranslateApi
-import net.solidanchor.api.thirdparty.translator.providers.LibreTranslateApi
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.api.thirdparty.translator.TranslateLanguage
+import com.github.eedcd.solidanchor.api.thirdparty.translator.TranslationResult
+import com.github.eedcd.solidanchor.api.thirdparty.translator.TranslatorApi
+import com.github.eedcd.solidanchor.api.thirdparty.translator.providers.GoogleTranslateApi
+import com.github.eedcd.solidanchor.api.thirdparty.translator.providers.LibreTranslateApi
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
 import java.time.Duration
 
 private data class TranslationCacheKey(

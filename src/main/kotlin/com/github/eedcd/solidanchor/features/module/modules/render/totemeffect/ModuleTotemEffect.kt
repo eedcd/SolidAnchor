@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.totemeffect
+package com.github.eedcd.solidanchor.features.module.modules.render.totemeffect
 
-import net.solidanchor.annotations.ValueClassCandidate
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.collection.ExpiringList.Companion.ExpiringList
+import com.github.eedcd.solidanchor.annotations.ValueClassCandidate
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.collection.ExpiringList.Companion.ExpiringList
 import net.minecraft.network.protocol.game.ClientboundEntityEventPacket
-import net.solidanchor.features.module.modules.render.totemeffect.modes.TotemEffectShockwave
-import net.solidanchor.features.module.modules.render.totemeffect.modes.TotemEffectSoul
-import net.solidanchor.utils.combat.shouldBeShown
-import net.solidanchor.utils.network.isDeathProtection
+import com.github.eedcd.solidanchor.features.module.modules.render.totemeffect.modes.TotemEffectShockwave
+import com.github.eedcd.solidanchor.features.module.modules.render.totemeffect.modes.TotemEffectSoul
+import com.github.eedcd.solidanchor.utils.combat.shouldBeShown
+import com.github.eedcd.solidanchor.utils.network.isDeathProtection
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.phys.Vec3
 

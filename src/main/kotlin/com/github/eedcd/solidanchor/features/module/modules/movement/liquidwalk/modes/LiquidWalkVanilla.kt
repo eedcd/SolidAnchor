@@ -17,16 +17,16 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.liquidwalk.modes
+package com.github.eedcd.solidanchor.features.module.modules.movement.liquidwalk.modes
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.BlockShapeEvent
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.movement.liquidwalk.ModuleLiquidWalk
-import net.solidanchor.utils.block.isBlockAtPosition
-import net.solidanchor.utils.entity.box
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.BlockShapeEvent
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.movement.liquidwalk.ModuleLiquidWalk
+import com.github.eedcd.solidanchor.utils.block.isBlockAtPosition
+import com.github.eedcd.solidanchor.utils.entity.box
 import net.minecraft.world.level.block.LiquidBlock
 import net.minecraft.world.phys.shapes.Shapes
 

@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.potionfx
+package com.github.eedcd.solidanchor.features.module.modules.render.potionfx
 
-import net.solidanchor.SolidAnchor
-import net.solidanchor.config.utils.TextureMode
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXLingering
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXPlayers
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash
-import net.solidanchor.utils.render.asTexture
-import net.solidanchor.utils.render.readNativeImage
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.config.utils.TextureMode
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXLingering
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXPlayers
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash
+import com.github.eedcd.solidanchor.utils.render.asTexture
+import com.github.eedcd.solidanchor.utils.render.readNativeImage
 
 object ModulePotionFX : ClientModule("PotionFX", ModuleCategories.RENDER) {
 

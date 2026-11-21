@@ -16,29 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement
+package com.github.eedcd.solidanchor.features.module.modules.movement
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PlayerJumpEvent
-import net.solidanchor.event.events.SprintEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.world.scaffold.features.ScaffoldSprintControlFeature
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.aiming.features.MovementCorrection
-import net.solidanchor.utils.math.fastCos
-import net.solidanchor.utils.math.fastSin
-import net.solidanchor.utils.math.toRadians
-import net.solidanchor.utils.entity.getMovementDirectionOfInput
-import net.solidanchor.utils.entity.isSlowDueToUsingItem
-import net.solidanchor.utils.entity.movementForward
-import net.solidanchor.utils.entity.movementSideways
-import net.solidanchor.utils.kotlin.EventPriorityConvention.CRITICAL_MODIFICATION
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PlayerJumpEvent
+import com.github.eedcd.solidanchor.event.events.SprintEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.features.ScaffoldSprintControlFeature
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.aiming.features.MovementCorrection
+import com.github.eedcd.solidanchor.utils.math.fastCos
+import com.github.eedcd.solidanchor.utils.math.fastSin
+import com.github.eedcd.solidanchor.utils.math.toRadians
+import com.github.eedcd.solidanchor.utils.entity.getMovementDirectionOfInput
+import com.github.eedcd.solidanchor.utils.entity.isSlowDueToUsingItem
+import com.github.eedcd.solidanchor.utils.entity.movementForward
+import com.github.eedcd.solidanchor.utils.entity.movementSideways
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.CRITICAL_MODIFICATION
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 
 /**
  * Sprint module

@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.gui;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui;
 
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleAntiExploit;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import net.solidanchor.features.module.modules.player.ModuleAntiExploit;
 import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.scores.Scoreboard;
 import org.jspecify.annotations.Nullable;

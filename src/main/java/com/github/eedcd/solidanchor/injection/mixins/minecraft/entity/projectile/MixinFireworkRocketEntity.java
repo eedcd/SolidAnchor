@@ -18,14 +18,14 @@
  */
 
 
-package net.solidanchor.injection.mixins.minecraft.entity.projectile;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.entity.projectile;
 
+import com.github.eedcd.solidanchor.additions.FireworkRocketEntityAddition;
+import com.github.eedcd.solidanchor.features.module.modules.exploit.ModuleExtendedFirework;
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager;
+import com.github.eedcd.solidanchor.utils.aiming.features.MovementCorrection;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.additions.FireworkRocketEntityAddition;
-import net.solidanchor.features.module.modules.exploit.ModuleExtendedFirework;
-import net.solidanchor.utils.aiming.RotationManager;
-import net.solidanchor.utils.aiming.features.MovementCorrection;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.FireworkRocketEntity;
@@ -61,7 +61,7 @@ public abstract class MixinFireworkRocketEntity implements FireworkRocketEntityA
     @ModifyArgs(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/phys/Vec3;add(DDD)Lnet/minecraft/world/phys/Vec3;", ordinal = 0))
     private void hookExtendedFirework(Args args, @Local(name = "lookAngle") Vec3 lookAngle, @Local(name = "movement") Vec3 movement) {
         if (attachedToEntity != Minecraft.getInstance().player
-                || !ModuleExtendedFirework.INSTANCE.getRunning()
+            || !ModuleExtendedFirework.INSTANCE.getRunning()
         ) return;
 
         var multiplier = ModuleExtendedFirework.getVelocityMultiplier();

@@ -17,22 +17,22 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.wings
+package com.github.eedcd.solidanchor.features.module.modules.render.wings
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.misc.FriendManager
-import net.solidanchor.features.module.modules.render.ModuleFreeLook
-import net.solidanchor.features.module.modules.render.ModuleRotations
-import net.solidanchor.features.module.modules.render.wings.ModuleWings.WingsPosition
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.misc.FriendManager
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleFreeLook
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleRotations
+import com.github.eedcd.solidanchor.features.module.modules.render.wings.ModuleWings.WingsPosition
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.math.fma
 import net.minecraft.util.Mth.rotLerp
 import net.minecraft.world.entity.EquipmentSlot
 import net.minecraft.world.entity.ai.attributes.Attributes

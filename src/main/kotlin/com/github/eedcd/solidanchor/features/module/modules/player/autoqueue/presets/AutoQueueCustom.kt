@@ -16,28 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.autoqueue.presets
+package com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.presets
 
 import kotlinx.coroutines.Dispatchers
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.tickUntil
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
-import net.solidanchor.features.module.modules.movement.speed.ModuleSpeed
-import net.solidanchor.features.module.modules.player.autoqueue.ModuleAutoQueue
-import net.solidanchor.features.module.modules.player.autoqueue.actions.AutoQueueActionChat
-import net.solidanchor.features.module.modules.player.autoqueue.actions.AutoQueueActionUseItem
-import net.solidanchor.features.module.modules.player.autoqueue.trigger.AutoQueueTriggerItem
-import net.solidanchor.features.module.modules.player.autoqueue.trigger.AutoQueueTriggerMessage
-import net.solidanchor.features.module.modules.player.autoqueue.trigger.AutoQueueTriggerSubtitle
-import net.solidanchor.features.module.modules.player.autoqueue.trigger.AutoQueueTriggerTabFooter
-import net.solidanchor.features.module.modules.player.autoqueue.trigger.AutoQueueTriggerTabHeader
-import net.solidanchor.features.module.modules.player.autoqueue.trigger.AutoQueueTriggerTitle
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.tickUntil
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
+import com.github.eedcd.solidanchor.features.module.modules.movement.speed.ModuleSpeed
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.ModuleAutoQueue
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.actions.AutoQueueActionChat
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.actions.AutoQueueActionUseItem
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.trigger.AutoQueueTriggerItem
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.trigger.AutoQueueTriggerMessage
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.trigger.AutoQueueTriggerSubtitle
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.trigger.AutoQueueTriggerTabFooter
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.trigger.AutoQueueTriggerTabHeader
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.trigger.AutoQueueTriggerTitle
 
 object AutoQueueCustom : Mode("Custom") {
 

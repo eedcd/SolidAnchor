@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.block.liquid
+package com.github.eedcd.solidanchor.utils.block.liquid
 
 import net.minecraft.core.BlockPos
 import kotlin.test.assertEquals

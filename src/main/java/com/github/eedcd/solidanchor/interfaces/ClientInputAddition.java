@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.interfaces;
+package com.github.eedcd.solidanchor.interfaces;
 
 import net.minecraft.world.entity.player.Input;
 import net.minecraft.world.phys.Vec2;
@@ -29,5 +29,6 @@ public interface ClientInputAddition {
     void solid_anchor$setMovementInput(Vec2 movementVector);
 
     Input solid_anchor$getInitial();
+
     Input solid_anchor$getUntransformed();
 }

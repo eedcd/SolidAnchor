@@ -16,24 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.killaura.features
+package com.github.eedcd.solidanchor.features.module.modules.combat.killaura.features
 
-import net.solidanchor.config.types.group.NoneMode
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.AttackEntityEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.combat.killaura.KillAuraClicker.prepareForAttack
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura.canAttackNow
-import net.solidanchor.features.module.modules.combat.killaura.features.KillAuraFailSwing.additionalRange
-import net.solidanchor.features.module.modules.combat.killaura.features.KillAuraNotifyWhenFail.Box
-import net.solidanchor.features.module.modules.combat.killaura.features.KillAuraNotifyWhenFail.Sound
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.combat.findEnemy
-import net.solidanchor.utils.entity.rotation
-import net.solidanchor.utils.entity.squaredBoxedDistanceTo
-import net.solidanchor.utils.kotlin.random
+import com.github.eedcd.solidanchor.config.types.group.NoneMode
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.AttackEntityEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.KillAuraClicker.prepareForAttack
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura.canAttackNow
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.features.KillAuraFailSwing.additionalRange
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.features.KillAuraNotifyWhenFail.Box
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.features.KillAuraNotifyWhenFail.Sound
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.combat.findEnemy
+import com.github.eedcd.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.utils.entity.squaredBoxedDistanceTo
+import com.github.eedcd.solidanchor.utils.kotlin.random
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.phys.BlockHitResult

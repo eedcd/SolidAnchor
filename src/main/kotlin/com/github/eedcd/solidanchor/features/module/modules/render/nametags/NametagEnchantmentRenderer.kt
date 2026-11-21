@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.nametags
+package com.github.eedcd.solidanchor.features.module.modules.render.nametags
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
 import net.ccbluex.fastutil.mapToArray
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.render.drawRoundedRect
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.collection.Filter
-import net.solidanchor.utils.item.getEnchantmentCount
-import net.solidanchor.utils.collection.LruCache
-import net.solidanchor.utils.kotlin.mapString
-import net.solidanchor.utils.text.withFormat
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.render.drawRoundedRect
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.collection.Filter
+import com.github.eedcd.solidanchor.utils.item.getEnchantmentCount
+import com.github.eedcd.solidanchor.utils.collection.LruCache
+import com.github.eedcd.solidanchor.utils.kotlin.mapString
+import com.github.eedcd.solidanchor.utils.text.withFormat
 import net.minecraft.ChatFormatting
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.gui.render.GuiRenderer

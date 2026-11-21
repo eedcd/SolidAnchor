@@ -19,7 +19,7 @@
 
 @file:Suppress("NOTHING_TO_INLINE", "TooManyFunctions")
 
-package net.solidanchor.utils.render
+package com.github.eedcd.solidanchor.utils.render
 
 import com.google.common.base.Suppliers
 import com.google.common.util.concurrent.Runnables
@@ -40,10 +40,10 @@ import com.mojang.blaze3d.vertex.BufferBuilder
 import com.mojang.blaze3d.vertex.ByteBufferBuilder
 import com.mojang.blaze3d.vertex.PoseStack
 import it.unimi.dsi.fastutil.ints.IntArrays
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.client.gpuDevice
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.io.ensurePngOrConvertJpeg
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.client.gpuDevice
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.io.ensurePngOrConvertJpeg
 import net.minecraft.client.gui.render.TextureSetup
 import net.minecraft.client.renderer.texture.AbstractTexture
 import net.minecraft.client.renderer.texture.DynamicTexture

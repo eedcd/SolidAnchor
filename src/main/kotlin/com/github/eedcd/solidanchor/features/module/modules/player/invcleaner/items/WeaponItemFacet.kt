@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.invcleaner.items
+package com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.items
 
-import net.solidanchor.features.module.modules.player.invcleaner.ItemCategory
-import net.solidanchor.features.module.modules.player.invcleaner.ItemFunction
-import net.solidanchor.features.module.modules.player.invcleaner.ItemType
-import net.solidanchor.utils.inventory.ItemSlot
-import net.solidanchor.utils.item.EnchantmentValueEstimator
-import net.solidanchor.utils.item.asHolderComparator
-import net.solidanchor.utils.item.attackDamage
-import net.solidanchor.utils.item.attackSpeed
-import net.solidanchor.utils.item.getEnchantment
-import net.solidanchor.utils.item.isSword
-import net.solidanchor.utils.sorting.ComparatorChain
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemCategory
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemFunction
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemType
+import com.github.eedcd.solidanchor.utils.inventory.ItemSlot
+import com.github.eedcd.solidanchor.utils.item.EnchantmentValueEstimator
+import com.github.eedcd.solidanchor.utils.item.asHolderComparator
+import com.github.eedcd.solidanchor.utils.item.attackDamage
+import com.github.eedcd.solidanchor.utils.item.attackSpeed
+import com.github.eedcd.solidanchor.utils.item.getEnchantment
+import com.github.eedcd.solidanchor.utils.item.isSword
+import com.github.eedcd.solidanchor.utils.sorting.ComparatorChain
 import net.minecraft.world.item.ItemInstance
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.ItemStackTemplate

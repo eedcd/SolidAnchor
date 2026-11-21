@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player
+package com.github.eedcd.solidanchor.features.module.modules.player
 
-import net.solidanchor.event.events.ScreenEvent
-import net.solidanchor.event.sequenceHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.event.events.ScreenEvent
+import com.github.eedcd.solidanchor.event.sequenceHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
 import net.minecraft.client.gui.screens.DeathScreen
 
 /**

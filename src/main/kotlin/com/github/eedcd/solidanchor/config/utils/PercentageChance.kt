@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.utils
+package com.github.eedcd.solidanchor.config.utils
 
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
 import java.util.concurrent.ThreadLocalRandom
 import java.util.function.BooleanSupplier
 import java.util.function.Supplier

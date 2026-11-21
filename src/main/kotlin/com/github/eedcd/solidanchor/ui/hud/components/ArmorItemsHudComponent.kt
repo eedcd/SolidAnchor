@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.ui.hud.components
+package com.github.eedcd.solidanchor.ui.hud.components
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.OverlayRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.ui.hud.NativeHudComponent
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.entity.armorItems
-import net.solidanchor.utils.kotlin.EventPriorityConvention
-import net.solidanchor.utils.render.Alignment
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.ui.hud.NativeHudComponent
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.entity.armorItems
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.utils.render.Alignment
 import net.minecraft.world.item.ItemStack
 
 object ArmorItemsHudComponent : NativeHudComponent(

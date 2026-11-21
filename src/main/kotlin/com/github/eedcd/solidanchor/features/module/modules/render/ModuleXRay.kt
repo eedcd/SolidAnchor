@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
 import net.ccbluex.fastutil.Pool.Companion.use
-import net.solidanchor.features.command.commands.module.CommandXRay
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.collection.Pools
-import net.solidanchor.utils.collection.blockSortedSetOf
-import net.solidanchor.utils.kotlin.addAll
+import com.github.eedcd.solidanchor.features.command.commands.module.CommandXRay
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.collection.Pools
+import com.github.eedcd.solidanchor.utils.collection.blockSortedSetOf
+import com.github.eedcd.solidanchor.utils.kotlin.addAll
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.world.level.BlockGetter

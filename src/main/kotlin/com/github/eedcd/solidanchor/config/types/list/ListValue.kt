@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.types.list
+package com.github.eedcd.solidanchor.config.types.list
 
 import com.google.gson.Gson
 import com.google.gson.JsonArray
 import com.google.gson.JsonElement
 import net.ccbluex.fastutil.enumMapOf
-import net.solidanchor.config.gson.stategies.Exclude
-import net.solidanchor.config.gson.stategies.ProtocolExclude
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.ValueType
-import net.solidanchor.utils.input.HumanInputDeserializer
+import com.github.eedcd.solidanchor.config.gson.stategies.Exclude
+import com.github.eedcd.solidanchor.config.gson.stategies.ProtocolExclude
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.ValueType
+import com.github.eedcd.solidanchor.utils.input.HumanInputDeserializer
 import java.util.SequencedSet
 
 open class ListValue<T : MutableCollection<E>, E>(

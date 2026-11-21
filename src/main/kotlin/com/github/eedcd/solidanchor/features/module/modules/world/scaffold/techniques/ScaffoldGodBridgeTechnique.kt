@@ -16,32 +16,32 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold.techniques
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.techniques
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.getTargetedPosition
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.rawInput
-import net.solidanchor.features.module.modules.world.scaffold.features.LedgeAction
-import net.solidanchor.features.module.modules.world.scaffold.features.ScaffoldLedgeExtension
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.block.targetfinding.BlockOffsetOptions
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTarget
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
-import net.solidanchor.utils.block.targetfinding.BlockPosOffsets
-import net.solidanchor.utils.block.targetfinding.CenterTargetPositionFactory
-import net.solidanchor.utils.block.targetfinding.FaceHandlingOptions
-import net.solidanchor.utils.block.targetfinding.PlayerLocationOnPlacement
-import net.solidanchor.utils.block.targetfinding.findBestBlockPlacementTarget
-import net.solidanchor.utils.math.toRadians
-import net.solidanchor.utils.entity.PlayerSimulationCache
-import net.solidanchor.utils.entity.getMovementDirectionOfInput
-import net.solidanchor.utils.math.geometry.Line
-import net.solidanchor.utils.math.toBlockPos
-import net.solidanchor.utils.movement.DirectionalInput
-import net.solidanchor.utils.raytracing.traceFromPoint
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.getTargetedPosition
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.rawInput
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.features.LedgeAction
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.features.ScaffoldLedgeExtension
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockOffsetOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTarget
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPosOffsets
+import com.github.eedcd.solidanchor.utils.block.targetfinding.CenterTargetPositionFactory
+import com.github.eedcd.solidanchor.utils.block.targetfinding.FaceHandlingOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.PlayerLocationOnPlacement
+import com.github.eedcd.solidanchor.utils.block.targetfinding.findBestBlockPlacementTarget
+import com.github.eedcd.solidanchor.utils.math.toRadians
+import com.github.eedcd.solidanchor.utils.entity.PlayerSimulationCache
+import com.github.eedcd.solidanchor.utils.entity.getMovementDirectionOfInput
+import com.github.eedcd.solidanchor.utils.math.geometry.Line
+import com.github.eedcd.solidanchor.utils.math.toBlockPos
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.utils.raytracing.traceFromPoint
 import net.minecraft.core.Direction
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.Pose

@@ -16,26 +16,26 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.input
+package com.github.eedcd.solidanchor.utils.input
 
 import com.mojang.blaze3d.platform.InputConstants
 import it.unimi.dsi.fastutil.ints.Int2ReferenceMap
 import it.unimi.dsi.fastutil.ints.Int2ReferenceOpenHashMap
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.config.types.list.Tagged.Companion.makeLookupTable
-import net.solidanchor.event.events.KeyboardKeyEvent
-import net.solidanchor.event.events.MouseButtonEvent
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.text.asPlainText
-import net.solidanchor.utils.client.bold
-import net.solidanchor.utils.client.copyable
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.onHover
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.variable
-import net.solidanchor.utils.text.buildText
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.types.list.Tagged.Companion.makeLookupTable
+import com.github.eedcd.solidanchor.event.events.KeyboardKeyEvent
+import com.github.eedcd.solidanchor.event.events.MouseButtonEvent
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.utils.client.bold
+import com.github.eedcd.solidanchor.utils.client.copyable
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.onHover
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.utils.text.buildText
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.HoverEvent
 import net.minecraft.util.Util

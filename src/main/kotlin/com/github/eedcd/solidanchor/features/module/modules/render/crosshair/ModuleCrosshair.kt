@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.crosshair
+package com.github.eedcd.solidanchor.features.module.modules.render.crosshair
 
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.crosshair.modes.CrosshairCircle
-import net.solidanchor.features.module.modules.render.crosshair.modes.CrosshairCS2
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.crosshair.modes.CrosshairCircle
+import com.github.eedcd.solidanchor.features.module.modules.render.crosshair.modes.CrosshairCS2
 
 object ModuleCrosshair : ClientModule("Crosshair", ModuleCategories.RENDER) {
     val modes =

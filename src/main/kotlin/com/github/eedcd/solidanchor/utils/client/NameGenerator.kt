@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.client
+package com.github.eedcd.solidanchor.utils.client
 
 import com.google.common.math.IntMath
 import it.unimi.dsi.fastutil.chars.Char2CharArrayMap
 import it.unimi.dsi.fastutil.ints.IntCharPair
 import net.ccbluex.fastutil.component1
 import net.ccbluex.fastutil.component2
-import net.solidanchor.SolidAnchor
-import net.solidanchor.utils.kotlin.subList
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.utils.kotlin.subList
 import kotlin.random.Random
 
 private val ADJECTIVE_LISTS_BY_SIZE = buildShorterThanList(loadLines("adjectives.txt"))

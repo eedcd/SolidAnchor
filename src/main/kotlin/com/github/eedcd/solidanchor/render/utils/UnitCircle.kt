@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.utils
+package com.github.eedcd.solidanchor.render.utils
 
-import net.solidanchor.utils.math.fastCos
-import net.solidanchor.utils.math.fastSin
+import com.github.eedcd.solidanchor.utils.math.fastCos
+import com.github.eedcd.solidanchor.utils.math.fastSin
 import net.minecraft.util.Mth
 
 object UnitCircle {

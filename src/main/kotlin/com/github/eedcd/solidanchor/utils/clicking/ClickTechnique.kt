@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.clicking
+package com.github.eedcd.solidanchor.utils.clicking
 
-import net.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.types.list.Tagged
 
 enum class ClickTechnique(override val tag: String) : Tagged {
     HUMAN("Human"),

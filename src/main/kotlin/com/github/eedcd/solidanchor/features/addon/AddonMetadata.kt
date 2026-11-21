@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.addon
+package com.github.eedcd.solidanchor.features.addon
 
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.client.logger
 import net.fabricmc.loader.api.ModContainer
 import net.fabricmc.loader.api.metadata.CustomValue
 import net.fabricmc.loader.api.metadata.ModOrigin

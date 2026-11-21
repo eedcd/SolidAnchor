@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.utils
+package com.github.eedcd.solidanchor.config.utils
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.config.types.toTextureProperty
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.types.toTextureProperty
 import net.minecraft.client.renderer.texture.DynamicTexture
 
 sealed class TextureMode(name: String) : Mode(name) {

@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.render;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render;
 
-import net.solidanchor.features.module.modules.render.ModuleXRay;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleXRay;
 import net.minecraft.client.renderer.chunk.VisGraph;
 import net.minecraft.core.BlockPos;
 import org.spongepowered.asm.mixin.Mixin;

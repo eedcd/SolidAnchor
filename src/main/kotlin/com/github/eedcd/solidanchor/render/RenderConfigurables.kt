@@ -17,18 +17,18 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
-import net.solidanchor.SolidAnchor
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.utils.rainbow
-import net.solidanchor.utils.entity.cameraDistance
-import net.solidanchor.utils.entity.getActualHealth
-import net.solidanchor.utils.render.asTexture
-import net.solidanchor.utils.render.readNativeImage
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.utils.rainbow
+import com.github.eedcd.solidanchor.utils.entity.cameraDistance
+import com.github.eedcd.solidanchor.utils.entity.getActualHealth
+import com.github.eedcd.solidanchor.utils.render.asTexture
+import com.github.eedcd.solidanchor.utils.render.readNativeImage
 import net.minecraft.core.BlockPos
 import net.minecraft.util.ToFloatFunction
 import net.minecraft.world.entity.Entity

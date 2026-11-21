@@ -16,32 +16,32 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.ingame
+package com.github.eedcd.solidanchor.features.command.commands.ingame
 
 import com.mojang.brigadier.CommandDispatcher
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.EventListener
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.arguments.MultiTaggedArgumentType
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.CmdI18n
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.lang.translation
-import net.solidanchor.utils.client.ServerObserver
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.copyable
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.client.network
-import net.solidanchor.utils.client.onClick
-import net.solidanchor.utils.client.onHover
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.variable
-import net.solidanchor.utils.client.warning
-import net.solidanchor.utils.math.roundToDecimalPlaces
-import net.solidanchor.utils.text.hideSensitiveAddress
-import net.solidanchor.utils.text.joinToText
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.arguments.MultiTaggedArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdI18n
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.lang.translation
+import com.github.eedcd.solidanchor.utils.client.ServerObserver
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.copyable
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.client.network
+import com.github.eedcd.solidanchor.utils.client.onClick
+import com.github.eedcd.solidanchor.utils.client.onHover
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.utils.client.warning
+import com.github.eedcd.solidanchor.utils.math.roundToDecimalPlaces
+import com.github.eedcd.solidanchor.utils.text.hideSensitiveAddress
+import com.github.eedcd.solidanchor.utils.text.joinToText
 import net.minecraft.network.chat.ClickEvent
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.ComponentUtils

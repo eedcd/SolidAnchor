@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.fluid;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.fluid;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.FluidPushEvent;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.FluidPushEvent;
 import net.minecraft.world.level.material.FlowingFluid;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

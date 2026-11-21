@@ -17,14 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.text;
+package com.github.eedcd.solidanchor.utils.text;
 
 import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.ComponentContents;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.Style;
-import net.minecraft.network.chat.TextColor;
+import net.minecraft.network.chat.*;
 import net.minecraft.network.chat.contents.PlainTextContents;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.FormattedCharSink;
@@ -50,18 +46,18 @@ public record PlainText(
     public static final PlainText SPACE = new PlainText(new PlainTextContents.LiteralContents(" "), Style.EMPTY);
     public static final PlainText NEW_LINE = new PlainText(new PlainTextContents.LiteralContents("\n"), Style.EMPTY);
 
-    public static PlainText empty() {
-        return EMPTY;
-    }
-
     public PlainText(PlainTextContents content) {
         this(content, Style.EMPTY);
     }
 
+    public static PlainText empty() {
+        return EMPTY;
+    }
+
     public static PlainText of(PlainTextContents content, Style style) {
         return content.text().isEmpty() && style.isEmpty()
-                ? EMPTY
-                : new PlainText(content, style);
+            ? EMPTY
+            : new PlainText(content, style);
     }
 
     public static PlainText of(String content) {
@@ -70,8 +66,8 @@ public record PlainText(
 
     public static PlainText of(String content, Style style) {
         return content.isEmpty() && style.isEmpty()
-                ? EMPTY
-                : new PlainText(PlainTextContents.create(content), style);
+            ? EMPTY
+            : new PlainText(PlainTextContents.create(content), style);
     }
 
     public static PlainText of(String content, ChatFormatting formatting) {

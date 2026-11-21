@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.misc.reporthelper
+package com.github.eedcd.solidanchor.features.module.modules.misc.reporthelper
 
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.ScreenEvent
-import net.solidanchor.event.sequenceHandler
-import net.solidanchor.event.tickConditional
-import net.solidanchor.utils.inventory.getSlotsInContainer
-import net.solidanchor.utils.inventory.syncId
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.ScreenEvent
+import com.github.eedcd.solidanchor.event.sequenceHandler
+import com.github.eedcd.solidanchor.event.tickConditional
+import com.github.eedcd.solidanchor.utils.inventory.getSlotsInContainer
+import com.github.eedcd.solidanchor.utils.inventory.syncId
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 import net.minecraft.world.inventory.ContainerInput
 import net.minecraft.world.item.Items
@@ -36,7 +36,7 @@ internal object ReportHelperAutoConfirm : ToggleableValueGroup(ModuleReportHelpe
         arrayOf(Hypixel, Heypixel)
     }
 
-    private sealed class Mode(name: String) : net.solidanchor.config.types.group.Mode(name) {
+    private sealed class Mode(name: String) : com.github.eedcd.solidanchor.config.types.group.Mode(name) {
         final override val parent: ModeValueGroup<*>
             get() = mode
 

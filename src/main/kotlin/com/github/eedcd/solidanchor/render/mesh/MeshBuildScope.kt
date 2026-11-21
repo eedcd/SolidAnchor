@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.mesh
+package com.github.eedcd.solidanchor.render.mesh
 
 import com.mojang.blaze3d.vertex.VertexConsumer
 

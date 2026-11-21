@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.spider.modes
+package com.github.eedcd.solidanchor.features.module.modules.movement.spider.modes
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.movement.spider.ModuleSpider
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.movement.spider.ModuleSpider
 
 /**
  * Spider Bypass for Vulcan 2.8.8
@@ -31,7 +31,7 @@ import net.solidanchor.features.module.modules.movement.spider.ModuleSpider
  *
  * @anticheat Vulcan 2.8.8
  * @testedOn eu.loyisa.cn
- * @see net.solidanchor.features.module.modules.movement.spider.ModuleSpider
+ * @see com.github.eedcd.solidanchor.features.module.modules.movement.spider.ModuleSpider
  *
  * TODO: Detection for how many blocks you've gone up. Anything over 40ish seems to flag for Invalid (C)
  *   Proper implementation if there's something above you needs to be added.

@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.render;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleItemChams;
+import com.github.eedcd.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.mojang.renderpearl.api.textures.GpuTexture;
 import com.mojang.renderpearl.api.textures.GpuTextureView;
-import net.solidanchor.features.module.modules.render.ModuleItemChams;
-import net.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience;
 import net.minecraft.client.renderer.Lightmap;
 import net.minecraft.client.renderer.state.LightmapRenderState;
 import org.jspecify.annotations.NullMarked;

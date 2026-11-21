@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.aimbot
+package com.github.eedcd.solidanchor.features.module.modules.combat.aimbot
 
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.combat.aimbot.autobow.AutoBowAimbotFeature
-import net.solidanchor.features.module.modules.combat.aimbot.autobow.AutoBowAutoShootFeature
-import net.solidanchor.features.module.modules.combat.aimbot.autobow.AutoBowFastChargeFeature
-import net.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.autobow.AutoBowAimbotFeature
+import com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.autobow.AutoBowAutoShootFeature
+import com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.autobow.AutoBowFastChargeFeature
+import com.github.eedcd.solidanchor.utils.client.Chronometer
 import net.minecraft.world.item.BowItem
 import java.util.Random
 

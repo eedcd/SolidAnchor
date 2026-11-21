@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.`fun`.notebot.nbs
+package com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.nbs
 
-import net.solidanchor.features.module.modules.`fun`.notebot.ModuleNotebot
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.ModuleNotebot
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.client.markAsError
 import okio.buffer
 import okio.source
 import java.io.File

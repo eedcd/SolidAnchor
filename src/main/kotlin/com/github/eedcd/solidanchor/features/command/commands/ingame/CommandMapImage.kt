@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.ingame
+package com.github.eedcd.solidanchor.features.command.commands.ingame
 
 import com.mojang.brigadier.CommandDispatcher
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.arguments.ClientStringArgumentType
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.clickablePath
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.entity.handItems
-import net.solidanchor.utils.io.clipboardSet
-import net.solidanchor.utils.item.mapSavedData
-import net.solidanchor.utils.item.toNativeImage
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.arguments.ClientStringArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.clickablePath
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.entity.handItems
+import com.github.eedcd.solidanchor.utils.io.clipboardSet
+import com.github.eedcd.solidanchor.utils.item.mapSavedData
+import com.github.eedcd.solidanchor.utils.item.toNativeImage
 import net.minecraft.core.component.DataComponents.MAP_ID
 import net.minecraft.world.level.saveddata.maps.MapId
 import net.minecraft.world.level.saveddata.maps.MapItemSavedData

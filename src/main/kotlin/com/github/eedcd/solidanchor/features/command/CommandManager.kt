@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command
+package com.github.eedcd.solidanchor.features.command
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.ParseResults
@@ -26,58 +26,58 @@ import com.mojang.brigadier.suggestion.Suggestions
 import com.mojang.brigadier.tree.LiteralCommandNode
 import it.unimi.dsi.fastutil.ints.IntArrayList
 import it.unimi.dsi.fastutil.ints.IntList
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.deepestExecutableContext
-import net.solidanchor.features.command.brigadier.offset
-import net.solidanchor.features.command.commands.client.CommandBind
-import net.solidanchor.features.command.commands.client.CommandBinds
-import net.solidanchor.features.command.commands.client.CommandClear
-import net.solidanchor.features.command.commands.client.CommandFriend
-import net.solidanchor.features.command.commands.client.CommandHelp
-import net.solidanchor.features.command.commands.client.CommandHide
-import net.solidanchor.features.command.commands.client.CommandLocalConfig
-import net.solidanchor.features.command.commands.client.CommandPanic
-import net.solidanchor.features.command.commands.client.CommandAddon
-import net.solidanchor.features.command.commands.client.CommandTargets
-import net.solidanchor.features.command.commands.client.CommandToggle
-import net.solidanchor.features.command.commands.client.CommandValue
-import net.solidanchor.features.command.commands.client.client.CommandClient
-import net.solidanchor.features.command.commands.ingame.CommandCenter
-import net.solidanchor.features.command.commands.ingame.CommandCoordinates
-import net.solidanchor.features.command.commands.ingame.CommandPing
-import net.solidanchor.features.command.commands.ingame.CommandRemoteView
-import net.solidanchor.features.command.commands.ingame.CommandSay
-import net.solidanchor.features.command.commands.ingame.CommandServerInfo
-import net.solidanchor.features.command.commands.ingame.CommandTps
-import net.solidanchor.features.command.commands.ingame.CommandUsername
-import net.solidanchor.features.command.commands.ingame.creative.CommandItemEnchant
-import net.solidanchor.features.command.commands.ingame.creative.CommandItemGive
-import net.solidanchor.features.command.commands.ingame.creative.CommandItemRename
-import net.solidanchor.features.command.commands.ingame.creative.CommandItemSkull
-import net.solidanchor.features.command.commands.ingame.creative.CommandItemStack
-import net.solidanchor.features.command.commands.ingame.CommandMapImage
-import net.solidanchor.features.command.commands.ingame.fakeplayer.CommandFakePlayer
-import net.solidanchor.features.command.commands.module.CommandAutoAccount
-import net.solidanchor.features.command.commands.module.CommandAutoDisable
-import net.solidanchor.features.command.commands.module.CommandInvsee
-import net.solidanchor.features.command.commands.module.CommandXRay
-import net.solidanchor.features.command.commands.module.teleport.CommandPlayerTeleport
-import net.solidanchor.features.command.commands.module.teleport.CommandTeleport
-import net.solidanchor.features.command.commands.module.teleport.CommandVClip
-import net.solidanchor.features.command.commands.translate.CommandAutoTranslate
-import net.solidanchor.features.command.commands.translate.CommandTranslate
-import net.solidanchor.features.misc.SelfDestruct
-import net.solidanchor.lang.translation
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.text.asPlainText
-import net.solidanchor.utils.text.asText
-import net.solidanchor.utils.text.joinToText
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.math.levenshtein
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.deepestExecutableContext
+import com.github.eedcd.solidanchor.features.command.brigadier.offset
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandBind
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandBinds
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandClear
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandFriend
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandHelp
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandHide
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandLocalConfig
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandPanic
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandAddon
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandTargets
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandToggle
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandValue
+import com.github.eedcd.solidanchor.features.command.commands.client.client.CommandClient
+import com.github.eedcd.solidanchor.features.command.commands.ingame.CommandCenter
+import com.github.eedcd.solidanchor.features.command.commands.ingame.CommandCoordinates
+import com.github.eedcd.solidanchor.features.command.commands.ingame.CommandPing
+import com.github.eedcd.solidanchor.features.command.commands.ingame.CommandRemoteView
+import com.github.eedcd.solidanchor.features.command.commands.ingame.CommandSay
+import com.github.eedcd.solidanchor.features.command.commands.ingame.CommandServerInfo
+import com.github.eedcd.solidanchor.features.command.commands.ingame.CommandTps
+import com.github.eedcd.solidanchor.features.command.commands.ingame.CommandUsername
+import com.github.eedcd.solidanchor.features.command.commands.ingame.creative.CommandItemEnchant
+import com.github.eedcd.solidanchor.features.command.commands.ingame.creative.CommandItemGive
+import com.github.eedcd.solidanchor.features.command.commands.ingame.creative.CommandItemRename
+import com.github.eedcd.solidanchor.features.command.commands.ingame.creative.CommandItemSkull
+import com.github.eedcd.solidanchor.features.command.commands.ingame.creative.CommandItemStack
+import com.github.eedcd.solidanchor.features.command.commands.ingame.CommandMapImage
+import com.github.eedcd.solidanchor.features.command.commands.ingame.fakeplayer.CommandFakePlayer
+import com.github.eedcd.solidanchor.features.command.commands.module.CommandAutoAccount
+import com.github.eedcd.solidanchor.features.command.commands.module.CommandAutoDisable
+import com.github.eedcd.solidanchor.features.command.commands.module.CommandInvsee
+import com.github.eedcd.solidanchor.features.command.commands.module.CommandXRay
+import com.github.eedcd.solidanchor.features.command.commands.module.teleport.CommandPlayerTeleport
+import com.github.eedcd.solidanchor.features.command.commands.module.teleport.CommandTeleport
+import com.github.eedcd.solidanchor.features.command.commands.module.teleport.CommandVClip
+import com.github.eedcd.solidanchor.features.command.commands.translate.CommandAutoTranslate
+import com.github.eedcd.solidanchor.features.command.commands.translate.CommandTranslate
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct
+import com.github.eedcd.solidanchor.lang.translation
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.utils.text.asText
+import com.github.eedcd.solidanchor.utils.text.joinToText
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.math.levenshtein
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.ComponentUtils
@@ -243,7 +243,7 @@ object CommandManager : EventListener {
     /**
      * Drops the cached dispatcher so it is rebuilt with fresh argument state on next use.
      *
-     * Called on world join/leave ([net.solidanchor.event.events.WorldChangeEvent]):
+     * Called on world join/leave ([com.github.eedcd.solidanchor.event.events.WorldChangeEvent]):
      * argument types capture the registry access / feature flags at construction time
      * (e.g. `itemArgument()`, `resourceArgument()`), so a world change invalidates them.
      */
@@ -376,7 +376,7 @@ object CommandManager : EventListener {
             if (aliases.isEmpty()) {
                 node.name.asPlainText()
             } else {
-                net.solidanchor.utils.text.textOf(
+                com.github.eedcd.solidanchor.utils.text.textOf(
                     node.name.asPlainText(),
                     " (".asPlainText(ChatFormatting.DARK_GRAY),
                     aliases.joinToText(ComponentUtils.DEFAULT_SEPARATOR),

@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold
 
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.features.module.modules.player.invcleaner.ModuleInventoryCleaner
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.collection.blockSortedSetOf
-import net.solidanchor.utils.item.getBlock
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ModuleInventoryCleaner
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.collection.blockSortedSetOf
+import com.github.eedcd.solidanchor.utils.item.getBlock
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.world.item.ItemStack

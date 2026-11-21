@@ -16,23 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura.place
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place
 
 import it.unimi.dsi.fastutil.ints.IntCollection
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura
-import net.solidanchor.features.module.modules.combat.crystalaura.SubmoduleBasePlace
-import net.solidanchor.features.module.modules.combat.crystalaura.place.SubmoduleCrystalPlacer.getMaxRange
-import net.solidanchor.features.module.modules.combat.crystalaura.place.SubmoduleCrystalPlacer.oldVersion
-import net.solidanchor.features.module.modules.combat.crystalaura.place.conditions.AirAboveCondition
-import net.solidanchor.features.module.modules.combat.crystalaura.place.conditions.AirOldVersionCondition
-import net.solidanchor.features.module.modules.combat.crystalaura.place.conditions.BasePlaceCondition
-import net.solidanchor.features.module.modules.combat.crystalaura.place.conditions.OnlyAboveCondition
-import net.solidanchor.features.module.modules.combat.crystalaura.place.conditions.PredictBlockageCondition
-import net.solidanchor.features.module.modules.combat.crystalaura.place.conditions.ValidHeightCondition
-import net.solidanchor.render.FULL_BOX
-import net.solidanchor.utils.block.getSortedSphere
-import net.solidanchor.utils.block.isBlockedByEntitiesReturnCrystal
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.SubmoduleBasePlace
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.SubmoduleCrystalPlacer.getMaxRange
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.SubmoduleCrystalPlacer.oldVersion
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.conditions.AirAboveCondition
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.conditions.AirOldVersionCondition
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.conditions.BasePlaceCondition
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.conditions.OnlyAboveCondition
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.conditions.PredictBlockageCondition
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.conditions.ValidHeightCondition
+import com.github.eedcd.solidanchor.render.FULL_BOX
+import com.github.eedcd.solidanchor.utils.block.getSortedSphere
+import com.github.eedcd.solidanchor.utils.block.isBlockedByEntitiesReturnCrystal
 import net.minecraft.core.BlockPos
 
 object CrystalAuraPlaceTargetFactory : MinecraftShortcuts {

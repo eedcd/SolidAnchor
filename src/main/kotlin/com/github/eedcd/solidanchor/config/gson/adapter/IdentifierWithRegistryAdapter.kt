@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.config.gson.adapter
+package com.github.eedcd.solidanchor.config.gson.adapter
 
 import com.google.gson.TypeAdapter
 import com.google.gson.stream.JsonReader

@@ -17,26 +17,26 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.tpaura.modes
+package com.github.eedcd.solidanchor.features.module.modules.combat.tpaura.modes
 
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.combat.tpaura.ModuleTpAura.clicker
-import net.solidanchor.features.module.modules.combat.tpaura.ModuleTpAura.desyncPlayerPosition
-import net.solidanchor.features.module.modules.combat.tpaura.ModuleTpAura.stuckChronometer
-import net.solidanchor.features.module.modules.combat.tpaura.ModuleTpAura.targetSelector
-import net.solidanchor.features.module.modules.combat.tpaura.TpAuraMode
-import net.solidanchor.render.drawLine
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.network.MovePacketType
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.entity.squaredBoxedDistanceTo
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.combat.tpaura.ModuleTpAura.clicker
+import com.github.eedcd.solidanchor.features.module.modules.combat.tpaura.ModuleTpAura.desyncPlayerPosition
+import com.github.eedcd.solidanchor.features.module.modules.combat.tpaura.ModuleTpAura.stuckChronometer
+import com.github.eedcd.solidanchor.features.module.modules.combat.tpaura.ModuleTpAura.targetSelector
+import com.github.eedcd.solidanchor.features.module.modules.combat.tpaura.TpAuraMode
+import com.github.eedcd.solidanchor.render.drawLine
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.network.MovePacketType
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.entity.squaredBoxedDistanceTo
 import net.minecraft.network.protocol.game.ClientboundPlayerPositionPacket
 import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket
 import net.minecraft.world.phys.Vec3

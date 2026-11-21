@@ -19,7 +19,7 @@
 
 @file:Suppress("TooManyFunctions")
 
-package net.solidanchor.utils.block
+package com.github.eedcd.solidanchor.utils.block
 
 import com.google.common.base.Predicates
 import net.ccbluex.fastutil.weightedFilterSortedByAtMost
@@ -27,32 +27,32 @@ import it.unimi.dsi.fastutil.booleans.BooleanObjectPair
 import it.unimi.dsi.fastutil.ints.IntCollection
 import it.unimi.dsi.fastutil.ints.IntLongPair
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet
-import net.solidanchor.common.TweakedMethods
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.BlockBreakingProgressEvent
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.render.FULL_BOX
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.block.targetfinding.BlockOffsetOptions
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
-import net.solidanchor.utils.block.targetfinding.CenterTargetPositionFactory
-import net.solidanchor.utils.block.targetfinding.FaceHandlingOptions
-import net.solidanchor.utils.block.targetfinding.PlayerLocationOnPlacement
-import net.solidanchor.utils.block.targetfinding.findBestBlockPlacementTarget
-import net.solidanchor.utils.block.targetfinding.verifyClick
-import net.solidanchor.utils.client.interaction
-import net.solidanchor.utils.client.isOlderThan1_21_2
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.math.boundsOrNull
-import net.solidanchor.utils.math.distanceToSqr
-import net.solidanchor.utils.math.intersects
-import net.solidanchor.utils.math.iterator
-import net.solidanchor.utils.math.plus
-import net.solidanchor.utils.math.sq
-import net.solidanchor.utils.network.useItem
-import net.solidanchor.utils.raytracing.traceFromPlayer
+import com.github.eedcd.solidanchor.common.TweakedMethods
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.BlockBreakingProgressEvent
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.render.FULL_BOX
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockOffsetOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.CenterTargetPositionFactory
+import com.github.eedcd.solidanchor.utils.block.targetfinding.FaceHandlingOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.PlayerLocationOnPlacement
+import com.github.eedcd.solidanchor.utils.block.targetfinding.findBestBlockPlacementTarget
+import com.github.eedcd.solidanchor.utils.block.targetfinding.verifyClick
+import com.github.eedcd.solidanchor.utils.client.interaction
+import com.github.eedcd.solidanchor.utils.client.isOlderThan1_21_2
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.math.boundsOrNull
+import com.github.eedcd.solidanchor.utils.math.distanceToSqr
+import com.github.eedcd.solidanchor.utils.math.intersects
+import com.github.eedcd.solidanchor.utils.math.iterator
+import com.github.eedcd.solidanchor.utils.math.plus
+import com.github.eedcd.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.utils.network.useItem
+import com.github.eedcd.solidanchor.utils.raytracing.traceFromPlayer
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.core.TypedInstance

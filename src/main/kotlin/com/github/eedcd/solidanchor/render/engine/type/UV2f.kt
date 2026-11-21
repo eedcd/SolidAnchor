@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.render.engine.type
+package com.github.eedcd.solidanchor.render.engine.type
 
-import net.solidanchor.utils.kotlin.FloatFloatValuePair
+import com.github.eedcd.solidanchor.utils.kotlin.FloatFloatValuePair
 
 @JvmInline
 value class UV2f private constructor(private val pair: FloatFloatValuePair) {

@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.config.types
+package com.github.eedcd.solidanchor.config.types
 
 import com.google.gson.Gson
 import com.google.gson.JsonElement
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.autoconfig.AutoConfig
-import net.solidanchor.config.gson.stategies.Exclude
-import net.solidanchor.lang.LanguageManager
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.autoconfig.AutoConfig
+import com.github.eedcd.solidanchor.config.gson.stategies.Exclude
+import com.github.eedcd.solidanchor.lang.LanguageManager
 import org.lwjgl.sdl.SDLDialog.SDL_ShowOpenFileDialog
 import org.lwjgl.sdl.SDLDialog.SDL_ShowOpenFolderDialog
 import org.lwjgl.sdl.SDLDialog.SDL_ShowSaveFileDialog

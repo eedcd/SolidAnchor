@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.types
+package com.github.eedcd.solidanchor.config.types
 
-import net.solidanchor.test.MinecraftBootstrap
+import com.github.eedcd.solidanchor.test.MinecraftBootstrap
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

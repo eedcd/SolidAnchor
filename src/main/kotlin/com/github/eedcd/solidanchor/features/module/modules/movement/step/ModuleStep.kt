@@ -16,33 +16,33 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.step
+package com.github.eedcd.solidanchor.features.module.modules.movement.step
 
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.AllowAutoJumpEvent
-import net.solidanchor.event.events.BlinkPacketEvent
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.PlayerNetworkMovementTickEvent
-import net.solidanchor.event.events.PlayerStepEvent
-import net.solidanchor.event.events.PlayerStepSuccessEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.event.handler
-import net.solidanchor.event.sequenceHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.blink.BlinkManager
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.movement.speed.ModuleSpeed
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.utils.network.MovePacketType
-import net.solidanchor.utils.client.Timer
-import net.solidanchor.utils.entity.airTicks
-import net.solidanchor.utils.entity.canStep
-import net.solidanchor.utils.entity.withStrafe
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.AllowAutoJumpEvent
+import com.github.eedcd.solidanchor.event.events.BlinkPacketEvent
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.PlayerNetworkMovementTickEvent
+import com.github.eedcd.solidanchor.event.events.PlayerStepEvent
+import com.github.eedcd.solidanchor.event.events.PlayerStepSuccessEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.sequenceHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.blink.BlinkManager
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.movement.speed.ModuleSpeed
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.utils.network.MovePacketType
+import com.github.eedcd.solidanchor.utils.client.Timer
+import com.github.eedcd.solidanchor.utils.entity.airTicks
+import com.github.eedcd.solidanchor.utils.entity.canStep
+import com.github.eedcd.solidanchor.utils.entity.withStrafe
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 import net.minecraft.stats.Stats
 
 /**

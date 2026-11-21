@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.render.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render.entity;
 
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleAntiExploit;
+import com.github.eedcd.solidanchor.features.module.modules.render.*;
+import com.github.eedcd.solidanchor.features.module.modules.render.esp.ModuleESP;
+import com.github.eedcd.solidanchor.features.module.modules.render.esp.modes.EspGlowMode;
+import com.github.eedcd.solidanchor.features.module.modules.render.nametags.ModuleNametags;
+import com.github.eedcd.solidanchor.interfaces.EntityRenderStateAddition;
+import com.github.eedcd.solidanchor.render.engine.type.Color4b;
+import com.github.eedcd.solidanchor.utils.combat.CombatExtensionsKt;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.solidanchor.features.module.modules.player.ModuleAntiExploit;
-import net.solidanchor.features.module.modules.render.*;
-import net.solidanchor.features.module.modules.render.esp.ModuleESP;
-import net.solidanchor.features.module.modules.render.esp.modes.EspGlowMode;
-import net.solidanchor.features.module.modules.render.nametags.ModuleNametags;
-import net.solidanchor.interfaces.EntityRenderStateAddition;
-import net.solidanchor.render.engine.type.Color4b;
-import net.solidanchor.utils.combat.CombatExtensionsKt;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.SubmitNodeCollector;
@@ -63,6 +63,22 @@ public abstract class MixinEntityRenderer<T extends Entity, S extends EntityRend
     @Shadow
     @Final
     protected EntityRenderDispatcher entityRenderDispatcher;
+
+    @Unique
+    private static boolean solid_anchor$shouldRenderOutline(Entity entity) {
+        if (ModuleItemESP.GlowMode.INSTANCE.getRunning() && ModuleItemESP.INSTANCE.shouldRender(entity)) {
+            return true;
+        } else if (EspGlowMode.INSTANCE.getRunning() && CombatExtensionsKt.shouldBeShown(entity) && EspGlowMode.INSTANCE.shouldRender(entity)) {
+            return true;
+        } else if (ModuleTNTTimer.INSTANCE.getRunning() && ModuleTNTTimer.INSTANCE.getEsp() && entity instanceof PrimedTnt) {
+            return true;
+        } else if (ModuleStorageESP.GlowMode.INSTANCE.getRunning()) {
+            var category = ModuleStorageESP.categorize(entity);
+            return category != null && category.shouldRender(entity);
+        } else {
+            return false;
+        }
+    }
 
     @Shadow
     public abstract Font getFont();
@@ -142,22 +158,6 @@ public abstract class MixinEntityRenderer<T extends Entity, S extends EntityRend
     @ModifyExpressionValue(method = "extractRenderState", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;shouldEntityAppearGlowing(Lnet/minecraft/world/entity/Entity;)Z"))
     private boolean modifyShouldRenderOutline(boolean original, @Local(argsOnly = true, name = "entity") Entity entity) {
         return original || solid_anchor$shouldRenderOutline(entity);
-    }
-
-    @Unique
-    private static boolean solid_anchor$shouldRenderOutline(Entity entity) {
-        if (ModuleItemESP.GlowMode.INSTANCE.getRunning() && ModuleItemESP.INSTANCE.shouldRender(entity)) {
-            return true;
-        } else if (EspGlowMode.INSTANCE.getRunning() && CombatExtensionsKt.shouldBeShown(entity) && EspGlowMode.INSTANCE.shouldRender(entity)) {
-            return true;
-        } else if (ModuleTNTTimer.INSTANCE.getRunning() && ModuleTNTTimer.INSTANCE.getEsp() && entity instanceof PrimedTnt) {
-            return true;
-        } else if (ModuleStorageESP.GlowMode.INSTANCE.getRunning()) {
-            var category = ModuleStorageESP.categorize(entity);
-            return category != null && category.shouldRender(entity);
-        } else {
-            return false;
-        }
     }
 
     /**

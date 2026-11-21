@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.render.trajectory
+package com.github.eedcd.solidanchor.utils.render.trajectory
 
-import net.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.types.list.Tagged
 
 /**
  * @see net.minecraft.world.entity.projectile.ThrowableProjectile.tick

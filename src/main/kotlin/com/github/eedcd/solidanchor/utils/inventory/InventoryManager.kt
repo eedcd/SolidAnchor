@@ -17,30 +17,30 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.inventory
+package com.github.eedcd.solidanchor.utils.inventory
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.ScheduleInventoryActionEvent
-import net.solidanchor.event.events.ScreenEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.inGame
-import net.solidanchor.utils.client.isOlderThanOrEqual1_11_1
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.network
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.network.send1_11_1OpenInventory
-import net.solidanchor.utils.network.sendCloseInventory
-import net.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.ScheduleInventoryActionEvent
+import com.github.eedcd.solidanchor.event.events.ScreenEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.inGame
+import com.github.eedcd.solidanchor.utils.client.isOlderThanOrEqual1_11_1
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.network
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.network.send1_11_1OpenInventory
+import com.github.eedcd.solidanchor.utils.network.sendCloseInventory
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 import net.minecraft.client.gui.screens.inventory.InventoryScreen
 import net.minecraft.core.registries.BuiltInRegistries
@@ -228,7 +228,7 @@ object InventoryManager : EventListener {
     /**
      * Called when a click occurs. Can be tracked by listening for [ServerboundContainerClickPacket]
      *
-     * @see net.solidanchor.injection.mixins.viaversion.MixinPacketWrapper
+     * @see com.github.eedcd.solidanchor.injection.mixins.viaversion.MixinPacketWrapper
      */
     @JvmStatic
     fun onClickOccurs() {

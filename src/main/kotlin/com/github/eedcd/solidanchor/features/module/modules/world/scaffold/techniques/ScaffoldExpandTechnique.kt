@@ -16,23 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold.techniques
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.techniques
 
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.getTargetedPosition
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.block.targetfinding.BlockOffsetOptions
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTarget
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
-import net.solidanchor.utils.block.targetfinding.CenterTargetPositionFactory
-import net.solidanchor.utils.block.targetfinding.FaceHandlingOptions
-import net.solidanchor.utils.block.targetfinding.FailedClick
-import net.solidanchor.utils.block.targetfinding.PlayerLocationOnPlacement
-import net.solidanchor.utils.block.targetfinding.findBestBlockPlacementTarget
-import net.solidanchor.utils.block.targetfinding.verifyClick
-import net.solidanchor.utils.math.center
-import net.solidanchor.utils.math.toRadians
-import net.solidanchor.utils.math.geometry.Line
-import net.solidanchor.utils.math.toBlockPos
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.getTargetedPosition
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockOffsetOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTarget
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.CenterTargetPositionFactory
+import com.github.eedcd.solidanchor.utils.block.targetfinding.FaceHandlingOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.FailedClick
+import com.github.eedcd.solidanchor.utils.block.targetfinding.PlayerLocationOnPlacement
+import com.github.eedcd.solidanchor.utils.block.targetfinding.findBestBlockPlacementTarget
+import com.github.eedcd.solidanchor.utils.block.targetfinding.verifyClick
+import com.github.eedcd.solidanchor.utils.math.center
+import com.github.eedcd.solidanchor.utils.math.toRadians
+import com.github.eedcd.solidanchor.utils.math.geometry.Line
+import com.github.eedcd.solidanchor.utils.math.toBlockPos
 import net.minecraft.world.entity.Pose
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.phys.BlockHitResult

@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura.place.conditions
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.conditions
 
-import net.solidanchor.features.module.modules.combat.crystalaura.place.CandidateCache
-import net.solidanchor.features.module.modules.combat.crystalaura.place.PlacementCondition
-import net.solidanchor.features.module.modules.combat.crystalaura.place.PlacementContext
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.CandidateCache
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.PlacementCondition
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.PlacementContext
 import net.minecraft.core.BlockPos
 
 /**

@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.antivoid.mode
+package com.github.eedcd.solidanchor.features.module.modules.player.antivoid.mode
 
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.EventState
-import net.solidanchor.event.events.PlayerNetworkMovementTickEvent
-import net.solidanchor.event.until
-import net.solidanchor.features.module.modules.player.antivoid.ModuleAntiVoid
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.EventState
+import com.github.eedcd.solidanchor.event.events.PlayerNetworkMovementTickEvent
+import com.github.eedcd.solidanchor.event.until
+import com.github.eedcd.solidanchor.features.module.modules.player.antivoid.ModuleAntiVoid
 
 object AntiVoidFlagMode : AntiVoidMode("Flag") {
 

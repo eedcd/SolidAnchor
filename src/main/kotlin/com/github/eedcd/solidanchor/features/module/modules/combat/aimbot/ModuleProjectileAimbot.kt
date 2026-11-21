@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.aimbot
+package com.github.eedcd.solidanchor.features.module.modules.combat.aimbot
 
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.aiming.projectiles.SituationalProjectileAngleCalculator
-import net.solidanchor.utils.combat.TargetSelector
-import net.solidanchor.utils.entity.handItems
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.render.trajectory.HeldItemTrajectoryResolver
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.projectiles.SituationalProjectileAngleCalculator
+import com.github.eedcd.solidanchor.utils.combat.TargetSelector
+import com.github.eedcd.solidanchor.utils.entity.handItems
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.render.trajectory.HeldItemTrajectoryResolver
 
 object ModuleProjectileAimbot : ClientModule("ProjectileAimbot", ModuleCategories.COMBAT) {
 

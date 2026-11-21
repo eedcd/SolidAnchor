@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.gui;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui;
 
+import com.github.eedcd.solidanchor.features.module.modules.misc.betterchat.ModuleBetterChat;
+import com.github.eedcd.solidanchor.interfaces.GuiMessageLineAddition;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.features.module.modules.misc.betterchat.ModuleBetterChat;
-import net.solidanchor.interfaces.GuiMessageLineAddition;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
@@ -29,7 +29,10 @@ import net.minecraft.client.gui.components.ChatComponent;
 import net.minecraft.client.multiplayer.chat.GuiMessage;
 import net.minecraft.util.ArrayListDeque;
 import net.minecraft.util.FormattedCharSequence;
-import org.spongepowered.asm.mixin.*;
+import org.spongepowered.asm.mixin.Final;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Mutable;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -39,28 +42,24 @@ import java.util.List;
 @Mixin(ChatComponent.class)
 public abstract class MixinChatComponent {
 
-    @Shadow
-    @Final
-    private Minecraft minecraft;
-
     @Mutable
     @Shadow
     @Final
     public List<GuiMessage> allMessages;
-
     @Mutable
     @Shadow
     @Final
     public List<GuiMessage.Line> trimmedMessages;
+    @Shadow
+    @Final
+    private Minecraft minecraft;
+    @Shadow
+    private int chatScrollbarPos;
+    @Shadow
+    private boolean newMessageSinceScroll;
 
     @Shadow
     public abstract boolean isChatFocused();
-
-    @Shadow
-    private int chatScrollbarPos;
-
-    @Shadow
-    private boolean newMessageSinceScroll;
 
     @Shadow
     public abstract void scrollChat(int scroll);

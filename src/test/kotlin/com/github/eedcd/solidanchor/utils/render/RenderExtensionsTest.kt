@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.render
+package com.github.eedcd.solidanchor.utils.render
 
 import com.mojang.blaze3d.platform.NativeImage
 import it.unimi.dsi.fastutil.io.FastByteArrayInputStream

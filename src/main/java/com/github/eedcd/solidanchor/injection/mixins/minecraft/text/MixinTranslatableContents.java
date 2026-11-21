@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.text;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.text;
 
+import com.github.eedcd.solidanchor.lang.LanguageManager;
+import com.github.eedcd.solidanchor.lang.LanguageText;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import net.solidanchor.lang.LanguageManager;
-import net.solidanchor.lang.LanguageText;
 import net.minecraft.locale.Language;
 import net.minecraft.network.chat.contents.TranslatableContents;
 import org.spongepowered.asm.mixin.Mixin;

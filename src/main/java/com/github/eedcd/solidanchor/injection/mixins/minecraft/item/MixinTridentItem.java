@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.item;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.item;
 
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleTridentBoost;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import net.solidanchor.features.module.modules.movement.ModuleTridentBoost;
 import net.minecraft.world.item.TridentItem;
 import org.jspecify.annotations.NullMarked;
 import org.spongepowered.asm.mixin.Mixin;

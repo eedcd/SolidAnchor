@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.ui.hud.components.minimap
+package com.github.eedcd.solidanchor.ui.hud.components.minimap
 
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet
-import net.solidanchor.SolidAnchor.CLIENT_NAME
-import net.solidanchor.render.engine.type.BoundingBox2f
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.render.textureSetup
-import net.solidanchor.utils.render.uploadRect
+import com.github.eedcd.solidanchor.SolidAnchor.CLIENT_NAME
+import com.github.eedcd.solidanchor.render.engine.type.BoundingBox2f
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.render.textureSetup
+import com.github.eedcd.solidanchor.utils.render.uploadRect
 import net.minecraft.client.gui.render.TextureSetup
 import net.minecraft.client.renderer.Rect2i
 import net.minecraft.client.renderer.texture.DynamicTexture

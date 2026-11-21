@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.brigadier
+package com.github.eedcd.solidanchor.features.command.brigadier
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.StringReader

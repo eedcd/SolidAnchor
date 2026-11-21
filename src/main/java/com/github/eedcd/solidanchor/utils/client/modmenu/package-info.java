@@ -18,4 +18,4 @@
  */
 
 @org.jspecify.annotations.NullMarked
-package net.solidanchor.utils.client.modmenu;
+package com.github.eedcd.solidanchor.utils.client.modmenu;

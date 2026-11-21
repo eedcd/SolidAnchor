@@ -17,14 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.ui.altmanager
+package com.github.eedcd.solidanchor.ui.altmanager
 
 import com.mojang.blaze3d.platform.InputConstants
-import net.solidanchor.features.account.AccountManager
-import net.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.AccountManagerAdditionResultEvent
+import com.github.eedcd.solidanchor.features.account.AccountManager
+import com.github.eedcd.solidanchor.utils.client.mc
 import net.minecraft.client.gui.GuiGraphicsExtractor
+import net.minecraft.client.gui.components.Button
+import net.minecraft.client.gui.components.EditBox
 import net.minecraft.client.gui.screens.Screen
-import net.minecraft.client.input.CharacterEvent
 import net.minecraft.client.input.KeyEvent
 import net.minecraft.client.input.MouseButtonEvent
 import net.minecraft.network.chat.Component
@@ -52,8 +55,23 @@ class AltManagerScreen : Screen(Component.literal("Alt Manager")) {
     private var listW = 0F
     private var listH = 0F
 
-    private var usernameBuffer = ""
-    private var editingUsername = false
+    private lateinit var usernameField: EditBox
+
+    private var statusMessage = ""
+    private var statusIsError = false
+
+    private val eventOwner = object : EventListener {}
+
+    private val additionHook = eventOwner.on(AccountManagerAdditionResultEvent::class.java) { event ->
+        val error = event.error
+        val username = event.username
+        if (error != null || username != null) {
+            mc.execute {
+                statusMessage = error ?: "Added account $username"
+                statusIsError = error != null
+            }
+        }
+    }
 
     private val accounts get() = AccountManager.accounts
 
@@ -61,6 +79,56 @@ class AltManagerScreen : Screen(Component.literal("Alt Manager")) {
         listW = (width - 20).toFloat()
         listH = (height - 120).coerceAtLeast(40).toFloat()
         listScroll = listScroll.coerceIn(0F, maxScroll())
+
+        val previousUsername = if (::usernameField.isInitialized) usernameField.value else ""
+
+        val fieldX = 10
+        val fieldY = height - 72
+        val fieldW = 160
+        val fieldH = 18
+
+        usernameField = EditBox(font, fieldX, fieldY, fieldW, fieldH, Component.literal("Username"))
+        usernameField.setMaxLength(16)
+        usernameField.value = previousUsername
+        addRenderableWidget(usernameField)
+
+        addRenderableWidget(
+            Button.builder(Component.literal("Add Cracked")) { addCrackedAccount() }
+                .pos(fieldX + fieldW + 6, fieldY)
+                .size(90, fieldH)
+                .build(),
+        )
+        addRenderableWidget(
+            Button.builder(Component.literal("Microsoft Login")) {
+                statusMessage = "Opening the Microsoft sign-in page in your browser..."
+                statusIsError = false
+                AccountManager.newMicrosoftAccountViaBrowser()
+            }
+                .pos(fieldX, fieldY + fieldH + 6)
+                .size(120, fieldH)
+                .build(),
+        )
+        addRenderableWidget(
+            Button.builder(Component.literal("Restore Initial")) { AccountManager.restoreInitial() }
+                .pos(fieldX + 126, fieldY + fieldH + 6)
+                .size(120, fieldH)
+                .build(),
+        )
+        addRenderableWidget(
+            Button.builder(Component.literal("Back")) { mc.gui.setScreen(null) }
+                .pos(width - 70, fieldY + fieldH + 6)
+                .size(60, fieldH)
+                .build(),
+        )
+    }
+
+    private fun addCrackedAccount() {
+        val username = usernameField.value.trim()
+        if (username.isEmpty()) {
+            return
+        }
+        AccountManager.newCrackedAccount(username)
+        usernameField.value = ""
     }
 
     private fun maxScroll(): Float = (accounts.size * ROW_HEIGHT - listH).coerceAtLeast(0F)
@@ -99,9 +167,13 @@ class AltManagerScreen : Screen(Component.literal("Alt Manager")) {
             )
         }
 
-        drawBottomControls(context, mouseX, mouseY)
-
         listScroll = listScroll.coerceIn(0F, maxScroll())
+
+        val pendingCode = AccountManager.pendingMicrosoftLoginCode
+        val message = if (pendingCode != null) "Enter code $pendingCode at microsoft.com/link" else statusMessage
+        if (message.isNotEmpty()) {
+            context.text(font, Component.literal(message), 10, height - 24, if (statusIsError) ERROR else TEXT_DIM, false)
+        }
 
         super.extractRenderState(context, mouseX, mouseY, partialTick)
     }
@@ -151,80 +223,11 @@ class AltManagerScreen : Screen(Component.literal("Alt Manager")) {
         })
     }
 
-    private fun drawBottomControls(context: GuiGraphicsExtractor, mouseX: Int, mouseY: Int) {
-        val fieldX = 10F
-        val fieldY = height - 72F
-        val fieldW = 160F
-        val fieldH = 18F
-
-        context.fill(fieldX.toInt(), fieldY.toInt(), (fieldX + fieldW).toInt(), (fieldY + fieldH).toInt(), PANEL_BG)
-        context.fill(
-            fieldX.toInt(),
-            fieldY.toInt(),
-            (fieldX + fieldW).toInt(),
-            (fieldY + fieldH).toInt(),
-            if (editingUsername) ACCENT else BORDER,
-        )
-        context.fill(
-            (fieldX + 1).toInt(),
-            (fieldY + 1).toInt(),
-            (fieldX + fieldW - 1).toInt(),
-            (fieldY + fieldH - 1).toInt(),
-            PANEL_BG,
-        )
-        context.text(
-            font,
-            Component.literal(usernameBuffer.ifEmpty { "Username" }),
-            (fieldX + 4).toInt(),
-            (fieldY + 5).toInt(),
-            if (usernameBuffer.isEmpty()) TEXT_DIM else TEXT,
-            false,
-        )
-        hits += HitArea(fieldX, fieldY, fieldX + fieldW, fieldY + fieldH, { editingUsername = true })
-
-        drawButton(context, "Add Cracked", fieldX + fieldW + 6, fieldY, 90F, fieldH, mouseX, mouseY) {
-            val username = usernameBuffer.trim()
-            if (username.isNotEmpty()) {
-                AccountManager.newCrackedAccount(username)
-                usernameBuffer = ""
-            }
-        }
-
-        val row2Y = fieldY + fieldH + 6F
-        drawButton(context, "Microsoft Login", fieldX, row2Y, 120F, fieldH, mouseX, mouseY) {
-            AccountManager.newMicrosoftAccountViaBrowser()
-        }
-        drawButton(context, "Restore Initial", fieldX + 126, row2Y, 120F, fieldH, mouseX, mouseY) {
-            AccountManager.restoreInitial()
-        }
-        drawButton(context, "Back", width - 70F, row2Y, 60F, fieldH, mouseX, mouseY) {
-            mc.gui.setScreen(null)
-        }
-    }
-
-    private fun drawButton(
-        context: GuiGraphicsExtractor,
-        label: String,
-        x: Float,
-        y: Float,
-        w: Float,
-        h: Float,
-        mouseX: Int,
-        mouseY: Int,
-        action: () -> Unit,
-    ) {
-        val hovered = mouseX.toDouble() in x.toDouble()..(x + w).toDouble() &&
-            mouseY.toDouble() in y.toDouble()..(y + h).toDouble()
-
-        context.fill(x.toInt(), y.toInt(), (x + w).toInt(), (y + h).toInt(), if (hovered) PANEL_HEADER else PANEL_BG)
-        context.fill(x.toInt(), y.toInt(), (x + w).toInt(), (y + h).toInt(), BORDER)
-        context.fill((x + 1).toInt(), (y + 1).toInt(), (x + w - 1).toInt(), (y + h - 1).toInt(), if (hovered) PANEL_HEADER else PANEL_BG)
-        context.centeredText(font, Component.literal(label), (x + w / 2).toInt(), (y + 5).toInt(), TEXT)
-
-        hits += HitArea(x, y, x + w, y + h, action)
-    }
-
     override fun mouseClicked(click: MouseButtonEvent, doubled: Boolean): Boolean {
+        if (super.mouseClicked(click, doubled)) {
+            return true
+        }
+
         if (click.button() == InputConstants.MOUSE_BUTTON_LEFT) {
             for (hit in hits) {
                 if (hit.contains(click.x, click.y)) {
@@ -233,7 +236,8 @@ class AltManagerScreen : Screen(Component.literal("Alt Manager")) {
                 }
             }
         }
-        return super.mouseClicked(click, doubled)
+
+        return false
     }
 
     override fun mouseScrolled(mouseX: Double, mouseY: Double, horizontalAmount: Double, verticalAmount: Double): Boolean {
@@ -247,23 +251,7 @@ class AltManagerScreen : Screen(Component.literal("Alt Manager")) {
     }
 
     override fun keyPressed(input: KeyEvent): Boolean {
-        if (editingUsername) {
-            when (input.key) {
-                InputConstants.KEY_ESCAPE -> editingUsername = false
-                InputConstants.KEY_RETURN, InputConstants.KEY_NUMPADENTER -> {
-                    val username = usernameBuffer.trim()
-                    if (username.isNotEmpty()) {
-                        AccountManager.newCrackedAccount(username)
-                        usernameBuffer = ""
-                    }
-                    editingUsername = false
-                }
-                InputConstants.KEY_BACKSPACE -> {
-                    if (usernameBuffer.isNotEmpty()) {
-                        usernameBuffer = usernameBuffer.dropLast(1)
-                    }
-                }
-            }
+        if (super.keyPressed(input)) {
             return true
         }
 
@@ -272,18 +260,12 @@ class AltManagerScreen : Screen(Component.literal("Alt Manager")) {
             return true
         }
 
-        return super.keyPressed(input)
+        return false
     }
 
-    override fun charTyped(input: CharacterEvent): Boolean {
-        if (editingUsername) {
-            val codePoint = input.codepoint()
-            if (codePoint >= 32 && usernameBuffer.length < 16) {
-                usernameBuffer += codePoint.toChar()
-            }
-            return true
-        }
-        return super.charTyped(input)
+    override fun removed() {
+        additionHook.close()
+        super.removed()
     }
 
     override fun isPauseScreen() = false
@@ -293,12 +275,11 @@ class AltManagerScreen : Screen(Component.literal("Alt Manager")) {
 
         val BACKGROUND = 0xC0101014.toInt()
         val PANEL_BG = 0xE01A1A20.toInt()
-        val PANEL_HEADER = 0xFF26262E.toInt()
         val ROW_HOVER = 0xFF30303A.toInt()
-        val BORDER = 0xFF3A3A46.toInt()
         val ACCENT = 0xFF5C9DFF.toInt()
         val TEXT = 0xFFE8E8EC.toInt()
         val TEXT_DIM = 0xFF9A9AA6.toInt()
+        val ERROR = 0xFFFF6B6B.toInt()
     }
 
 }

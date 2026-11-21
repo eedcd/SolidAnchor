@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.packetmine.mode
+package com.github.eedcd.solidanchor.features.module.modules.world.packetmine.mode
 
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.BlockBreakingProgressEvent
-import net.solidanchor.features.module.modules.world.packetmine.MineTarget
-import net.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
-import net.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.BlockBreakingProgressEvent
+import com.github.eedcd.solidanchor.features.module.modules.world.packetmine.MineTarget
+import com.github.eedcd.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
 import net.minecraft.network.protocol.game.ServerboundPlayerActionPacket
 import net.minecraft.world.InteractionHand
 

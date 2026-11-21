@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.invcleaner
+package com.github.eedcd.solidanchor.features.module.modules.player.invcleaner
 
-import net.solidanchor.features.module.modules.player.invcleaner.ItemPacker.ItemAmountConstraintProvider.SatisfactionStatus.OVERSATURATED
-import net.solidanchor.features.module.modules.player.invcleaner.ItemPacker.ItemAmountConstraintProvider.SatisfactionStatus.SATISFIED
-import net.solidanchor.features.module.modules.player.invcleaner.items.ItemFacet
-import net.solidanchor.utils.inventory.ItemSlot
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemPacker.ItemAmountConstraintProvider.SatisfactionStatus.OVERSATURATED
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemPacker.ItemAmountConstraintProvider.SatisfactionStatus.SATISFIED
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.items.ItemFacet
+import com.github.eedcd.solidanchor.utils.inventory.ItemSlot
 import net.minecraft.world.item.ItemStack
 
 /**

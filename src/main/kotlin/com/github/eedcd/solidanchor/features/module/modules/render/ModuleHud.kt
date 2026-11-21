@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.SpaceSeperatedNamesChangeEvent
-import net.solidanchor.features.misc.SelfDestruct.isDestructed
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.ui.hud.HudComponentManager
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.SpaceSeperatedNamesChangeEvent
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct.isDestructed
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.ui.hud.HudComponentManager
 
 /**
  * Module HUD

@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.terrainspeed.waterspeed
+package com.github.eedcd.solidanchor.features.module.modules.movement.terrainspeed.waterspeed
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.PlayerTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.movement.terrainspeed.ModuleTerrainSpeed
-import net.solidanchor.utils.entity.moving
-import net.solidanchor.utils.entity.withStrafe
-import net.solidanchor.utils.math.copy
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.PlayerTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.movement.terrainspeed.ModuleTerrainSpeed
+import com.github.eedcd.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.utils.entity.withStrafe
+import com.github.eedcd.solidanchor.utils.math.copy
 
 internal object WaterSpeed : ToggleableValueGroup(ModuleTerrainSpeed, "WaterSpeed", true) {
 

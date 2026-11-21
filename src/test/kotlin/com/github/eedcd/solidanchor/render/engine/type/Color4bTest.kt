@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.type
+package com.github.eedcd.solidanchor.render.engine.type
 
 import net.minecraft.util.ARGB
 import net.minecraft.world.item.DyeColor

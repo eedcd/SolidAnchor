@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.netty
+package com.github.eedcd.solidanchor.utils.netty
 
 import io.netty.util.concurrent.Future
 import io.netty.util.concurrent.GenericFutureListener

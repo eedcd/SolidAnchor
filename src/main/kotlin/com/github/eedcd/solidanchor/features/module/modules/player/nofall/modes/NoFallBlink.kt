@@ -16,21 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.nofall.modes
+package com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes
 
-import net.solidanchor.event.events.BlinkPacketEvent
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.event.handler
-import net.solidanchor.features.blink.BlinkManager
-import net.solidanchor.features.module.modules.player.nofall.ModuleNoFall
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.client.notification
-import net.solidanchor.utils.entity.SimulatedPlayer
-import net.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.event.events.BlinkPacketEvent
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.blink.BlinkManager
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.ModuleNoFall
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.utils.entity.SimulatedPlayer
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
 import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket
 
 /**

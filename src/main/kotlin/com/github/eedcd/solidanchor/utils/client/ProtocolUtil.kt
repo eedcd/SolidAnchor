@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.client
+package com.github.eedcd.solidanchor.utils.client
 
 import com.viaversion.viafabricplus.ViaFabricPlus
-import net.solidanchor.utils.client.vfp.VfpCompatibility
-import net.solidanchor.utils.client.vfp.VfpCompatibility1_8
+import com.github.eedcd.solidanchor.utils.client.vfp.VfpCompatibility
+import com.github.eedcd.solidanchor.utils.client.vfp.VfpCompatibility1_8
 import net.minecraft.SharedConstants
 import net.minecraft.core.BlockPos
 import net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket

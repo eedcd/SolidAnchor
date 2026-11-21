@@ -16,24 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.noslow
+package com.github.eedcd.solidanchor.features.module.modules.movement.noslow
 
-import net.solidanchor.event.events.PlayerUseMultiplier
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.movement.noslow.modes.blocking.NoSlowBlock
-import net.solidanchor.features.module.modules.movement.noslow.modes.bow.NoSlowBow
-import net.solidanchor.features.module.modules.movement.noslow.modes.bundle.NoSlowBundle
-import net.solidanchor.features.module.modules.movement.noslow.modes.consume.NoSlowConsume
-import net.solidanchor.features.module.modules.movement.noslow.modes.fluid.NoSlowFluid
-import net.solidanchor.features.module.modules.movement.noslow.modes.honey.NoSlowHoney
-import net.solidanchor.features.module.modules.movement.noslow.modes.powdersnow.NoSlowPowderSnow
-import net.solidanchor.features.module.modules.movement.noslow.modes.slime.NoSlowSlime
-import net.solidanchor.features.module.modules.movement.noslow.modes.slowness.NoSlowSlowness
-import net.solidanchor.features.module.modules.movement.noslow.modes.sneaking.NoSlowSneaking
-import net.solidanchor.features.module.modules.movement.noslow.modes.soulsand.NoSlowSoulsand
-import net.solidanchor.utils.entity.isBlockingServerside
+import com.github.eedcd.solidanchor.event.events.PlayerUseMultiplier
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.blocking.NoSlowBlock
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.bow.NoSlowBow
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.bundle.NoSlowBundle
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.consume.NoSlowConsume
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.fluid.NoSlowFluid
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.honey.NoSlowHoney
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.powdersnow.NoSlowPowderSnow
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.slime.NoSlowSlime
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.slowness.NoSlowSlowness
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.sneaking.NoSlowSneaking
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.soulsand.NoSlowSoulsand
+import com.github.eedcd.solidanchor.utils.entity.isBlockingServerside
 import net.minecraft.world.item.ItemUseAnimation
 import net.minecraft.world.phys.Vec2
 

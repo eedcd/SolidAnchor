@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.murdermystery
+package com.github.eedcd.solidanchor.features.module.modules.render.murdermystery
 
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.item.mapSavedData
-import net.solidanchor.utils.math.levenshtein
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.item.mapSavedData
+import com.github.eedcd.solidanchor.utils.math.levenshtein
 import net.minecraft.client.multiplayer.ClientLevel
 import net.minecraft.client.multiplayer.PlayerInfo
 import net.minecraft.client.player.AbstractClientPlayer

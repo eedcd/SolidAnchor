@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.aiming.projectiles
+package com.github.eedcd.solidanchor.utils.aiming.projectiles
 
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.math.yaw
-import net.solidanchor.utils.math.toDegrees
-import net.solidanchor.utils.entity.PositionExtrapolation
-import net.solidanchor.utils.render.trajectory.TrajectoryInfo
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.math.yaw
+import com.github.eedcd.solidanchor.utils.math.toDegrees
+import com.github.eedcd.solidanchor.utils.entity.PositionExtrapolation
+import com.github.eedcd.solidanchor.utils.render.trajectory.TrajectoryInfo
 import net.minecraft.util.Mth
 import net.minecraft.world.entity.EntityDimensions
 import net.minecraft.world.phys.Vec3

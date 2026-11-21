@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.client;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client;
 
+import com.github.eedcd.solidanchor.additions.MouseHandlerAddition;
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.*;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleZoom;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.platform.InputConstants;
-import net.solidanchor.additions.MouseHandlerAddition;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.*;
-import net.solidanchor.features.module.modules.render.ModuleZoom;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.MouseHandler;
 import net.minecraft.client.input.MouseButtonInfo;
@@ -68,11 +68,11 @@ public abstract class MixinMouseHandler implements MouseHandlerAddition {
     private void hookMouseButton(long window, MouseButtonInfo input, int action, CallbackInfo ci) {
         final var button = input.button();
         EventManager.INSTANCE.callEvent(new MouseButtonEvent(
-                InputConstants.Type.MOUSE.getOrCreate(button),
-                button,
-                action,
-                input.modifiers(),
-                this.minecraft.gui.screen()
+            InputConstants.Type.MOUSE.getOrCreate(button),
+            button,
+            action,
+            input.modifiers(),
+            this.minecraft.gui.screen()
         ));
     }
 

@@ -17,20 +17,20 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.aiming
+package com.github.eedcd.solidanchor.utils.aiming
 
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.aiming.features.MovementCorrection
-import net.solidanchor.utils.aiming.features.processors.FailRotationProcessor
-import net.solidanchor.utils.aiming.features.processors.ShortStopRotationProcessor
-import net.solidanchor.utils.aiming.features.processors.anglesmooth.impl.AccelerationAngleSmooth
-import net.solidanchor.utils.aiming.features.processors.anglesmooth.impl.InterpolationAngleSmooth
-import net.solidanchor.utils.aiming.features.processors.anglesmooth.impl.LinearAngleSmooth
-import net.solidanchor.utils.aiming.features.processors.anglesmooth.impl.SigmoidAngleSmooth
-import net.solidanchor.utils.client.RestrictedSingleUseAction
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.aiming.features.MovementCorrection
+import com.github.eedcd.solidanchor.utils.aiming.features.processors.FailRotationProcessor
+import com.github.eedcd.solidanchor.utils.aiming.features.processors.ShortStopRotationProcessor
+import com.github.eedcd.solidanchor.utils.aiming.features.processors.anglesmooth.impl.AccelerationAngleSmooth
+import com.github.eedcd.solidanchor.utils.aiming.features.processors.anglesmooth.impl.InterpolationAngleSmooth
+import com.github.eedcd.solidanchor.utils.aiming.features.processors.anglesmooth.impl.LinearAngleSmooth
+import com.github.eedcd.solidanchor.utils.aiming.features.processors.anglesmooth.impl.SigmoidAngleSmooth
+import com.github.eedcd.solidanchor.utils.client.RestrictedSingleUseAction
 import net.minecraft.world.entity.Entity
 
 /**

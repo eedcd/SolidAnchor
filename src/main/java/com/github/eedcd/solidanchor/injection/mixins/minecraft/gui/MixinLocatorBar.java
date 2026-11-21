@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.gui;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui;
 
-import net.solidanchor.ui.hud.HudComponentManager;
-import net.solidanchor.ui.hud.HudComponentTweak;
+import com.github.eedcd.solidanchor.ui.hud.HudComponentManager;
+import com.github.eedcd.solidanchor.ui.hud.HudComponentTweak;
 import net.minecraft.client.gui.contextualbar.LocatorBar;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

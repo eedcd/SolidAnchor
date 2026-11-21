@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.type
+package com.github.eedcd.solidanchor.render.engine.type
 
-import net.solidanchor.annotations.ValueClassCandidate
+import com.github.eedcd.solidanchor.annotations.ValueClassCandidate
 
 @ValueClassCandidate
 @JvmRecord

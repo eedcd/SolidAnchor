@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.nofall.modes
+package com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes
 
-import net.solidanchor.event.EventState
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.PlayerNetworkMovementTickEvent
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.tickUntil
-import net.solidanchor.event.until
+import com.github.eedcd.solidanchor.event.EventState
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.PlayerNetworkMovementTickEvent
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.tickUntil
+import com.github.eedcd.solidanchor.event.until
 import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket
 
 /**

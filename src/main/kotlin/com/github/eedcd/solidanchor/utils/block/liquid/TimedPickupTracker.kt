@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block.liquid
+package com.github.eedcd.solidanchor.utils.block.liquid
 
 import com.google.common.base.Predicates
-import net.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.block.state
 import net.minecraft.core.BlockPos
 import net.minecraft.world.level.material.Fluids
 import java.util.ArrayDeque

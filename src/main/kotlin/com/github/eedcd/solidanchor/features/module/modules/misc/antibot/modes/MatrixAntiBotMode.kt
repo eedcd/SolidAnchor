@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.misc.antibot.modes
+package com.github.eedcd.solidanchor.features.module.modules.misc.antibot.modes
 
 import net.ccbluex.fastutil.objectHashSetOf
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot.isADuplicate
-import net.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot.isGameProfileUnique
-import net.solidanchor.utils.entity.armorItems
-import net.solidanchor.utils.item.isPlayerArmor
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot.isADuplicate
+import com.github.eedcd.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot.isGameProfileUnique
+import com.github.eedcd.solidanchor.utils.entity.armorItems
+import com.github.eedcd.solidanchor.utils.item.isPlayerArmor
 import net.minecraft.network.protocol.game.ClientboundPlayerInfoRemovePacket
 import net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket
 import net.minecraft.world.entity.player.Player

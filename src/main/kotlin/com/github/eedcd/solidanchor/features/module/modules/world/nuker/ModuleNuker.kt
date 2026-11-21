@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.nuker
+package com.github.eedcd.solidanchor.features.module.modules.world.nuker
 
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.world.nuker.area.FloorNukerArea
-import net.solidanchor.features.module.modules.world.nuker.area.SphereNukerArea
-import net.solidanchor.features.module.modules.world.nuker.mode.InstantNukerMode
-import net.solidanchor.features.module.modules.world.nuker.mode.LegitNukerMode
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.collection.Filter
-import net.solidanchor.utils.collection.blockSortedSetOf
-import net.solidanchor.utils.render.BreakingProgress
-import net.solidanchor.utils.render.BreakingProgressRenderer
-import net.solidanchor.utils.render.placement.PlacementRenderer
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.area.FloorNukerArea
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.area.SphereNukerArea
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.mode.InstantNukerMode
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.mode.LegitNukerMode
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.collection.Filter
+import com.github.eedcd.solidanchor.utils.collection.blockSortedSetOf
+import com.github.eedcd.solidanchor.utils.render.BreakingProgress
+import com.github.eedcd.solidanchor.utils.render.BreakingProgressRenderer
+import com.github.eedcd.solidanchor.utils.render.placement.PlacementRenderer
 import net.minecraft.core.BlockPos
 import net.minecraft.world.level.block.state.BlockState
 

@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.render
+package com.github.eedcd.solidanchor.utils.render
 
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.withPush
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.math.toRadians
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.math.toRadians
 import net.minecraft.util.Mth
 import net.minecraft.world.entity.Pose
 import net.minecraft.world.phys.AABB

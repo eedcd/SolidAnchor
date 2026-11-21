@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.common;
+package com.github.eedcd.solidanchor.common;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleXRay;
 import com.mojang.blaze3d.vertex.QuadInstance;
-import net.solidanchor.features.module.modules.render.ModuleXRay;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.util.ARGB;
 import net.minecraft.world.level.block.state.BlockState;
@@ -68,6 +68,7 @@ public final class XRayBlockRenderContext {
 
         renderTransparentBackground(ModuleXRay.INSTANCE.transparentBackgroundAlpha(state), render);
     }
+
     public static void applyAlpha(QuadInstance quadInstance) {
         if (!isRenderingTransparentBackground()) {
             return;

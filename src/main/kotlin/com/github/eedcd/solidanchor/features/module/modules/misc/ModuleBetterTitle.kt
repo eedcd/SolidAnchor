@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.misc
+package com.github.eedcd.solidanchor.features.module.modules.misc
 
-import net.solidanchor.api.thirdparty.translator.TranslationResult
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.TitleEvent
-import net.solidanchor.event.suspendHandler
-import net.solidanchor.features.global.GlobalSettingsAutoTranslate
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.text.asPlainText
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.highlight
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.text.stripMinecraftColorCodes
+import com.github.eedcd.solidanchor.api.thirdparty.translator.TranslationResult
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.TitleEvent
+import com.github.eedcd.solidanchor.event.suspendHandler
+import com.github.eedcd.solidanchor.features.global.GlobalSettingsAutoTranslate
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.highlight
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.text.stripMinecraftColorCodes
 import net.minecraft.ChatFormatting
 import net.minecraft.client.gui.Gui
 import net.minecraft.network.chat.Component

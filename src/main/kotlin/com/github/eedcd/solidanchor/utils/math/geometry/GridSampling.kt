@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.math.geometry
+package com.github.eedcd.solidanchor.utils.math.geometry
 
 /**
  * Walks a `countA x countB` grid of cell centres: the point at index `i` sits at `(i + 0.5) / count`, so no

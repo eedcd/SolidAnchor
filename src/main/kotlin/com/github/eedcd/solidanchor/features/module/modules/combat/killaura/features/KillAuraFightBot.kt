@@ -16,24 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.killaura.features
+package com.github.eedcd.solidanchor.features.module.modules.combat.killaura.features
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura.clicker
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura.targetTracker
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.entity.doesCollideAt
-import net.solidanchor.utils.entity.doesNotCollideBelow
-import net.solidanchor.utils.entity.rotation
-import net.solidanchor.utils.entity.squaredBoxedDistanceTo
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.sq
-import net.solidanchor.utils.navigation.NavigationBaseValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura.clicker
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura.targetTracker
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.entity.doesCollideAt
+import com.github.eedcd.solidanchor.utils.entity.doesNotCollideBelow
+import com.github.eedcd.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.utils.entity.squaredBoxedDistanceTo
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.utils.navigation.NavigationBaseValueGroup
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.phys.Vec3
 import kotlin.math.abs

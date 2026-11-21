@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.client;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.WorldEntityRemoveEvent;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleNoPush;
+import com.github.eedcd.solidanchor.features.module.modules.movement.NoPushBy;
+import com.github.eedcd.solidanchor.features.module.modules.render.DoRender;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleAntiBlind;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleTrueSight;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.WorldEntityRemoveEvent;
-import net.solidanchor.features.module.modules.movement.ModuleNoPush;
-import net.solidanchor.features.module.modules.movement.NoPushBy;
-import net.solidanchor.features.module.modules.render.DoRender;
-import net.solidanchor.features.module.modules.render.ModuleAntiBlind;
-import net.solidanchor.features.module.modules.render.ModuleTrueSight;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ExplosionParticleInfo;

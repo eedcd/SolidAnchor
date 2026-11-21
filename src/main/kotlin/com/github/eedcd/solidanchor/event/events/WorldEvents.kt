@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.event.events
+package com.github.eedcd.solidanchor.event.events
 
-import net.solidanchor.annotations.Tag
-import net.solidanchor.event.CancellableEvent
-import net.solidanchor.event.Event
-import net.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.annotations.Tag
+import com.github.eedcd.solidanchor.event.CancellableEvent
+import com.github.eedcd.solidanchor.event.Event
+import com.github.eedcd.solidanchor.features.addon.AddonApi
 import net.minecraft.client.multiplayer.ClientLevel
 import net.minecraft.core.BlockPos
 import net.minecraft.network.protocol.game.ClientboundSectionBlocksUpdatePacket

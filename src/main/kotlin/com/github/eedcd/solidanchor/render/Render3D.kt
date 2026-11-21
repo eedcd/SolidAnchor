@@ -19,17 +19,17 @@
 
 @file:Suppress("detekt:TooManyFunctions", "NOTHING_TO_INLINE")
 
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
 import com.mojang.renderpearl.api.buffers.GpuBufferSlice
 import com.mojang.renderpearl.api.pipeline.RenderPipeline
 import com.mojang.blaze3d.pipeline.RenderTarget
 import com.mojang.blaze3d.vertex.PoseStack
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.render.engine.RenderDrawKey
-import net.solidanchor.render.mesh.BatchCollector
-import net.solidanchor.render.mesh.MeshBuildScope
-import net.solidanchor.utils.collection.Pools
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.render.engine.RenderDrawKey
+import com.github.eedcd.solidanchor.render.mesh.BatchCollector
+import com.github.eedcd.solidanchor.render.mesh.MeshBuildScope
+import com.github.eedcd.solidanchor.utils.collection.Pools
 import net.minecraft.client.Camera
 import net.minecraft.client.gui.Font
 import net.minecraft.client.renderer.SubmitNodeStorage
@@ -65,8 +65,8 @@ inline fun PoseStack.translate(vec3i: Vec3i) =
     translate(vec3i.x, vec3i.y, vec3i.z)
 
 /**
- * @see net.solidanchor.features.module.modules.render.ModuleBlockESP
- * @see net.solidanchor.features.module.modules.render.ModuleStorageESP
+ * @see com.github.eedcd.solidanchor.features.module.modules.render.ModuleBlockESP
+ * @see com.github.eedcd.solidanchor.features.module.modules.render.ModuleStorageESP
  */
 inline fun PoseStack.translate(blockPos: Long, origin: BlockPos) {
     translate(
@@ -93,7 +93,7 @@ class WorldRenderEnvironment internal constructor(
      *
      * The returned scope must be closed after writing vertices.
      *
-     * Prefer [net.solidanchor.render.drawCustomMesh] for regular use.
+     * Prefer [com.github.eedcd.solidanchor.render.drawCustomMesh] for regular use.
      */
     fun start(
         pipeline: RenderPipeline,

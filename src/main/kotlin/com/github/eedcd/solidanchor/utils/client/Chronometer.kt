@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.client
+package com.github.eedcd.solidanchor.utils.client
 
-import net.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.addon.AddonApi
 
 @AddonApi
 class Chronometer @JvmOverloads constructor(private var lastUpdate: Long = 0) {

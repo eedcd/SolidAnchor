@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.brigadier
+package com.github.eedcd.solidanchor.features.command.brigadier
 
 import com.mojang.brigadier.Command
 import com.mojang.brigadier.arguments.ArgumentType
@@ -23,9 +23,9 @@ import com.mojang.brigadier.arguments.StringArgumentType
 import com.mojang.brigadier.builder.ArgumentBuilder
 import com.mojang.brigadier.builder.LiteralArgumentBuilder
 import com.mojang.brigadier.suggestion.SuggestionProvider
-import net.solidanchor.features.command.CommandExecutor
-import net.solidanchor.features.command.KAsyncCommand
-import net.solidanchor.features.command.arguments.MultiTaggedArgumentType
+import com.github.eedcd.solidanchor.features.command.CommandExecutor
+import com.github.eedcd.solidanchor.features.command.KAsyncCommand
+import com.github.eedcd.solidanchor.features.command.arguments.MultiTaggedArgumentType
 
 /** Internal command-tree node compiled into a Brigadier builder. */
 @CommandDsl

@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autoqueue.trigger
+package com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.trigger
 
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.event.events.ChatReceiveEvent
-import net.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.events.ChatReceiveEvent
+import com.github.eedcd.solidanchor.event.handler
 
 /**
  * Can be used for different server that use paper to join a game

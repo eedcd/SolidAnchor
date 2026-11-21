@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.hats.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.hats.modes
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.features.module.modules.render.hats.HatsMode
-import net.solidanchor.render.ClientRenderPipelines
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawCustomMesh
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.segmentAngle
-import net.solidanchor.render.setColor
-import net.solidanchor.utils.math.fastCos
-import net.solidanchor.utils.math.fastSin
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.render.hats.HatsMode
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawCustomMesh
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.segmentAngle
+import com.github.eedcd.solidanchor.render.setColor
+import com.github.eedcd.solidanchor.utils.math.fastCos
+import com.github.eedcd.solidanchor.utils.math.fastSin
 import kotlin.math.cos
 import kotlin.math.sin
 

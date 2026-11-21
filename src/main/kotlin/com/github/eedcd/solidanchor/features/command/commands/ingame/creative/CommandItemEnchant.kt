@@ -16,26 +16,26 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.ingame.creative
+package com.github.eedcd.solidanchor.features.command.commands.ingame.creative
 
 import com.mojang.brigadier.CommandDispatcher
-import net.solidanchor.features.command.CommandException
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.arguments.EnchantLevel
-import net.solidanchor.features.command.arguments.EnchantLevelArgumentType
-import net.solidanchor.features.command.arguments.render
-import net.solidanchor.features.command.arguments.resourceArgument
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.CmdI18n
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.client.MessageMetadata
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.item.clearEnchantments
-import net.solidanchor.utils.item.removeEnchantment
-import net.solidanchor.utils.item.setInventoryItemCreative
+import com.github.eedcd.solidanchor.features.command.CommandException
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.arguments.EnchantLevel
+import com.github.eedcd.solidanchor.features.command.arguments.EnchantLevelArgumentType
+import com.github.eedcd.solidanchor.features.command.arguments.render
+import com.github.eedcd.solidanchor.features.command.arguments.resourceArgument
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdI18n
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.client.MessageMetadata
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.item.clearEnchantments
+import com.github.eedcd.solidanchor.utils.item.removeEnchantment
+import com.github.eedcd.solidanchor.utils.item.setInventoryItemCreative
 import net.minecraft.core.Holder
 import net.minecraft.core.registries.Registries
 import net.minecraft.world.InteractionHand

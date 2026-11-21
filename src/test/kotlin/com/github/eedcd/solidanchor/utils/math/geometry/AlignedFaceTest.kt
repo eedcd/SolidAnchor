@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.math.geometry
+package com.github.eedcd.solidanchor.utils.math.geometry
 
 import net.ccbluex.fastutil.forEachDouble
 import net.ccbluex.fastutil.step
-import net.solidanchor.test.assertVec3Equals
-import net.solidanchor.utils.block.targetfinding.trimFace
+import com.github.eedcd.solidanchor.test.assertVec3Equals
+import com.github.eedcd.solidanchor.utils.block.targetfinding.trimFace
 import net.minecraft.core.Direction
 import net.minecraft.core.Vec3i
 import net.minecraft.world.phys.AABB

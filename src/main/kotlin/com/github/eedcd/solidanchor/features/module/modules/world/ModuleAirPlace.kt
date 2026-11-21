@@ -16,27 +16,27 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world
+package com.github.eedcd.solidanchor.features.module.modules.world
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.PlayerInteractItemEvent
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.cameraclip.ScrollAdjustValueGroup
-import net.solidanchor.render.FULL_BOX
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.entity.shouldSwingHand
-import net.solidanchor.utils.inventory.ArmorItemSlot
-import net.solidanchor.utils.item.isConsumable
-import net.solidanchor.utils.item.isGlider
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.toBlockPos
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.PlayerInteractItemEvent
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.cameraclip.ScrollAdjustValueGroup
+import com.github.eedcd.solidanchor.render.FULL_BOX
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.entity.shouldSwingHand
+import com.github.eedcd.solidanchor.utils.inventory.ArmorItemSlot
+import com.github.eedcd.solidanchor.utils.item.isConsumable
+import com.github.eedcd.solidanchor.utils.item.isGlider
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.toBlockPos
 import net.minecraft.world.item.ArmorStandItem
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.FireworkRocketItem

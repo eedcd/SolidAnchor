@@ -17,8 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.event
+package com.github.eedcd.solidanchor.event
 
+import com.github.eedcd.solidanchor.utils.client.error.ErrorHandler
+import com.github.eedcd.solidanchor.utils.client.logger
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineExceptionHandler
@@ -28,8 +30,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
-import net.solidanchor.utils.client.error.ErrorHandler
-import net.solidanchor.utils.client.logger
 import net.minecraft.ReportedException
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.coroutines.AbstractCoroutineContextElement

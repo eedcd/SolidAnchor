@@ -16,26 +16,26 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world
+package com.github.eedcd.solidanchor.features.module.modules.world
 
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet
 import net.ccbluex.fastutil.objectRBTreeSetOf
-import net.solidanchor.config.types.ValueType
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.DeathEvent
-import net.solidanchor.event.events.DisconnectEvent
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.command.commands.module.CommandAutoDisable
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
-import net.solidanchor.features.module.modules.movement.ModuleNoClip
-import net.solidanchor.features.module.modules.movement.fly.ModuleFly
-import net.solidanchor.features.module.modules.movement.speed.ModuleSpeed
-import net.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.config.types.ValueType
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.DeathEvent
+import com.github.eedcd.solidanchor.event.events.DisconnectEvent
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.command.commands.module.CommandAutoDisable
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleNoClip
+import com.github.eedcd.solidanchor.features.module.modules.movement.fly.ModuleFly
+import com.github.eedcd.solidanchor.features.module.modules.movement.speed.ModuleSpeed
+import com.github.eedcd.solidanchor.utils.client.notification
 import net.minecraft.network.protocol.game.ClientboundPlayerPositionPacket
 
 /**

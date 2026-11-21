@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.item;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.item;
 
+import com.github.eedcd.solidanchor.features.module.modules.combat.ModuleSwordBlock;
+import com.github.eedcd.solidanchor.features.module.modules.render.animations.ModuleAnimations;
+import com.github.eedcd.solidanchor.features.module.modules.render.animations.SwingAnimations;
+import com.github.eedcd.solidanchor.interfaces.EntityRenderStateAddition;
+import com.github.eedcd.solidanchor.utils.item.ItemCategorizationsKt;
+import com.github.eedcd.solidanchor.utils.render.FirstPersonShieldTint;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import net.solidanchor.features.module.modules.combat.ModuleSwordBlock;
-import net.solidanchor.features.module.modules.render.animations.ModuleAnimations;
-import net.solidanchor.features.module.modules.render.animations.SwingAnimations;
-import net.solidanchor.interfaces.EntityRenderStateAddition;
-import net.solidanchor.utils.item.ItemCategorizationsKt;
-import net.solidanchor.utils.render.FirstPersonShieldTint;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.renderer.FirstPersonHandsAndItemsRenderer;
@@ -52,7 +52,10 @@ import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
-import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyArg;
+import org.spongepowered.asm.mixin.injection.Slice;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(FirstPersonHandsAndItemsRenderer.class)
@@ -61,6 +64,19 @@ public abstract class MixinFirstPersonHandsAndItems {
     @Shadow
     @Final
     private static float ITEM_POS_Y;
+
+    @Unique
+    private static void solid_anchor$applyTransformations(PoseStack matrices, float translateX, float translateY, float translateZ, float rotateX, float rotateY, float rotateZ) {
+        matrices.translate(translateX, translateY, translateZ);
+        matrices.rotate(Axis.XP.rotationDegrees(rotateX));
+        matrices.rotate(Axis.YP.rotationDegrees(rotateY));
+        matrices.rotate(Axis.ZP.rotationDegrees(rotateZ));
+    }
+
+    @Unique
+    private static @Nullable Entity solid_anchor$getEntity(PlayerRenderState playerState) {
+        return playerState.avatarRenderState instanceof EntityRenderStateAddition entityRenderState ? entityRenderState.solid_anchor$getEntity() : null;
+    }
 
     @WrapOperation(method = "submitArmWithItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/item/ItemStackRenderState;submit(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;III)V"))
     private void hookFirstPersonShieldTint(
@@ -113,12 +129,12 @@ public abstract class MixinFirstPersonHandsAndItems {
             ModuleAnimations.OffHand offHand = ModuleAnimations.OffHand.INSTANCE;
             if (isInBothHands && mainHand.getRunning() && offHand.getRunning()) {
                 solid_anchor$applyTransformations(poseStack,
-                        (mainHand.getMainHandX() + offHand.getOffHandX()) / 2f,
-                        (mainHand.getMainHandY() + offHand.getOffHandY()) / 2f,
-                        (mainHand.getMainHandItemScale() + offHand.getOffHandItemScale()) / 2f,
-                        (mainHand.getMainHandPositiveX() + offHand.getOffHandPositiveX()) / 2f,
-                        (mainHand.getMainHandPositiveY() + offHand.getOffHandPositiveY()) / 2f,
-                        (mainHand.getMainHandPositiveZ() + offHand.getOffHandPositiveZ()) / 2f
+                    (mainHand.getMainHandX() + offHand.getOffHandX()) / 2f,
+                    (mainHand.getMainHandY() + offHand.getOffHandY()) / 2f,
+                    (mainHand.getMainHandItemScale() + offHand.getOffHandItemScale()) / 2f,
+                    (mainHand.getMainHandPositiveX() + offHand.getOffHandPositiveX()) / 2f,
+                    (mainHand.getMainHandPositiveY() + offHand.getOffHandPositiveY()) / 2f,
+                    (mainHand.getMainHandPositiveZ() + offHand.getOffHandPositiveZ()) / 2f
                 );
             } else if (isInBothHands && mainHand.getRunning()) {
                 poseStack.translate(0f, 0f, mainHand.getMainHandItemScale());
@@ -128,14 +144,6 @@ public abstract class MixinFirstPersonHandsAndItems {
                 solid_anchor$applyTransformations(poseStack, offHand.getOffHandX(), offHand.getOffHandY(), offHand.getOffHandItemScale(), offHand.getOffHandPositiveX(), offHand.getOffHandPositiveY(), offHand.getOffHandPositiveZ());
             }
         }
-    }
-
-    @Unique
-    private static void solid_anchor$applyTransformations(PoseStack matrices, float translateX, float translateY, float translateZ, float rotateX, float rotateY, float rotateZ) {
-        matrices.translate(translateX, translateY, translateZ);
-        matrices.rotate(Axis.XP.rotationDegrees(rotateX));
-        matrices.rotate(Axis.YP.rotationDegrees(rotateY));
-        matrices.rotate(Axis.ZP.rotationDegrees(rotateZ));
     }
 
     @Inject(method = "submitArmWithItem",
@@ -164,9 +172,9 @@ public abstract class MixinFirstPersonHandsAndItems {
     }
 
     @ModifyArg(method = "submitArmWithItem", at = @At(
-            value = "INVOKE",
-            target = "Lnet/minecraft/client/renderer/FirstPersonHandsAndItemsRenderer;applyItemArmTransform(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/entity/HumanoidArm;F)V",
-            ordinal = 3
+        value = "INVOKE",
+        target = "Lnet/minecraft/client/renderer/FirstPersonHandsAndItemsRenderer;applyItemArmTransform(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/entity/HumanoidArm;F)V",
+        ordinal = 3
     ), index = 2)
     private float injectIgnoreBlocking(float equipProgress) {
         if (ModuleAnimations.EquipOffset.INSTANCE.getRunning() && ModuleAnimations.EquipOffset.INSTANCE.getIgnoreBlocking()) {
@@ -243,11 +251,6 @@ public abstract class MixinFirstPersonHandsAndItems {
             return 7200;
         }
         return original;
-    }
-
-    @Unique
-    private static @Nullable Entity solid_anchor$getEntity(PlayerRenderState playerState) {
-        return playerState.avatarRenderState instanceof EntityRenderStateAddition entityRenderState ? entityRenderState.solid_anchor$getEntity() : null;
     }
 
 }

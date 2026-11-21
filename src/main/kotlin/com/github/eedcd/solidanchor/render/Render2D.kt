@@ -19,25 +19,25 @@
 
 @file:Suppress("detekt:TooManyFunctions", "NOTHING_TO_INLINE")
 
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
 import com.mojang.renderpearl.api.pipeline.RenderPipeline
 import it.unimi.dsi.fastutil.floats.Float2IntFunction
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.render.engine.type.BoundingBox2f
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.gui.GuiCircleLutAtlas
-import net.solidanchor.utils.math.ceilToInt
-import net.solidanchor.utils.math.floorToInt
-import net.solidanchor.utils.collection.Pools
-import net.solidanchor.render.gui.element.CircleGuiElementRenderState
-import net.solidanchor.render.gui.element.LambdaSimpleGuiElementRenderState
-import net.solidanchor.render.gui.element.LineGuiElementRenderState
-import net.solidanchor.render.gui.element.QuadGuiElementRenderState
-import net.solidanchor.render.gui.element.RoundedRectGuiElementRenderState
-import net.solidanchor.render.gui.element.TexQuadGuiElementRenderState
-import net.solidanchor.render.gui.element.TriangleGuiElementRenderState
-import net.solidanchor.utils.render.VerticesSetupHandler
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.render.engine.type.BoundingBox2f
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.gui.GuiCircleLutAtlas
+import com.github.eedcd.solidanchor.utils.math.ceilToInt
+import com.github.eedcd.solidanchor.utils.math.floorToInt
+import com.github.eedcd.solidanchor.utils.collection.Pools
+import com.github.eedcd.solidanchor.render.gui.element.CircleGuiElementRenderState
+import com.github.eedcd.solidanchor.render.gui.element.LambdaSimpleGuiElementRenderState
+import com.github.eedcd.solidanchor.render.gui.element.LineGuiElementRenderState
+import com.github.eedcd.solidanchor.render.gui.element.QuadGuiElementRenderState
+import com.github.eedcd.solidanchor.render.gui.element.RoundedRectGuiElementRenderState
+import com.github.eedcd.solidanchor.render.gui.element.TexQuadGuiElementRenderState
+import com.github.eedcd.solidanchor.render.gui.element.TriangleGuiElementRenderState
+import com.github.eedcd.solidanchor.utils.render.VerticesSetupHandler
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.gui.navigation.ScreenRectangle
 import net.minecraft.client.gui.render.TextureSetup

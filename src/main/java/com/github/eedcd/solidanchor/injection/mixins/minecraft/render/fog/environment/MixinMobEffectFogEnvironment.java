@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.render.fog.environment;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render.fog.environment;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.DoRender;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleAntiBlind;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import net.solidanchor.features.module.modules.render.DoRender;
-import net.solidanchor.features.module.modules.render.ModuleAntiBlind;
 import net.minecraft.client.renderer.fog.environment.MobEffectFogEnvironment;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;

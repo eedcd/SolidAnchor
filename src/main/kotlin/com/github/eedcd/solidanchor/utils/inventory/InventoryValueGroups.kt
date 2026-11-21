@@ -17,29 +17,29 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.inventory
+package com.github.eedcd.solidanchor.utils.inventory
 
 import it.unimi.dsi.fastutil.objects.ObjectRBTreeSet
 import net.ccbluex.fastutil.enumSetAllOf
 import net.ccbluex.fastutil.enumSetOf
 import net.ccbluex.fastutil.objectRBTreeSetOf
-import net.solidanchor.config.types.ValueType
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.EventListener
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.collection.Filter
-import net.solidanchor.utils.collection.asComparator
-import net.solidanchor.utils.collection.itemSortedSetOf
-import net.solidanchor.utils.combat.CombatManager
-import net.solidanchor.utils.kotlin.matchesAll
-import net.solidanchor.utils.math.isLikelyZero
-import net.solidanchor.utils.text.StringMatchMode
+import com.github.eedcd.solidanchor.config.types.ValueType
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.collection.Filter
+import com.github.eedcd.solidanchor.utils.collection.asComparator
+import com.github.eedcd.solidanchor.utils.collection.itemSortedSetOf
+import com.github.eedcd.solidanchor.utils.combat.CombatManager
+import com.github.eedcd.solidanchor.utils.kotlin.matchesAll
+import com.github.eedcd.solidanchor.utils.math.isLikelyZero
+import com.github.eedcd.solidanchor.utils.text.StringMatchMode
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 import net.minecraft.core.registries.BuiltInRegistries

@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.misc.nameprotect
+package com.github.eedcd.solidanchor.features.module.modules.misc.nameprotect
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.misc.FriendManager
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.render.GenericColorMode
-import net.solidanchor.render.GenericRainbowColorMode
-import net.solidanchor.render.GenericStaticColorMode
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.client.bypassesNameProtection
-import net.solidanchor.utils.collection.Pools
-import net.solidanchor.utils.text.asFormattedCharSequence
-import net.solidanchor.utils.text.codePointsToString
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.misc.FriendManager
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.render.GenericColorMode
+import com.github.eedcd.solidanchor.render.GenericRainbowColorMode
+import com.github.eedcd.solidanchor.render.GenericStaticColorMode
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.client.bypassesNameProtection
+import com.github.eedcd.solidanchor.utils.collection.Pools
+import com.github.eedcd.solidanchor.utils.text.asFormattedCharSequence
+import com.github.eedcd.solidanchor.utils.text.codePointsToString
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.Style
 import net.minecraft.util.FormattedCharSequence

@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.render.engine.font
+package com.github.eedcd.solidanchor.render.engine.font
 
 import com.mojang.renderpearl.api.GpuFormat
-import net.solidanchor.annotations.ValueClassCandidate
-import net.solidanchor.render.engine.type.BoundingBox2f
-import net.solidanchor.render.engine.type.BoundingBox2s
-import net.solidanchor.utils.client.gpuDevice
+import com.github.eedcd.solidanchor.annotations.ValueClassCandidate
+import com.github.eedcd.solidanchor.render.engine.type.BoundingBox2f
+import com.github.eedcd.solidanchor.render.engine.type.BoundingBox2s
+import com.github.eedcd.solidanchor.utils.client.gpuDevice
 import org.lwjgl.sdl.SDLVideo
 import java.awt.AlphaComposite
 import java.awt.Color

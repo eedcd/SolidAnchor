@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.config.types
+package com.github.eedcd.solidanchor.config.types
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
-import net.solidanchor.config.gson.stategies.Exclude
-import net.solidanchor.config.types.list.ListValue
-import net.solidanchor.utils.math.CurveUtil
+import com.github.eedcd.solidanchor.config.gson.stategies.Exclude
+import com.github.eedcd.solidanchor.config.types.list.ListValue
+import com.github.eedcd.solidanchor.utils.math.CurveUtil
 import org.joml.Vector2f
 
 class CurveValue(

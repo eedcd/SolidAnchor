@@ -17,21 +17,21 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.world.automobheal
+package com.github.eedcd.solidanchor.features.module.modules.world.automobheal
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.world.automobheal.MobFoodOption.foodNutritionHeal
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.entity.interactEntity
-import net.solidanchor.utils.entity.squaredBoxedDistanceTo
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.findClosestSlot
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.world.automobheal.MobFoodOption.foodNutritionHeal
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.entity.interactEntity
+import com.github.eedcd.solidanchor.utils.entity.squaredBoxedDistanceTo
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.findClosestSlot
 import net.minecraft.tags.ItemTags
 import net.minecraft.util.ToFloatFunction
 import net.minecraft.world.entity.Entity

@@ -16,19 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.module
+package com.github.eedcd.solidanchor.features.command.commands.module
 
 import com.mojang.brigadier.CommandDispatcher
-import net.solidanchor.features.command.CommandException
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.arguments.PlayerInfoArgumentType
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.features.module.modules.misc.ModuleInventoryTracker
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.inventory.ViewedInventoryScreen
+import com.github.eedcd.solidanchor.features.command.CommandException
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.arguments.PlayerInfoArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.features.module.modules.misc.ModuleInventoryTracker
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.inventory.ViewedInventoryScreen
 import java.util.UUID
 
 /**

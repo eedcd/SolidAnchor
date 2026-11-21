@@ -16,21 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold
 
 import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.entity.getMovementDirectionOfInput
-import net.solidanchor.utils.math.bottomCenter
-import net.solidanchor.utils.math.copy
-import net.solidanchor.utils.math.geometry.Line
-import net.solidanchor.utils.math.horizontalDistanceToSqr
-import net.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.entity.getMovementDirectionOfInput
+import com.github.eedcd.solidanchor.utils.math.bottomCenter
+import com.github.eedcd.solidanchor.utils.math.copy
+import com.github.eedcd.solidanchor.utils.math.geometry.Line
+import com.github.eedcd.solidanchor.utils.math.horizontalDistanceToSqr
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
 import net.minecraft.core.BlockPos
 import net.minecraft.util.Mth
 import net.minecraft.world.phys.AABB

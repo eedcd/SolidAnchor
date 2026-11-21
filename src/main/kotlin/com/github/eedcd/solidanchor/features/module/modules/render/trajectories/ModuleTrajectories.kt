@@ -16,29 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.trajectories
+package com.github.eedcd.solidanchor.features.module.modules.render.trajectories
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.features.module.modules.render.ModuleFreeCam
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.entity.handItems
-import net.solidanchor.utils.entity.rotation
-import net.solidanchor.utils.math.dot
-import net.solidanchor.utils.math.sq
-import net.solidanchor.utils.render.trajectory.EntityTrajectoryResolver
-import net.solidanchor.utils.render.trajectory.HeldItemTrajectoryResolver
-import net.solidanchor.utils.render.trajectory.TrajectoryDisplayResolver
-import net.solidanchor.utils.render.trajectory.TrajectoryInfoRenderer
-import net.solidanchor.utils.render.trajectory.TrajectoryType
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleFreeCam
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.entity.handItems
+import com.github.eedcd.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.utils.math.dot
+import com.github.eedcd.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.utils.render.trajectory.EntityTrajectoryResolver
+import com.github.eedcd.solidanchor.utils.render.trajectory.HeldItemTrajectoryResolver
+import com.github.eedcd.solidanchor.utils.render.trajectory.TrajectoryDisplayResolver
+import com.github.eedcd.solidanchor.utils.render.trajectory.TrajectoryInfoRenderer
+import com.github.eedcd.solidanchor.utils.render.trajectory.TrajectoryType
 import net.minecraft.world.entity.TraceableEntity
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.FishingRodItem

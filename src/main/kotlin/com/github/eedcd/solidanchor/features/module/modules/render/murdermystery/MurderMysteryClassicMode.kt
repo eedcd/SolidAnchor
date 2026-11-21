@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.murdermystery
+package com.github.eedcd.solidanchor.features.module.modules.render.murdermystery
 
-import net.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.chat
 import net.minecraft.client.player.AbstractClientPlayer
 
 object MurderMysteryClassicMode : UuidBasedMurderMysteryMode("Classic") {

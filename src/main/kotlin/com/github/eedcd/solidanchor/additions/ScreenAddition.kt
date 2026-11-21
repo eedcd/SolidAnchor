@@ -19,7 +19,7 @@
 
 @file:Suppress("FunctionName", "NOTHING_TO_INLINE")
 
-package net.solidanchor.additions
+package com.github.eedcd.solidanchor.additions
 
 import net.minecraft.client.gui.screens.Screen
 

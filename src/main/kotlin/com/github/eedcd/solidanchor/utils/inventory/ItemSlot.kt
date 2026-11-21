@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.inventory
+package com.github.eedcd.solidanchor.utils.inventory
 
 import net.ccbluex.fastutil.asObjectList
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.client.isOlderThanOrEqual1_8
-import net.solidanchor.utils.client.isOlderThanOrEqual1_15_2
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.item.ItemStackHolder
-import net.solidanchor.utils.item.PreferStackSize
-import net.solidanchor.utils.item.asHolderComparator
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.client.isOlderThanOrEqual1_8
+import com.github.eedcd.solidanchor.utils.client.isOlderThanOrEqual1_15_2
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.item.ItemStackHolder
+import com.github.eedcd.solidanchor.utils.item.PreferStackSize
+import com.github.eedcd.solidanchor.utils.item.asHolderComparator
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.entity.EquipmentSlot

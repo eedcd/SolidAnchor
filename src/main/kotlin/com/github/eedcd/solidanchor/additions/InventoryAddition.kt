@@ -19,13 +19,13 @@
 
 @file:Suppress("FunctionName", "NOTHING_TO_INLINE")
 
-package net.solidanchor.additions
+package com.github.eedcd.solidanchor.additions
 
 import net.minecraft.world.entity.player.Inventory
 
 interface InventoryAddition {
     /**
-     * @return the actual selected slot without any modification by [net.solidanchor.utils.client.SilentHotbar]
+     * @return the actual selected slot without any modification by [com.github.eedcd.solidanchor.utils.client.SilentHotbar]
      */
     fun `solid_anchor$getRealSelectedSlot`(): Int
 }

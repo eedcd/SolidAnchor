@@ -17,24 +17,24 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.aimbot.autobow
+package com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.autobow
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.KeybindIsPressedEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.combat.aimbot.ModuleAutoBow
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.combat.shouldBeAttacked
-import net.solidanchor.utils.entity.PlayerSimulationCache
-import net.solidanchor.utils.entity.SimulatedArrow
-import net.solidanchor.utils.entity.SimulatedPlayerCache
-import net.solidanchor.utils.entity.rotation
-import net.solidanchor.utils.entity.useItem
-import net.solidanchor.utils.entity.usingItemOrNull
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.geometry.Line
-import net.solidanchor.utils.render.trajectory.HeldItemTrajectoryResolver
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.KeybindIsPressedEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.ModuleAutoBow
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.combat.shouldBeAttacked
+import com.github.eedcd.solidanchor.utils.entity.PlayerSimulationCache
+import com.github.eedcd.solidanchor.utils.entity.SimulatedArrow
+import com.github.eedcd.solidanchor.utils.entity.SimulatedPlayerCache
+import com.github.eedcd.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.utils.entity.useItem
+import com.github.eedcd.solidanchor.utils.entity.usingItemOrNull
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.geometry.Line
+import com.github.eedcd.solidanchor.utils.render.trajectory.HeldItemTrajectoryResolver
 import net.minecraft.client.player.AbstractClientPlayer
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.entity.Entity

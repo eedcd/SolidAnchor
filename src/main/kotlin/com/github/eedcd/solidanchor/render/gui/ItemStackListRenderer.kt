@@ -17,20 +17,20 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.gui
+package com.github.eedcd.solidanchor.render.gui
 
-import net.solidanchor.additions.drawCooldownProgress
-import net.solidanchor.additions.drawItemBar
-import net.solidanchor.additions.drawStackCount
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.OverlayRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.kotlin.EventPriorityConvention.READ_FINAL_STATE
+import com.github.eedcd.solidanchor.additions.drawCooldownProgress
+import com.github.eedcd.solidanchor.additions.drawItemBar
+import com.github.eedcd.solidanchor.additions.drawStackCount
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.READ_FINAL_STATE
 import net.minecraft.client.gui.Font
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.gui.screens.achievement.StatsScreen

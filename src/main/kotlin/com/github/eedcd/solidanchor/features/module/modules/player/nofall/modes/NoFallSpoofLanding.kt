@@ -17,22 +17,22 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.nofall.modes
+package com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes
 
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.SprintEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.player.nofall.ModuleNoFall
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.lang.translation
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.isOlderThanOrEqual1_8
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.kotlin.EventPriorityConvention.MODEL_STATE
-import net.solidanchor.utils.math.component1
-import net.solidanchor.utils.math.component2
-import net.solidanchor.utils.math.component3
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.SprintEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.ModuleNoFall
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.lang.translation
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.isOlderThanOrEqual1_8
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.MODEL_STATE
+import com.github.eedcd.solidanchor.utils.math.component1
+import com.github.eedcd.solidanchor.utils.math.component2
+import com.github.eedcd.solidanchor.utils.math.component3
 import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket
 import net.minecraft.world.phys.Vec3
 

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.autoshop
+package com.github.eedcd.solidanchor.features.module.modules.player.autoshop
 
 import it.unimi.dsi.fastutil.ints.IntArrayList
 import it.unimi.dsi.fastutil.ints.IntList
@@ -29,22 +29,22 @@ import kotlinx.coroutines.delay
 import net.ccbluex.fastutil.fastIterator
 import net.ccbluex.fastutil.forEachInt
 import net.ccbluex.fastutil.intListOf
-import net.solidanchor.event.tickConditional
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.tickUntil
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.player.autoshop.AutoShopConfig.loadAutoShopConfig
-import net.solidanchor.features.module.modules.player.autoshop.purchasemode.NormalPurchaseMode
-import net.solidanchor.features.module.modules.player.autoshop.purchasemode.QuickPurchaseMode
-import net.solidanchor.features.module.modules.player.autoshop.serializable.ItemInfo
-import net.solidanchor.features.module.modules.player.autoshop.serializable.ShopConfig
-import net.solidanchor.features.module.modules.player.autoshop.serializable.ShopElement
-import net.solidanchor.features.module.modules.player.autoshop.serializable.conditions.ConditionCalculator
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.kotlin.subList
-import net.solidanchor.utils.text.stripMinecraftColorCodes
+import com.github.eedcd.solidanchor.event.tickConditional
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.tickUntil
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.AutoShopConfig.loadAutoShopConfig
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.purchasemode.NormalPurchaseMode
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.purchasemode.QuickPurchaseMode
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable.ItemInfo
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable.ShopConfig
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable.ShopElement
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable.conditions.ConditionCalculator
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.kotlin.subList
+import com.github.eedcd.solidanchor.utils.text.stripMinecraftColorCodes
 import net.minecraft.client.gui.screens.inventory.ContainerScreen
 import net.minecraft.world.inventory.ContainerInput
 import kotlin.math.ceil

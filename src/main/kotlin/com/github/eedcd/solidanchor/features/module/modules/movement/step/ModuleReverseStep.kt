@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.step
+package com.github.eedcd.solidanchor.features.module.modules.movement.step
 
 import net.ccbluex.fastutil.referenceHashSetOf
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PlayerJumpEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.block.getBlock
-import net.solidanchor.utils.entity.FallingPlayer
-import net.solidanchor.utils.entity.SimulatedPlayer
-import net.solidanchor.utils.math.allEmpty
-import net.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PlayerJumpEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.block.getBlock
+import com.github.eedcd.solidanchor.utils.entity.FallingPlayer
+import com.github.eedcd.solidanchor.utils.entity.SimulatedPlayer
+import com.github.eedcd.solidanchor.utils.math.allEmpty
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
 import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket
 import net.minecraft.world.level.block.Blocks
 

@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.aiming.features.processors
+package com.github.eedcd.solidanchor.utils.aiming.features.processors
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationTarget
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.kotlin.EventPriorityConvention
-import net.solidanchor.utils.kotlin.random
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationTarget
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.utils.kotlin.random
 import kotlin.random.Random
 
 /**

@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.elytrafly
+package com.github.eedcd.solidanchor.features.module.modules.movement.elytrafly
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.movement.elytrafly.modes.ElytraFlyModeBoost
-import net.solidanchor.features.module.modules.movement.elytrafly.modes.ElytraFlyModeFirework
-import net.solidanchor.features.module.modules.movement.elytrafly.modes.ElytraFlyModePitch40Infinite
-import net.solidanchor.features.module.modules.movement.elytrafly.modes.ElytraFlyModeStatic
-import net.solidanchor.features.module.modules.movement.elytrafly.modes.ElytraFlyModeVanilla
-import net.solidanchor.utils.entity.moving
-import net.solidanchor.utils.entity.set
-import net.solidanchor.utils.item.isGlider
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.movement.elytrafly.modes.ElytraFlyModeBoost
+import com.github.eedcd.solidanchor.features.module.modules.movement.elytrafly.modes.ElytraFlyModeFirework
+import com.github.eedcd.solidanchor.features.module.modules.movement.elytrafly.modes.ElytraFlyModePitch40Infinite
+import com.github.eedcd.solidanchor.features.module.modules.movement.elytrafly.modes.ElytraFlyModeStatic
+import com.github.eedcd.solidanchor.features.module.modules.movement.elytrafly.modes.ElytraFlyModeVanilla
+import com.github.eedcd.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.utils.entity.set
+import com.github.eedcd.solidanchor.utils.item.isGlider
 import net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket
 import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.entity.EquipmentSlot

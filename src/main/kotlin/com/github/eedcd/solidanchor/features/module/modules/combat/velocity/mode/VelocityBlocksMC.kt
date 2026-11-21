@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.velocity.mode
+package com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode
 
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.network.send1_21_5StartSneaking
-import net.solidanchor.utils.network.send1_21_5StopSneaking
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.network.send1_21_5StartSneaking
+import com.github.eedcd.solidanchor.utils.network.send1_21_5StopSneaking
 import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket
 
 /**

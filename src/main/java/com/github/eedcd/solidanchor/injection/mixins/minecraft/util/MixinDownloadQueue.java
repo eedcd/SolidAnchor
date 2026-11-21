@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.util;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.util;
 
+import com.github.eedcd.solidanchor.features.spoofer.SpooferFingerprint;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.features.spoofer.SpooferFingerprint;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.packs.DownloadQueue;
 import org.spongepowered.asm.mixin.Final;

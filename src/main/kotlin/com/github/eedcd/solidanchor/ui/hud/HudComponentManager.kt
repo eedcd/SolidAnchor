@@ -17,32 +17,32 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.ui.hud
+package com.github.eedcd.solidanchor.ui.hud
 
 import java.util.concurrent.CopyOnWriteArrayList
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.module.modules.render.ModuleHud
-import net.solidanchor.ui.hud.components.ArmorItemsHudComponent
-import net.solidanchor.ui.hud.components.ArrayListHudComponent
-import net.solidanchor.ui.hud.components.BlockCounterHudComponent
-import net.solidanchor.ui.hud.components.ClosedCaptionsHudComponent
-import net.solidanchor.ui.hud.components.CraftingInventoryHudComponent
-import net.solidanchor.ui.hud.components.EffectsHudComponent
-import net.solidanchor.ui.hud.components.EnderChestInventoryHudComponent
-import net.solidanchor.ui.hud.components.HotbarHudComponent
-import net.solidanchor.ui.hud.components.ImageHudComponent
-import net.solidanchor.ui.hud.components.InventoryHudComponent
-import net.solidanchor.ui.hud.components.InventoryStatisticsHudComponent
-import net.solidanchor.ui.hud.components.KeyBindsHudComponent
-import net.solidanchor.ui.hud.components.KeystrokesHudComponent
-import net.solidanchor.ui.hud.components.NotificationsHudComponent
-import net.solidanchor.ui.hud.components.ScoreboardHudComponent
-import net.solidanchor.ui.hud.components.TabGuiHudComponent
-import net.solidanchor.ui.hud.components.TacoHudComponent
-import net.solidanchor.ui.hud.components.TargetHudComponent
-import net.solidanchor.ui.hud.components.TextHudComponent
-import net.solidanchor.ui.hud.components.WatermarkHudComponent
-import net.solidanchor.ui.hud.components.minimap.MinimapHudComponent
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleHud
+import com.github.eedcd.solidanchor.ui.hud.components.ArmorItemsHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.ArrayListHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.BlockCounterHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.ClosedCaptionsHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.CraftingInventoryHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.EffectsHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.EnderChestInventoryHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.HotbarHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.ImageHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.InventoryHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.InventoryStatisticsHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.KeyBindsHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.KeystrokesHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.NotificationsHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.ScoreboardHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.TabGuiHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.TacoHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.TargetHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.TextHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.WatermarkHudComponent
+import com.github.eedcd.solidanchor.ui.hud.components.minimap.MinimapHudComponent
 
 @AddonApi
 object HudComponentManager {

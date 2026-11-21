@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.misc.antibot.modes
+package com.github.eedcd.solidanchor.features.module.modules.misc.antibot.modes
 
 import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap
 import it.unimi.dsi.fastutil.ints.IntOpenHashSet
 import net.ccbluex.fastutil.enumMapOf
 import net.ccbluex.fastutil.enumSetOf
 import net.ccbluex.fastutil.forEachInt
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.MultiChoiceListValue
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.AttackEntityEvent
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot
-import net.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot.isADuplicate
-import net.solidanchor.utils.item.isGlider
-import net.solidanchor.utils.kotlin.EventPriorityConvention.CRITICAL_MODIFICATION
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.MultiChoiceListValue
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.AttackEntityEvent
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot
+import com.github.eedcd.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot.isADuplicate
+import com.github.eedcd.solidanchor.utils.item.isGlider
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.CRITICAL_MODIFICATION
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.network.protocol.game.ClientboundAnimatePacket
 import net.minecraft.network.protocol.game.ClientboundMoveEntityPacket
 import net.minecraft.network.protocol.game.ClientboundRemoveEntitiesPacket

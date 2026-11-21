@@ -18,11 +18,11 @@
  */
 
 @file:Suppress("TooManyFunctions")
-package net.solidanchor.utils.world
+package com.github.eedcd.solidanchor.utils.world
 
 import com.google.common.base.Predicates
-import net.solidanchor.injection.mixins.minecraft.client.MixinLevelInvoker
-import net.solidanchor.utils.math.expandToCube
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.client.MixinLevelInvoker
+import com.github.eedcd.solidanchor.utils.math.expandToCube
 import net.minecraft.core.BlockPos
 import net.minecraft.util.AbortableIterationConsumer
 import net.minecraft.util.Continuation

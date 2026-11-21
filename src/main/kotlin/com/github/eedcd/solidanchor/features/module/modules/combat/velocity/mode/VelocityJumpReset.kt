@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.velocity.mode
+package com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.utils.percentageChance
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.utils.network.LocalPlayerFallDamageTracker
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.utils.percentageChance
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.utils.network.LocalPlayerFallDamageTracker
 
 /**
  * Jump Reset mode. A technique most players use to minimize the amount of knockback they get.

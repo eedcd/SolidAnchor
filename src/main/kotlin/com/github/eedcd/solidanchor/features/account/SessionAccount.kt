@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.account
+package com.github.eedcd.solidanchor.features.account
 
 import com.google.gson.JsonObject
 import com.mojang.authlib.GameProfile
-import net.solidanchor.config.gson.util.string
+import com.github.eedcd.solidanchor.config.gson.util.string
 import net.raphimc.minecraftauth.java.model.MinecraftToken
 import net.raphimc.minecraftauth.java.request.MinecraftProfileRequest
 

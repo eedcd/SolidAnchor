@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.gui.element;
+package com.github.eedcd.solidanchor.render.gui.element;
 
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.renderpearl.api.pipeline.RenderPipeline;
-import net.solidanchor.render.ClientRenderPipelines;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
 import net.minecraft.client.gui.render.TextureSetup;
 import org.joml.Matrix3x2f;
@@ -48,6 +48,14 @@ public record RoundedRectGuiElementRenderState(
 ) implements PoseReusableGuiElementRenderState {
 
     private static final int MAX_ENCODED_VALUE = 32767;
+
+    private static int encode(float value) {
+        return Math.round(Math.clamp(value, 0.0F, MAX_ENCODED_VALUE));
+    }
+
+    private static boolean isVisible(int argb) {
+        return (argb >>> 24) != 0;
+    }
 
     @Override
     public void buildVertices(VertexConsumer vertices) {
@@ -116,13 +124,5 @@ public record RoundedRectGuiElementRenderState(
     @Override
     public TextureSetup textureSetup() {
         return TextureSetup.noTexture();
-    }
-
-    private static int encode(float value) {
-        return Math.round(Math.clamp(value, 0.0F, MAX_ENCODED_VALUE));
-    }
-
-    private static boolean isVisible(int argb) {
-        return (argb >>> 24) != 0;
     }
 }

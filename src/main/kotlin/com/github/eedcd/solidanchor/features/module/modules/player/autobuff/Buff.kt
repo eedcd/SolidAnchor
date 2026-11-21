@@ -17,20 +17,20 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autobuff
+package com.github.eedcd.solidanchor.features.module.modules.player.autobuff
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.KeybindIsPressedEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickUntil
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.player.autobuff.ModuleAutoBuff.AutoSwap
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.combat.CombatManager
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.InventoryManager
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.findClosestSlot
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.KeybindIsPressedEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickUntil
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.player.autobuff.ModuleAutoBuff.AutoSwap
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.combat.CombatManager
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.InventoryManager
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.findClosestSlot
 import net.minecraft.world.item.ItemStack
 
 abstract class Buff(

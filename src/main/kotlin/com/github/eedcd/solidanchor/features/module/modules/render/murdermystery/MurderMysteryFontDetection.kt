@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.murdermystery
+package com.github.eedcd.solidanchor.features.module.modules.render.murdermystery
 
-import net.solidanchor.config.gson.util.readJson
-import net.solidanchor.utils.item.MAP_SIZE
+import com.github.eedcd.solidanchor.config.gson.util.readJson
+import com.github.eedcd.solidanchor.utils.item.MAP_SIZE
 import net.minecraft.world.level.material.MapColor
 import net.minecraft.world.level.saveddata.maps.MapItemSavedData
 import java.util.BitSet

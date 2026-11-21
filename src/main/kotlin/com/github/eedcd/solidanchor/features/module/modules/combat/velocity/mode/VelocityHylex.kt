@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.velocity.mode
+package com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode
 
-import net.solidanchor.event.events.AttackEntityEvent
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.event.events.AttackEntityEvent
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.entity.moving
 
 /**
  * Hylex Velocity

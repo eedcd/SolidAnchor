@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.render;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render;
 
+import com.github.eedcd.solidanchor.common.XRayBlockRenderContext;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleXRay;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.mojang.blaze3d.vertex.QuadInstance;
-import net.solidanchor.common.XRayBlockRenderContext;
-import net.solidanchor.features.module.modules.render.ModuleXRay;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.block.BlockQuadOutput;
 import net.minecraft.client.renderer.block.ModelBlockRenderer;
@@ -51,28 +51,6 @@ public abstract class MixinModelBlockRenderer {
     @Shadow
     private QuadInstance quadInstance;
 
-    @WrapMethod(method = "tesselateBlock")
-    private void wrapXRayTransparentBackground(BlockQuadOutput output, float x, float y, float z,
-            BlockAndTintGetter level, BlockPos pos, BlockState state, BlockStateModel model, long seed,
-            Operation<Void> original) {
-        XRayBlockRenderContext.renderIfActive(ModuleXRay.renderActive(), state,
-            () -> original.call(output, x, y, z, level, pos, state, model, seed));
-    }
-
-    @Inject(method = {"tesselateFlat", "tesselateAmbientOcclusion"}, at = @At("HEAD"), cancellable = true)
-    private void injectXRaySkipHiddenBlocks(BlockQuadOutput output, float x, float y, float z,
-            List<BlockStateModelPart> parts, BlockAndTintGetter level, BlockState state, BlockPos pos,
-            CallbackInfo ci) {
-        ModuleXRay module = ModuleXRay.INSTANCE;
-        if (!ModuleXRay.renderActive()) {
-            return;
-        }
-
-        if (module.shouldSkipRender(state, pos)) {
-            ci.cancel();
-        }
-    }
-
     @ModifyExpressionValue(method = "tesselateBlock", at = @At(value = "FIELD", target = "Lnet/minecraft/client/renderer/block/ModelBlockRenderer;ambientOcclusion:Z", opcode = Opcodes.GETFIELD))
     private static boolean injectXRayFullBright(boolean original) {
         ModuleXRay module = ModuleXRay.INSTANCE;
@@ -85,7 +63,7 @@ public abstract class MixinModelBlockRenderer {
 
     @ModifyReturnValue(method = "forceOpaque", at = @At("RETURN"))
     private static boolean injectXRayTransparentBackgroundForceTranslucent(boolean original, boolean cutoutLeaves,
-            BlockState state) {
+                                                                           BlockState state) {
         ModuleXRay module = ModuleXRay.INSTANCE;
         if (!ModuleXRay.renderActive() || !module.shouldRenderTransparentBackground(state)) {
             return original;
@@ -94,9 +72,31 @@ public abstract class MixinModelBlockRenderer {
         return false;
     }
 
+    @WrapMethod(method = "tesselateBlock")
+    private void wrapXRayTransparentBackground(BlockQuadOutput output, float x, float y, float z,
+                                               BlockAndTintGetter level, BlockPos pos, BlockState state, BlockStateModel model, long seed,
+                                               Operation<Void> original) {
+        XRayBlockRenderContext.renderIfActive(ModuleXRay.renderActive(), state,
+            () -> original.call(output, x, y, z, level, pos, state, model, seed));
+    }
+
+    @Inject(method = {"tesselateFlat", "tesselateAmbientOcclusion"}, at = @At("HEAD"), cancellable = true)
+    private void injectXRaySkipHiddenBlocks(BlockQuadOutput output, float x, float y, float z,
+                                            List<BlockStateModelPart> parts, BlockAndTintGetter level, BlockState state, BlockPos pos,
+                                            CallbackInfo ci) {
+        ModuleXRay module = ModuleXRay.INSTANCE;
+        if (!ModuleXRay.renderActive()) {
+            return;
+        }
+
+        if (module.shouldSkipRender(state, pos)) {
+            ci.cancel();
+        }
+    }
+
     @ModifyReturnValue(method = "shouldRenderFace", at = @At("RETURN"))
     private boolean injectXRayDrawSide(boolean original, BlockAndTintGetter level, BlockState state, Direction direction,
-            BlockPos neighborPos) {
+                                       BlockPos neighborPos) {
         ModuleXRay module = ModuleXRay.INSTANCE;
         if (!ModuleXRay.renderActive()) {
             return original;
@@ -110,8 +110,8 @@ public abstract class MixinModelBlockRenderer {
         at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/block/BlockQuadOutput;put(FFFLnet/minecraft/client/resources/model/geometry/BakedQuad;Lcom/mojang/blaze3d/vertex/QuadInstance;)V")
     )
     private void injectXRayTransparentBackgroundAlpha(BlockQuadOutput output, float x, float y, float z,
-            BlockAndTintGetter level, BlockState state, BlockPos pos,
-            net.minecraft.client.resources.model.geometry.BakedQuad quad, CallbackInfo ci) {
+                                                      BlockAndTintGetter level, BlockState state, BlockPos pos,
+                                                      net.minecraft.client.resources.model.geometry.BakedQuad quad, CallbackInfo ci) {
         XRayBlockRenderContext.applyAlpha(this.quadInstance);
     }
 

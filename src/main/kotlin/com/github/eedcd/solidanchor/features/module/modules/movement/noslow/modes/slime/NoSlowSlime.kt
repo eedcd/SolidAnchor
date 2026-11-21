@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.noslow.modes.slime
+package com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.slime
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.BlockSlipperinessMultiplierEvent
-import net.solidanchor.event.events.BlockVelocityMultiplierEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.movement.noslow.ModuleNoSlow
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.BlockSlipperinessMultiplierEvent
+import com.github.eedcd.solidanchor.event.events.BlockVelocityMultiplierEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.ModuleNoSlow
 import net.minecraft.world.level.block.SlimeBlock
 
 internal object NoSlowSlime : ToggleableValueGroup(ModuleNoSlow, "SlimeBlock", true) {

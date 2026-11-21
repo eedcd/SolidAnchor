@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.noslow.modes.shared
+package com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.shared
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.event.handler
-import net.solidanchor.utils.client.NullableBypass
-import net.solidanchor.utils.network.sendPacketSilently
-import net.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.client.NullableBypass
+import com.github.eedcd.solidanchor.utils.network.sendPacketSilently
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
 import net.minecraft.network.protocol.game.ServerboundUseItemPacket
 
 internal class NoSlowSharedInvalidHand(override val parent: ModeValueGroup<*>) : Mode("InvalidHand") {

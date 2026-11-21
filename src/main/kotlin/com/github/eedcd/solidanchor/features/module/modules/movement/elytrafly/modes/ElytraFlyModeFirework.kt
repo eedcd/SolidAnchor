@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.elytrafly.modes
+package com.github.eedcd.solidanchor.features.module.modules.movement.elytrafly.modes
 
-import net.solidanchor.additions.shooter
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.ScheduleInventoryActionEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.InventoryAction
-import net.solidanchor.utils.inventory.PlayerInventoryConstraints
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.useHotbarSlotOrOffhand
-import net.solidanchor.utils.world.entityGetter
-import net.solidanchor.utils.world.none
+import com.github.eedcd.solidanchor.additions.shooter
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.ScheduleInventoryActionEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.InventoryAction
+import com.github.eedcd.solidanchor.utils.inventory.PlayerInventoryConstraints
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.useHotbarSlotOrOffhand
+import com.github.eedcd.solidanchor.utils.world.entityGetter
+import com.github.eedcd.solidanchor.utils.world.none
 import net.minecraft.world.entity.EntityTypes
 import net.minecraft.world.item.Items
 

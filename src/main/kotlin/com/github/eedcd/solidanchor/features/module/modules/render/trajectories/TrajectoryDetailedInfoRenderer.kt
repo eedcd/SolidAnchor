@@ -17,32 +17,32 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.trajectories
+package com.github.eedcd.solidanchor.features.module.modules.render.trajectories
 
-import net.solidanchor.config.types.CurveValue.Axis.Companion.axis
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.OverlayRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.misc.nameprotect.sanitizeForeignInput
-import net.solidanchor.features.module.modules.render.GameTimeUnit
-import net.solidanchor.render.FontManager
-import net.solidanchor.render.engine.font.HorizontalAnchor
-import net.solidanchor.render.engine.type.BoundingBox2f
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.gui.indicator.IndicatorRenderState
-import net.solidanchor.render.gui.indicator.IndicatorRenderer
-import net.solidanchor.render.gui.indicator.IndicatorStyle
-import net.solidanchor.render.gui.indicator.IndicatorVisibility
-import net.solidanchor.render.gui.indicator.NoneIndicatorStyle
-import net.solidanchor.render.gui.indicator.TriangleIndicatorStyle
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.entity.simpleDisplayName
-import net.solidanchor.utils.entity.cameraDistance
-import net.solidanchor.utils.math.toFixed
-import net.solidanchor.utils.render.trajectory.TrajectoryInfoRenderer
-import net.solidanchor.utils.text.plus
-import net.solidanchor.utils.text.withFormat
+import com.github.eedcd.solidanchor.config.types.CurveValue.Axis.Companion.axis
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.misc.nameprotect.sanitizeForeignInput
+import com.github.eedcd.solidanchor.features.module.modules.render.GameTimeUnit
+import com.github.eedcd.solidanchor.render.FontManager
+import com.github.eedcd.solidanchor.render.engine.font.HorizontalAnchor
+import com.github.eedcd.solidanchor.render.engine.type.BoundingBox2f
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.gui.indicator.IndicatorRenderState
+import com.github.eedcd.solidanchor.render.gui.indicator.IndicatorRenderer
+import com.github.eedcd.solidanchor.render.gui.indicator.IndicatorStyle
+import com.github.eedcd.solidanchor.render.gui.indicator.IndicatorVisibility
+import com.github.eedcd.solidanchor.render.gui.indicator.NoneIndicatorStyle
+import com.github.eedcd.solidanchor.render.gui.indicator.TriangleIndicatorStyle
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.entity.simpleDisplayName
+import com.github.eedcd.solidanchor.utils.entity.cameraDistance
+import com.github.eedcd.solidanchor.utils.math.toFixed
+import com.github.eedcd.solidanchor.utils.render.trajectory.TrajectoryInfoRenderer
+import com.github.eedcd.solidanchor.utils.text.plus
+import com.github.eedcd.solidanchor.utils.text.withFormat
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.util.FormattedCharSequence
 import net.minecraft.world.item.ItemStack

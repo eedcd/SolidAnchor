@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.render.entity.feature;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render.entity.feature;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleChams;
+import com.github.eedcd.solidanchor.interfaces.EntityRenderStateAddition;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.solidanchor.features.module.modules.render.ModuleChams;
-import net.solidanchor.interfaces.EntityRenderStateAddition;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.layers.ItemInHandLayer;
 import net.minecraft.client.renderer.entity.state.ArmedEntityRenderState;

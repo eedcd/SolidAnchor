@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.arguments
+package com.github.eedcd.solidanchor.features.command.arguments
 
 import com.mojang.brigadier.exceptions.DynamicCommandExceptionType
-import net.solidanchor.lang.translation
+import com.github.eedcd.solidanchor.lang.translation
 
 /**
  * Typed parse-error factories for the client argument types, mirroring the vanilla

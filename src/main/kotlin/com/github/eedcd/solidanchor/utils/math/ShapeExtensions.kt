@@ -19,7 +19,7 @@
 
 @file:Suppress("TooManyFunctions")
 
-package net.solidanchor.utils.math
+package com.github.eedcd.solidanchor.utils.math
 
 import it.unimi.dsi.fastutil.ints.IntArrayList
 import net.minecraft.core.BlockPos

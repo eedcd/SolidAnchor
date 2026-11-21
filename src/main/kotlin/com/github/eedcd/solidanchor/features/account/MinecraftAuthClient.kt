@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.account
+package com.github.eedcd.solidanchor.features.account
 
-import net.solidanchor.api.core.HttpClient
+import com.github.eedcd.solidanchor.api.core.HttpClient
 import net.raphimc.minecraftauth.MinecraftAuth
 import net.lenni0451.commons.httpclient.HttpClient as MinecraftAuthHttpClient
 

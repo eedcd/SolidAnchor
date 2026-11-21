@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.kotlin
+package com.github.eedcd.solidanchor.utils.kotlin
 
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.kotlin.EventPriorityConvention.OBJECTION_AGAINST_EVERYTHING
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.OBJECTION_AGAINST_EVERYTHING
 
 
 @AddonApi

@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.render
+package com.github.eedcd.solidanchor.utils.render
 
-import net.solidanchor.features.module.modules.combat.aimbot.ModuleProjectileAimbot
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.render.engine.type.Rect
-import net.solidanchor.render.engine.type.Vec3f
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.math.vertices
-import net.solidanchor.utils.math.geometry.Line
-import net.solidanchor.utils.math.toVec3d
+import com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.ModuleProjectileAimbot
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.render.engine.type.Rect
+import com.github.eedcd.solidanchor.render.engine.type.Vec3f
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.math.vertices
+import com.github.eedcd.solidanchor.utils.math.geometry.Line
+import com.github.eedcd.solidanchor.utils.math.toVec3d
 import net.minecraft.client.renderer.GameRenderer
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec2

@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.network
+package com.github.eedcd.solidanchor.utils.network
 
-import net.solidanchor.utils.client.isNewerThanOrEquals1_21_9
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.kotlin.toNullable
+import com.github.eedcd.solidanchor.utils.client.isNewerThanOrEquals1_21_9
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.kotlin.toNullable
 import net.minecraft.network.protocol.Packet
 import net.minecraft.network.protocol.game.ClientboundDamageEventPacket
 import net.minecraft.network.protocol.game.ClientboundEntityEventPacket

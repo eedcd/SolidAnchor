@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.block
+package com.github.eedcd.solidanchor.utils.block
 
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet
-import net.solidanchor.utils.block.CachedBlockPosSpheres.RADIUS
+import com.github.eedcd.solidanchor.utils.block.CachedBlockPosSpheres.RADIUS
 import net.minecraft.core.BlockPos
 import kotlin.test.assertEquals
 import kotlin.test.Test

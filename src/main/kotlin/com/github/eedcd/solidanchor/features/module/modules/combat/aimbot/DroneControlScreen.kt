@@ -17,22 +17,22 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.aimbot
+package com.github.eedcd.solidanchor.features.module.modules.combat.aimbot
 
 import com.mojang.blaze3d.platform.InputConstants
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.text.asPlainText
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.math.toDegrees
-import net.solidanchor.utils.entity.box
-import net.solidanchor.utils.input.InputTracker.isPressedOnAny
-import net.solidanchor.utils.math.geometry.NormalizedPlane
-import net.solidanchor.utils.math.plus
-import net.solidanchor.utils.math.withLength
-import net.solidanchor.utils.render.WorldToScreen
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.math.toDegrees
+import com.github.eedcd.solidanchor.utils.entity.box
+import com.github.eedcd.solidanchor.utils.input.InputTracker.isPressedOnAny
+import com.github.eedcd.solidanchor.utils.math.geometry.NormalizedPlane
+import com.github.eedcd.solidanchor.utils.math.plus
+import com.github.eedcd.solidanchor.utils.math.withLength
+import com.github.eedcd.solidanchor.utils.render.WorldToScreen
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.client.input.KeyEvent

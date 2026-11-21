@@ -18,4 +18,4 @@
  */
 
 @org.jspecify.annotations.NullMarked
-package net.solidanchor.interfaces;
+package com.github.eedcd.solidanchor.interfaces;

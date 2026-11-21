@@ -16,23 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block.placer
+package com.github.eedcd.solidanchor.utils.block.placer
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.aiming.NoRotationMode
-import net.solidanchor.utils.aiming.NormalRotationMode
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.utils.raytraceBox
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.combat.attackEntity
-import net.solidanchor.utils.entity.getExplosionDamageFromEntity
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.raytracing.isLookingAtEntity
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.aiming.NoRotationMode
+import com.github.eedcd.solidanchor.utils.aiming.NormalRotationMode
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.utils.raytraceBox
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.combat.attackEntity
+import com.github.eedcd.solidanchor.utils.entity.getExplosionDamageFromEntity
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.raytracing.isLookingAtEntity
 import net.minecraft.network.protocol.game.ClientboundRemoveEntitiesPacket
 import net.minecraft.world.entity.boss.enderdragon.EndCrystal
 

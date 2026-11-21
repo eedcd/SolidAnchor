@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block.bed
+package com.github.eedcd.solidanchor.utils.block.bed
 
 import it.unimi.dsi.fastutil.objects.Reference2IntOpenHashMap
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet
 import net.ccbluex.fastutil.component1
 import net.ccbluex.fastutil.component2
 import net.ccbluex.fastutil.fastIterator
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.BedStateChangeEvent
-import net.solidanchor.utils.block.AbstractBlockLocationTracker
-import net.solidanchor.utils.block.ChunkScanner
-import net.solidanchor.utils.block.immutable
-import net.solidanchor.utils.block.isBed
-import net.solidanchor.utils.block.searchBedLayer
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.kotlin.unmodifiable
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.BedStateChangeEvent
+import com.github.eedcd.solidanchor.utils.block.AbstractBlockLocationTracker
+import com.github.eedcd.solidanchor.utils.block.ChunkScanner
+import com.github.eedcd.solidanchor.utils.block.immutable
+import com.github.eedcd.solidanchor.utils.block.isBed
+import com.github.eedcd.solidanchor.utils.block.searchBedLayer
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.kotlin.unmodifiable
 import net.minecraft.core.BlockPos
 import net.minecraft.world.level.block.BedBlock
 import net.minecraft.world.level.block.Block

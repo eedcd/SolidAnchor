@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.text;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.text;
 
+import com.github.eedcd.solidanchor.interfaces.TextColorAddition;
 import com.google.common.base.Objects;
-import net.solidanchor.interfaces.TextColorAddition;
 import net.minecraft.network.chat.TextColor;
 import org.jspecify.annotations.Nullable;
 import org.spongepowered.asm.mixin.*;
@@ -70,6 +70,7 @@ public abstract class MixinTextColor implements TextColorAddition {
             }
         }
     }
+
     /**
      * @author superblaubeere27
      * @reason Nobody will ever overwrite this method too fr.

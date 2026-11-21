@@ -16,32 +16,32 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.nuker.mode
+package com.github.eedcd.solidanchor.features.module.modules.world.nuker.mode
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.CancelBlockBreakingEvent
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.player.ModuleBlink
-import net.solidanchor.features.module.modules.world.nuker.ModuleNuker
-import net.solidanchor.features.module.modules.world.nuker.ModuleNuker.areaMode
-import net.solidanchor.features.module.modules.world.nuker.ModuleNuker.ignoreOpenInventory
-import net.solidanchor.features.module.modules.world.nuker.ModuleNuker.mode
-import net.solidanchor.features.module.modules.world.nuker.ModuleNuker.wasTarget
-import net.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.aiming.utils.raytraceBlockRotation
-import net.solidanchor.utils.aiming.utils.selectBlockTarget
-import net.solidanchor.utils.block.doBreak
-import net.solidanchor.utils.block.isNotBreakable
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.raytracing.raytraceBlock
-import net.solidanchor.utils.render.BreakingProgress
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.CancelBlockBreakingEvent
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleBlink
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.ModuleNuker
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.ModuleNuker.areaMode
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.ModuleNuker.ignoreOpenInventory
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.ModuleNuker.mode
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.ModuleNuker.wasTarget
+import com.github.eedcd.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.utils.raytraceBlockRotation
+import com.github.eedcd.solidanchor.utils.aiming.utils.selectBlockTarget
+import com.github.eedcd.solidanchor.utils.block.doBreak
+import com.github.eedcd.solidanchor.utils.block.isNotBreakable
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.raytracing.raytraceBlock
+import com.github.eedcd.solidanchor.utils.render.BreakingProgress
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 import net.minecraft.core.BlockPos
 import net.minecraft.world.phys.HitResult

@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.killaura
+package com.github.eedcd.solidanchor.features.module.modules.combat.killaura
 
-import net.solidanchor.features.module.modules.combat.ModuleAutoWeapon
-import net.solidanchor.utils.client.isOlderThanOrEqual1_8
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.combat.TargetTracker
-import net.solidanchor.utils.entity.wouldBlockHit
-import net.solidanchor.utils.item.isAxe
+import com.github.eedcd.solidanchor.features.module.modules.combat.ModuleAutoWeapon
+import com.github.eedcd.solidanchor.utils.client.isOlderThanOrEqual1_8
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.combat.TargetTracker
+import com.github.eedcd.solidanchor.utils.entity.wouldBlockHit
+import com.github.eedcd.solidanchor.utils.item.isAxe
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.player.Player
 

@@ -17,18 +17,18 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.entity;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.*;
+import com.github.eedcd.solidanchor.features.module.modules.exploit.ModuleNoPitchLimit;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleAntiBounce;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleNoPose;
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.slime.NoSlowSlime;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.*;
-import net.solidanchor.features.module.modules.exploit.ModuleNoPitchLimit;
-import net.solidanchor.features.module.modules.movement.ModuleAntiBounce;
-import net.solidanchor.features.module.modules.movement.ModuleNoPose;
-import net.solidanchor.features.module.modules.movement.noslow.modes.slime.NoSlowSlime;
 import net.minecraft.client.Minecraft;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
@@ -71,7 +71,8 @@ public abstract class MixinEntity {
     @Shadow
     public abstract double getZ();
 
-    @Shadow public abstract float getYRot();
+    @Shadow
+    public abstract float getYRot();
 
     @Unique
     protected boolean solid_anchor$isClientPlayer() {
@@ -141,7 +142,7 @@ public abstract class MixinEntity {
     }
 
     @Inject(method = "collide(Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;",
-            at = @At(value = "RETURN", ordinal = 0), cancellable = true)
+        at = @At(value = "RETURN", ordinal = 0), cancellable = true)
     private void hookStepHeight(Vec3 movement, CallbackInfoReturnable<Vec3> cir) {
         if (solid_anchor$isClientPlayer()) {
             PlayerStepSuccessEvent movementCollisionsEvent = new PlayerStepSuccessEvent(movement, cir.getReturnValue());

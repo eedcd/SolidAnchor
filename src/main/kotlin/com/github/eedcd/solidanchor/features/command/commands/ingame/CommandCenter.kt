@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.ingame
+package com.github.eedcd.solidanchor.features.command.commands.ingame
 
 import com.mojang.brigadier.CommandDispatcher
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.EventState
-import net.solidanchor.event.events.PlayerNetworkMovementTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.utils.client.inGame
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.kotlin.EventPriorityConvention
-import net.solidanchor.utils.math.center
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.EventState
+import com.github.eedcd.solidanchor.event.events.PlayerNetworkMovementTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.utils.client.inGame
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.utils.math.center
 
 /**
  * Center command

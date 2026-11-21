@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.gui.custom;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui.custom;
 
-import net.solidanchor.features.misc.SelfDestruct;
-import net.solidanchor.injection.mixins.minecraft.gui.MixinScreen;
-import net.solidanchor.ui.multiplayer.MultiplayerActions;
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct;
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.gui.MixinScreen;
+import com.github.eedcd.solidanchor.ui.multiplayer.MultiplayerActions;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.DisconnectedScreen;
 import net.minecraft.client.gui.screens.Screen;
@@ -86,8 +86,8 @@ public abstract class MixinDisconnectedScreen extends MixinScreen {
         int x = this.width - 140;
         int y = this.height - 30;
         disconnectButton = (this.minecraft.allowsMultiplayer() ?
-                Button.builder(this.buttonText, button -> this.minecraft.gui.setScreen(this.parent)) :
-                Button.builder(TO_TITLE, button -> this.minecraft.gui.setScreen(new TitleScreen()))
+            Button.builder(this.buttonText, button -> this.minecraft.gui.setScreen(this.parent)) :
+            Button.builder(TO_TITLE, button -> this.minecraft.gui.setScreen(new TitleScreen()))
         ).bounds(x, y, 120, 20).build();
         addRenderableWidget(disconnectButton);
 
@@ -96,29 +96,29 @@ public abstract class MixinDisconnectedScreen extends MixinScreen {
 
         reconnectButton = Button.builder(Component.literal("Reconnect"),
                 button -> MultiplayerActions.INSTANCE.reconnect())
-                .bounds(0, 0, OPTION_WIDTH, OPTION_HEIGHT)
-                .build();
+            .bounds(0, 0, OPTION_WIDTH, OPTION_HEIGHT)
+            .build();
         reconnectButton.active = canReconnect;
         addRenderableWidget(reconnectButton);
 
         restoreSessionButton = Button.builder(Component.literal("Restore initial session"),
                 button -> MultiplayerActions.INSTANCE.reconnectWithInitialSession())
-                .bounds(0, 0, OPTION_WIDTH, OPTION_HEIGHT)
-                .build();
+            .bounds(0, 0, OPTION_WIDTH, OPTION_HEIGHT)
+            .build();
         restoreSessionButton.active = canReconnect;
         addRenderableWidget(restoreSessionButton);
 
         randomAccountButton = Button.builder(Component.literal("Reconnect with random account"),
                 button -> MultiplayerActions.INSTANCE.reconnectWithRandomAccount())
-                .bounds(0, 0, OPTION_WIDTH, OPTION_HEIGHT)
-                .build();
+            .bounds(0, 0, OPTION_WIDTH, OPTION_HEIGHT)
+            .build();
         randomAccountButton.active = canReconnect && hasAccounts;
         addRenderableWidget(randomAccountButton);
 
         randomUsernameButton = Button.builder(Component.literal("Reconnect with random username"),
                 button -> MultiplayerActions.INSTANCE.reconnectWithRandomUsername())
-                .bounds(0, 0, OPTION_WIDTH, OPTION_HEIGHT)
-                .build();
+            .bounds(0, 0, OPTION_WIDTH, OPTION_HEIGHT)
+            .build();
         randomUsernameButton.active = canReconnect;
         addRenderableWidget(randomUsernameButton);
 

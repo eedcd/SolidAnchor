@@ -16,26 +16,26 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.misc
+package com.github.eedcd.solidanchor.features.module.modules.misc
 
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.PlayerTickEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.misc.FriendManager
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.notification
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.collection.itemSortedSetOf
-import net.solidanchor.utils.item.isConsumable
-import net.solidanchor.utils.network.isDeathProtection
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.PlayerTickEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.misc.FriendManager
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.collection.itemSortedSetOf
+import com.github.eedcd.solidanchor.utils.item.isConsumable
+import com.github.eedcd.solidanchor.utils.network.isDeathProtection
 import net.minecraft.client.player.RemotePlayer
 import net.minecraft.network.protocol.common.ClientboundDisconnectPacket
 import net.minecraft.network.protocol.game.ClientboundEntityEventPacket

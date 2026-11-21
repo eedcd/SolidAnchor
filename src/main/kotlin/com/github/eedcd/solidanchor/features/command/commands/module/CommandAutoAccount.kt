@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.module
+package com.github.eedcd.solidanchor.features.command.commands.module
 
 import com.mojang.brigadier.CommandDispatcher
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.features.module.modules.misc.ModuleAutoAccount
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.features.module.modules.misc.ModuleAutoAccount
 
 /**
  * AutoAccount Command

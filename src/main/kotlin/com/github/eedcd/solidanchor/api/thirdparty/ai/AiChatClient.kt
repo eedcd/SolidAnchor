@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.api.thirdparty.ai
+package com.github.eedcd.solidanchor.api.thirdparty.ai
 
 import com.google.gson.JsonParser
 import kotlinx.coroutines.CancellationException
-import net.solidanchor.api.core.HttpClient
-import net.solidanchor.api.core.httpException
-import net.solidanchor.api.thirdparty.ai.service.ANTHROPIC_API_VERSION
-import net.solidanchor.api.thirdparty.ai.service.ANTHROPIC_MAX_TOKENS
-import net.solidanchor.api.thirdparty.ai.service.AnthropicMessage
-import net.solidanchor.api.thirdparty.ai.service.AnthropicRequest
-import net.solidanchor.api.thirdparty.ai.service.AnthropicService
-import net.solidanchor.api.thirdparty.ai.service.OpenAiChatRequest
-import net.solidanchor.api.thirdparty.ai.service.OpenAiCompatibleService
-import net.solidanchor.api.thirdparty.ai.service.OpenAiMessage
-import net.solidanchor.config.gson.util.GSON_DEFAULT
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.api.core.HttpClient
+import com.github.eedcd.solidanchor.api.core.httpException
+import com.github.eedcd.solidanchor.api.thirdparty.ai.service.ANTHROPIC_API_VERSION
+import com.github.eedcd.solidanchor.api.thirdparty.ai.service.ANTHROPIC_MAX_TOKENS
+import com.github.eedcd.solidanchor.api.thirdparty.ai.service.AnthropicMessage
+import com.github.eedcd.solidanchor.api.thirdparty.ai.service.AnthropicRequest
+import com.github.eedcd.solidanchor.api.thirdparty.ai.service.AnthropicService
+import com.github.eedcd.solidanchor.api.thirdparty.ai.service.OpenAiChatRequest
+import com.github.eedcd.solidanchor.api.thirdparty.ai.service.OpenAiCompatibleService
+import com.github.eedcd.solidanchor.api.thirdparty.ai.service.OpenAiMessage
+import com.github.eedcd.solidanchor.config.gson.util.GSON_DEFAULT
+import com.github.eedcd.solidanchor.utils.client.logger
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create

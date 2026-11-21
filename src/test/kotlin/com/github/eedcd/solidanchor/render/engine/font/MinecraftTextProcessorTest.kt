@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.font
+package com.github.eedcd.solidanchor.render.engine.font
 
 import net.ccbluex.fastutil.mapToIntArray
-import net.solidanchor.render.engine.font.MinecraftTextProcessor.ProcessedChar
-import net.solidanchor.render.engine.font.MinecraftTextProcessor.RecyclingProcessedText
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.text.asFormattedCharSequence
-import net.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.render.engine.font.MinecraftTextProcessor.ProcessedChar
+import com.github.eedcd.solidanchor.render.engine.font.MinecraftTextProcessor.RecyclingProcessedText
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.text.asFormattedCharSequence
+import com.github.eedcd.solidanchor.utils.text.asPlainText
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.Style
@@ -77,7 +77,7 @@ class MinecraftTextProcessorTest {
     }
 
     /**
-     * Legacy formatting codes are what [net.solidanchor.features.module.modules.misc.nameprotect.sanitizeForeignInput]
+     * Legacy formatting codes are what [com.github.eedcd.solidanchor.features.module.modules.misc.nameprotect.sanitizeForeignInput]
      * degenerates, so a `§`-colored string has to end up styled like its styled counterpart.
      */
     @Test

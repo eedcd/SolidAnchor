@@ -16,24 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.autofarm
+package com.github.eedcd.solidanchor.features.module.modules.world.autofarm
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.render.FULL_BOX
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.drawBoxSides
-import net.solidanchor.render.drawLine
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.utils.rainbow
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.entity.interpolateCurrentPosition
-import net.solidanchor.utils.math.horizontalDistanceToSqr
-import net.solidanchor.utils.math.sq
-import net.solidanchor.utils.math.toVec3f
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.render.FULL_BOX
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.drawBoxSides
+import com.github.eedcd.solidanchor.render.drawLine
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.utils.rainbow
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.entity.interpolateCurrentPosition
+import com.github.eedcd.solidanchor.utils.math.horizontalDistanceToSqr
+import com.github.eedcd.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.utils.math.toVec3f
 
 object AutoFarmVisualizer : ToggleableValueGroup(ModuleAutoFarm, "Visualize", true) {
     private object Path : ToggleableValueGroup(this, "Path", true) {

@@ -17,18 +17,18 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.font.dynamic
+package com.github.eedcd.solidanchor.render.engine.font.dynamic
 
 import it.unimi.dsi.fastutil.ints.IntArrays
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet
-import net.solidanchor.render.engine.font.FontGlyph
-import net.solidanchor.render.engine.font.GlyphAtlasTexture
-import net.solidanchor.render.engine.font.GlyphPage
-import net.solidanchor.render.engine.font.GlyphPage.Companion
-import net.solidanchor.render.engine.font.RasterizedGlyph
-import net.solidanchor.render.engine.font.copyCoverageToNativeImage
-import net.solidanchor.render.engine.font.toLuminanceNativeImage
+import com.github.eedcd.solidanchor.render.engine.font.FontGlyph
+import com.github.eedcd.solidanchor.render.engine.font.GlyphAtlasTexture
+import com.github.eedcd.solidanchor.render.engine.font.GlyphPage
+import com.github.eedcd.solidanchor.render.engine.font.GlyphPage.Companion
+import com.github.eedcd.solidanchor.render.engine.font.RasterizedGlyph
+import com.github.eedcd.solidanchor.render.engine.font.copyCoverageToNativeImage
+import com.github.eedcd.solidanchor.render.engine.font.toLuminanceNativeImage
 import java.awt.Dimension
 import kotlin.math.min
 

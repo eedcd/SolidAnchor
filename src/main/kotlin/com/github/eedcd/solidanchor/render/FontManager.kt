@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import net.solidanchor.api.core.AsyncLazy
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.render.engine.font.FontGlyphPageManager
-import net.solidanchor.utils.client.clientLogger
-import net.solidanchor.utils.io.createFont
+import com.github.eedcd.solidanchor.api.core.AsyncLazy
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.render.engine.font.FontGlyphPageManager
+import com.github.eedcd.solidanchor.utils.client.clientLogger
+import com.github.eedcd.solidanchor.utils.io.createFont
 import net.minecraft.util.Util
 import net.minecraft.util.Util.OS.LINUX
 import net.minecraft.util.Util.OS.OSX

@@ -17,16 +17,16 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.gson.adapter
+package com.github.eedcd.solidanchor.config.gson.adapter
 
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import com.google.gson.JsonSerializationContext
 import com.google.gson.JsonSerializer
-import net.solidanchor.SolidAnchor.logger
-import net.solidanchor.features.account.CrackedAccount
-import net.solidanchor.features.account.MinecraftAccount
+import com.github.eedcd.solidanchor.SolidAnchor.logger
+import com.github.eedcd.solidanchor.features.account.CrackedAccount
+import com.github.eedcd.solidanchor.features.account.MinecraftAccount
 import java.lang.reflect.Type
 
 object MinecraftAccountAdapter : JsonSerializer<MinecraftAccount>, JsonDeserializer<MinecraftAccount> {

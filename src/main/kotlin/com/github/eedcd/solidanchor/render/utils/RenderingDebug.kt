@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.utils
+package com.github.eedcd.solidanchor.render.utils
 
-import net.solidanchor.features.misc.DebuggedOwner
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.features.misc.DebuggedOwner
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
 
 object RenderingDebug : DebuggedOwner {
 

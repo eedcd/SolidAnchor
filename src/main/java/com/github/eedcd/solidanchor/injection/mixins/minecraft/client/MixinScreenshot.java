@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.client;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client;
 
+import com.github.eedcd.solidanchor.utils.client.ClientChat;
+import com.github.eedcd.solidanchor.utils.text.PlainText;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.platform.NativeImage;
-import net.solidanchor.utils.client.ClientChat;
-import net.solidanchor.utils.text.PlainText;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Screenshot;
 import net.minecraft.network.chat.Component;
@@ -32,8 +32,8 @@ import org.jspecify.annotations.NullMarked;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-import static net.solidanchor.lang.LanguageKt.translation;
-import static net.solidanchor.utils.io.ClipboardUtilsKt.clipboardCopyAction;
+import static com.github.eedcd.solidanchor.lang.LanguageKt.translation;
+import static com.github.eedcd.solidanchor.utils.io.ClipboardUtilsKt.clipboardCopyAction;
 
 @NullMarked
 @Mixin(Screenshot.class)

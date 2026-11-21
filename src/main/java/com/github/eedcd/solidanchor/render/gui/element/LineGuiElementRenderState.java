@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.gui.element;
+package com.github.eedcd.solidanchor.render.gui.element;
 
-import com.mojang.renderpearl.api.pipeline.RenderPipeline;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.renderpearl.api.pipeline.RenderPipeline;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
 import net.minecraft.client.gui.render.TextureSetup;
 import net.minecraft.world.phys.Vec2;
@@ -60,6 +60,16 @@ public record LineGuiElementRenderState(
         );
     }
 
+    private static float[] flat(Vec2[] points) {
+        float[] flatPoints = new float[points.length << 1];
+        for (int i = 0; i < points.length; i++) {
+            Vec2 point = points[i];
+            flatPoints[i << 1] = point.x;
+            flatPoints[(i << 1) | 1] = point.y;
+        }
+        return flatPoints;
+    }
+
     @Override
     public void buildVertices(VertexConsumer vertices) {
         for (int i = 0; i < points.length; i += 2) {
@@ -72,15 +82,5 @@ public record LineGuiElementRenderState(
     @Override
     public TextureSetup textureSetup() {
         return TextureSetup.noTexture();
-    }
-
-    private static float[] flat(Vec2[] points) {
-        float[] flatPoints = new float[points.length << 1];
-        for (int i = 0; i < points.length; i++) {
-            Vec2 point = points[i];
-            flatPoints[i << 1] = point.x;
-            flatPoints[(i << 1) | 1] = point.y;
-        }
-        return flatPoints;
     }
 }

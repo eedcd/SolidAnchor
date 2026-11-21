@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.spoofer
+package com.github.eedcd.solidanchor.features.spoofer
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
 import net.minecraft.network.protocol.common.ClientboundResourcePackPushPacket
 import net.minecraft.network.protocol.common.ServerboundResourcePackPacket
 import net.minecraft.network.protocol.common.ServerboundResourcePackPacket.Action.ACCEPTED

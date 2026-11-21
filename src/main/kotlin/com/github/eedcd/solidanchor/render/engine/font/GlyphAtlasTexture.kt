@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.font
+package com.github.eedcd.solidanchor.render.engine.font
 
 import com.mojang.renderpearl.api.GpuFormat
 import com.mojang.blaze3d.platform.NativeImage
@@ -25,8 +25,8 @@ import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.renderpearl.api.textures.FilterMode
 import com.mojang.renderpearl.api.textures.GpuTexture
 import it.unimi.dsi.fastutil.ints.IntArrays
-import net.solidanchor.utils.client.gpuDevice
-import net.solidanchor.utils.render.write
+import com.github.eedcd.solidanchor.utils.client.gpuDevice
+import com.github.eedcd.solidanchor.utils.render.write
 import net.minecraft.client.renderer.texture.AbstractTexture
 import org.lwjgl.system.MemoryUtil
 import java.awt.image.BufferedImage

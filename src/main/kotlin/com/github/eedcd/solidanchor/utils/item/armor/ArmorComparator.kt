@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.item.armor
+package com.github.eedcd.solidanchor.utils.item.armor
 
 import net.ccbluex.fastutil.enumMapOf
-import net.solidanchor.utils.item.EnchantmentValueEstimator
-import net.solidanchor.utils.item.EnchantmentValueEstimator.WeightedEnchantment
-import net.solidanchor.utils.item.armorToughness
-import net.solidanchor.utils.item.armorValue
-import net.solidanchor.utils.item.durability
-import net.solidanchor.utils.item.equipmentSlot
-import net.solidanchor.utils.item.getEnchantment
-import net.solidanchor.utils.item.getEnchantmentCount
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.utils.math.roundToDecimalPlaces
-import net.solidanchor.utils.sorting.ComparatorChain
+import com.github.eedcd.solidanchor.utils.item.EnchantmentValueEstimator
+import com.github.eedcd.solidanchor.utils.item.EnchantmentValueEstimator.WeightedEnchantment
+import com.github.eedcd.solidanchor.utils.item.armorToughness
+import com.github.eedcd.solidanchor.utils.item.armorValue
+import com.github.eedcd.solidanchor.utils.item.durability
+import com.github.eedcd.solidanchor.utils.item.equipmentSlot
+import com.github.eedcd.solidanchor.utils.item.getEnchantment
+import com.github.eedcd.solidanchor.utils.item.getEnchantmentCount
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.utils.math.roundToDecimalPlaces
+import com.github.eedcd.solidanchor.utils.sorting.ComparatorChain
 import net.minecraft.core.component.DataComponents
 import net.minecraft.world.entity.EquipmentSlot
 import net.minecraft.world.item.ItemStack

@@ -17,16 +17,16 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.client;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client;
 
+import com.github.eedcd.solidanchor.SolidAnchor;
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.ScreenEvent;
+import com.github.eedcd.solidanchor.event.events.ScreenRenderEvent;
+import com.github.eedcd.solidanchor.features.module.modules.movement.inventorymove.ModuleInventoryMove;
+import com.github.eedcd.solidanchor.features.module.modules.player.cheststealer.features.FeatureSilentScreen;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.SolidAnchor;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.ScreenEvent;
-import net.solidanchor.event.events.ScreenRenderEvent;
-import net.solidanchor.features.module.modules.movement.inventorymove.ModuleInventoryMove;
-import net.solidanchor.features.module.modules.player.cheststealer.features.FeatureSilentScreen;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.MouseHandler;
@@ -46,9 +46,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Gui.class)
 public abstract class MixinGui {
 
-    @Shadow
-    public abstract void setScreen(@Nullable Screen screen);
-
     /**
      * Fixes recursive screen opening,
      * this is usually caused by another mod such as Lunar Client.
@@ -56,6 +53,9 @@ public abstract class MixinGui {
      */
     @Unique
     private static final ScopedValue<Void> RECURSIVE_SCREEN_OPENING = ScopedValue.newInstance();
+
+    @Shadow
+    public abstract void setScreen(@Nullable Screen screen);
 
     /**
      * Handle opening screens
@@ -97,7 +97,7 @@ public abstract class MixinGui {
         target = "Lnet/minecraft/client/gui/screens/Screen;extractRenderStateWithTooltipAndSubtitles(Lnet/minecraft/client/gui/GuiGraphicsExtractor;IIF)V",
         shift = At.Shift.AFTER))
     public void hookScreenRender(DeltaTracker deltaTracker, boolean shouldRenderLevel, boolean resourcesLoaded,
-        CallbackInfo ci, @Local(name = "graphics") GuiGraphicsExtractor graphics) {
+                                 CallbackInfo ci, @Local(name = "graphics") GuiGraphicsExtractor graphics) {
         EventManager.INSTANCE.callEvent(new ScreenRenderEvent(graphics, deltaTracker.getGameTimeDeltaPartialTick(false)));
     }
 

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.autoshop.serializable
+package com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable
 
 data class ShopConfig (
     val traderTitles: List<String>,

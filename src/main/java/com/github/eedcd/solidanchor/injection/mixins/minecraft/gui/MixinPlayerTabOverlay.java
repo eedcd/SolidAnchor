@@ -16,29 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.gui;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui;
 
-import static net.solidanchor.utils.entity.EntityExtensionsKt.shortName;
-
+import com.github.eedcd.solidanchor.features.misc.FriendManager;
+import com.github.eedcd.solidanchor.features.module.modules.misc.ModuleBetterTab;
+import com.github.eedcd.solidanchor.features.module.modules.misc.Visibility;
+import com.github.eedcd.solidanchor.utils.text.PlainText;
+import com.github.eedcd.solidanchor.utils.text.TextBuilder;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.llamalad7.mixinextras.sugar.ref.LocalIntRef;
-import net.solidanchor.features.misc.FriendManager;
-import net.solidanchor.features.module.modules.misc.ModuleBetterTab;
-import net.solidanchor.features.module.modules.misc.Visibility;
-import net.solidanchor.utils.text.PlainText;
-import net.solidanchor.utils.text.TextBuilder;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.PlayerTabOverlay;
 import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
-import net.minecraft.network.chat.TextColor;
-import net.minecraft.util.CommonColors;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.Mth;
 import org.objectweb.asm.Opcodes;
@@ -53,6 +49,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Stream;
+
+import static com.github.eedcd.solidanchor.utils.entity.EntityExtensionsKt.shortName;
 
 @Mixin(PlayerTabOverlay.class)
 public abstract class MixinPlayerTabOverlay {

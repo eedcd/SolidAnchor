@@ -18,4 +18,4 @@
  */
 
 @org.jspecify.annotations.NullMarked
-package net.solidanchor.render.buffers;
+package com.github.eedcd.solidanchor.render.buffers;

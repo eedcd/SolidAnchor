@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.client;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client;
 
-import net.solidanchor.features.module.modules.misc.nameprotect.ModuleNameProtect;
-import net.solidanchor.utils.text.TextExtensionsKt;
+import com.github.eedcd.solidanchor.features.module.modules.misc.nameprotect.ModuleNameProtect;
+import com.github.eedcd.solidanchor.utils.text.TextExtensionsKt;
 import net.minecraft.client.StringSplitter;
 import net.minecraft.network.chat.FormattedText;
 import net.minecraft.util.FormattedCharSequence;

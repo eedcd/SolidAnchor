@@ -16,19 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.render.placement
+package com.github.eedcd.solidanchor.utils.render.placement
 
 import net.ccbluex.fastutil.intObjectArrayMapOf
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.render.EMPTY_BOX
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.block.outlineBox
-import net.solidanchor.utils.math.Easing
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.render.EMPTY_BOX
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.block.outlineBox
+import com.github.eedcd.solidanchor.utils.math.Easing
 import net.minecraft.core.BlockPos
 import net.minecraft.world.phys.AABB
 

@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.math.geometry
+package com.github.eedcd.solidanchor.utils.math.geometry
 
 import net.ccbluex.fastutil.forEachDouble
 import net.ccbluex.fastutil.step
-import net.solidanchor.test.assertVec3Equals
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.getNearestPoint
-import net.solidanchor.utils.math.vertices
+import com.github.eedcd.solidanchor.test.assertVec3Equals
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.getNearestPoint
+import com.github.eedcd.solidanchor.utils.math.vertices
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3
 import net.minecraft.world.phys.shapes.Shapes

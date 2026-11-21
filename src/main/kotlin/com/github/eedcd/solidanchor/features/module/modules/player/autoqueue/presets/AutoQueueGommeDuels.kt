@@ -16,28 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.autoqueue.presets
+package com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.presets
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.ChatReceiveEvent
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.event.sequenceHandler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitSeconds
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
-import net.solidanchor.features.module.modules.player.autoqueue.ModuleAutoQueue
-import net.solidanchor.features.module.modules.player.autoqueue.ModuleAutoQueue.presets
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.notification
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.entity.boxedDistanceTo
-import net.solidanchor.utils.entity.interactEntity
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.world.entityGetter
-import net.solidanchor.utils.world.firstOrNull
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.ChatReceiveEvent
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.event.sequenceHandler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitSeconds
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.ModuleAutoQueue
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.ModuleAutoQueue.presets
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.entity.boxedDistanceTo
+import com.github.eedcd.solidanchor.utils.entity.interactEntity
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.world.entityGetter
+import com.github.eedcd.solidanchor.utils.world.firstOrNull
 import net.minecraft.network.protocol.game.ServerboundUseItemPacket
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.entity.EntityTypes

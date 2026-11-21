@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.network;
 
+import com.github.eedcd.solidanchor.features.module.modules.exploit.disabler.disablers.DisablerVerusScaffoldG;
 import io.netty.buffer.ByteBuf;
-import net.solidanchor.features.module.modules.exploit.disabler.disablers.DisablerVerusScaffoldG;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.VarInt;
 import net.minecraft.network.codec.StreamCodec;

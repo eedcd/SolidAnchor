@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.autoconfig
+package com.github.eedcd.solidanchor.config.autoconfig
 
-import net.solidanchor.api.types.enums.AutoSettingsStatusType
-import net.solidanchor.api.types.enums.AutoSettingsType
-import net.solidanchor.utils.text.PlainText.NEW_LINE
-import net.solidanchor.utils.text.PlainText.SPACE
-import net.solidanchor.utils.text.asPlainText
-import net.solidanchor.utils.text.joinToText
-import net.solidanchor.utils.text.textOf
+import com.github.eedcd.solidanchor.api.types.enums.AutoSettingsStatusType
+import com.github.eedcd.solidanchor.api.types.enums.AutoSettingsType
+import com.github.eedcd.solidanchor.utils.text.PlainText.NEW_LINE
+import com.github.eedcd.solidanchor.utils.text.PlainText.SPACE
+import com.github.eedcd.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.utils.text.joinToText
+import com.github.eedcd.solidanchor.utils.text.textOf
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.Component
 import java.time.format.DateTimeFormatter

@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold.features
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.features
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
-import net.solidanchor.utils.math.multiply
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
+import com.github.eedcd.solidanchor.utils.math.multiply
 
 object ScaffoldAccelerationFeature : ToggleableValueGroup(ModuleScaffold, "Acceleration", false) {
     private val speedMultiplier by float("SpeedMultiplier", 0.6f, 0.1f..3f)

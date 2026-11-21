@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.block;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.block;
 
-import net.solidanchor.features.module.modules.movement.noweb.ModuleNoWeb;
+import com.github.eedcd.solidanchor.features.module.modules.movement.noweb.ModuleNoWeb;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
@@ -41,7 +41,7 @@ public abstract class MixinWebBlock {
     @Inject(method = "entityInside", at = @At("HEAD"), cancellable = true)
     private void hookEntityCollision(BlockState state, Level world, BlockPos pos, Entity entity, InsideBlockEffectApplier handler, boolean bl, CallbackInfo ci) {
         if (ModuleNoWeb.INSTANCE.getRunning() && entity == Minecraft.getInstance().player &&
-                ModuleNoWeb.INSTANCE.handleEntityCollision(pos)) {
+            ModuleNoWeb.INSTANCE.handleEntityCollision(pos)) {
             ci.cancel();
         }
     }

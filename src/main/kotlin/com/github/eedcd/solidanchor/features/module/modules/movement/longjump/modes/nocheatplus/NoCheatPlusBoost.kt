@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.longjump.modes.nocheatplus
+package com.github.eedcd.solidanchor.features.module.modules.movement.longjump.modes.nocheatplus
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PlayerMoveEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.movement.longjump.ModuleLongJump
-import net.solidanchor.utils.entity.moving
-import net.solidanchor.utils.math.multiply
-import net.solidanchor.utils.movement.stopXZVelocity
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PlayerMoveEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.movement.longjump.ModuleLongJump
+import com.github.eedcd.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.utils.math.multiply
+import com.github.eedcd.solidanchor.utils.movement.stopXZVelocity
 
 /**
  * @anticheat NoCheatPlus

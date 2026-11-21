@@ -9,10 +9,10 @@
  * (at your option) any later version.
  */
 
-package net.solidanchor.config.types.group
+package com.github.eedcd.solidanchor.config.types.group
 
-import net.solidanchor.config.types.Value
-import net.solidanchor.test.MinecraftBootstrap
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.test.MinecraftBootstrap
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

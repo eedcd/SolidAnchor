@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.collection
+package com.github.eedcd.solidanchor.utils.collection
 
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.utils.collection.ExpiringList.Companion.ExpiringList
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.utils.collection.ExpiringList.Companion.ExpiringList
 import kotlin.test.AfterTest
 import kotlin.test.Test
 import kotlin.test.assertEquals

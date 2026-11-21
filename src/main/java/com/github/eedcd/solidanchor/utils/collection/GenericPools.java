@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.collection;
+package com.github.eedcd.solidanchor.utils.collection;
 
-import net.ccbluex.fastutil.Pool;
 import it.unimi.dsi.fastutil.floats.FloatArrayList;
 import it.unimi.dsi.fastutil.ints.IntArrayList;
+import net.ccbluex.fastutil.Pool;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,16 +32,12 @@ import java.util.HashSet;
  */
 @SuppressWarnings("rawtypes")
 public final class GenericPools {
+    public static final Pool<ArrayList> ARRAY_LIST = Pool.create(ArrayList::new, ArrayList::clear);
+    public static final Pool<HashMap> HASH_MAP = Pool.create(HashMap::new, HashMap::clear);
+    public static final Pool<HashSet> HASH_SET = Pool.create(HashSet::new, HashSet::clear);
+    public static final Pool<FloatArrayList> FLOAT_LIST = Pool.create(FloatArrayList::new, FloatArrayList::clear);
+    public static final Pool<IntArrayList> INT_LIST = Pool.create(IntArrayList::new, IntArrayList::clear);
+
     private GenericPools() {
     }
-
-    public static final Pool<ArrayList> ARRAY_LIST = Pool.create(ArrayList::new, ArrayList::clear);
-
-    public static final Pool<HashMap> HASH_MAP = Pool.create(HashMap::new, HashMap::clear);
-
-    public static final Pool<HashSet> HASH_SET = Pool.create(HashSet::new, HashSet::clear);
-
-    public static final Pool<FloatArrayList> FLOAT_LIST = Pool.create(FloatArrayList::new, FloatArrayList::clear);
-
-    public static final Pool<IntArrayList> INT_LIST = Pool.create(IntArrayList::new, IntArrayList::clear);
 }

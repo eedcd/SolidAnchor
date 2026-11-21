@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.render
+package com.github.eedcd.solidanchor.utils.render
 
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.render.engine.type.BoundingBox2f
-import net.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.render.engine.type.BoundingBox2f
+import com.github.eedcd.solidanchor.utils.client.mc
 
 @AddonApi
 class Alignment(

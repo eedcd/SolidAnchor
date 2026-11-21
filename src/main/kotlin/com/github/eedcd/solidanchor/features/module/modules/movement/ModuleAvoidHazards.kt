@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement
+package com.github.eedcd.solidanchor.features.module.modules.movement
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.BlockShapeEvent
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.movement.avoidhazards.AvoidHazardInputPlanner
-import net.solidanchor.features.module.modules.movement.avoidhazards.isLadderClimbState
-import net.solidanchor.utils.block.getBlock
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.entity.SimulatedPlayer
-import net.solidanchor.utils.entity.isOnMagmaBlock
-import net.solidanchor.utils.kotlin.EventPriorityConvention.SAFETY_FEATURE
-import net.solidanchor.utils.math.intersects
-import net.solidanchor.utils.math.toBlockPos
-import net.solidanchor.utils.movement.DirectionalInput
-import net.solidanchor.utils.world.anyMatched
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.BlockShapeEvent
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.movement.avoidhazards.AvoidHazardInputPlanner
+import com.github.eedcd.solidanchor.features.module.modules.movement.avoidhazards.isLadderClimbState
+import com.github.eedcd.solidanchor.utils.block.getBlock
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.entity.SimulatedPlayer
+import com.github.eedcd.solidanchor.utils.entity.isOnMagmaBlock
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.SAFETY_FEATURE
+import com.github.eedcd.solidanchor.utils.math.intersects
+import com.github.eedcd.solidanchor.utils.math.toBlockPos
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.utils.world.anyMatched
 import net.minecraft.client.multiplayer.ClientLevel
 import net.minecraft.core.BlockPos
 import net.minecraft.world.level.block.BasePressurePlateBlock

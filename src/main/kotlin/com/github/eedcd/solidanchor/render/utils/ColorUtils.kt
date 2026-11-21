@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.render.utils
+package com.github.eedcd.solidanchor.render.utils
 
-import net.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
 import java.awt.Color
 
 object ColorUtils {

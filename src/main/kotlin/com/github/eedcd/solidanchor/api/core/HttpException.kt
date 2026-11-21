@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.core
+package com.github.eedcd.solidanchor.api.core
 
 import java.io.IOException
 import java.net.HttpURLConnection

@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.nofall.modes
+package com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes
 
-import net.solidanchor.test.MinecraftBootstrap
-import net.solidanchor.utils.block.liquid.canPlaceStandaloneFluid
-import net.solidanchor.utils.block.liquid.requiresSneakForAdjacentFluidPlacement
+import com.github.eedcd.solidanchor.test.MinecraftBootstrap
+import com.github.eedcd.solidanchor.utils.block.liquid.canPlaceStandaloneFluid
+import com.github.eedcd.solidanchor.utils.block.liquid.requiresSneakForAdjacentFluidPlacement
 import net.minecraft.world.item.Items
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.SlabBlock

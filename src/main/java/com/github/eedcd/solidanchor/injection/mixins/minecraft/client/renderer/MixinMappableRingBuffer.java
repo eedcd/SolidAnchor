@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.client.renderer;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client.renderer;
 
 import net.minecraft.client.input.InputQuirks;
 import net.minecraft.client.renderer.MappableRingBuffer;

@@ -17,21 +17,21 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.totemeffect.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.totemeffect.modes
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.modules.render.totemeffect.ModuleTotemEffect.TotemPopSnapshot
-import net.solidanchor.features.module.modules.render.totemeffect.TotemEffectColorSettings
-import net.solidanchor.features.module.modules.render.totemeffect.TotemEffectMode
-import net.solidanchor.render.ClientRenderPipelines
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.addTorusQuad
-import net.solidanchor.render.drawCustomMesh
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.segmentAngle
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.render.WireframePlayer
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.modules.render.totemeffect.ModuleTotemEffect.TotemPopSnapshot
+import com.github.eedcd.solidanchor.features.module.modules.render.totemeffect.TotemEffectColorSettings
+import com.github.eedcd.solidanchor.features.module.modules.render.totemeffect.TotemEffectMode
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.addTorusQuad
+import com.github.eedcd.solidanchor.render.drawCustomMesh
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.segmentAngle
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.render.WireframePlayer
 import net.minecraft.world.phys.Vec3
 
 internal object TotemEffectSoul : TotemEffectMode("Soul") {

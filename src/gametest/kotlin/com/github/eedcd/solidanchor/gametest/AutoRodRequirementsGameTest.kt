@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.gametest
+package com.github.eedcd.solidanchor.gametest
 
 import com.google.gson.JsonArray
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.gson.util.GSON_DEFAULT
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.features.module.modules.combat.ModuleAutoRod
-import net.solidanchor.features.module.modules.movement.ModuleFreeze
-import net.solidanchor.features.module.modules.player.ModuleBlink
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
-import net.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.gson.util.GSON_DEFAULT
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.features.module.modules.combat.ModuleAutoRod
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleFreeze
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleBlink
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
+import com.github.eedcd.solidanchor.utils.client.mc
 import net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest
 import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext
 import net.minecraft.world.InteractionHand

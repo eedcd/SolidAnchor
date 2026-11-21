@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat
+package com.github.eedcd.solidanchor.features.module.modules.combat
 
-import net.solidanchor.config.utils.percentageChance
-import net.solidanchor.event.events.PlayerPostTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.kotlin.random
+import com.github.eedcd.solidanchor.config.utils.percentageChance
+import com.github.eedcd.solidanchor.event.events.PlayerPostTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.kotlin.random
 
 /**
  * When hitting an entity, the player will keep sprinting

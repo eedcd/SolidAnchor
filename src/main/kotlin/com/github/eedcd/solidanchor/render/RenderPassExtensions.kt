@@ -19,7 +19,7 @@
 
 @file:Suppress("NOTHING_TO_INLINE", "TooManyFunctions")
 
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
 import com.mojang.renderpearl.api.pipeline.IndexType
 import com.mojang.renderpearl.api.buffers.GpuBufferSlice
@@ -28,9 +28,9 @@ import com.mojang.renderpearl.api.commands.RenderPass
 import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.renderpearl.api.pipeline.RenderPipeline
 import com.mojang.renderpearl.api.textures.GpuTextureView
-import net.solidanchor.SolidAnchor
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.client.gpuDevice
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.client.gpuDevice
 import net.minecraft.client.renderer.texture.AbstractTexture
 import org.joml.Matrix4f
 import org.joml.Vector3f

@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.criticals.modes
+package com.github.eedcd.solidanchor.features.module.modules.combat.criticals.modes
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.combat.criticals.ModuleCriticals
-import net.solidanchor.features.module.modules.combat.criticals.ModuleCriticals.wouldDoCriticalHit
-import net.solidanchor.utils.client.Timer
-import net.solidanchor.utils.combat.findEnemy
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.ModuleCriticals
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.ModuleCriticals.wouldDoCriticalHit
+import com.github.eedcd.solidanchor.utils.client.Timer
+import com.github.eedcd.solidanchor.utils.combat.findEnemy
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 
 object CriticalsTimer : Mode("Timer") {
 

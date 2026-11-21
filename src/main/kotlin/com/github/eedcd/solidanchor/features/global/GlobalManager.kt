@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.global
+package com.github.eedcd.solidanchor.features.global
 
-import net.solidanchor.config.types.Config
-import net.solidanchor.features.blink.BlinkManager
-import net.solidanchor.features.command.CommandManager
-import net.solidanchor.lang.LanguageManager
+import com.github.eedcd.solidanchor.config.types.Config
+import com.github.eedcd.solidanchor.features.blink.BlinkManager
+import com.github.eedcd.solidanchor.features.command.CommandManager
+import com.github.eedcd.solidanchor.lang.LanguageManager
 
 /**
  * Global Manager

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.api.thirdparty.ai.service
+package com.github.eedcd.solidanchor.api.thirdparty.ai.service
 
 import retrofit2.http.Body
 import retrofit2.http.Header

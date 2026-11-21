@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine
+package com.github.eedcd.solidanchor.render.engine
 
 import com.mojang.renderpearl.api.pipeline.RenderPipeline
 import com.mojang.blaze3d.pipeline.RenderTarget
@@ -25,9 +25,9 @@ import com.mojang.renderpearl.api.commands.RenderPass
 import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.renderpearl.api.textures.FilterMode
 import com.mojang.renderpearl.api.textures.GpuSampler
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.render.createRenderPass
-import net.solidanchor.render.setPipeline
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.render.createRenderPass
+import com.github.eedcd.solidanchor.render.setPipeline
 
 /**
  * @param blitPipeline should use `core/screenquad` for drawing

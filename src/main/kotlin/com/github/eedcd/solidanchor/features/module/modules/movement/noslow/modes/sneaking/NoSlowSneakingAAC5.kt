@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.noslow.modes.sneaking
+package com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.sneaking
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.EventState
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.event.events.PlayerNetworkMovementTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.utils.client.isNewerThanOrEquals1_21_6
-import net.solidanchor.utils.client.notification
-import net.solidanchor.utils.network.send1_21_5StartSneaking
-import net.solidanchor.utils.client.usesViaFabricPlus
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.EventState
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.event.events.PlayerNetworkMovementTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.utils.client.isNewerThanOrEquals1_21_6
+import com.github.eedcd.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.utils.network.send1_21_5StartSneaking
+import com.github.eedcd.solidanchor.utils.client.usesViaFabricPlus
 
 internal class NoSlowSneakingAAC5(override val parent: ModeValueGroup<*>) : Mode("AAC5") {
     private val timingMode by enumChoice("Timing", TimingMode.PRE_POST)

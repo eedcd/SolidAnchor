@@ -18,7 +18,7 @@
  */
 
 
-package net.solidanchor.api.core
+package com.github.eedcd.solidanchor.api.core
 
 import kotlinx.atomicfu.atomic
 import kotlinx.coroutines.CompletableDeferred

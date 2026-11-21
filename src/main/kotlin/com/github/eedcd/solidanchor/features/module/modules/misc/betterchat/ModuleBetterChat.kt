@@ -16,27 +16,27 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.misc.betterchat
+package com.github.eedcd.solidanchor.features.module.modules.misc.betterchat
 
 import com.mojang.blaze3d.platform.InputConstants
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.ChatReceiveEvent
-import net.solidanchor.event.events.KeyboardKeyEvent
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.suspendHandler
-import net.solidanchor.features.command.CommandManager
-import net.solidanchor.features.global.GlobalSettingsAutoTranslate
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.interfaces.GuiMessageLineAddition
-import net.solidanchor.utils.client.MessageMetadata
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.notification
-import net.solidanchor.utils.client.openChat
-import net.solidanchor.utils.text.AppenderCharSink
-import net.solidanchor.utils.text.stripMinecraftColorCodes
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.ChatReceiveEvent
+import com.github.eedcd.solidanchor.event.events.KeyboardKeyEvent
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.suspendHandler
+import com.github.eedcd.solidanchor.features.command.CommandManager
+import com.github.eedcd.solidanchor.features.global.GlobalSettingsAutoTranslate
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.interfaces.GuiMessageLineAddition
+import com.github.eedcd.solidanchor.utils.client.MessageMetadata
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.utils.client.openChat
+import com.github.eedcd.solidanchor.utils.text.AppenderCharSink
+import com.github.eedcd.solidanchor.utils.text.stripMinecraftColorCodes
 import net.minecraft.client.gui.screens.DeathScreen
 import net.minecraft.client.multiplayer.chat.GuiMessage
 

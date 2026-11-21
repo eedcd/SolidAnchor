@@ -16,33 +16,33 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.killaura
+package com.github.eedcd.solidanchor.features.module.modules.combat.killaura
 
-import net.solidanchor.features.module.modules.combat.ModuleAutoWeapon
-import net.solidanchor.features.module.modules.combat.killaura.KillAuraRotationsValueGroup.rotationTiming
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura.simulateInventoryClosing
-import net.solidanchor.features.module.modules.combat.killaura.features.KillAuraAutoBlock
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityReduce
-import net.solidanchor.features.module.modules.exploit.ModuleMultiActions
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.aiming.utils.canSeeBox
-import net.solidanchor.utils.aiming.utils.withFixedYaw
-import net.solidanchor.utils.clicking.Clicker
-import net.solidanchor.utils.clicking.ItemCooldown
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.network
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.network.send1_11_1OpenInventory
-import net.solidanchor.utils.network.sendCloseInventory
-import net.solidanchor.utils.entity.PositionExtrapolation
-import net.solidanchor.utils.entity.getBoundingBoxAt
-import net.solidanchor.utils.entity.isBlockingServerside
-import net.solidanchor.utils.entity.wouldBlockHit
-import net.solidanchor.utils.inventory.InventoryManager
+import com.github.eedcd.solidanchor.features.module.modules.combat.ModuleAutoWeapon
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.KillAuraRotationsValueGroup.rotationTiming
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura.simulateInventoryClosing
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.features.KillAuraAutoBlock
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityReduce
+import com.github.eedcd.solidanchor.features.module.modules.exploit.ModuleMultiActions
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.aiming.utils.canSeeBox
+import com.github.eedcd.solidanchor.utils.aiming.utils.withFixedYaw
+import com.github.eedcd.solidanchor.utils.clicking.Clicker
+import com.github.eedcd.solidanchor.utils.clicking.ItemCooldown
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.network
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.network.send1_11_1OpenInventory
+import com.github.eedcd.solidanchor.utils.network.sendCloseInventory
+import com.github.eedcd.solidanchor.utils.entity.PositionExtrapolation
+import com.github.eedcd.solidanchor.utils.entity.getBoundingBoxAt
+import com.github.eedcd.solidanchor.utils.entity.isBlockingServerside
+import com.github.eedcd.solidanchor.utils.entity.wouldBlockHit
+import com.github.eedcd.solidanchor.utils.inventory.InventoryManager
 import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket.PosRot
 import kotlin.math.round
 

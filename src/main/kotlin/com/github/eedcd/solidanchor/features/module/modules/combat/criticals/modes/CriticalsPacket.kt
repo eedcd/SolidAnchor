@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.criticals.modes
+package com.github.eedcd.solidanchor.features.module.modules.combat.criticals.modes
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.AttackEntityEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.combat.criticals.ModuleCriticals
-import net.solidanchor.features.module.modules.combat.criticals.ModuleCriticals.VisualsValueGroup.showCriticals
-import net.solidanchor.features.module.modules.combat.criticals.ModuleCriticals.canDoCriticalHit
-import net.solidanchor.features.module.modules.combat.criticals.ModuleCriticals.modes
-import net.solidanchor.utils.network.MovePacketType
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.AttackEntityEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.ModuleCriticals
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.ModuleCriticals.VisualsValueGroup.showCriticals
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.ModuleCriticals.canDoCriticalHit
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.ModuleCriticals.modes
+import com.github.eedcd.solidanchor.utils.network.MovePacketType
 import net.minecraft.world.entity.LivingEntity
 
 /**
@@ -38,7 +38,7 @@ object CriticalsPacket : Mode("Packet") {
     private val mode by enumChoice("Mode", Mode.NO_CHEAT_PLUS)
     private val packetType by enumChoice("PacketType", MovePacketType.FULL)
 
-    override val parent: ModeValueGroup<net.solidanchor.config.types.group.Mode>
+    override val parent: ModeValueGroup<com.github.eedcd.solidanchor.config.types.group.Mode>
         get() = modes
 
     @Suppress("unused")

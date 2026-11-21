@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.block
+package com.github.eedcd.solidanchor.utils.block
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.client.network
-import net.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.client.network
+import com.github.eedcd.solidanchor.utils.client.player
 import net.minecraft.network.protocol.game.ServerboundPunchPacket
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.item.component.SwingAnimation

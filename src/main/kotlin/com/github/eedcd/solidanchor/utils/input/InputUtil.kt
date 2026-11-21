@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.input
+package com.github.eedcd.solidanchor.utils.input
 
 import com.mojang.blaze3d.platform.InputConstants
 

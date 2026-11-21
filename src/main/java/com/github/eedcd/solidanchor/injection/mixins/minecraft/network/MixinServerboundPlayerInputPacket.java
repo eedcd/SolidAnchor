@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.network;
 
+import com.github.eedcd.solidanchor.additions.ServerboundPlayerInputPacketAddition;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import net.solidanchor.additions.ServerboundPlayerInputPacketAddition;
 import net.minecraft.network.protocol.game.ServerboundPlayerInputPacket;
 import net.minecraft.world.entity.player.Input;
 import org.jspecify.annotations.NullMarked;
@@ -42,13 +42,13 @@ public abstract class MixinServerboundPlayerInputPacket implements ServerboundPl
     private boolean solidAnchor$forceSneak = false;
 
     @Override
-    public void setSolidAnchor$forceSneak(boolean b) {
-        this.solidAnchor$forceSneak = b;
+    public boolean getSolidAnchor$forceSneak() {
+        return this.solidAnchor$forceSneak;
     }
 
     @Override
-    public boolean getSolidAnchor$forceSneak() {
-        return this.solidAnchor$forceSneak;
+    public void setSolidAnchor$forceSneak(boolean b) {
+        this.solidAnchor$forceSneak = b;
     }
 
     public Input solidAnchor$getRawInput() {

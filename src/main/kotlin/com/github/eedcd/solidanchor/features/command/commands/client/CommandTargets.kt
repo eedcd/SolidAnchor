@@ -16,23 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.client
+package com.github.eedcd.solidanchor.features.command.commands.client
 
 import com.mojang.brigadier.CommandDispatcher
-import net.solidanchor.config.types.list.MultiChoiceListValue
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.arguments.TaggedArgumentType
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.CmdLiteralScope
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.features.global.GlobalSettingsTarget
-import net.solidanchor.features.module.modules.render.ModuleClickGui
-import net.solidanchor.lang.translation
-import net.solidanchor.utils.client.MessageMetadata
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.combat.Targets
+import com.github.eedcd.solidanchor.config.types.list.MultiChoiceListValue
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.arguments.TaggedArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdLiteralScope
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.features.global.GlobalSettingsTarget
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleClickGui
+import com.github.eedcd.solidanchor.lang.translation
+import com.github.eedcd.solidanchor.utils.client.MessageMetadata
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.combat.Targets
 
 /**
  * Enemy Command

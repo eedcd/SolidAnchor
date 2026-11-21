@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.brigadier
+package com.github.eedcd.solidanchor.features.command.brigadier
 
 import com.mojang.brigadier.Command
 import com.mojang.brigadier.arguments.ArgumentType
@@ -23,8 +23,8 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder
 import com.mojang.brigadier.context.CommandContext
 import com.mojang.brigadier.suggestion.SuggestionProvider
 import net.ccbluex.fastutil.filterIsInstance
-import net.solidanchor.features.command.KAsyncCommand
-import net.solidanchor.lang.translation
+import com.github.eedcd.solidanchor.features.command.KAsyncCommand
+import com.github.eedcd.solidanchor.lang.translation
 import net.minecraft.network.chat.MutableComponent
 import java.util.function.Predicate
 
@@ -145,7 +145,7 @@ class CmdLiteralScope internal constructor(
      * [com.mojang.brigadier.arguments.StringArgumentType.greedyString]),
      * it must be the last argument of the chain. The DSL only detects greediness for known types
      * ([com.mojang.brigadier.arguments.StringArgumentType] and
-     * [net.solidanchor.features.command.arguments.MultiTaggedArgumentType]);
+     * [com.github.eedcd.solidanchor.features.command.arguments.MultiTaggedArgumentType]);
      * custom greedy argument types are not verified and silently produce an
      * unmatchable tree when placed before other arguments.
      */

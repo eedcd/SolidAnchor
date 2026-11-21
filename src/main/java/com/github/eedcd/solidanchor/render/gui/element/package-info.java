@@ -18,4 +18,4 @@
  */
 
 @org.jspecify.annotations.NullMarked
-package net.solidanchor.render.gui.element;
+package com.github.eedcd.solidanchor.render.gui.element;

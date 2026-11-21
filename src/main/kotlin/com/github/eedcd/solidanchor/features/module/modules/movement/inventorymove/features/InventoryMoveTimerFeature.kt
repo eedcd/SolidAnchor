@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.inventorymove.features
+package com.github.eedcd.solidanchor.features.module.modules.movement.inventorymove.features
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.movement.inventorymove.ModuleInventoryMove
-import net.solidanchor.utils.client.Timer
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.movement.inventorymove.ModuleInventoryMove
+import com.github.eedcd.solidanchor.utils.client.Timer
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 
 object InventoryMoveTimerFeature : ToggleableValueGroup(ModuleInventoryMove, "Timer", false) {

@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.block.targetfinding
+package com.github.eedcd.solidanchor.utils.block.targetfinding
 
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet
 import net.ccbluex.fastutil.mapToArray
-import net.solidanchor.utils.math.lengthSqr
+import com.github.eedcd.solidanchor.utils.math.lengthSqr
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Vec3i
 

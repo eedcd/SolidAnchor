@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.item.armor
+package com.github.eedcd.solidanchor.utils.item.armor
 
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.ItemSlot
-import net.solidanchor.utils.item.armorKnockbackResistance
-import net.solidanchor.utils.item.armorToughness
-import net.solidanchor.utils.item.armorValue
-import net.solidanchor.utils.item.equipmentSlot
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.ItemSlot
+import com.github.eedcd.solidanchor.utils.item.armorKnockbackResistance
+import com.github.eedcd.solidanchor.utils.item.armorToughness
+import com.github.eedcd.solidanchor.utils.item.armorValue
+import com.github.eedcd.solidanchor.utils.item.equipmentSlot
 import net.minecraft.world.entity.EquipmentSlot
 
 /**

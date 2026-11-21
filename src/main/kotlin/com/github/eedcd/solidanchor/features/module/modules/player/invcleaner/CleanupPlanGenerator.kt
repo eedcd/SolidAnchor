@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.invcleaner
+package com.github.eedcd.solidanchor.features.module.modules.player.invcleaner
 
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap
-import net.solidanchor.features.module.modules.player.invcleaner.items.ItemFacet
-import net.solidanchor.utils.inventory.ItemSlot
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.items.ItemFacet
+import com.github.eedcd.solidanchor.utils.inventory.ItemSlot
 import net.minecraft.world.item.Item
 
 class CleanupPlanGenerator(

@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.aiming.point.exempts
+package com.github.eedcd.solidanchor.utils.aiming.point.exempts
 
-import net.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.types.list.Tagged
 import net.minecraft.world.phys.Vec3
 
 enum class ExemptBoxPart(override val tag: String) : Tagged, ExemptPoint {

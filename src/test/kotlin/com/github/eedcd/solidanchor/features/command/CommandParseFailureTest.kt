@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command
+package com.github.eedcd.solidanchor.features.command
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.StringReader
 import com.mojang.brigadier.arguments.ArgumentType
 import com.mojang.brigadier.arguments.IntegerArgumentType
-import net.solidanchor.features.command.arguments.CommandErrors
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.argument
-import net.solidanchor.features.command.brigadier.literal
-import net.solidanchor.test.MinecraftBootstrap
-import net.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.features.command.arguments.CommandErrors
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.argument
+import com.github.eedcd.solidanchor.features.command.brigadier.literal
+import com.github.eedcd.solidanchor.test.MinecraftBootstrap
+import com.github.eedcd.solidanchor.utils.text.asPlainText
 import net.minecraft.network.chat.contents.TranslatableContents
 import kotlin.test.BeforeTest
 import kotlin.test.Test

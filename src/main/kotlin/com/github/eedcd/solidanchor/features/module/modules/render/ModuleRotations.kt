@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.ModuleRotations.smooth
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.drawLine
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.engine.type.Vec3f
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.entity.lastRotation
-import net.solidanchor.utils.kotlin.EventPriorityConvention
-import net.solidanchor.utils.math.toVec3f
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleRotations.smooth
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.drawLine
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.engine.type.Vec3f
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.entity.lastRotation
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.utils.math.toVec3f
 import net.minecraft.world.phys.AABB
 
 /**

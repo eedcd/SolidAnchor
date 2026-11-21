@@ -17,22 +17,22 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.thirdparty.mojang.service
+package com.github.eedcd.solidanchor.api.thirdparty.mojang.service
 
-import net.solidanchor.api.thirdparty.mojang.model.ActivateCapeRequest
-import net.solidanchor.api.thirdparty.mojang.model.BlockList
-import net.solidanchor.api.thirdparty.mojang.model.ChangeSkinRequest
-import net.solidanchor.api.thirdparty.mojang.model.FriendsList
-import net.solidanchor.api.thirdparty.mojang.model.FriendsUpdateRequest
-import net.solidanchor.api.thirdparty.mojang.model.NameAvailability
-import net.solidanchor.api.thirdparty.mojang.model.NameChangeInfo
-import net.solidanchor.api.thirdparty.mojang.model.PlayerAttributes
-import net.solidanchor.api.thirdparty.mojang.model.PlayerAttributesUpdate
-import net.solidanchor.api.thirdparty.mojang.model.PlayerProfile
-import net.solidanchor.api.thirdparty.mojang.model.PresenceRequest
-import net.solidanchor.api.thirdparty.mojang.model.PresenceResponse
-import net.solidanchor.api.thirdparty.mojang.model.ProfileIdName
-import net.solidanchor.api.thirdparty.mojang.model.PublicKeys
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.ActivateCapeRequest
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.BlockList
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.ChangeSkinRequest
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.FriendsList
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.FriendsUpdateRequest
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.NameAvailability
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.NameChangeInfo
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.PlayerAttributes
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.PlayerAttributesUpdate
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.PlayerProfile
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.PresenceRequest
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.PresenceResponse
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.ProfileIdName
+import com.github.eedcd.solidanchor.api.thirdparty.mojang.model.PublicKeys
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Response

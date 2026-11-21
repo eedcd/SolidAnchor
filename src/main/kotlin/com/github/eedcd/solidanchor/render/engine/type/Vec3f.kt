@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.render.engine.type
+package com.github.eedcd.solidanchor.render.engine.type
 
-import net.solidanchor.annotations.ValueClassCandidate
-import net.solidanchor.utils.math.fastCos
-import net.solidanchor.utils.math.fastSin
-import net.solidanchor.utils.math.toRadians
+import com.github.eedcd.solidanchor.annotations.ValueClassCandidate
+import com.github.eedcd.solidanchor.utils.math.fastCos
+import com.github.eedcd.solidanchor.utils.math.fastSin
+import com.github.eedcd.solidanchor.utils.math.toRadians
 import net.minecraft.client.Camera
 import net.minecraft.core.Position
 import net.minecraft.core.Vec3i

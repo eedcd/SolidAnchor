@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config
+package com.github.eedcd.solidanchor.config
 
 /**
  * Groups of settings that can be optionally included or excluded during configuration saving.

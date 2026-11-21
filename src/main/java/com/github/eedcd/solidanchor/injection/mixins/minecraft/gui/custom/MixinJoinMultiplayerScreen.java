@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.gui.custom;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui.custom;
 
-import net.solidanchor.features.misc.SelfDestruct;
-import net.solidanchor.injection.mixins.minecraft.gui.MixinScreen;
-import net.solidanchor.ui.multiplayer.MultiplayerActions;
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct;
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.gui.MixinScreen;
+import com.github.eedcd.solidanchor.ui.multiplayer.MultiplayerActions;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen;

@@ -16,26 +16,26 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.traps.traps
+package com.github.eedcd.solidanchor.features.module.modules.world.traps.traps
 
 import net.ccbluex.fastutil.referenceSetOf
-import net.solidanchor.event.EventListener
-import net.solidanchor.features.module.modules.world.traps.BlockChangeInfo
-import net.solidanchor.features.module.modules.world.traps.BlockChangeIntent
-import net.solidanchor.features.module.modules.world.traps.IntentTiming
-import net.solidanchor.features.module.modules.world.traps.ModuleAutoTrap.targetTracker
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.block.targetBlockPos
-import net.solidanchor.utils.block.targetfinding.BlockOffsetOptions
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTarget
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
-import net.solidanchor.utils.block.targetfinding.FaceHandlingOptions
-import net.solidanchor.utils.block.targetfinding.NearestRotationTargetPositionFactory
-import net.solidanchor.utils.block.targetfinding.PlayerLocationOnPlacement
-import net.solidanchor.utils.block.targetfinding.findBestBlockPlacementTarget
-import net.solidanchor.utils.entity.lastPos
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.math.toBlockPos
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.features.module.modules.world.traps.BlockChangeInfo
+import com.github.eedcd.solidanchor.features.module.modules.world.traps.BlockChangeIntent
+import com.github.eedcd.solidanchor.features.module.modules.world.traps.IntentTiming
+import com.github.eedcd.solidanchor.features.module.modules.world.traps.ModuleAutoTrap.targetTracker
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.block.targetBlockPos
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockOffsetOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTarget
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.FaceHandlingOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.NearestRotationTargetPositionFactory
+import com.github.eedcd.solidanchor.utils.block.targetfinding.PlayerLocationOnPlacement
+import com.github.eedcd.solidanchor.utils.block.targetfinding.findBestBlockPlacementTarget
+import com.github.eedcd.solidanchor.utils.entity.lastPos
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.math.toBlockPos
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.Pose
 import net.minecraft.world.item.Item

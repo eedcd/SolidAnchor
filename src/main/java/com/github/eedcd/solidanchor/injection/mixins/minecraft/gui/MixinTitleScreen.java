@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.gui;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui;
 
-import net.solidanchor.features.misc.SelfDestruct;
-import net.solidanchor.ui.altmanager.AltManagerScreen;
-import net.solidanchor.ui.clickgui.ClickGuiScreen;
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct;
+import com.github.eedcd.solidanchor.ui.altmanager.AltManagerScreen;
+import com.github.eedcd.solidanchor.ui.clickgui.ClickGuiScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.network.chat.Component;

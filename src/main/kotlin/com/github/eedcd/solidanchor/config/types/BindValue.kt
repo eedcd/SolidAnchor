@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.types
+package com.github.eedcd.solidanchor.config.types
 
-import net.solidanchor.utils.input.InputBind
-import net.solidanchor.utils.input.bind
+import com.github.eedcd.solidanchor.utils.input.InputBind
+import com.github.eedcd.solidanchor.utils.input.bind
 
 class BindValue(
     name: String,

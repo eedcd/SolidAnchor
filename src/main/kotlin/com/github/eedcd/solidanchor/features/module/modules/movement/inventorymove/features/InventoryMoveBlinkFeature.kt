@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.inventorymove.features
+package com.github.eedcd.solidanchor.features.module.modules.movement.inventorymove.features
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.BlinkPacketEvent
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.event.events.ScreenEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.event.handler
-import net.solidanchor.features.blink.BlinkManager
-import net.solidanchor.features.module.modules.movement.inventorymove.ModuleInventoryMove
-import net.solidanchor.features.module.modules.player.ModuleBlink
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.text.formatAsTime
-import net.solidanchor.utils.client.notification
-import net.solidanchor.utils.network.isC2SContainerPacket
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.BlinkPacketEvent
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.event.events.ScreenEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.blink.BlinkManager
+import com.github.eedcd.solidanchor.features.module.modules.movement.inventorymove.ModuleInventoryMove
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleBlink
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.text.formatAsTime
+import com.github.eedcd.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.utils.network.isC2SContainerPacket
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 
 object InventoryMoveBlinkFeature : ToggleableValueGroup(ModuleInventoryMove, "Blink", false) {

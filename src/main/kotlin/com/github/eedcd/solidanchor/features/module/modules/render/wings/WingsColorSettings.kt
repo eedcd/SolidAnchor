@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.wings
+package com.github.eedcd.solidanchor.features.module.modules.render.wings
 
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
 
 class WingsColorSettings : ValueGroup("WingsColorSettings") {
 

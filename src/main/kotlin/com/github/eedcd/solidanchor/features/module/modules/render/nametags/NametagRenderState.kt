@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.nametags
+package com.github.eedcd.solidanchor.features.module.modules.render.nametags
 
-import net.solidanchor.features.module.modules.render.nametags.NametagEnchantmentRenderer.drawItemEnchantments
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.gui.GuiPanel
-import net.solidanchor.render.gui.ItemStackListRenderState
-import net.solidanchor.render.gui.ItemStackListRenderer.SingleItemStackRenderer
-import net.solidanchor.render.engine.type.Vec3f
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.entity.interpolateCurrentPosition
-import net.solidanchor.utils.render.WorldToScreen
+import com.github.eedcd.solidanchor.features.module.modules.render.nametags.NametagEnchantmentRenderer.drawItemEnchantments
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.gui.GuiPanel
+import com.github.eedcd.solidanchor.render.gui.ItemStackListRenderState
+import com.github.eedcd.solidanchor.render.gui.ItemStackListRenderer.SingleItemStackRenderer
+import com.github.eedcd.solidanchor.render.engine.type.Vec3f
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.entity.interpolateCurrentPosition
+import com.github.eedcd.solidanchor.utils.render.WorldToScreen
 import net.minecraft.util.FormattedCharSequence
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityEquipment

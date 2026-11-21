@@ -16,28 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player
+package com.github.eedcd.solidanchor.features.module.modules.player
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.BlinkPacketEvent
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.PlayerMovementTickEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.features.blink.BlinkManager
-import net.solidanchor.features.blink.BlinkManager.Action
-import net.solidanchor.features.blink.BlinkManager.positions
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.movement.autododge.ModuleAutoDodge
-import net.solidanchor.features.module.modules.player.ModuleBlink.dummyPlayer
-import net.solidanchor.utils.client.notification
-import net.solidanchor.utils.kotlin.EventPriorityConvention
-import net.solidanchor.utils.world.nextLocalEntityId
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.BlinkPacketEvent
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.PlayerMovementTickEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.features.blink.BlinkManager
+import com.github.eedcd.solidanchor.features.blink.BlinkManager.Action
+import com.github.eedcd.solidanchor.features.blink.BlinkManager.positions
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.movement.autododge.ModuleAutoDodge
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleBlink.dummyPlayer
+import com.github.eedcd.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.utils.world.nextLocalEntityId
 import net.minecraft.client.player.RemotePlayer
 import net.minecraft.network.protocol.game.ServerboundAttackPacket
 import net.minecraft.network.protocol.game.ServerboundInteractPacket

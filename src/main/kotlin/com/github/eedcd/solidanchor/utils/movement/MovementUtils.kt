@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.movement
+package com.github.eedcd.solidanchor.utils.movement
 
 import net.ccbluex.fastutil.mapToArray
 import net.ccbluex.fastutil.objectHashSetOf
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.math.yaw
-import net.solidanchor.utils.math.copy
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.iterator
-import net.solidanchor.utils.math.minus
-import net.solidanchor.utils.math.rangeTo
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.math.yaw
+import com.github.eedcd.solidanchor.utils.math.copy
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.iterator
+import com.github.eedcd.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.utils.math.rangeTo
 import net.minecraft.client.player.LocalPlayer
 import net.minecraft.core.BlockPos
 import net.minecraft.util.Mth

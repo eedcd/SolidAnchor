@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.sorting
+package com.github.eedcd.solidanchor.utils.sorting
 
 /**
  * This class is recommended to be used when size of [comparators] is greater than 3.

@@ -16,32 +16,32 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.events.AttackEntityEvent
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.render.BuiltinParticle
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawSquareTexture
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.block.collisionShape
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.combat.shouldBeShown
-import net.solidanchor.utils.entity.rotation
-import net.solidanchor.utils.kotlin.random
-import net.solidanchor.utils.math.copy
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.toBlockPos
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.events.AttackEntityEvent
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.render.BuiltinParticle
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawSquareTexture
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.block.collisionShape
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.combat.shouldBeShown
+import com.github.eedcd.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.utils.kotlin.random
+import com.github.eedcd.solidanchor.utils.math.copy
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.toBlockPos
 import net.minecraft.util.Mth
 import net.minecraft.world.phys.Vec3
 import org.joml.Quaternionf

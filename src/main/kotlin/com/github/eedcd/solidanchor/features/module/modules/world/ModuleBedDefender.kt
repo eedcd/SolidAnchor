@@ -16,33 +16,33 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world
+package com.github.eedcd.solidanchor.features.module.modules.world
 
 import it.unimi.dsi.fastutil.ints.IntLongPair
 import net.ccbluex.fastutil.component1
 import net.ccbluex.fastutil.component2
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.block.UnbreakableFirst
-import net.solidanchor.utils.block.bed.isSelfBedChoices
-import net.solidanchor.utils.block.placer.BlockPlacer
-import net.solidanchor.utils.block.searchBedLayer
-import net.solidanchor.utils.block.searchBlocksInCuboid
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.ItemSlot
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.item.isAnyChest
-import net.solidanchor.utils.item.isFullBlock
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.math.center
-import net.solidanchor.utils.math.distanceToCenterSqr
-import net.solidanchor.utils.math.sq
-import net.solidanchor.utils.sorting.ComparatorChain
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.block.UnbreakableFirst
+import com.github.eedcd.solidanchor.utils.block.bed.isSelfBedChoices
+import com.github.eedcd.solidanchor.utils.block.placer.BlockPlacer
+import com.github.eedcd.solidanchor.utils.block.searchBedLayer
+import com.github.eedcd.solidanchor.utils.block.searchBlocksInCuboid
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.ItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.item.isAnyChest
+import com.github.eedcd.solidanchor.utils.item.isFullBlock
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.math.center
+import com.github.eedcd.solidanchor.utils.math.distanceToCenterSqr
+import com.github.eedcd.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.utils.sorting.ComparatorChain
 import net.minecraft.core.BlockPos
 import net.minecraft.world.item.BlockItem
 import net.minecraft.world.level.block.BedBlock

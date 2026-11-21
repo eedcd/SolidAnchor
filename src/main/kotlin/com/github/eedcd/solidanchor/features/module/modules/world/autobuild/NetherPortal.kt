@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.autobuild
+package com.github.eedcd.solidanchor.features.module.modules.world.autobuild
 
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.block.getBlockingEntities
-import net.solidanchor.utils.block.isUnobstructed
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.block.getBlockingEntities
+import com.github.eedcd.solidanchor.utils.block.isUnobstructed
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.world.entity.boss.enderdragon.EndCrystal

@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.kotlin
+package com.github.eedcd.solidanchor.utils.kotlin
 
 import java.lang.reflect.AnnotatedType
 import java.lang.reflect.GenericArrayType

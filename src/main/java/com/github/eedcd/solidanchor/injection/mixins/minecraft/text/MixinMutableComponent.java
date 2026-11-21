@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.text;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.text;
 
-import net.solidanchor.utils.text.PlainText;
+import com.github.eedcd.solidanchor.utils.text.PlainText;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.contents.PlainTextContents;

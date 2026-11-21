@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.network
+package com.github.eedcd.solidanchor.utils.network
 
 import com.viaversion.viaversion.api.protocol.packet.PacketWrapper
 import com.viaversion.viaversion.api.type.Types
 import com.viaversion.viaversion.protocols.v1_21_4to1_21_5.packet.ServerboundPackets1_21_5
 import com.viaversion.viaversion.protocols.v1_21_5to1_21_6.Protocol1_21_5To1_21_6
-import net.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.player
 
 /**
  * https://github.com/ViaVersion/ViaFabricPlus/blob/8f96c699edc97db8a3fc58c1533e8cf41dd46aaf/src/main/java/com/viaversion/viafabricplus/injection/mixin/features/v1_21_5/movement/MixinLocalPlayer.java#L118-L128

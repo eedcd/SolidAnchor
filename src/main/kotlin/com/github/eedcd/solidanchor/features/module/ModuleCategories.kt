@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module
+package com.github.eedcd.solidanchor.features.module
 
-import net.solidanchor.config.OptionalInclusion
-import net.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.config.OptionalInclusion
+import com.github.eedcd.solidanchor.features.addon.AddonApi
 import java.util.TreeMap
 
 @AddonApi

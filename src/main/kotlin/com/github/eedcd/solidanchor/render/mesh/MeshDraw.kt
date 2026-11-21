@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.mesh
+package com.github.eedcd.solidanchor.render.mesh
 
 import com.mojang.renderpearl.api.pipeline.IndexType
 import com.mojang.renderpearl.api.pipeline.PrimitiveTopology
@@ -28,9 +28,9 @@ import com.mojang.renderpearl.api.commands.RenderPass
 import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.blaze3d.vertex.MeshData
 import com.mojang.renderpearl.api.vertex.VertexFormat
-import net.solidanchor.SolidAnchor
-import net.solidanchor.render.ClientTesselator
-import net.solidanchor.render.buffers.DynamicGpuBufferWriter
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.render.ClientTesselator
+import com.github.eedcd.solidanchor.render.buffers.DynamicGpuBufferWriter
 import java.nio.ByteBuffer
 
 /**

@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.autododge
+package com.github.eedcd.solidanchor.features.module.modules.movement.autododge
 
 import net.ccbluex.fastutil.mapToArray
 import net.ccbluex.fastutil.mapToDoubleArray
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.entity.getMovementDirectionOfInput
-import net.solidanchor.utils.math.copy
-import net.solidanchor.utils.math.geometry.Line
-import net.solidanchor.utils.math.isLikelyZero
-import net.solidanchor.utils.math.plus
-import net.solidanchor.utils.movement.DirectionalInput
-import net.solidanchor.utils.movement.getDegreesRelativeToView
-import net.solidanchor.utils.movement.getDirectionalInputForDegrees
-import net.solidanchor.utils.raytracing.rayTraceCollidingBlocks
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.entity.getMovementDirectionOfInput
+import com.github.eedcd.solidanchor.utils.math.copy
+import com.github.eedcd.solidanchor.utils.math.geometry.Line
+import com.github.eedcd.solidanchor.utils.math.isLikelyZero
+import com.github.eedcd.solidanchor.utils.math.plus
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.utils.movement.getDegreesRelativeToView
+import com.github.eedcd.solidanchor.utils.movement.getDirectionalInputForDegrees
+import com.github.eedcd.solidanchor.utils.raytracing.rayTraceCollidingBlocks
 import net.minecraft.world.phys.Vec3
 
 data class DodgePlan(

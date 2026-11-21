@@ -16,19 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.speed.modes.spartan
+package com.github.eedcd.solidanchor.features.module.modules.movement.speed.modes.spartan
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.PlayerMoveEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.movement.speed.ModuleSpeed
-import net.solidanchor.utils.network.MovePacketType
-import net.solidanchor.utils.client.Timer
-import net.solidanchor.utils.entity.airTicks
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.math.copy
-import net.solidanchor.utils.movement.stopXZVelocity
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.PlayerMoveEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.movement.speed.ModuleSpeed
+import com.github.eedcd.solidanchor.utils.network.MovePacketType
+import com.github.eedcd.solidanchor.utils.client.Timer
+import com.github.eedcd.solidanchor.utils.entity.airTicks
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.math.copy
+import com.github.eedcd.solidanchor.utils.movement.stopXZVelocity
 import net.minecraft.world.entity.EquipmentSlot
 import net.minecraft.world.item.Items
 

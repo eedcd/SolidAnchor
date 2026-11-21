@@ -17,26 +17,26 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.account
+package com.github.eedcd.solidanchor.features.account
 
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.types.Config
-import net.solidanchor.config.types.ValueType
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.AccountManagerAdditionResultEvent
-import net.solidanchor.event.events.AccountManagerLoginResultEvent
-import net.solidanchor.event.events.AccountManagerRemovalResultEvent
-import net.solidanchor.event.events.SessionEvent
-import net.solidanchor.injection.mixins.realms.MixinRealmsAvailabilityAccessor
-import net.solidanchor.injection.mixins.realms.MixinRealmsClientAccessor
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.notification
-import net.solidanchor.utils.client.with
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.types.Config
+import com.github.eedcd.solidanchor.config.types.ValueType
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.AccountManagerAdditionResultEvent
+import com.github.eedcd.solidanchor.event.events.AccountManagerLoginResultEvent
+import com.github.eedcd.solidanchor.event.events.AccountManagerRemovalResultEvent
+import com.github.eedcd.solidanchor.event.events.SessionEvent
+import com.github.eedcd.solidanchor.injection.mixins.realms.MixinRealmsAvailabilityAccessor
+import com.github.eedcd.solidanchor.injection.mixins.realms.MixinRealmsClientAccessor
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.utils.client.browseUrl
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.utils.client.with
 import net.minecraft.client.multiplayer.ProfileKeyPairManager
-import java.awt.Desktop
 import java.net.Proxy
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.atomic.AtomicBoolean
@@ -208,8 +208,17 @@ object AccountManager : Config("Accounts"), EventListener {
     }
 
     /**
-     * Opens the Microsoft login page in the system default browser and receives the redirect through a
-     * local web server. Runs asynchronously; the result is surfaced via [AccountManagerAdditionResultEvent].
+     * The code of the running Microsoft device code sign-in, so the UI can display it.
+     */
+    @Volatile
+    var pendingMicrosoftLoginCode: String? = null
+        private set
+
+    /**
+     * Signs in through the Microsoft device code flow and opens the verification page in the system
+     * browser. The local web server flow cannot be used here: the Minecraft title client id has no
+     * localhost redirect URI registered, so Microsoft rejects it with `invalid_request`.
+     * Runs asynchronously; the result is surfaced via [AccountManagerAdditionResultEvent].
      */
     fun newMicrosoftAccountViaBrowser() {
         if (!microsoftLoginInProgress.compareAndSet(false, true)) {
@@ -219,22 +228,24 @@ object AccountManager : Config("Accounts"), EventListener {
             return
         }
 
-        if (!Desktop.isDesktopSupported() || !Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
-            microsoftLoginInProgress.set(false)
-            EventManager.callEvent(
-                AccountManagerAdditionResultEvent(error = "No system browser is available, use another sign-in method")
-            )
-            return
-        }
+        // Browsers are opened through SDL (Blaze3D.openUri), not java.awt.Desktop - the latter is
+        // reported as unsupported in some game runtimes even though a browser is available.
+        logger.info("Starting Microsoft sign-in via the device code flow")
 
-        thread(name = "microsoft-account-browser", isDaemon = true) {
+        thread(name = "microsoft-account-device-code", isDaemon = true) {
             runCatching {
-                MicrosoftAccount.buildFromLocalWebServer(
-                    onOpen = { url ->
+                MicrosoftAccount.buildFromDeviceCode(
+                    onDeviceCode = { code ->
+                        logger.info("Opening Microsoft sign-in page in the browser")
+                        pendingMicrosoftLoginCode = code.userCode
                         mc.execute {
-                            notification("Microsoft Login", "Continue in your browser", NotificationEvent.Severity.INFO)
+                            notification(
+                                "Microsoft Login",
+                                "Enter code ${code.userCode} in your browser",
+                                NotificationEvent.Severity.INFO,
+                            )
                         }
-                        Desktop.getDesktop().browse(url.toURI())
+                        browseUrl(code.directVerificationUri)
                     },
                 )
             }.onSuccess {
@@ -244,6 +255,7 @@ object AccountManager : Config("Accounts"), EventListener {
                 EventManager.callEvent(AccountManagerAdditionResultEvent(error = it.message ?: "Unknown error"))
             }
 
+            pendingMicrosoftLoginCode = null
             microsoftLoginInProgress.set(false)
         }
     }

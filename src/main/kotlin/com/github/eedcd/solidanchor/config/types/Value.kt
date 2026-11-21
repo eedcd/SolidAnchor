@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.config.types
+package com.github.eedcd.solidanchor.config.types
 
 import com.google.gson.Gson
 import com.google.gson.JsonElement
@@ -24,19 +24,19 @@ import com.google.gson.annotations.SerializedName
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import net.solidanchor.config.OptionalInclusion
-import net.solidanchor.config.autoconfig.AutoConfig
-import net.solidanchor.config.gson.stategies.Exclude
-import net.solidanchor.config.gson.stategies.ProtocolExclude
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.list.MultiChoiceListValue
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.ValueChangedEvent
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.lang.translation
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.text.toLowerCamelCase
+import com.github.eedcd.solidanchor.config.OptionalInclusion
+import com.github.eedcd.solidanchor.config.autoconfig.AutoConfig
+import com.github.eedcd.solidanchor.config.gson.stategies.Exclude
+import com.github.eedcd.solidanchor.config.gson.stategies.ProtocolExclude
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.list.MultiChoiceListValue
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.ValueChangedEvent
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.lang.translation
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.text.toLowerCamelCase
 import java.util.function.BooleanSupplier
 import java.util.function.Consumer
 import java.util.function.Supplier
@@ -64,7 +64,7 @@ open class Value<T : Any>(
     @Exclude val valueType: ValueType,
 
     /**
-     * If true, the description won't be bound to any [net.solidanchor.config.types.group.ValueGroup].
+     * If true, the description won't be bound to any [com.github.eedcd.solidanchor.config.types.group.ValueGroup].
      */
     @Exclude @ProtocolExclude var independentDescription: Boolean = false
 ) {

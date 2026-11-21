@@ -17,25 +17,25 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
 import com.google.common.collect.Ordering
 import net.ccbluex.fastutil.mapToArray
 import net.ccbluex.fastutil.synchronized
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.utils.block.AbstractBlockLocationTracker
-import net.solidanchor.utils.block.ChunkScanner
-import net.solidanchor.utils.collection.blockSortedSetOf
-import net.solidanchor.utils.item.getBlock
-import net.solidanchor.utils.math.center
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.utils.block.AbstractBlockLocationTracker
+import com.github.eedcd.solidanchor.utils.block.ChunkScanner
+import com.github.eedcd.solidanchor.utils.collection.blockSortedSetOf
+import com.github.eedcd.solidanchor.utils.item.getBlock
+import com.github.eedcd.solidanchor.utils.math.center
 import net.minecraft.core.BlockPos
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.block.Block

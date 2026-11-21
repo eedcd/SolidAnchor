@@ -16,27 +16,30 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.entity;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.EntityEquipmentChangeEvent;
+import com.github.eedcd.solidanchor.event.events.EntityHealthUpdateEvent;
+import com.github.eedcd.solidanchor.event.events.PlayerAfterJumpEvent;
+import com.github.eedcd.solidanchor.event.events.PlayerJumpEvent;
+import com.github.eedcd.solidanchor.features.module.modules.combat.elytratarget.ModuleElytraTarget;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleAirJump;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleAntiLevitation;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleElytraRecast;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleNoJumpDelay;
+import com.github.eedcd.solidanchor.features.module.modules.render.DoRender;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleAntiBlind;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleNoSwing;
+import com.github.eedcd.solidanchor.features.module.modules.render.animations.ModuleAnimations;
+import com.github.eedcd.solidanchor.features.module.modules.render.hitfx.ModuleHitFX;
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold;
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.tower.ScaffoldTowerNone;
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager;
+import com.github.eedcd.solidanchor.utils.aiming.features.MovementCorrection;
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.EntityEquipmentChangeEvent;
-import net.solidanchor.event.events.EntityHealthUpdateEvent;
-import net.solidanchor.event.events.PlayerAfterJumpEvent;
-import net.solidanchor.event.events.PlayerJumpEvent;
-import net.solidanchor.features.module.modules.combat.elytratarget.ModuleElytraTarget;
-import net.solidanchor.features.module.modules.movement.*;
-import net.solidanchor.features.module.modules.render.DoRender;
-import net.solidanchor.features.module.modules.render.ModuleNoSwing;
-import net.solidanchor.features.module.modules.render.animations.ModuleAnimations;
-import net.solidanchor.features.module.modules.render.ModuleAntiBlind;
-import net.solidanchor.features.module.modules.render.hitfx.ModuleHitFX;
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold;
-import net.solidanchor.features.module.modules.world.scaffold.tower.ScaffoldTowerNone;
-import net.solidanchor.utils.aiming.RotationManager;
-import net.solidanchor.utils.aiming.features.MovementCorrection;
-import net.solidanchor.utils.client.SilentHotbar;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.Holder;
@@ -73,6 +76,12 @@ public abstract class MixinLivingEntity extends MixinEntity {
 
     @Shadow
     public int noJumpDelay;
+    @Unique
+    private PlayerJumpEvent jumpEvent;
+    @Unique
+    private boolean previousElytra = false;
+    @Unique
+    private boolean previousIsGliding = false;
 
     @Shadow
     public abstract float getJumpPower();
@@ -90,9 +99,6 @@ public abstract class MixinLivingEntity extends MixinEntity {
     public abstract boolean swing(final InteractionHand hand, final SwingAnimation animation, final boolean sendToSwingingEntity);
 
     @Shadow
-    public abstract void setHealth(float health);
-
-    @Shadow
     public abstract boolean isFallFlying();
 
     @Shadow
@@ -100,6 +106,9 @@ public abstract class MixinLivingEntity extends MixinEntity {
 
     @Shadow
     public abstract float getHealth();
+
+    @Shadow
+    public abstract void setHealth(float health);
 
     @Shadow
     public abstract float getMaxHealth();
@@ -118,14 +127,14 @@ public abstract class MixinLivingEntity extends MixinEntity {
      * Disable [StatusEffects.LEVITATION] effect when [ModuleAntiLevitation] is enabled
      */
     @ModifyExpressionValue(
-            method = "travelInAir",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/world/entity/LivingEntity;getEffect(Lnet/minecraft/core/Holder;)Lnet/minecraft/world/effect/MobEffectInstance;",
-                    ordinal = 0
-            ),
-            require = 1,
-            allow = 1
+        method = "travelInAir",
+        at = @At(
+            value = "INVOKE",
+            target = "Lnet/minecraft/world/entity/LivingEntity;getEffect(Lnet/minecraft/core/Holder;)Lnet/minecraft/world/effect/MobEffectInstance;",
+            ordinal = 0
+        ),
+        require = 1,
+        allow = 1
     )
     public @Nullable MobEffectInstance hookTravelStatusEffect(@Nullable MobEffectInstance original) {
         if (original == null) {
@@ -146,14 +155,14 @@ public abstract class MixinLivingEntity extends MixinEntity {
      * Disable [StatusEffects.SLOW_FALLING] effect when [ModuleAntiLevitation] is enabled
      */
     @ModifyExpressionValue(
-            method = "getEffectiveGravity",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/world/entity/LivingEntity;hasEffect(Lnet/minecraft/core/Holder;)Z",
-                    ordinal = 0
-            ),
-            require = 1,
-            allow = 1
+        method = "getEffectiveGravity",
+        at = @At(
+            value = "INVOKE",
+            target = "Lnet/minecraft/world/entity/LivingEntity;hasEffect(Lnet/minecraft/core/Holder;)Z",
+            ordinal = 0
+        ),
+        require = 1,
+        allow = 1
     )
     public boolean hookTravelStatusEffect(boolean original) {
         if (ModuleAntiLevitation.INSTANCE.getRunning()) {
@@ -162,9 +171,6 @@ public abstract class MixinLivingEntity extends MixinEntity {
 
         return original;
     }
-
-    @Unique
-    private PlayerJumpEvent jumpEvent;
 
     @Inject(method = "jumpFromGround", at = @At("HEAD"), cancellable = true)
     private void hookJumpEvent(CallbackInfo ci) {
@@ -239,8 +245,8 @@ public abstract class MixinLivingEntity extends MixinEntity {
 
         // The jumping cooldown would lead to very slow tower building
         var towerActive = ModuleScaffold.INSTANCE.getRunning() &&
-                ModuleScaffold.INSTANCE.getTowerMode().getActiveMode() != ScaffoldTowerNone.INSTANCE &&
-                ModuleScaffold.INSTANCE.getTowerMode().getActiveMode().getRunning();
+            ModuleScaffold.INSTANCE.getTowerMode().getActiveMode() != ScaffoldTowerNone.INSTANCE &&
+            ModuleScaffold.INSTANCE.getTowerMode().getActiveMode().getRunning();
 
         if (noJumpDelay || towerActive) {
             this.noJumpDelay = 0;
@@ -255,9 +261,6 @@ public abstract class MixinLivingEntity extends MixinEntity {
         }
     }
 
-    @Unique
-    private boolean previousElytra = false;
-
     @Inject(method = "aiStep", at = @At("TAIL"))
     public void recastIfLanded(CallbackInfo callbackInfo) {
         if (!solid_anchor$isClientPlayer()) {
@@ -267,7 +270,7 @@ public abstract class MixinLivingEntity extends MixinEntity {
         var elytra = isFallFlying();
         if (ModuleElytraRecast.INSTANCE.getRunning() && previousElytra && !elytra) {
             Minecraft.getInstance().getSoundManager().stop(SoundEvents.ELYTRA_FLYING.location(),
-                    SoundSource.PLAYERS);
+                SoundSource.PLAYERS);
             ModuleElytraRecast.INSTANCE.recastElytra();
             noJumpDelay = 0;
         }
@@ -319,9 +322,6 @@ public abstract class MixinLivingEntity extends MixinEntity {
 
         return rotation.directionVector();
     }
-
-    @Unique
-    private boolean previousIsGliding = false;
 
     @Inject(method = "isFallFlying", at = @At("RETURN"), cancellable = true)
     private void hookIsGliding(CallbackInfoReturnable<Boolean> cir) {

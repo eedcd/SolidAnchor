@@ -16,8 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.viaversion;
+package com.github.eedcd.solidanchor.injection.mixins.viaversion;
 
+import com.github.eedcd.solidanchor.utils.inventory.InventoryManager;
 import com.viaversion.viaversion.api.protocol.Protocol;
 import com.viaversion.viaversion.api.protocol.packet.PacketType;
 import com.viaversion.viaversion.api.type.Type;
@@ -26,7 +27,6 @@ import com.viaversion.viaversion.exception.InformativeException;
 import com.viaversion.viaversion.protocols.v1_16_1to1_16_2.packet.ServerboundPackets1_16_2;
 import com.viaversion.viaversion.protocols.v1_21_2to1_21_4.packet.ServerboundPackets1_21_4;
 import com.viaversion.viaversion.protocols.v1_9_1to1_9_3.packet.ServerboundPackets1_9_3;
-import net.solidanchor.utils.inventory.InventoryManager;
 import org.jspecify.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;
@@ -57,7 +57,7 @@ public abstract class MixinPacketWrapper {
           their inventory, which results in the same packet being sent twice.
          */
         if (packetType == ServerboundPackets1_9_3.CLIENT_COMMAND && this.get(Types.VAR_INT, 0) == 2 &&
-                InventoryManager.INSTANCE.isInventoryOpenServerSide()) {
+            InventoryManager.INSTANCE.isInventoryOpenServerSide()) {
             ci.cancel();
         }
 

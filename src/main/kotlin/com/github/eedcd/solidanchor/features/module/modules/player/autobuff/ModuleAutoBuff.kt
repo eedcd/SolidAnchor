@@ -17,24 +17,24 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autobuff
+package com.github.eedcd.solidanchor.features.module.modules.player.autobuff
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.ScheduleInventoryActionEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.player.autobuff.features.Drink
-import net.solidanchor.features.module.modules.player.autobuff.features.Gapple
-import net.solidanchor.features.module.modules.player.autobuff.features.Head
-import net.solidanchor.features.module.modules.player.autobuff.features.Pot
-import net.solidanchor.features.module.modules.player.autobuff.features.Refill
-import net.solidanchor.features.module.modules.player.autobuff.features.Soup
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.combat.CombatManager
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.ScheduleInventoryActionEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.player.autobuff.features.Drink
+import com.github.eedcd.solidanchor.features.module.modules.player.autobuff.features.Gapple
+import com.github.eedcd.solidanchor.features.module.modules.player.autobuff.features.Head
+import com.github.eedcd.solidanchor.features.module.modules.player.autobuff.features.Pot
+import com.github.eedcd.solidanchor.features.module.modules.player.autobuff.features.Refill
+import com.github.eedcd.solidanchor.features.module.modules.player.autobuff.features.Soup
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.combat.CombatManager
 
 object ModuleAutoBuff : ClientModule(
     name = "AutoBuff",

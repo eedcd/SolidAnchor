@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.packetmine.mode
+package com.github.eedcd.solidanchor.features.module.modules.world.packetmine.mode
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.modules.world.packetmine.MineTarget
-import net.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
-import net.solidanchor.utils.block.isBreakable
-import net.solidanchor.utils.block.isNotBreakable
-import net.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.world.packetmine.MineTarget
+import com.github.eedcd.solidanchor.features.module.modules.world.packetmine.ModulePacketMine
+import com.github.eedcd.solidanchor.utils.block.isBreakable
+import com.github.eedcd.solidanchor.utils.block.isNotBreakable
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
 import net.minecraft.core.BlockPos
 import net.minecraft.world.level.block.state.BlockState
 

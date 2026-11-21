@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.noweb
+package com.github.eedcd.solidanchor.features.module.modules.movement.noweb
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.modules.movement.noweb.ModuleNoWeb.modes
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.movement.noweb.ModuleNoWeb.modes
 import net.minecraft.core.BlockPos
 
 abstract class NoWebMode(name: String) : Mode(name) {

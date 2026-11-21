@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.client;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client;
 
-import com.mojang.blaze3d.platform.SDLEventHandler;
+import com.github.eedcd.solidanchor.utils.input.WindowsShiftCompatibility;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.utils.input.WindowsShiftCompatibility;
+import com.mojang.blaze3d.platform.SDLEventHandler;
 import org.lwjgl.sdl.SDL_Event;
 import org.lwjgl.system.Platform;
 import org.spongepowered.asm.mixin.Mixin;

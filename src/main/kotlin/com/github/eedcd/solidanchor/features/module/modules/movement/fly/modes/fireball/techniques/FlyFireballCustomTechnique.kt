@@ -17,24 +17,24 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.fly.modes.fireball.techniques
+package com.github.eedcd.solidanchor.features.module.modules.movement.fly.modes.fireball.techniques
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.PlayerMoveEvent
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.sequenceHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.movement.fly.ModuleFly
-import net.solidanchor.features.module.modules.movement.fly.modes.fireball.FlyFireball
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.PlayerMoveEvent
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.sequenceHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.movement.fly.ModuleFly
+import com.github.eedcd.solidanchor.features.module.modules.movement.fly.modes.fireball.FlyFireball
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
 import net.minecraft.world.entity.MoverType
 
 object FlyFireballCustomTechnique : Mode("Custom") {

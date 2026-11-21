@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render;
+package com.github.eedcd.solidanchor.render;
 
-import com.mojang.renderpearl.api.pipeline.IndexType;
-import com.mojang.renderpearl.api.buffers.GpuBuffer;
-import com.mojang.renderpearl.api.buffers.GpuBufferSlice;
+import com.github.eedcd.solidanchor.render.buffers.StaticGpuBufferPool;
+import com.github.eedcd.solidanchor.render.mesh.MeshDraw;
 import com.mojang.blaze3d.buffers.Std140Builder;
-import com.mojang.renderpearl.api.pipeline.RenderPipeline;
-import com.mojang.renderpearl.api.commands.RenderPass;
 import com.mojang.blaze3d.vertex.ByteBufferBuilder;
 import com.mojang.blaze3d.vertex.MeshData;
+import com.mojang.renderpearl.api.buffers.GpuBuffer;
+import com.mojang.renderpearl.api.buffers.GpuBufferSlice;
+import com.mojang.renderpearl.api.commands.RenderPass;
+import com.mojang.renderpearl.api.pipeline.IndexType;
+import com.mojang.renderpearl.api.pipeline.RenderPipeline;
 import com.mojang.renderpearl.api.vertex.VertexFormat;
-import net.solidanchor.render.buffers.StaticGpuBufferPool;
-import net.solidanchor.render.mesh.MeshDraw;
 import net.minecraft.core.BlockPos;
 import org.jspecify.annotations.Nullable;
 
@@ -51,20 +51,26 @@ public final class CachedMeshStorage implements AutoCloseable {
     private static final int BASE_BLOCK_POS_MASK = ~0xFFF;
 
     public final ByteBufferBuilder byteBufferBuilder = new ByteBufferBuilder(0xC0000);
+    public final String label;
     private final GpuBufferSlice baseBlockPosUniform;
-
+    private final BlockPos.MutableBlockPos baseBlockPos = new BlockPos.MutableBlockPos();
     private @Nullable MeshDraw meshDraw;
     private @Nullable GpuBuffer vertexBuffer;
     private @Nullable GpuBuffer indexBuffer;
     private long baseBlockPosAsLong;
-    private final BlockPos.MutableBlockPos baseBlockPos = new BlockPos.MutableBlockPos();
     private boolean hasBaseBlockPosUniformValue;
-
-    public final String label;
 
     public CachedMeshStorage(String label) {
         this.baseBlockPosUniform = ClientUniformDefine.MESH_BASE_BLOCK_POS.createSingleBuffer(() -> label + " BaseBlockPos UBO");
         this.label = label;
+    }
+
+    private static long normalize(BlockPos pos) {
+        return BlockPos.asLong(
+            pos.getX() & BASE_BLOCK_POS_MASK,
+            pos.getY() & BASE_BLOCK_POS_MASK,
+            pos.getZ() & BASE_BLOCK_POS_MASK
+        );
     }
 
     public boolean isReady() {
@@ -93,14 +99,6 @@ public final class CachedMeshStorage implements AutoCloseable {
         this.writeBaseBlockPosUniform(this.baseBlockPos);
         this.hasBaseBlockPosUniformValue = true;
         return this.baseBlockPos;
-    }
-
-    private static long normalize(BlockPos pos) {
-        return BlockPos.asLong(
-            pos.getX() & BASE_BLOCK_POS_MASK,
-            pos.getY() & BASE_BLOCK_POS_MASK,
-            pos.getZ() & BASE_BLOCK_POS_MASK
-        );
     }
 
     private void writeBaseBlockPosUniform(BlockPos baseBlockPos) {

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.io
+package com.github.eedcd.solidanchor.utils.io
 
 import it.unimi.dsi.fastutil.io.FastByteArrayOutputStream
 import java.io.IOException

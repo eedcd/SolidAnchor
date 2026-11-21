@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.aiming.features.processors.anglesmooth
+package com.github.eedcd.solidanchor.utils.aiming.features.processors.anglesmooth
 
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.utils.aiming.RotationTarget
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.math.component1
-import net.solidanchor.utils.math.component2
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.RotationTarget
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.math.component1
+import com.github.eedcd.solidanchor.utils.math.component2
 import net.minecraft.world.phys.Vec2
 
 abstract class FactorAngleSmooth(name: String, parent: ModeValueGroup<*>) : AngleSmooth(name, parent) {

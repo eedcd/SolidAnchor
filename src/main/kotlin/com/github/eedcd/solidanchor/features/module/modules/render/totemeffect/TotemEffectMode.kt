@@ -17,18 +17,18 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.totemeffect
+package com.github.eedcd.solidanchor.features.module.modules.render.totemeffect
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.render.totemeffect.ModuleTotemEffect.TotemPopSnapshot
-import net.solidanchor.features.module.modules.render.totemeffect.ModuleTotemEffect.entities
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.math.Easing
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.render.totemeffect.ModuleTotemEffect.TotemPopSnapshot
+import com.github.eedcd.solidanchor.features.module.modules.render.totemeffect.ModuleTotemEffect.entities
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.math.Easing
 
 abstract class TotemEffectMode(name: String) : Mode(name) {
     final override val parent: ModeValueGroup<*>

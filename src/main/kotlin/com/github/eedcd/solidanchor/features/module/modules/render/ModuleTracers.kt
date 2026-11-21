@@ -16,28 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.misc.FriendManager
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.render.GenericDistanceHSBColorMode
-import net.solidanchor.render.GenericEntityHealthColorMode
-import net.solidanchor.render.GenericRainbowColorMode
-import net.solidanchor.render.GenericStaticColorMode
-import net.solidanchor.render.drawLines
-import net.solidanchor.render.drawLinesWithWidth
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.engine.type.Vec3f
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.utils.combat.EntityTaggingManager
-import net.solidanchor.utils.entity.RenderedEntities
-import net.solidanchor.utils.entity.cameraDistanceSq
-import net.solidanchor.utils.entity.interpolateCurrentPosition
-import net.solidanchor.utils.math.sq
-import net.solidanchor.utils.math.toVec3f
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.misc.FriendManager
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.render.GenericDistanceHSBColorMode
+import com.github.eedcd.solidanchor.render.GenericEntityHealthColorMode
+import com.github.eedcd.solidanchor.render.GenericRainbowColorMode
+import com.github.eedcd.solidanchor.render.GenericStaticColorMode
+import com.github.eedcd.solidanchor.render.drawLines
+import com.github.eedcd.solidanchor.render.drawLinesWithWidth
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.engine.type.Vec3f
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.utils.combat.EntityTaggingManager
+import com.github.eedcd.solidanchor.utils.entity.RenderedEntities
+import com.github.eedcd.solidanchor.utils.entity.cameraDistanceSq
+import com.github.eedcd.solidanchor.utils.entity.interpolateCurrentPosition
+import com.github.eedcd.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.utils.math.toVec3f
 
 /**
  * Tracers module

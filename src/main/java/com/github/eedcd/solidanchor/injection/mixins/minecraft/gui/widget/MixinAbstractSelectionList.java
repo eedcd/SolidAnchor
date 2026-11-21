@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.gui.widget;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui.widget;
 
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
-import net.solidanchor.features.misc.SelfDestruct;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.AbstractSelectionList;
@@ -37,7 +37,7 @@ public abstract class MixinAbstractSelectionList {
     protected Minecraft minecraft;
 
     @WrapWithCondition(method = "extractWidgetRenderState",
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/components/AbstractSelectionList;extractListSeparators(Lnet/minecraft/client/gui/GuiGraphicsExtractor;)V"))
+        at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/components/AbstractSelectionList;extractListSeparators(Lnet/minecraft/client/gui/GuiGraphicsExtractor;)V"))
     private boolean renderBackground(AbstractSelectionList<?> instance, GuiGraphicsExtractor graphics) {
         return this.minecraft.level != null || SelfDestruct.INSTANCE.isDestructed();
     }

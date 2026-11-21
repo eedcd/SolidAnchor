@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.io
+package com.github.eedcd.solidanchor.utils.io
 
 import java.io.InputStream
 import java.nio.charset.Charset

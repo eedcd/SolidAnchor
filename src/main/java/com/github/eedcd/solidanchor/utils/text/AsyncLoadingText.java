@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.text;
+package com.github.eedcd.solidanchor.utils.text;
 
 import com.google.common.base.Suppliers;
 import kotlinx.coroutines.Deferred;
@@ -30,8 +30,8 @@ import java.util.function.Supplier;
 /**
  * A lazy text component with async loading.
  *
- * @param delegate The lazy component delegate.
- * @param onLoading The component to display while loading.
+ * @param delegate    The lazy component delegate.
+ * @param onLoading   The component to display while loading.
  * @param onException The component to display when an exception occurs.
  */
 public record AsyncLoadingText(

@@ -17,18 +17,18 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player
+package com.github.eedcd.solidanchor.features.module.modules.player
 
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.injection.mixins.minecraft.client.MinecraftAccessor
-import net.solidanchor.utils.block.getBlock
-import net.solidanchor.utils.block.isInteractable
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.item.isInteractable
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.client.MinecraftAccessor
+import com.github.eedcd.solidanchor.utils.block.getBlock
+import com.github.eedcd.solidanchor.utils.block.isInteractable
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.item.isInteractable
 import net.minecraft.world.phys.BlockHitResult
 
 /**

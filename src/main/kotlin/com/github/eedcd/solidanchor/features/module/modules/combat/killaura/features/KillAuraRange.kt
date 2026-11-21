@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.killaura.features
+package com.github.eedcd.solidanchor.features.module.modules.combat.killaura.features
 
 import com.google.gson.JsonObject
-import net.solidanchor.SolidAnchor.logger
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.ValueType
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.kotlin.random
-import net.solidanchor.utils.range.RangeValueGroup
+import com.github.eedcd.solidanchor.SolidAnchor.logger
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.ValueType
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.kotlin.random
+import com.github.eedcd.solidanchor.utils.range.RangeValueGroup
 import kotlin.math.max
 
 /**

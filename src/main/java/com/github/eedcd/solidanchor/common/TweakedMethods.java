@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.common;
+package com.github.eedcd.solidanchor.common;
 
-import net.solidanchor.features.module.modules.exploit.ModuleGhostHand;
+import com.github.eedcd.solidanchor.features.module.modules.exploit.ModuleGhostHand;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
@@ -33,12 +33,13 @@ import java.util.function.Function;
 
 public final class TweakedMethods {
 
-    private TweakedMethods() {}
-
     public static final Function<ClipContext, BlockHitResult> DEFAULT_MISS_FACTORY = (context) -> {
         Vec3 delta = context.getFrom().subtract(context.getTo());
         return BlockHitResult.miss(context.getTo(), Direction.getApproximateNearest(delta.x, delta.y, delta.z), BlockPos.containing(context.getTo()));
     };
+
+    private TweakedMethods() {
+    }
 
     public static BlockHitResult tweakedRaycast(BlockGetter blockView, ClipContext context) {
         if (ModuleGhostHand.INSTANCE.getRunning()) {

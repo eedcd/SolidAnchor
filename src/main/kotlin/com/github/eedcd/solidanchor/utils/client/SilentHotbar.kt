@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.client
+package com.github.eedcd.solidanchor.utils.client
 
-import net.solidanchor.additions.realSelectedSlot
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.SelectHotbarSlotSilentlyEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
-import net.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.additions.realSelectedSlot
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.SelectHotbarSlotSilentlyEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
 import net.minecraft.world.entity.player.Inventory
 import org.jetbrains.annotations.Range
 

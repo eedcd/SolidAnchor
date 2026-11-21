@@ -17,32 +17,32 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.render.trajectory
+package com.github.eedcd.solidanchor.utils.render.trajectory
 
-import net.solidanchor.features.module.modules.movement.ModuleFreeze
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.drawBoxSide
-import net.solidanchor.render.drawLines
-import net.solidanchor.render.drawLinesWithWidth
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.utils.MutableVertexList
-import net.solidanchor.render.utils.lineStripAsLines
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.block.stateOrEmpty
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.math.toRadians
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.entity.box
-import net.solidanchor.utils.entity.interpolateCurrentPosition
-import net.solidanchor.utils.math.copy
-import net.solidanchor.utils.math.minus
-import net.solidanchor.utils.math.move
-import net.solidanchor.utils.math.scaleMut
-import net.solidanchor.utils.math.set
-import net.solidanchor.utils.math.withLength
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleFreeze
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.drawBoxSide
+import com.github.eedcd.solidanchor.render.drawLines
+import com.github.eedcd.solidanchor.render.drawLinesWithWidth
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.utils.MutableVertexList
+import com.github.eedcd.solidanchor.render.utils.lineStripAsLines
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.math.toRadians
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.entity.box
+import com.github.eedcd.solidanchor.utils.entity.interpolateCurrentPosition
+import com.github.eedcd.solidanchor.utils.math.copy
+import com.github.eedcd.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.utils.math.move
+import com.github.eedcd.solidanchor.utils.math.scaleMut
+import com.github.eedcd.solidanchor.utils.math.set
+import com.github.eedcd.solidanchor.utils.math.withLength
 import net.minecraft.core.BlockPos
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.LivingEntity

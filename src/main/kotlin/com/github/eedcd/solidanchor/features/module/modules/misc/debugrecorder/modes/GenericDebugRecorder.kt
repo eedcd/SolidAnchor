@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.misc.debugrecorder.modes
+package com.github.eedcd.solidanchor.features.module.modules.misc.debugrecorder.modes
 
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import net.ccbluex.fastutil.objectHashSetOf
-import net.solidanchor.event.tickHandler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.modules.misc.debugrecorder.ModuleDebugRecorder
-import net.solidanchor.utils.io.toJsonArray
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.modules.misc.debugrecorder.ModuleDebugRecorder
+import com.github.eedcd.solidanchor.utils.io.toJsonArray
 import net.minecraft.world.entity.Entity
 import java.util.concurrent.CopyOnWriteArraySet
 

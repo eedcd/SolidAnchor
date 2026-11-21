@@ -19,7 +19,7 @@
 
 @file:Suppress("NOTHING_TO_INLINE", "TooManyFunctions")
 
-package net.solidanchor.utils.math
+package com.github.eedcd.solidanchor.utils.math
 
 import net.minecraft.util.Mth
 import org.joml.Vector2f

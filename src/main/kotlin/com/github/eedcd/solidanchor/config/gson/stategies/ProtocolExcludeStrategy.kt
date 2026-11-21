@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.gson.stategies
+package com.github.eedcd.solidanchor.config.gson.stategies
 
 import com.google.gson.ExclusionStrategy
 import com.google.gson.FieldAttributes

@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.atlas
+package com.github.eedcd.solidanchor.render.atlas
 
 import com.mojang.renderpearl.api.GpuFormat
 import com.mojang.blaze3d.ProjectionType
@@ -27,12 +27,12 @@ import com.mojang.blaze3d.platform.NativeImage
 import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.blaze3d.vertex.PoseStack
 import com.mojang.renderpearl.api.commands.RenderPass
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.render.createRenderPass
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.render.clearColorAndDepth
-import net.solidanchor.utils.render.copyTo
-import net.solidanchor.utils.render.readFully
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.render.createRenderPass
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.render.clearColorAndDepth
+import com.github.eedcd.solidanchor.utils.render.copyTo
+import com.github.eedcd.solidanchor.utils.render.readFully
 import net.minecraft.client.renderer.Projection
 import net.minecraft.client.renderer.ProjectionMatrixBuffer
 import net.minecraft.client.renderer.Rect2i

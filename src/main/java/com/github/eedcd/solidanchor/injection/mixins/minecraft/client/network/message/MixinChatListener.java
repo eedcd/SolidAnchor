@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.client.network.message;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client.network.message;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.ChatReceiveEvent;
 import com.mojang.authlib.GameProfile;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.ChatReceiveEvent;
 import net.minecraft.client.multiplayer.chat.ChatListener;
 import net.minecraft.network.chat.ChatType;
 import net.minecraft.network.chat.Component;

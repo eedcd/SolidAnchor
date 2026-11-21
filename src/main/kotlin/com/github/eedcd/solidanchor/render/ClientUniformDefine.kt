@@ -17,16 +17,16 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
 import com.mojang.renderpearl.api.buffers.GpuBuffer
 import com.mojang.renderpearl.api.buffers.GpuBufferSlice
 import com.mojang.renderpearl.api.pipeline.BindGroupLayout
 import com.mojang.renderpearl.api.pipeline.UniformType
 import com.mojang.renderpearl.api.commands.RenderPass
-import net.solidanchor.SolidAnchor
-import net.solidanchor.utils.client.gpuDevice
-import net.solidanchor.utils.render.std140Size
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.utils.client.gpuDevice
+import com.github.eedcd.solidanchor.utils.render.std140Size
 import net.minecraft.client.renderer.MappableRingBuffer
 import java.util.function.Supplier
 

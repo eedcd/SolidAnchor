@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.autoshop
+package com.github.eedcd.solidanchor.features.module.modules.player.autoshop
 
 import com.google.gson.GsonBuilder
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.features.module.modules.player.autoshop.serializable.ItemInfo
-import net.solidanchor.features.module.modules.player.autoshop.serializable.ShopConfig
-import net.solidanchor.features.module.modules.player.autoshop.serializable.ShopElement
-import net.solidanchor.features.module.modules.player.autoshop.serializable.conditions.ConditionNode
-import net.solidanchor.features.module.modules.player.autoshop.serializable.conditions.ItemConditionNode
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable.ItemInfo
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable.ShopConfig
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable.ShopElement
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable.conditions.ConditionNode
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable.conditions.ItemConditionNode
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.client.notification
 import java.io.Reader
 
 object AutoShopConfig {

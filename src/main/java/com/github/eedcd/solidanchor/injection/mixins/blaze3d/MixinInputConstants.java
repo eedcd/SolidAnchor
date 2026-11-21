@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.blaze3d;
+package com.github.eedcd.solidanchor.injection.mixins.blaze3d;
 
+import com.github.eedcd.solidanchor.utils.input.WindowsShiftCompatibility;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.mojang.blaze3d.platform.InputConstants;
-import net.solidanchor.utils.input.WindowsShiftCompatibility;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 

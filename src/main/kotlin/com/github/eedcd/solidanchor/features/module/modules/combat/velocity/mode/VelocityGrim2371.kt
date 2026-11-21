@@ -17,22 +17,22 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.velocity.mode
+package com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode
 
-import net.solidanchor.event.events.BlinkPacketEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.PlayerTickEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.event.handler
-import net.solidanchor.event.sequenceHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.blink.BlinkManager
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.entity.shouldSwingHand
-import net.solidanchor.utils.network.isLocalPlayerDamage
-import net.solidanchor.utils.network.isLocalPlayerVelocity
-import net.solidanchor.utils.raytracing.traceFromPlayer
+import com.github.eedcd.solidanchor.event.events.BlinkPacketEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.PlayerTickEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.sequenceHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.blink.BlinkManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.entity.shouldSwingHand
+import com.github.eedcd.solidanchor.utils.network.isLocalPlayerDamage
+import com.github.eedcd.solidanchor.utils.network.isLocalPlayerVelocity
+import com.github.eedcd.solidanchor.utils.raytracing.traceFromPlayer
 import net.minecraft.network.protocol.common.ServerboundPongPacket
 import net.minecraft.network.protocol.game.ClientboundBlockUpdatePacket
 import net.minecraft.network.protocol.game.ServerboundAttackPacket

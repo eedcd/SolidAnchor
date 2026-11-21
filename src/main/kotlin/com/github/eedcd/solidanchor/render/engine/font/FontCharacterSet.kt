@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.font
+package com.github.eedcd.solidanchor.render.engine.font
 
 import it.unimi.dsi.fastutil.ints.IntOpenHashSet
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet
 import net.ccbluex.fastutil.mapToIntArray
-import net.solidanchor.render.FontFace
-import net.solidanchor.utils.io.readText
+import com.github.eedcd.solidanchor.render.FontFace
+import com.github.eedcd.solidanchor.utils.io.readText
 import java.awt.Font
 
 internal object FontCharacterSet {

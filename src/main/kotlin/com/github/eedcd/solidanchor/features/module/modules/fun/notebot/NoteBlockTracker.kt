@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.`fun`.notebot
+package com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot
 
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.aiming.utils.raytraceBlockRotation
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.raytracing.raytraceBlock
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.aiming.utils.raytraceBlockRotation
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.raytracing.raytraceBlock
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket

@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.network;
 
-import net.solidanchor.utils.network.PacketRegistryKt;
+import com.github.eedcd.solidanchor.utils.network.PacketRegistryKt;
 import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.protocol.PacketType;
 import net.minecraft.resources.Identifier;
@@ -34,7 +34,7 @@ public abstract class MixinPacketType {
      * Registers a packet type for the given [networkSide] with the specified [id].
      *
      * @param networkSide The side of the network.
-     * @param identifier The identifier of the packet type to register defined in {@link PacketType}
+     * @param identifier  The identifier of the packet type to register defined in {@link PacketType}
      */
     @Inject(method = "<init>", at = @At("RETURN"))
     private void hookPacketRegistry(PacketFlow networkSide, Identifier identifier, CallbackInfo ci) {

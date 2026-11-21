@@ -16,34 +16,34 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
 import kotlinx.atomicfu.atomic
-import net.solidanchor.event.events.DrawOutlinesEvent
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.render.CachedMeshStorage
-import net.solidanchor.render.ClientRenderPipelines
-import net.solidanchor.render.GenericRainbowColorMode
-import net.solidanchor.render.GenericStaticColorMode
-import net.solidanchor.render.MapColorMode
-import net.solidanchor.render.addShapeFaces
-import net.solidanchor.render.addShapeOutlines
-import net.solidanchor.render.buildMesh
-import net.solidanchor.render.drawGenericBlockESP
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.getDynamicTransformsUniform
-import net.solidanchor.render.translate
-import net.solidanchor.render.utils.DistanceFadeUniformValueGroup
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.block.AbstractBlockLocationTracker
-import net.solidanchor.utils.block.ChunkScanner
-import net.solidanchor.utils.inventory.findBlocksEndingWith
-import net.solidanchor.utils.math.PositionedVoxelShape
-import net.solidanchor.utils.math.mergeAdjacentVoxelShapes
+import com.github.eedcd.solidanchor.event.events.DrawOutlinesEvent
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.render.CachedMeshStorage
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines
+import com.github.eedcd.solidanchor.render.GenericRainbowColorMode
+import com.github.eedcd.solidanchor.render.GenericStaticColorMode
+import com.github.eedcd.solidanchor.render.MapColorMode
+import com.github.eedcd.solidanchor.render.addShapeFaces
+import com.github.eedcd.solidanchor.render.addShapeOutlines
+import com.github.eedcd.solidanchor.render.buildMesh
+import com.github.eedcd.solidanchor.render.drawGenericBlockESP
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.getDynamicTransformsUniform
+import com.github.eedcd.solidanchor.render.translate
+import com.github.eedcd.solidanchor.render.utils.DistanceFadeUniformValueGroup
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.block.AbstractBlockLocationTracker
+import com.github.eedcd.solidanchor.utils.block.ChunkScanner
+import com.github.eedcd.solidanchor.utils.inventory.findBlocksEndingWith
+import com.github.eedcd.solidanchor.utils.math.PositionedVoxelShape
+import com.github.eedcd.solidanchor.utils.math.mergeAdjacentVoxelShapes
 import net.minecraft.core.BlockPos
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
@@ -94,7 +94,7 @@ object ModuleBlockESP : ClientModule("BlockESP", ModuleCategories.RENDER) {
         markDirtyForModes()
     }
 
-    sealed class Mode(name: String) : net.solidanchor.config.types.group.Mode(name) {
+    sealed class Mode(name: String) : com.github.eedcd.solidanchor.config.types.group.Mode(name) {
         final override val parent get() = modes
 
         protected var useColor = false
@@ -293,7 +293,7 @@ object ModuleBlockESP : ClientModule("BlockESP", ModuleCategories.RENDER) {
     }
 
     private fun collectBlockShapes(
-        colorMode: net.solidanchor.render.GenericColorMode<Pair<BlockPos, BlockState>>,
+        colorMode: com.github.eedcd.solidanchor.render.GenericColorMode<Pair<BlockPos, BlockState>>,
         useColor: Boolean,
     ): List<PositionedVoxelShape<BlockMergeKey>> {
         val shapes = buildList {

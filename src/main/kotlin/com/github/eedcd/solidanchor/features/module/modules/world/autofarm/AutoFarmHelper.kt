@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.world.autofarm
+package com.github.eedcd.solidanchor.features.module.modules.world.autofarm
 
-import net.solidanchor.utils.block.getBlock
-import net.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.block.getBlock
+import com.github.eedcd.solidanchor.utils.client.world
 import net.minecraft.core.BlockPos
 import net.minecraft.tags.BlockTags
 import net.minecraft.world.level.block.BambooStalkBlock

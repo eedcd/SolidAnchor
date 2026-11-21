@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.terrainspeed.icespeed
+package com.github.eedcd.solidanchor.features.module.modules.movement.terrainspeed.icespeed
 
 import net.ccbluex.fastutil.referenceHashSetOf
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.BlockSlipperinessMultiplierEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.movement.terrainspeed.ModuleTerrainSpeed
-import net.solidanchor.features.module.modules.movement.terrainspeed.icespeed.IceSpeed.Motion.horizontalMotion
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.BlockSlipperinessMultiplierEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.movement.terrainspeed.ModuleTerrainSpeed
+import com.github.eedcd.solidanchor.features.module.modules.movement.terrainspeed.icespeed.IceSpeed.Motion.horizontalMotion
 import net.minecraft.world.level.block.Blocks
 
 /**

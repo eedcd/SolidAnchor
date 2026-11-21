@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.misc.nameprotect
+package com.github.eedcd.solidanchor.features.module.modules.misc.nameprotect
 
 import it.unimi.dsi.fastutil.io.FastByteArrayInputStream
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap
 import net.ccbluex.fastutil.LfuCache
 import net.ccbluex.fastutil.mapToArray
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.client.randomUsername
-import net.solidanchor.utils.kotlin.unmodifiable
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.client.randomUsername
+import com.github.eedcd.solidanchor.utils.kotlin.unmodifiable
 import org.ahocorasick.trie.Emit
 import org.ahocorasick.trie.Trie
 import org.apache.commons.codec.digest.DigestUtils

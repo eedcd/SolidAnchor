@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.util;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.util;
 
 import net.minecraft.core.Vec3i;
 import org.spongepowered.asm.mixin.Mixin;

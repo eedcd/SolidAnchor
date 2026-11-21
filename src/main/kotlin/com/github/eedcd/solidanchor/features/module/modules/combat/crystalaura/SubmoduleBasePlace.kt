@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura
 
 import it.unimi.dsi.fastutil.doubles.DoubleDoubleImmutablePair
 import net.ccbluex.fastutil.mapToArray
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.combat.crystalaura.place.PlacementPositionCandidate
-import net.solidanchor.features.module.modules.combat.crystalaura.place.SubmoduleCrystalPlacer
-import net.solidanchor.render.FULL_BOX
-import net.solidanchor.utils.block.getCenterDistanceSquared
-import net.solidanchor.utils.block.isUnobstructed
-import net.solidanchor.utils.block.placer.BlockPlacer
-import net.solidanchor.utils.block.stateOrEmpty
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.entity.PlayerSimulationCache
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.PlacementPositionCandidate
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.SubmoduleCrystalPlacer
+import com.github.eedcd.solidanchor.render.FULL_BOX
+import com.github.eedcd.solidanchor.utils.block.getCenterDistanceSquared
+import com.github.eedcd.solidanchor.utils.block.isUnobstructed
+import com.github.eedcd.solidanchor.utils.block.placer.BlockPlacer
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.entity.PlayerSimulationCache
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.core.BlockPos
 import net.minecraft.world.item.Items
 import net.minecraft.world.level.block.state.BlockState

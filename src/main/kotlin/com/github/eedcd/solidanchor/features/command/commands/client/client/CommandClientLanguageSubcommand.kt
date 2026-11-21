@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.client.client
+package com.github.eedcd.solidanchor.features.command.commands.client.client
 
 import net.ccbluex.fastutil.mapToArray
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.features.command.arguments.ClientStringArgumentType
-import net.solidanchor.features.command.brigadier.CmdLiteralScope
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.suggestions
-import net.solidanchor.features.global.GlobalManager
-import net.solidanchor.lang.LanguageManager
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.features.command.arguments.ClientStringArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdLiteralScope
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.suggestions
+import com.github.eedcd.solidanchor.features.global.GlobalManager
+import com.github.eedcd.solidanchor.lang.LanguageManager
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.regular
 
 object CommandClientLanguageSubcommand {
     fun CmdLiteralScope.language() {

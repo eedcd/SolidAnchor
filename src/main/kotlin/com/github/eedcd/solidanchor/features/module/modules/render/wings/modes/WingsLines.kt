@@ -17,20 +17,20 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.wings.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.wings.modes
 
 import com.mojang.math.Axis
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.features.module.modules.render.wings.WingsColorSettings
-import net.solidanchor.features.module.modules.render.wings.WingsMode
-import net.solidanchor.features.module.modules.render.wings.modes.WingsLines.WingsOptions.angles
-import net.solidanchor.features.module.modules.render.wings.modes.WingsLines.WingsOptions.linesCount
-import net.solidanchor.render.ClientRenderPipelines
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawCustomMesh
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.setColor
-import net.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.render.wings.WingsColorSettings
+import com.github.eedcd.solidanchor.features.module.modules.render.wings.WingsMode
+import com.github.eedcd.solidanchor.features.module.modules.render.wings.modes.WingsLines.WingsOptions.angles
+import com.github.eedcd.solidanchor.features.module.modules.render.wings.modes.WingsLines.WingsOptions.linesCount
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawCustomMesh
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.setColor
+import com.github.eedcd.solidanchor.render.withPush
 import org.joml.Matrix4f
 
 object WingsLines : WingsMode("Lines") {

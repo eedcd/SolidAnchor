@@ -17,18 +17,18 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.world.nuker.mode
+package com.github.eedcd.solidanchor.features.module.modules.world.nuker.mode
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.player.ModuleBlink
-import net.solidanchor.features.module.modules.world.nuker.ModuleNuker.areaMode
-import net.solidanchor.features.module.modules.world.nuker.ModuleNuker.ignoreOpenInventory
-import net.solidanchor.features.module.modules.world.nuker.ModuleNuker.mode
-import net.solidanchor.features.module.modules.world.nuker.ModuleNuker.swingMode
-import net.solidanchor.features.module.modules.world.nuker.ModuleNuker.wasTarget
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleBlink
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.ModuleNuker.areaMode
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.ModuleNuker.ignoreOpenInventory
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.ModuleNuker.mode
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.ModuleNuker.swingMode
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.ModuleNuker.wasTarget
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 import net.minecraft.core.Direction
 import net.minecraft.network.protocol.game.ServerboundPlayerActionPacket

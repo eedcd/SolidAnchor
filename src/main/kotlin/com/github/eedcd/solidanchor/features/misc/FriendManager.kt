@@ -16,21 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.misc
+package com.github.eedcd.solidanchor.features.misc
 
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.types.Config
-import net.solidanchor.config.types.ValueType
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.AttackEntityEvent
-import net.solidanchor.event.events.TagEntityEvent
-import net.solidanchor.event.handler
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.types.Config
+import com.github.eedcd.solidanchor.config.types.ValueType
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.AttackEntityEvent
+import com.github.eedcd.solidanchor.event.events.TagEntityEvent
+import com.github.eedcd.solidanchor.event.handler
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.player.Player
 import java.util.TreeSet
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.FriendChangeEvent
-import net.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.FriendChangeEvent
+import com.github.eedcd.solidanchor.features.addon.AddonApi
 
 object FriendManager : Config("Friends"), EventListener {
 

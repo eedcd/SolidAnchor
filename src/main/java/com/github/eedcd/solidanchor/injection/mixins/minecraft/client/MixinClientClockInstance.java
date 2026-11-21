@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.client;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience;
+import com.github.eedcd.solidanchor.interfaces.ClientClockInstanceAddition;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import net.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience;
-import net.solidanchor.interfaces.ClientClockInstanceAddition;
 import net.minecraft.core.Holder;
 import net.minecraft.world.clock.ClockInstance;
 import net.minecraft.world.clock.WorldClock;

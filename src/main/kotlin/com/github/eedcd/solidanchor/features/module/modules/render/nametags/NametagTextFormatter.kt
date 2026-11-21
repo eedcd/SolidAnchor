@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.nametags
+package com.github.eedcd.solidanchor.features.module.modules.render.nametags
 
 import it.unimi.dsi.fastutil.objects.ObjectLinkedOpenHashSet
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot
-import net.solidanchor.features.module.modules.misc.nameprotect.sanitizeForeignInput
-import net.solidanchor.features.module.modules.render.ModuleCombineMobs
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.combat.EntityTaggingManager
-import net.solidanchor.utils.entity.getActualHealth
-import net.solidanchor.utils.entity.hasHealthScoreboard
-import net.solidanchor.utils.entity.ping
-import net.solidanchor.utils.entity.shortName
-import net.solidanchor.utils.entity.simpleDisplayName
-import net.solidanchor.utils.text.withFormat
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot
+import com.github.eedcd.solidanchor.features.module.modules.misc.nameprotect.sanitizeForeignInput
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleCombineMobs
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.combat.EntityTaggingManager
+import com.github.eedcd.solidanchor.utils.entity.getActualHealth
+import com.github.eedcd.solidanchor.utils.entity.hasHealthScoreboard
+import com.github.eedcd.solidanchor.utils.entity.ping
+import com.github.eedcd.solidanchor.utils.entity.shortName
+import com.github.eedcd.solidanchor.utils.entity.simpleDisplayName
+import com.github.eedcd.solidanchor.utils.text.withFormat
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.Style
 import net.minecraft.network.chat.TextColor

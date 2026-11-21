@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.network;
 
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct;
+import com.github.eedcd.solidanchor.features.spoofer.SpooferClient;
+import com.github.eedcd.solidanchor.utils.text.PlainText;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import net.solidanchor.features.misc.SelfDestruct;
-import net.solidanchor.features.spoofer.SpooferClient;
-import net.solidanchor.utils.text.PlainText;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.multiplayer.ClientHandshakePacketListenerImpl;
 import net.minecraft.network.chat.Component;
@@ -43,7 +43,7 @@ public abstract class MixinClientHandshakePacketListenerImplMixin {
      * How do people not know that you need a Minecraft premium account to join a premium server?
      */
     @ModifyExpressionValue(method = "authenticateServer", at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/network/chat/Component;translatable(Ljava/lang/String;[Ljava/lang/Object;)Lnet/minecraft/network/chat/MutableComponent;", ordinal = 1))
+        target = "Lnet/minecraft/network/chat/Component;translatable(Ljava/lang/String;[Ljava/lang/Object;)Lnet/minecraft/network/chat/MutableComponent;", ordinal = 1))
     private MutableComponent modifySessionReason(MutableComponent original) {
         if (SelfDestruct.INSTANCE.isDestructed()) {
             return original;
@@ -59,17 +59,17 @@ public abstract class MixinClientHandshakePacketListenerImplMixin {
         );
         var loginText = PlainText.of("Login into a Minecraft premium account and try again.");
         var retryText = PlainText.of("If you've already signed into a premium account,\n" +
-                "reload the game or re-sign into the account.");
+            "reload the game or re-sign into the account.");
 
         return Component.empty()
-                .append(notOfflineMode)
-                .append(PlainText.NEW_LINE)
-                .append(PlainText.NEW_LINE)
-                .append(requiresValidText)
-                .append(PlainText.NEW_LINE)
-                .append(loginText)
-                .append(PlainText.NEW_LINE)
-                .append(retryText);
+            .append(notOfflineMode)
+            .append(PlainText.NEW_LINE)
+            .append(PlainText.NEW_LINE)
+            .append(requiresValidText)
+            .append(PlainText.NEW_LINE)
+            .append(loginText)
+            .append(PlainText.NEW_LINE)
+            .append(retryText);
     }
 
 }

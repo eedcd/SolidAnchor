@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.entity.projectile;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.entity.projectile;
 
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleNoPush;
+import com.github.eedcd.solidanchor.features.module.modules.movement.NoPushBy;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
-import net.solidanchor.features.module.modules.movement.ModuleNoPush;
-import net.solidanchor.features.module.modules.movement.NoPushBy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.projectile.FishingHook;

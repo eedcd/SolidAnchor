@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.gson.adapter
+package com.github.eedcd.solidanchor.config.gson.adapter
 
 import com.google.gson.JsonParseException
 import com.google.gson.TypeAdapter
 import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonToken
 import com.google.gson.stream.JsonWriter
-import net.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
 
 object ColorAdapter : TypeAdapter<Color4b>() {
     override fun write(

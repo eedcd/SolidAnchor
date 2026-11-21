@@ -16,33 +16,33 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world
+package com.github.eedcd.solidanchor.features.module.modules.world
 
 import it.unimi.dsi.fastutil.longs.Long2LongOpenHashMap
 import it.unimi.dsi.fastutil.objects.ObjectArraySet
 import net.ccbluex.fastutil.enumSetAllOf
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.PlayerMovementTickEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.tickUntil
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.utils.block.UnbreakableFirst
-import net.solidanchor.utils.block.placer.BlockPlacer
-import net.solidanchor.utils.block.stateOrEmpty
-import net.solidanchor.utils.client.notification
-import net.solidanchor.utils.collection.Filter
-import net.solidanchor.utils.collection.blockSortedSetOf
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.item.getBlock
-import net.solidanchor.utils.math.BY_Y
-import net.solidanchor.utils.math.BY_Y_DESC
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.PlayerMovementTickEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.tickUntil
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.utils.block.UnbreakableFirst
+import com.github.eedcd.solidanchor.utils.block.placer.BlockPlacer
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.utils.collection.Filter
+import com.github.eedcd.solidanchor.utils.collection.blockSortedSetOf
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.item.getBlock
+import com.github.eedcd.solidanchor.utils.math.BY_Y
+import com.github.eedcd.solidanchor.utils.math.BY_Y_DESC
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.core.Vec3i

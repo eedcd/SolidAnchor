@@ -17,23 +17,23 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.ui.hud
+package com.github.eedcd.solidanchor.ui.hud
 
 import com.mojang.blaze3d.platform.InputConstants
-import net.solidanchor.config.types.RangedValue
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.ValueType
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.config.types.list.ChoiceListValue
-import net.solidanchor.config.types.list.MultiChoiceListValue
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.modules.render.ModuleHud
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.getBounds
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.render.Alignment
+import com.github.eedcd.solidanchor.config.types.RangedValue
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.ValueType
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.config.types.list.ChoiceListValue
+import com.github.eedcd.solidanchor.config.types.list.MultiChoiceListValue
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleHud
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.getBounds
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.render.Alignment
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.client.input.CharacterEvent

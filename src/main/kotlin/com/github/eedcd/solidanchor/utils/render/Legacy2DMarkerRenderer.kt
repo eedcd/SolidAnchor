@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.render
+package com.github.eedcd.solidanchor.utils.render
 
 import com.mojang.math.Axis
-import net.solidanchor.render.ClientRenderPipelines
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawCustomMesh
-import net.solidanchor.render.engine.type.Rect
-import net.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawCustomMesh
+import com.github.eedcd.solidanchor.render.engine.type.Rect
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
 import net.minecraft.world.phys.Vec3
 
 fun WorldRenderEnvironment.drawLegacy2DMarker(

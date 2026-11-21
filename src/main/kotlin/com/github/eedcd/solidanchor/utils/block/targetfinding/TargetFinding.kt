@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block.targetfinding
+package com.github.eedcd.solidanchor.utils.block.targetfinding
 
 import net.ccbluex.fastutil.enumMapOf
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.block.outlineShape
-import net.solidanchor.utils.block.stateOrEmpty
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.entity.anyHorizontal
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.math.center
-import net.solidanchor.utils.math.contains
-import net.solidanchor.utils.math.distanceToSqr
-import net.solidanchor.utils.math.geometry.AlignedFace
-import net.solidanchor.utils.math.geometry.Line
-import net.solidanchor.utils.math.minus
-import net.solidanchor.utils.math.plus
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.block.outlineShape
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.entity.anyHorizontal
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.math.center
+import com.github.eedcd.solidanchor.utils.math.contains
+import com.github.eedcd.solidanchor.utils.math.distanceToSqr
+import com.github.eedcd.solidanchor.utils.math.geometry.AlignedFace
+import com.github.eedcd.solidanchor.utils.math.geometry.Line
+import com.github.eedcd.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.utils.math.plus
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.core.Vec3i

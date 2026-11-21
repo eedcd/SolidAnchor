@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.io
+package com.github.eedcd.solidanchor.utils.io
 
 import com.mojang.blaze3d.platform.NativeImage
-import net.solidanchor.utils.render.toBufferedImage
+import com.github.eedcd.solidanchor.utils.render.toBufferedImage
 import net.minecraft.util.Util
 import okio.Buffer
 import org.lwjgl.sdl.SDLClipboard

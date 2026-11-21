@@ -18,10 +18,10 @@
  */
 @file:Suppress("NOTHING_TO_INLINE", "TooManyFunctions")
 
-package net.solidanchor.utils.math
+package com.github.eedcd.solidanchor.utils.math
 
 import it.unimi.dsi.fastutil.longs.LongComparator
-import net.solidanchor.render.engine.type.Vec3f
+import com.github.eedcd.solidanchor.render.engine.type.Vec3f
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Position
 import net.minecraft.core.SectionPos

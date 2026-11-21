@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.world
+package com.github.eedcd.solidanchor.utils.world
 
 import it.unimi.dsi.fastutil.objects.ReferenceCollection
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.level.entity.LevelEntityGetter
 import kotlin.reflect.KProperty

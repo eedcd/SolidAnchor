@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.misc
+package com.github.eedcd.solidanchor.features.module.modules.misc
 
 import it.unimi.dsi.fastutil.objects.Object2LongOpenHashMap
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap
-import net.solidanchor.event.events.EntityEquipmentChangeEvent
-import net.solidanchor.event.events.ItemLoreQueryEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.command.commands.module.CommandInvsee
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot
-import net.solidanchor.utils.inventory.ViewedInventoryScreen
-import net.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.event.events.EntityEquipmentChangeEvent
+import com.github.eedcd.solidanchor.event.events.ItemLoreQueryEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.command.commands.module.CommandInvsee
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot
+import com.github.eedcd.solidanchor.utils.inventory.ViewedInventoryScreen
+import com.github.eedcd.solidanchor.utils.text.asPlainText
 import net.minecraft.ChatFormatting
 import net.minecraft.client.player.RemotePlayer
 import net.minecraft.world.entity.EquipmentSlot

@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autobuff.features
+package com.github.eedcd.solidanchor.features.module.modules.player.autobuff.features
 
-import net.solidanchor.features.module.modules.player.autobuff.HealthBasedBuff
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.useHotbarSlotOrOffhand
+import com.github.eedcd.solidanchor.features.module.modules.player.autobuff.HealthBasedBuff
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.useHotbarSlotOrOffhand
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Items
 

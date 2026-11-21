@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.blink
+package com.github.eedcd.solidanchor.features.blink
 
 import net.minecraft.client.multiplayer.ClientLevel
 import net.minecraft.network.protocol.Packet

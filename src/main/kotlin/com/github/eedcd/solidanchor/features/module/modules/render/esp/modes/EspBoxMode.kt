@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.esp.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.esp.modes
 
 import net.ccbluex.fastutil.mapToArray
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.render.esp.ModuleESP.getColor
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.math.KeyedAabb
-import net.solidanchor.utils.math.mergeIntersectingAabbsSweep
-import net.solidanchor.utils.math.worldToLocal
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.render.esp.ModuleESP.getColor
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.math.KeyedAabb
+import com.github.eedcd.solidanchor.utils.math.mergeIntersectingAabbsSweep
+import com.github.eedcd.solidanchor.utils.math.worldToLocal
 import net.minecraft.world.phys.AABB
 
 object EspBoxMode : EspMode.BoxBased("Box") {

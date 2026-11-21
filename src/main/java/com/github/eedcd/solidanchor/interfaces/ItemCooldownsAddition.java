@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.interfaces;
+package com.github.eedcd.solidanchor.interfaces;
 
 import net.minecraft.world.item.ItemStack;
 import org.jspecify.annotations.Nullable;

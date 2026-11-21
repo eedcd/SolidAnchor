@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.thirdparty.translator
+package com.github.eedcd.solidanchor.api.thirdparty.translator
 
 /**
  * Represents a language used for translation. The interface allows for flexibility in defining

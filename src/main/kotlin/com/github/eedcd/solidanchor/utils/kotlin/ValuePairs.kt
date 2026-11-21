@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.kotlin
+package com.github.eedcd.solidanchor.utils.kotlin
 
-import net.solidanchor.utils.math.high32
-import net.solidanchor.utils.math.longFrom32
-import net.solidanchor.utils.math.low32
+import com.github.eedcd.solidanchor.utils.math.high32
+import com.github.eedcd.solidanchor.utils.math.longFrom32
+import com.github.eedcd.solidanchor.utils.math.low32
 
 @JvmInline
 value class IntIntValuePair(@JvmField val bits: Long) {

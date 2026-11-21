@@ -17,16 +17,16 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autoqueue.presets
+package com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.presets
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.player.autoqueue.ModuleAutoQueue
-import net.solidanchor.features.module.modules.player.autoqueue.ModuleAutoQueue.presets
-import net.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.ModuleAutoQueue
+import com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.ModuleAutoQueue.presets
+import com.github.eedcd.solidanchor.utils.inventory.Slots
 import net.minecraft.world.item.Items
 
 object AutoQueueHypixelSW : Mode("HypixelSW") {

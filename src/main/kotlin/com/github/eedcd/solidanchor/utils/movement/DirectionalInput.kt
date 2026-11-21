@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.movement
+package com.github.eedcd.solidanchor.utils.movement
 
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.entity.untransformed
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.entity.untransformed
 import net.minecraft.client.Options
 import net.minecraft.client.player.ClientInput
 import net.minecraft.world.entity.player.Input

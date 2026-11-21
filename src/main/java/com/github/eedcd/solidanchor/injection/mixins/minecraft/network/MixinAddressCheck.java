@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.network;
 
 import com.google.common.collect.ImmutableList;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
@@ -37,7 +37,7 @@ public interface MixinAddressCheck {
 
     /**
      * java.lang.NoClassDefFoundError: Could not initialize class net.minecraft.client.multiplayer.resolver.ServerNameResolver
-     * 	at ~
+     * at ~
      * Caused by: java.lang.ExceptionInInitializerError: Exception java.util.ServiceConfigurationError: com.mojang.blocklist.BlockListSupplier: com.mojang.patchy.MojangBlockListSupplier not a subtype
      */
     @WrapOperation(

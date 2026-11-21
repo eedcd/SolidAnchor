@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.client.error.errors
+package com.github.eedcd.solidanchor.utils.client.error.errors
 
-import net.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.addon.AddonApi
 
 @AddonApi
 open class ClientError(

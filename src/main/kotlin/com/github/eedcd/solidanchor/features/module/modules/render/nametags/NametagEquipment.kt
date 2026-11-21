@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.nametags
+package com.github.eedcd.solidanchor.features.module.modules.render.nametags
 
 import net.ccbluex.fastutil.objectLinkedSetOf
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.render.drawQuad
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.entity.usingItemOrNull
-import net.solidanchor.utils.inventory.EquipmentSlotChoice
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.render.drawQuad
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.entity.usingItemOrNull
+import com.github.eedcd.solidanchor.utils.inventory.EquipmentSlotChoice
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.gui.render.GuiRenderer.DEFAULT_ITEM_SIZE
 import net.minecraft.world.entity.LivingEntity

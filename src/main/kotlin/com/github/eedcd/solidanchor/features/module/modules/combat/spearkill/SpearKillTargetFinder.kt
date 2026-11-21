@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.spearkill
+package com.github.eedcd.solidanchor.features.module.modules.combat.spearkill
 
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.entity.isWithinWorldBorder
-import net.solidanchor.utils.entity.useItem
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.raytracing.hasLineOfSight
-import net.solidanchor.utils.raytracing.traceFromPlayer
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.entity.isWithinWorldBorder
+import com.github.eedcd.solidanchor.utils.entity.useItem
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.raytracing.hasLineOfSight
+import com.github.eedcd.solidanchor.utils.raytracing.traceFromPlayer
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.item.component.AttackRange
 import net.minecraft.world.level.ClipContext

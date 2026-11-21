@@ -17,24 +17,24 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.aiming.utils
+package com.github.eedcd.solidanchor.utils.aiming.utils
 
 import net.ccbluex.fastutil.mapToArray
-import net.solidanchor.features.module.modules.combat.aimbot.ModuleProjectileAimbot
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.math.add
-import net.solidanchor.utils.math.vertices
-import net.solidanchor.utils.math.firstHit
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.geometry.Line
-import net.solidanchor.utils.math.geometry.NormalizedPlane
-import net.solidanchor.utils.math.geometry.PlaneSection
-import net.solidanchor.utils.math.minus
-import net.solidanchor.utils.math.toVec3d
-import net.solidanchor.utils.math.withLength
+import com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.ModuleProjectileAimbot
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.math.add
+import com.github.eedcd.solidanchor.utils.math.vertices
+import com.github.eedcd.solidanchor.utils.math.firstHit
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.geometry.Line
+import com.github.eedcd.solidanchor.utils.math.geometry.NormalizedPlane
+import com.github.eedcd.solidanchor.utils.math.geometry.PlaneSection
+import com.github.eedcd.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.utils.math.toVec3d
+import com.github.eedcd.solidanchor.utils.math.withLength
 import net.minecraft.world.entity.projectile.arrow.Arrow
 import net.minecraft.world.item.Items
 import net.minecraft.world.level.ClipContext

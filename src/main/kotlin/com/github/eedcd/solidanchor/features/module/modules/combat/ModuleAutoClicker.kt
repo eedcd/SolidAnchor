@@ -16,28 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat
+package com.github.eedcd.solidanchor.features.module.modules.combat
 
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.SprintEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.tickUntil
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.combat.criticals.ModuleCriticals.CriticalsSelectionMode
-import net.solidanchor.utils.clicking.Clicker
-import net.solidanchor.utils.collection.blockSortedSetOf
-import net.solidanchor.utils.collection.itemSortedSetOf
-import net.solidanchor.utils.combat.shouldBeAttacked
-import net.solidanchor.utils.input.InputTracker.isPressedOnAny
-import net.solidanchor.utils.item.WeaponType
-import net.solidanchor.utils.kotlin.matchesAny
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.SprintEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.tickUntil
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.combat.criticals.ModuleCriticals.CriticalsSelectionMode
+import com.github.eedcd.solidanchor.utils.clicking.Clicker
+import com.github.eedcd.solidanchor.utils.collection.blockSortedSetOf
+import com.github.eedcd.solidanchor.utils.collection.itemSortedSetOf
+import com.github.eedcd.solidanchor.utils.combat.shouldBeAttacked
+import com.github.eedcd.solidanchor.utils.input.InputTracker.isPressedOnAny
+import com.github.eedcd.solidanchor.utils.item.WeaponType
+import com.github.eedcd.solidanchor.utils.kotlin.matchesAny
 import net.minecraft.client.KeyMapping
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.network.protocol.game.ServerboundPlayerActionPacket

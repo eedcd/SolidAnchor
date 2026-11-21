@@ -17,16 +17,16 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.lang
+package com.github.eedcd.solidanchor.lang
 
-import net.solidanchor.config.gson.util.readJson
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.ClientLanguageChangedEvent
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.client.NullableBypass
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.config.gson.util.readJson
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.ClientLanguageChangedEvent
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.client.NullableBypass
+import com.github.eedcd.solidanchor.utils.client.logger
 import net.minecraft.locale.Language
 import net.minecraft.network.chat.FormattedText
 import net.minecraft.network.chat.MutableComponent
@@ -71,7 +71,7 @@ object LanguageManager : ValueGroup("Language") {
         .mapNotNull(ClientLanguage::code)
         .toSet()
 
-    private val languageRegistry = ConcurrentHashMap<ClientLanguage, net.solidanchor.lang.ClientLanguage>()
+    private val languageRegistry = ConcurrentHashMap<ClientLanguage, com.github.eedcd.solidanchor.lang.ClientLanguage>()
 
     fun interface TranslationSource {
         fun load(code: String): Map<String, String>?
@@ -92,7 +92,7 @@ object LanguageManager : ValueGroup("Language") {
         languageRegistry.clear()
     }
 
-    private fun loadLanguage(choice: ClientLanguage): net.solidanchor.lang.ClientLanguage? {
+    private fun loadLanguage(choice: ClientLanguage): com.github.eedcd.solidanchor.lang.ClientLanguage? {
         require(choice != ClientLanguage.AUTO) { "Cannot load language ${choice.code} because it is auto" }
         require(choice.code != null) { "Cannot load language ${choice.tag} because it has no code" }
 

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.config.gson.adapter
+package com.github.eedcd.solidanchor.config.gson.adapter
 
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
@@ -26,10 +26,10 @@ import com.google.gson.JsonSerializationContext
 import com.google.gson.JsonSerializer
 import com.mojang.blaze3d.platform.InputConstants
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.config.gson.util.array
-import net.solidanchor.config.gson.util.string
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.utils.input.InputBind
+import com.github.eedcd.solidanchor.config.gson.util.array
+import com.github.eedcd.solidanchor.config.gson.util.string
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.utils.input.InputBind
 import java.lang.reflect.Type
 
 object InputBindAdapter : JsonSerializer<InputBind>, JsonDeserializer<InputBind> {

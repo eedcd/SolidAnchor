@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.item;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.item;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleSilentHotbar;
+import com.github.eedcd.solidanchor.features.module.modules.render.animations.ModuleAnimations;
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.features.module.modules.render.ModuleSilentHotbar;
-import net.solidanchor.features.module.modules.render.animations.ModuleAnimations;
-import net.solidanchor.utils.client.SilentHotbar;
 import net.minecraft.client.player.FirstPersonHandsAndItems;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.InteractionHand;

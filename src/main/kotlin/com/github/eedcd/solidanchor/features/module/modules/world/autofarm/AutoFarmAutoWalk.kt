@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.autofarm
+package com.github.eedcd.solidanchor.features.module.modules.world.autofarm
 
 import net.ccbluex.fastutil.weightedMinByOrNullAtMost
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.mapReadOnly
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.utils.client.notification
-import net.solidanchor.utils.collection.Filter
-import net.solidanchor.utils.collection.itemSortedSetOf
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.hasInventorySpace
-import net.solidanchor.utils.math.center
-import net.solidanchor.utils.math.sq
-import net.solidanchor.utils.navigation.NavigationBaseValueGroup
-import net.solidanchor.utils.world.entityGetter
-import net.solidanchor.utils.world.filter
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.mapReadOnly
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.utils.collection.Filter
+import com.github.eedcd.solidanchor.utils.collection.itemSortedSetOf
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.hasInventorySpace
+import com.github.eedcd.solidanchor.utils.math.center
+import com.github.eedcd.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.utils.navigation.NavigationBaseValueGroup
+import com.github.eedcd.solidanchor.utils.world.entityGetter
+import com.github.eedcd.solidanchor.utils.world.filter
 import net.minecraft.world.entity.EntityTypes
 import net.minecraft.world.entity.item.ItemEntity
 import net.minecraft.world.item.BoneMealItem

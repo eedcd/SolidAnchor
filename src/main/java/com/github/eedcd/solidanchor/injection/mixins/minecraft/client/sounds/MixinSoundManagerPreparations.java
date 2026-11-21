@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.client.sounds;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client.sounds;
 
-import net.solidanchor.features.module.modules.render.hitfx.HitFXRegistry;
+import com.github.eedcd.solidanchor.features.module.modules.render.hitfx.HitFXRegistry;
 import net.minecraft.client.sounds.SoundEngine;
 import net.minecraft.client.sounds.WeighedSoundEvents;
 import net.minecraft.resources.Identifier;

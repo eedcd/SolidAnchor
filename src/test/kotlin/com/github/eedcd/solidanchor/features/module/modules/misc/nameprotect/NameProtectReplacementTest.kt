@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.misc.nameprotect
+package com.github.eedcd.solidanchor.features.module.modules.misc.nameprotect
 
 import it.unimi.dsi.fastutil.ints.IntArrayList
 import it.unimi.dsi.fastutil.ints.IntList
 import net.ccbluex.fastutil.asIntList
 import net.ccbluex.fastutil.intListOf
-import net.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
 import net.minecraft.network.chat.Style
 import net.minecraft.util.FormattedCharSequence
 import org.ahocorasick.trie.Emit

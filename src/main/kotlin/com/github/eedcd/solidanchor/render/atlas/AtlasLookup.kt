@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.atlas
+package com.github.eedcd.solidanchor.render.atlas
 
 sealed interface AtlasLookup {
     data object NotReady : AtlasLookup

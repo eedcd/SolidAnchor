@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.speed
+package com.github.eedcd.solidanchor.features.module.modules.movement.speed
 
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.block.stateOrEmpty
-import net.solidanchor.utils.entity.SimulatedPlayer
-import net.solidanchor.utils.entity.set
-import net.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.utils.entity.SimulatedPlayer
+import com.github.eedcd.solidanchor.utils.entity.set
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
 import net.minecraft.core.BlockPos
 import net.minecraft.world.entity.Pose
 import net.minecraft.world.level.block.state.BlockState

@@ -15,19 +15,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands
+package com.github.eedcd.solidanchor.features.command.commands
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.StringReader
-import net.solidanchor.features.command.arguments.BooleanArgumentType
-import net.solidanchor.features.command.arguments.Vec3ArgumentType
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.features.command.commands.client.CommandPanic
-import net.solidanchor.features.command.commands.client.CommandTargets
-import net.solidanchor.features.command.preset.pagedList
-import net.solidanchor.test.MinecraftBootstrap
-import net.solidanchor.utils.text.asText
+import com.github.eedcd.solidanchor.features.command.arguments.BooleanArgumentType
+import com.github.eedcd.solidanchor.features.command.arguments.Vec3ArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandPanic
+import com.github.eedcd.solidanchor.features.command.commands.client.CommandTargets
+import com.github.eedcd.solidanchor.features.command.preset.pagedList
+import com.github.eedcd.solidanchor.test.MinecraftBootstrap
+import com.github.eedcd.solidanchor.utils.text.asText
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 import kotlin.test.assertFalse

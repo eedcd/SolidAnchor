@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.killaura
+package com.github.eedcd.solidanchor.features.module.modules.combat.killaura
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.utils.client.isOlderThanOrEqual1_8
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.input.InputTracker.isPressedOnAny
-import net.solidanchor.utils.input.InputTracker.wasPressedRecently
-import net.solidanchor.utils.item.getEnchantment
-import net.solidanchor.utils.item.isAxe
-import net.solidanchor.utils.item.isSword
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.utils.client.isOlderThanOrEqual1_8
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.input.InputTracker.isPressedOnAny
+import com.github.eedcd.solidanchor.utils.input.InputTracker.wasPressedRecently
+import com.github.eedcd.solidanchor.utils.item.getEnchantment
+import com.github.eedcd.solidanchor.utils.item.isAxe
+import com.github.eedcd.solidanchor.utils.item.isSword
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.MaceItem
 import net.minecraft.world.item.enchantment.Enchantments

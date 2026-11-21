@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.client;
+package com.github.eedcd.solidanchor.utils.client;
 
-import net.solidanchor.utils.network.UseItemPacketRotation;
+import com.github.eedcd.solidanchor.utils.network.UseItemPacketRotation;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.protocol.game.ServerboundUseItemPacket;
 import org.jspecify.annotations.Nullable;

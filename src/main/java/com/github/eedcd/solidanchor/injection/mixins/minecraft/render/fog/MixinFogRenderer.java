@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.render.fog;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render.fog;
 
-import net.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience;
+import com.github.eedcd.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience;
 import net.minecraft.client.Camera;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.fog.FogData;

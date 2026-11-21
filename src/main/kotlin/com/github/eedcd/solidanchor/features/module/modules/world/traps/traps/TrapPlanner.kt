@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.traps.traps
+package com.github.eedcd.solidanchor.features.module.modules.world.traps.traps
 
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.features.module.modules.world.traps.BlockChangeIntent
-import net.solidanchor.features.module.modules.world.traps.BlockIntentProvider
-import net.solidanchor.utils.block.collidingRegion
-import net.solidanchor.utils.block.immutable
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
-import net.solidanchor.utils.block.targetfinding.BlockPosOffsets
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.findClosestSlot
-import net.solidanchor.utils.math.iterate
-import net.solidanchor.utils.math.minus
-import net.solidanchor.utils.math.overlapVolume
-import net.solidanchor.utils.math.toBlockPos
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.features.module.modules.world.traps.BlockChangeIntent
+import com.github.eedcd.solidanchor.features.module.modules.world.traps.BlockIntentProvider
+import com.github.eedcd.solidanchor.utils.block.collidingRegion
+import com.github.eedcd.solidanchor.utils.block.immutable
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPlacementTargetFindingOptions
+import com.github.eedcd.solidanchor.utils.block.targetfinding.BlockPosOffsets
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.findClosestSlot
+import com.github.eedcd.solidanchor.utils.math.iterate
+import com.github.eedcd.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.utils.math.overlapVolume
+import com.github.eedcd.solidanchor.utils.math.toBlockPos
 import net.minecraft.core.BlockPos
 import net.minecraft.world.entity.EntityDimensions
 import net.minecraft.world.entity.LivingEntity

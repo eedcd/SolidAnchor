@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.client;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.client;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent;
+import com.github.eedcd.solidanchor.event.events.SprintEvent;
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager;
+import com.github.eedcd.solidanchor.utils.aiming.features.MovementCorrection;
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.MovementInputEvent;
-import net.solidanchor.event.events.SprintEvent;
-import net.solidanchor.utils.aiming.RotationManager;
-import net.solidanchor.utils.aiming.features.MovementCorrection;
-import net.solidanchor.utils.movement.DirectionalInput;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.KeyboardInput;
 import net.minecraft.util.Mth;
@@ -52,23 +52,23 @@ public abstract class MixinKeyboardInput extends MixinClientInput {
 
         // Store the untransformed input for later use
         this.untransformed = new Input(
-                untransformedDirectionalInput.getForwards(),
-                untransformedDirectionalInput.getBackwards(),
-                untransformedDirectionalInput.getLeft(),
-                untransformedDirectionalInput.getRight(),
-                event.getJump(),
-                event.getSneak(),
-                sprintEvent.getSprint()
+            untransformedDirectionalInput.getForwards(),
+            untransformedDirectionalInput.getBackwards(),
+            untransformedDirectionalInput.getLeft(),
+            untransformedDirectionalInput.getRight(),
+            event.getJump(),
+            event.getSneak(),
+            sprintEvent.getSprint()
         );
 
         return new Input(
-                directionalInput.getForwards(),
-                directionalInput.getBackwards(),
-                directionalInput.getLeft(),
-                directionalInput.getRight(),
-                event.getJump(),
-                event.getSneak(),
-                sprintEvent.getSprint()
+            directionalInput.getForwards(),
+            directionalInput.getBackwards(),
+            directionalInput.getLeft(),
+            directionalInput.getRight(),
+            event.getJump(),
+            event.getSneak(),
+            sprintEvent.getSprint()
         );
     }
 
@@ -82,16 +82,16 @@ public abstract class MixinKeyboardInput extends MixinClientInput {
         float x = KeyboardInput.calculateImpulse(input.getLeft(), input.getRight());
 
         if (configurable == null || configurable.getMovementCorrection() != MovementCorrection.SILENT
-                || rotation == null || player == null) {
+            || rotation == null || player == null) {
             return input;
         }
 
         float deltaYaw = player.getYRot() - rotation.yRot();
 
         float newX = x * Mth.cos(deltaYaw * DEG_TO_RAD) - z *
-                Mth.sin(deltaYaw * DEG_TO_RAD);
+            Mth.sin(deltaYaw * DEG_TO_RAD);
         float newZ = z * Mth.cos(deltaYaw * DEG_TO_RAD) + x *
-                Mth.sin(deltaYaw * DEG_TO_RAD);
+            Mth.sin(deltaYaw * DEG_TO_RAD);
 
         var movementSideways = Math.round(newX);
         var movementForward = Math.round(newZ);

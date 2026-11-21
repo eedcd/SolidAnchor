@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.aiming.features.processors.anglesmooth
+package com.github.eedcd.solidanchor.utils.aiming.features.processors.anglesmooth
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.aiming.features.processors.RotationProcessor
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.aiming.features.processors.RotationProcessor
 
 /**
  * An [AngleSmooth]'er, but as choice

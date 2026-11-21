@@ -17,20 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.render.entity.feature;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render.entity.feature;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleLogoffSpot;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleTrueSight;
+import com.github.eedcd.solidanchor.render.engine.type.Color4b;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.solidanchor.features.module.modules.render.ModuleLogoffSpot;
-import net.solidanchor.features.module.modules.render.ModuleTrueSight;
-import net.solidanchor.render.engine.type.Color4b;
 import net.minecraft.client.model.Model;
 import net.minecraft.client.renderer.OrderedSubmitNodeCollector;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
-import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
 import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.texture.UvMapping;

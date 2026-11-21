@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine
+package com.github.eedcd.solidanchor.render.engine
 
 import com.mojang.renderpearl.api.GpuFormat
 import com.mojang.blaze3d.pipeline.RenderTarget
 import com.mojang.blaze3d.pipeline.TextureTarget
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.render.clearColorAndDepth
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.render.clearColorAndDepth
 import java.util.function.Supplier
 
 /**

@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.render.trajectory
+package com.github.eedcd.solidanchor.utils.render.trajectory
 
-import net.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.player
 import net.minecraft.world.item.BowItem
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3

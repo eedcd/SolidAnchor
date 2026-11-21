@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.ui.hud
+package com.github.eedcd.solidanchor.ui.hud
 
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.render.engine.type.BoundingBox2f
-import net.solidanchor.utils.render.Alignment
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.render.engine.type.BoundingBox2f
+import com.github.eedcd.solidanchor.utils.render.Alignment
 
 @AddonApi
 abstract class NativeHudComponent @JvmOverloads constructor(

@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura.destroy
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.destroy
 
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.features.module.modules.combat.crystalaura.CrystalAuraDamageOptions
-import net.solidanchor.features.module.modules.combat.crystalaura.destroy.SubmoduleCrystalDestroyer.getMaxRange
-import net.solidanchor.features.module.modules.combat.crystalaura.destroy.SubmoduleCrystalDestroyer.range
-import net.solidanchor.features.module.modules.combat.crystalaura.destroy.SubmoduleCrystalDestroyer.wallsRange
-import net.solidanchor.utils.aiming.utils.canSeeBox
-import net.solidanchor.utils.combat.getEntitiesBoxInRange
-import net.solidanchor.utils.entity.isWithinWorldBorder
-import net.solidanchor.utils.entity.squaredBoxedDistanceTo
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.CrystalAuraDamageOptions
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.destroy.SubmoduleCrystalDestroyer.getMaxRange
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.destroy.SubmoduleCrystalDestroyer.range
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.destroy.SubmoduleCrystalDestroyer.wallsRange
+import com.github.eedcd.solidanchor.utils.aiming.utils.canSeeBox
+import com.github.eedcd.solidanchor.utils.combat.getEntitiesBoxInRange
+import com.github.eedcd.solidanchor.utils.entity.isWithinWorldBorder
+import com.github.eedcd.solidanchor.utils.entity.squaredBoxedDistanceTo
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.boss.enderdragon.EndCrystal
 

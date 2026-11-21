@@ -19,7 +19,7 @@
 
 @file:Suppress("NOTHING_TO_INLINE", "TooManyFunctions")
 
-package net.solidanchor.utils.kotlin
+package com.github.eedcd.solidanchor.utils.kotlin
 
 import it.unimi.dsi.fastutil.objects.ObjectArraySet
 import it.unimi.dsi.fastutil.objects.ObjectImmutableList

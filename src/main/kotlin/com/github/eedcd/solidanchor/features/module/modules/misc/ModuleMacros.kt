@@ -17,28 +17,28 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.misc
+package com.github.eedcd.solidanchor.features.module.modules.misc
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.config.utils.asRefreshable
-import net.solidanchor.event.events.KeyEvent
-import net.solidanchor.event.suspendHandler
-import net.solidanchor.features.command.CommandManager
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.block.doPlacement
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.client.clientStartDurationMs
-import net.solidanchor.utils.network.sendChatOrCommand
-import net.solidanchor.utils.inventory.SingleItemStackPickMode
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.entity.useItem
-import net.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.utils.asRefreshable
+import com.github.eedcd.solidanchor.event.events.KeyEvent
+import com.github.eedcd.solidanchor.event.suspendHandler
+import com.github.eedcd.solidanchor.features.command.CommandManager
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.block.doPlacement
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.client.clientStartDurationMs
+import com.github.eedcd.solidanchor.utils.network.sendChatOrCommand
+import com.github.eedcd.solidanchor.utils.inventory.SingleItemStackPickMode
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.entity.useItem
+import com.github.eedcd.solidanchor.utils.entity.rotation
 import net.minecraft.world.phys.BlockHitResult
 import kotlin.time.Duration.Companion.milliseconds
 

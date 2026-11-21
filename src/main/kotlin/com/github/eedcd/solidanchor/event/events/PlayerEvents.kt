@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.event.events
+package com.github.eedcd.solidanchor.event.events
 
-import net.solidanchor.annotations.Tag
-import net.solidanchor.event.CancellableEvent
-import net.solidanchor.event.Event
-import net.solidanchor.event.EventState
-import net.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.annotations.Tag
+import com.github.eedcd.solidanchor.event.CancellableEvent
+import com.github.eedcd.solidanchor.event.Event
+import com.github.eedcd.solidanchor.event.EventState
+import com.github.eedcd.solidanchor.features.addon.AddonApi
 import net.minecraft.tags.TagKey
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResult

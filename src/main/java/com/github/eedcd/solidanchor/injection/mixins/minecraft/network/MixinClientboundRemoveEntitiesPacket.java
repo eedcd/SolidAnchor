@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.network;
 
-import net.solidanchor.interfaces.ClientboundRemoveEntitiesPacketAddition;
+import com.github.eedcd.solidanchor.interfaces.ClientboundRemoveEntitiesPacketAddition;
 import net.minecraft.network.protocol.game.ClientboundRemoveEntitiesPacket;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;

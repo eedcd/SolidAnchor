@@ -17,30 +17,30 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.potionfx.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes
 
 import com.mojang.math.Axis
 import net.ccbluex.fastutil.enumSetAllOf
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.config.utils.TextureMode
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.render.potionfx.ModulePotionFX
-import net.solidanchor.features.module.modules.render.potionfx.ModulePotionFX.PresetTexture
-import net.solidanchor.features.module.modules.render.potionfx.ModulePotionFX.SecondaryPresetTexture
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXPlayers.MainEffect.radius
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXPlayers.MainEffect.rotationSpeed
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXPlayers.MainEffect.textureMode
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXPlayers.SecondEffect.extraRadius
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXPlayers.SecondEffect.secondaryTextureMode
-import net.solidanchor.render.AnchorPoint
-import net.solidanchor.render.drawSquareTexture
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.world.EntityLookup.Companion.EntityLookup
-import net.solidanchor.utils.world.filterTo
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.config.utils.TextureMode
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.ModulePotionFX
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.ModulePotionFX.PresetTexture
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.ModulePotionFX.SecondaryPresetTexture
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXPlayers.MainEffect.radius
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXPlayers.MainEffect.rotationSpeed
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXPlayers.MainEffect.textureMode
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXPlayers.SecondEffect.extraRadius
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXPlayers.SecondEffect.secondaryTextureMode
+import com.github.eedcd.solidanchor.render.AnchorPoint
+import com.github.eedcd.solidanchor.render.drawSquareTexture
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.world.EntityLookup.Companion.EntityLookup
+import com.github.eedcd.solidanchor.utils.world.filterTo
 import net.minecraft.world.entity.EntityTypes
 import net.minecraft.world.item.alchemy.PotionContents.getColorOptional
 

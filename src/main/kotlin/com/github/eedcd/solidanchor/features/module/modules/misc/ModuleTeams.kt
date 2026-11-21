@@ -16,21 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.misc
+package com.github.eedcd.solidanchor.features.module.modules.misc
 
 import it.unimi.dsi.fastutil.objects.ObjectLinkedOpenHashSet
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.TagEntityEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.entity.simpleDisplayName
-import net.solidanchor.utils.text.stripMinecraftColorCodes
-import net.solidanchor.utils.inventory.EquipmentSlotChoice
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.kotlin.matchesAny
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.TagEntityEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.entity.simpleDisplayName
+import com.github.eedcd.solidanchor.utils.text.stripMinecraftColorCodes
+import com.github.eedcd.solidanchor.utils.inventory.EquipmentSlotChoice
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.kotlin.matchesAny
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.player.Player

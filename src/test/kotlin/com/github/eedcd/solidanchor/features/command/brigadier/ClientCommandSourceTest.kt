@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.brigadier
+package com.github.eedcd.solidanchor.features.command.brigadier
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.StringReader
-import net.solidanchor.features.command.arguments.resourceArgument
-import net.solidanchor.test.MinecraftBootstrap
+import com.github.eedcd.solidanchor.features.command.arguments.resourceArgument
+import com.github.eedcd.solidanchor.test.MinecraftBootstrap
 import net.minecraft.core.registries.Registries
 import kotlin.test.BeforeTest
 import kotlin.test.Test

@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.text;
+package com.github.eedcd.solidanchor.utils.text;
 
 import kotlin.LazyKt;
 import kotlin.jvm.functions.Function0;

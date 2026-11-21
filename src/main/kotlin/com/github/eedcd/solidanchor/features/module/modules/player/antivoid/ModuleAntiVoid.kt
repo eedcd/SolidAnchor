@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.antivoid
+package com.github.eedcd.solidanchor.features.module.modules.player.antivoid
 
-import net.solidanchor.common.ShapeFlag
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.NotificationEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.player.antivoid.mode.AntiVoidBlinkMode
-import net.solidanchor.features.module.modules.player.antivoid.mode.AntiVoidFlagMode
-import net.solidanchor.features.module.modules.player.antivoid.mode.AntiVoidGhostBlockMode
-import net.solidanchor.features.module.modules.player.antivoid.mode.AntiVoidUseItemMode
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.client.notification
-import net.solidanchor.utils.entity.PlayerSimulationCache
-import net.solidanchor.utils.math.allEmpty
+import com.github.eedcd.solidanchor.common.ShapeFlag
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.NotificationEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.player.antivoid.mode.AntiVoidBlinkMode
+import com.github.eedcd.solidanchor.features.module.modules.player.antivoid.mode.AntiVoidFlagMode
+import com.github.eedcd.solidanchor.features.module.modules.player.antivoid.mode.AntiVoidGhostBlockMode
+import com.github.eedcd.solidanchor.features.module.modules.player.antivoid.mode.AntiVoidUseItemMode
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugGeometry
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.client.notification
+import com.github.eedcd.solidanchor.utils.entity.PlayerSimulationCache
+import com.github.eedcd.solidanchor.utils.math.allEmpty
 import net.minecraft.world.phys.Vec3
 
 /**

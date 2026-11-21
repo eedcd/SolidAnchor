@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.module.teleport
+package com.github.eedcd.solidanchor.features.command.commands.module.teleport
 
 import com.mojang.brigadier.CommandDispatcher
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.arguments.BooleanArgumentType
-import net.solidanchor.features.command.arguments.Vec3ArgumentType
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.features.module.modules.movement.ModuleTeleport
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.arguments.BooleanArgumentType
+import com.github.eedcd.solidanchor.features.command.arguments.Vec3ArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleTeleport
 
 /**
  * Teleport Command

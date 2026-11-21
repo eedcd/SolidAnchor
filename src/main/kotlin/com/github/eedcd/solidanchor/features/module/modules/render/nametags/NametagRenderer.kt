@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.nametags
+package com.github.eedcd.solidanchor.features.module.modules.render.nametags
 
-import net.solidanchor.render.FontManager
-import net.solidanchor.render.drawRoundedRect
-import net.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.FontManager
+import com.github.eedcd.solidanchor.render.drawRoundedRect
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
 import net.minecraft.client.gui.GuiGraphicsExtractor
 
 private const val NAMETAG_PADDING: Int = 15

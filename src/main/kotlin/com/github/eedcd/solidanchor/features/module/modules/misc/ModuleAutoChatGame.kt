@@ -16,21 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.misc
+package com.github.eedcd.solidanchor.features.module.modules.misc
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
-import net.solidanchor.api.thirdparty.ai.AiChatClient
-import net.solidanchor.api.thirdparty.ai.AiProtocol
-import net.solidanchor.event.events.ChatReceiveEvent
-import net.solidanchor.event.sequenceHandler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.tickUntil
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.api.thirdparty.ai.AiChatClient
+import com.github.eedcd.solidanchor.api.thirdparty.ai.AiProtocol
+import com.github.eedcd.solidanchor.event.events.ChatReceiveEvent
+import com.github.eedcd.solidanchor.event.sequenceHandler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.tickUntil
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.client.chat
 import kotlin.time.Duration.Companion.milliseconds
 
 /**

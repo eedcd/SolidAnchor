@@ -16,21 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block.placer
+package com.github.eedcd.solidanchor.utils.block.placer
 
 import net.ccbluex.fastutil.objectHashSetOf
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.utils.block.isUnobstructed
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.collection.Filter
-import net.solidanchor.utils.collection.blockSortedSetOf
-import net.solidanchor.utils.block.WeightedEdge
-import net.solidanchor.utils.block.dijkstraShortestPath
-import net.solidanchor.utils.block.hasAnySolidPlacementNeighbor
-import net.solidanchor.utils.block.immutable
-import net.solidanchor.utils.block.stateOrEmpty
-import net.solidanchor.utils.kotlin.toOrderedSet
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.utils.block.isUnobstructed
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.collection.Filter
+import com.github.eedcd.solidanchor.utils.collection.blockSortedSetOf
+import com.github.eedcd.solidanchor.utils.block.WeightedEdge
+import com.github.eedcd.solidanchor.utils.block.dijkstraShortestPath
+import com.github.eedcd.solidanchor.utils.block.hasAnySolidPlacementNeighbor
+import com.github.eedcd.solidanchor.utils.block.immutable
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.utils.kotlin.toOrderedSet
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 

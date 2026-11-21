@@ -18,7 +18,7 @@
  */
 @file:Suppress("NOTHING_TO_INLINE")
 
-package net.solidanchor.utils.math
+package com.github.eedcd.solidanchor.utils.math
 
 inline fun Int.sq(): Int {
     return this * this

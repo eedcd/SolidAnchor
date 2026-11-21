@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player
+package com.github.eedcd.solidanchor.features.module.modules.player
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.features.module.modules.world.scaffold.ScaffoldBlockItemSelection.isValidBlock
-import net.solidanchor.utils.entity.isCloseToEdge
-import net.solidanchor.utils.kotlin.EventPriorityConvention.SAFETY_FEATURE
-import net.solidanchor.utils.kotlin.matchesAll
-import net.solidanchor.utils.kotlin.random
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ScaffoldBlockItemSelection.isValidBlock
+import com.github.eedcd.solidanchor.utils.entity.isCloseToEdge
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.SAFETY_FEATURE
+import com.github.eedcd.solidanchor.utils.kotlin.matchesAll
+import com.github.eedcd.solidanchor.utils.kotlin.random
 import java.util.function.Predicate
 
 /**

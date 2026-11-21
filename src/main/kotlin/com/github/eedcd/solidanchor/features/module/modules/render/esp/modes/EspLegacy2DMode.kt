@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.esp.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.esp.modes
 
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.render.esp.ModuleESP.getColor
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.utils.entity.RenderedEntities
-import net.solidanchor.utils.entity.interpolateCurrentPosition
-import net.solidanchor.utils.render.drawLegacy2DMarker
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.render.esp.ModuleESP.getColor
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.utils.entity.RenderedEntities
+import com.github.eedcd.solidanchor.utils.entity.interpolateCurrentPosition
+import com.github.eedcd.solidanchor.utils.render.drawLegacy2DMarker
 
 object EspLegacy2DMode : EspMode("Legacy2D") {
 

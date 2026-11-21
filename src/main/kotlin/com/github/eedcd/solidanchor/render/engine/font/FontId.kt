@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.font
+package com.github.eedcd.solidanchor.render.engine.font
 
-import net.solidanchor.annotations.ValueClassCandidate
+import com.github.eedcd.solidanchor.annotations.ValueClassCandidate
 import java.awt.Font
 
 /**
  * One face at one style, as rasterized here: the identity every glyph lookup keys on.
  *
- * Its layout lives in [TextMetrics], which a [net.solidanchor.render.FontFace]
+ * Its layout lives in [TextMetrics], which a [com.github.eedcd.solidanchor.render.FontFace]
  * pairs up with this.
  */
 @ValueClassCandidate

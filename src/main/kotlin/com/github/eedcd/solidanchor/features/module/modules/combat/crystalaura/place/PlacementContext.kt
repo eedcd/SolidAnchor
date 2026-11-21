@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura.place
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place
 
-import net.solidanchor.utils.block.stateOrEmpty
-import net.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.utils.client.player
 import net.minecraft.core.BlockPos
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.level.block.Blocks

@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.thirdparty
+package com.github.eedcd.solidanchor.api.thirdparty
 
 import com.mojang.util.UndashedUuid
-import net.solidanchor.api.core.HttpClient.mojangApiClient
+import com.github.eedcd.solidanchor.api.core.HttpClient.mojangApiClient
 import java.util.UUID
 
 internal suspend fun lookupUuidByName(username: String): UUID? = try {

@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.gui.element;
+package com.github.eedcd.solidanchor.render.gui.element;
 
-import com.mojang.renderpearl.api.pipeline.RenderPipeline;
+import com.github.eedcd.solidanchor.utils.render.VerticesSetupHandler;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.solidanchor.utils.render.VerticesSetupHandler;
+import com.mojang.renderpearl.api.pipeline.RenderPipeline;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
 import net.minecraft.client.gui.render.TextureSetup;
 import org.joml.Matrix3x2f;

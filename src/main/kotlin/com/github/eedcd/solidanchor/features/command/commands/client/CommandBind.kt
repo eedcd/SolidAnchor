@@ -15,33 +15,33 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.client
+package com.github.eedcd.solidanchor.features.command.commands.client
 
 import com.mojang.blaze3d.platform.InputConstants
 import com.mojang.brigadier.CommandDispatcher
 import net.ccbluex.fastutil.toEnumSet
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.arguments.ClientStringArgumentType
-import net.solidanchor.features.command.arguments.ModuleArgumentType
-import net.solidanchor.features.command.arguments.MultiTaggedArgumentType
-import net.solidanchor.features.command.arguments.TaggedArgumentType
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.CmdI18n
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.features.command.brigadier.suggestions
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.modules.render.ModuleClickGui
-import net.solidanchor.utils.client.MessageMetadata
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.variable
-import net.solidanchor.utils.input.InputBind
-import net.solidanchor.utils.input.availableInputKeys
-import net.solidanchor.utils.input.bind
-import net.solidanchor.utils.input.inputByName
-import net.solidanchor.utils.input.renderText
-import net.solidanchor.utils.input.unbind
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.arguments.ClientStringArgumentType
+import com.github.eedcd.solidanchor.features.command.arguments.ModuleArgumentType
+import com.github.eedcd.solidanchor.features.command.arguments.MultiTaggedArgumentType
+import com.github.eedcd.solidanchor.features.command.arguments.TaggedArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdI18n
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.features.command.brigadier.suggestions
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleClickGui
+import com.github.eedcd.solidanchor.utils.client.MessageMetadata
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.utils.input.InputBind
+import com.github.eedcd.solidanchor.utils.input.availableInputKeys
+import com.github.eedcd.solidanchor.utils.input.bind
+import com.github.eedcd.solidanchor.utils.input.inputByName
+import com.github.eedcd.solidanchor.utils.input.renderText
+import com.github.eedcd.solidanchor.utils.input.unbind
 
 /**
  * Bind Command

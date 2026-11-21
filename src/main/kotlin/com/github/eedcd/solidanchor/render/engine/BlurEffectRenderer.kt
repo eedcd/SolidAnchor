@@ -16,24 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.render.engine
+package com.github.eedcd.solidanchor.render.engine
 
 import com.mojang.blaze3d.buffers.Std140Builder
 import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.renderpearl.api.textures.FilterMode
-import net.solidanchor.SolidAnchor
-import net.solidanchor.event.EventListener
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.features.module.modules.player.cheststealer.features.FeatureSilentScreen
-import net.solidanchor.features.module.modules.render.ModuleHud
-import net.solidanchor.render.ClientRenderPipelines
-import net.solidanchor.render.ClientUniformDefine
-import net.solidanchor.render.buffers.CachedUniform
-import net.solidanchor.render.createRenderPass
-import net.solidanchor.render.setPipeline
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.client.inGame
-import net.solidanchor.utils.math.Easing
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.features.module.modules.player.cheststealer.features.FeatureSilentScreen
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleHud
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines
+import com.github.eedcd.solidanchor.render.ClientUniformDefine
+import com.github.eedcd.solidanchor.render.buffers.CachedUniform
+import com.github.eedcd.solidanchor.render.createRenderPass
+import com.github.eedcd.solidanchor.render.setPipeline
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.client.inGame
+import com.github.eedcd.solidanchor.utils.math.Easing
 import net.minecraft.client.gui.screens.ChatScreen
 import kotlin.math.ceil
 import kotlin.math.exp

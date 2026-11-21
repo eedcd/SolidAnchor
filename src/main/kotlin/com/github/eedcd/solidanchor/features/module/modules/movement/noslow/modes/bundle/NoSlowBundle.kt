@@ -16,8 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.noslow.modes.bundle
+package com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.bundle
 
-import net.solidanchor.features.module.modules.movement.noslow.NoSlowUseActionHandler
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.NoSlowUseActionHandler
 
 object NoSlowBundle : NoSlowUseActionHandler("Bundle")

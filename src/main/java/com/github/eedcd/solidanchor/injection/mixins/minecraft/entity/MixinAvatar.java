@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.entity;
 
-import net.solidanchor.features.module.modules.movement.ModuleNoPose;
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleNoPose;
 import net.minecraft.world.entity.Avatar;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Pose;
@@ -32,7 +32,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class MixinAvatar {
     /**
      * Sneak height fix
-     * @see net.solidanchor.features.module.modules.movement.ModuleNoPose
+     *
+     * @see com.github.eedcd.solidanchor.features.module.modules.movement.ModuleNoPose
      */
     @Inject(method = "getDefaultDimensions", at = @At("RETURN"), cancellable = true)
     private void hookGetBaseDimensions(Pose pose, CallbackInfoReturnable<EntityDimensions> cir) {

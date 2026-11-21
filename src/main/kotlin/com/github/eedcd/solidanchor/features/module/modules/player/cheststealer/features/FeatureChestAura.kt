@@ -16,30 +16,30 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.cheststealer.features
+package com.github.eedcd.solidanchor.features.module.modules.player.cheststealer.features
 
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickConditional
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.player.cheststealer.ModuleChestStealer
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.aiming.utils.selectBlockTarget
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.block.anotherChestPartDirection
-import net.solidanchor.utils.block.searchBlocksInRangeSorted
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.combat.CombatManager
-import net.solidanchor.utils.entity.shouldSwingHand
-import net.solidanchor.utils.inventory.findBlocksEndingWith
-import net.solidanchor.utils.kotlin.EventPriorityConvention.READ_FINAL_STATE
-import net.solidanchor.utils.raytracing.raytraceBlock
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickConditional
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.player.cheststealer.ModuleChestStealer
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.utils.selectBlockTarget
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.block.anotherChestPartDirection
+import com.github.eedcd.solidanchor.utils.block.searchBlocksInRangeSorted
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.combat.CombatManager
+import com.github.eedcd.solidanchor.utils.entity.shouldSwingHand
+import com.github.eedcd.solidanchor.utils.inventory.findBlocksEndingWith
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.READ_FINAL_STATE
+import com.github.eedcd.solidanchor.utils.raytracing.raytraceBlock
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 import net.minecraft.core.BlockPos
 import net.minecraft.network.protocol.game.ServerboundUseItemOnPacket

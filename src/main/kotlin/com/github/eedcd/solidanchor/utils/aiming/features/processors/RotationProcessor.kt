@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.aiming.features.processors
+package com.github.eedcd.solidanchor.utils.aiming.features.processors
 
-import net.solidanchor.utils.aiming.RotationTarget
-import net.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.aiming.RotationTarget
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
 
 /**
  * Processes the rotation from the current to the target rotation.

@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.cameraclip
+package com.github.eedcd.solidanchor.features.module.modules.render.cameraclip
 
 import com.mojang.blaze3d.platform.InputConstants
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.KeyboardKeyEvent
-import net.solidanchor.event.events.PerspectiveEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.ModuleFreeLook
-import net.solidanchor.utils.input.isPressed
-import net.solidanchor.utils.kotlin.EventPriorityConvention
-import net.solidanchor.utils.math.Easing
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.KeyboardKeyEvent
+import com.github.eedcd.solidanchor.event.events.PerspectiveEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleFreeLook
+import com.github.eedcd.solidanchor.utils.input.isPressed
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.utils.math.Easing
 import net.minecraft.client.CameraType
 import net.minecraft.util.Mth
 

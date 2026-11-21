@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.velocity.mode
+package com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.modules.combat.velocity.ModuleVelocity.modes
-import net.solidanchor.features.module.modules.combat.velocity.ModuleVelocity.pause
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.ModuleVelocity.modes
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.ModuleVelocity.pause
 
 abstract class VelocityMode(name: String) : Mode(name) {
 

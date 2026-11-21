@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine
+package com.github.eedcd.solidanchor.render.engine
 
-import net.solidanchor.render.ClientRenderPipelines
-import net.solidanchor.utils.client.inGame
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines
+import com.github.eedcd.solidanchor.utils.client.inGame
 
 /**
- * For [net.solidanchor.features.module.modules.render.ModuleBlockESP] outline mode.
+ * For [com.github.eedcd.solidanchor.features.module.modules.render.ModuleBlockESP] outline mode.
  *
- * @see net.solidanchor.event.events.DrawOutlinesEvent
+ * @see com.github.eedcd.solidanchor.event.events.DrawOutlinesEvent
  */
 @Deprecated("Disabled this feature")
 object OutlineShaderRenderer : OverlayShaderRenderer(

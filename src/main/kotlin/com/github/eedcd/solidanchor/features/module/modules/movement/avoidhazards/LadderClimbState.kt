@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.avoidhazards
+package com.github.eedcd.solidanchor.features.module.modules.movement.avoidhazards
 
 import net.minecraft.core.Direction
 import net.minecraft.world.level.block.LadderBlock

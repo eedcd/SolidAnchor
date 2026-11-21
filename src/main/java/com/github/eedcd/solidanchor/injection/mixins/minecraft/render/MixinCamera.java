@@ -16,22 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.render;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.PerspectiveEvent;
+import com.github.eedcd.solidanchor.features.module.modules.combat.aimbot.ModuleDroneControl;
+import com.github.eedcd.solidanchor.features.module.modules.render.*;
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.PerspectiveEvent;
-import net.solidanchor.features.module.modules.combat.aimbot.ModuleDroneControl;
-import net.solidanchor.features.module.modules.render.ModuleAspect;
-import net.solidanchor.features.module.modules.render.ModuleFreeCam;
-import net.solidanchor.features.module.modules.render.ModuleFreeLook;
-import net.solidanchor.features.module.modules.render.ModuleNoFov;
-import net.solidanchor.features.module.modules.render.ModuleQuickPerspectiveSwap;
-import net.solidanchor.features.module.modules.render.ModuleSmoothCamera;
-import net.solidanchor.features.module.modules.render.ModuleZoom;
-import net.solidanchor.utils.aiming.data.Rotation;
 import net.minecraft.client.Camera;
 import net.minecraft.client.CameraType;
 import net.minecraft.client.Minecraft;
@@ -56,6 +50,11 @@ public abstract class MixinCamera {
     private float yRot;
     @Shadow
     private float xRot;
+    @Shadow
+    private @Nullable Entity entity;
+    @Shadow
+    @Final
+    private Minecraft minecraft;
 
     @Shadow
     protected abstract void setRotation(float yRot, float xRot);
@@ -71,13 +70,6 @@ public abstract class MixinCamera {
 
     @Shadow
     public abstract boolean isPanoramicMode();
-
-    @Shadow
-    private @Nullable Entity entity;
-
-    @Shadow
-    @Final
-    private Minecraft minecraft;
 
     @Inject(method = "alignWithEntity", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Camera;setPosition(DDD)V", shift = At.Shift.AFTER))
     private void hookFreeCamModifiedPosition(float partialTicks, CallbackInfo ci) {
@@ -206,7 +198,7 @@ public abstract class MixinCamera {
      *     ...
      *     return this.modifyFovBasedOnDeathOrFluid(partialTicks, fov);
      * </pre>
-     *
+     * <p>
      * The base fov above is an {@code int}, so the zoom would end in whole degrees. Re-add the fraction.
      */
     @ModifyReturnValue(method = "calculateFov", at = @At("RETURN"))

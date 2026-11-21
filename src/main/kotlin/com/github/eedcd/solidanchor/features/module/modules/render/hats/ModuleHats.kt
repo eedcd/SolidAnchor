@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.hats
+package com.github.eedcd.solidanchor.features.module.modules.render.hats
 
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.hats.modes.HatsCone
-import net.solidanchor.features.module.modules.render.hats.modes.HatsFlower
-import net.solidanchor.features.module.modules.render.hats.modes.HatsHalo
-import net.solidanchor.features.module.modules.render.hats.modes.HatsImage
-import net.solidanchor.features.module.modules.render.hats.modes.HatsOrbs
-import net.solidanchor.features.module.modules.render.hats.modes.HatsStar
-import net.solidanchor.render.utils.AnimatedValueGroup
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.hats.modes.HatsCone
+import com.github.eedcd.solidanchor.features.module.modules.render.hats.modes.HatsFlower
+import com.github.eedcd.solidanchor.features.module.modules.render.hats.modes.HatsHalo
+import com.github.eedcd.solidanchor.features.module.modules.render.hats.modes.HatsImage
+import com.github.eedcd.solidanchor.features.module.modules.render.hats.modes.HatsOrbs
+import com.github.eedcd.solidanchor.features.module.modules.render.hats.modes.HatsStar
+import com.github.eedcd.solidanchor.render.utils.AnimatedValueGroup
 import org.joml.Vector2f
 
 /**

@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.gui.element;
+package com.github.eedcd.solidanchor.render.gui.element;
 
-import net.solidanchor.utils.collection.Pools;
+import com.github.eedcd.solidanchor.utils.collection.Pools;
 import org.joml.Matrix3x2f;
 
 public sealed interface PoseReusableGuiElementRenderState

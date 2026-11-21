@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.block
+package com.github.eedcd.solidanchor.utils.block
 
 import net.minecraft.world.level.levelgen.structure.BoundingBox
 import kotlin.test.assertEquals

@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.autoarmor
+package com.github.eedcd.solidanchor.features.module.modules.combat.autoarmor
 
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.combat.autoarmor.ModuleAutoArmor.UseHotbar
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.item.armor.ArmorEvaluation
-import net.solidanchor.utils.item.armor.ArmorPiece
-import net.solidanchor.utils.item.durability
-import net.solidanchor.utils.item.isPlayerArmor
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.combat.autoarmor.ModuleAutoArmor.UseHotbar
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.item.armor.ArmorEvaluation
+import com.github.eedcd.solidanchor.utils.item.armor.ArmorPiece
+import com.github.eedcd.solidanchor.utils.item.durability
+import com.github.eedcd.solidanchor.utils.item.isPlayerArmor
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 import net.minecraft.client.gui.screens.inventory.InventoryScreen
 

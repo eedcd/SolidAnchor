@@ -17,8 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.render.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render.entity;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.*;
+import com.github.eedcd.solidanchor.interfaces.EntityRenderStateAddition;
+import com.github.eedcd.solidanchor.render.engine.type.Color4b;
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
@@ -26,14 +30,9 @@ import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.vertex.PoseStack;
 import kotlin.Pair;
-import net.solidanchor.features.module.modules.render.*;
-import net.solidanchor.interfaces.EntityRenderStateAddition;
-import net.solidanchor.render.engine.type.Color4b;
-import net.solidanchor.utils.aiming.data.Rotation;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.Model;
-import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
@@ -45,8 +44,8 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import org.jspecify.annotations.Nullable;
 import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;

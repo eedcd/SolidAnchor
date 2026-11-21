@@ -17,21 +17,21 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.jumpeffect.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.jumpeffect.modes
 
 import com.mojang.math.Axis
 import net.ccbluex.fastutil.enumSetAllOf
-import net.solidanchor.SolidAnchor
-import net.solidanchor.SolidAnchor.CLIENT_NAME
-import net.solidanchor.config.utils.TextureMode
-import net.solidanchor.features.module.modules.render.jumpeffect.JumpEffectColorSettings
-import net.solidanchor.features.module.modules.render.jumpeffect.JumpEffectMode
-import net.solidanchor.render.AnchorPoint
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawSquareTextureGradient
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.render.asTexture
-import net.solidanchor.utils.render.readNativeImage
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.SolidAnchor.CLIENT_NAME
+import com.github.eedcd.solidanchor.config.utils.TextureMode
+import com.github.eedcd.solidanchor.features.module.modules.render.jumpeffect.JumpEffectColorSettings
+import com.github.eedcd.solidanchor.features.module.modules.render.jumpeffect.JumpEffectMode
+import com.github.eedcd.solidanchor.render.AnchorPoint
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawSquareTextureGradient
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.render.asTexture
+import com.github.eedcd.solidanchor.utils.render.readNativeImage
 
 internal object JumpEffectImage : JumpEffectMode("Image") {
 

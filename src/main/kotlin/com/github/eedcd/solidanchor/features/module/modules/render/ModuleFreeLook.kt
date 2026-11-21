@@ -17,16 +17,16 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.MouseRotationEvent
-import net.solidanchor.event.events.PerspectiveEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.aiming.utils.RotationUtil
-import net.solidanchor.utils.input.InputBind
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.MouseRotationEvent
+import com.github.eedcd.solidanchor.event.events.PerspectiveEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.aiming.utils.RotationUtil
+import com.github.eedcd.solidanchor.utils.input.InputBind
 import net.minecraft.client.CameraType
 import net.minecraft.client.CameraType.THIRD_PERSON_BACK
 import net.minecraft.client.CameraType.THIRD_PERSON_FRONT

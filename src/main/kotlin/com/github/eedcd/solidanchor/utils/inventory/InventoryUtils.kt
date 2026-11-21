@@ -18,19 +18,19 @@
  */
 @file:Suppress("TooManyFunctions")
 
-package net.solidanchor.utils.inventory
+package com.github.eedcd.solidanchor.utils.inventory
 
-import net.solidanchor.event.EventListener
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.collection.blockSortedSetOf
-import net.solidanchor.utils.item.durability
-import net.solidanchor.utils.item.getDestroySpeedWithEnchantment
-import net.solidanchor.utils.item.isMergeable
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.collection.blockSortedSetOf
+import com.github.eedcd.solidanchor.utils.item.durability
+import com.github.eedcd.solidanchor.utils.item.getDestroySpeedWithEnchantment
+import com.github.eedcd.solidanchor.utils.item.isMergeable
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.world.InteractionResult
@@ -94,7 +94,7 @@ fun useHotbarSlotOrOffhand(
     swingMode: SwingMode = SwingMode.DO_NOT_HIDE,
 ): InteractionResult {
     SilentHotbar.selectSlotSilently(requester, slot, ticksUntilReset)
-    return net.solidanchor.utils.entity.useItem(slot.useHand, yRot, xRot, swingMode)
+    return com.github.eedcd.solidanchor.utils.entity.useItem(slot.useHand, yRot, xRot, swingMode)
 }
 
 internal fun findBlocksEndingWith(vararg targets: String): SortedSet<Block> =

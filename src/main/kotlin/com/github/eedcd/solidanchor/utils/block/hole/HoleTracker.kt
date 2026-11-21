@@ -16,19 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block.hole
+package com.github.eedcd.solidanchor.utils.block.hole
 
 import it.unimi.dsi.fastutil.longs.Long2ByteOpenHashMap
 import net.ccbluex.fastutil.referenceHashSetOf
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.block.ChunkScanner
-import net.solidanchor.utils.block.DIRECTIONS_EXCLUDING_UP
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.kotlin.getValue
-import net.solidanchor.utils.math.expandToBoundingBox
-import net.solidanchor.utils.math.iterator
-import net.solidanchor.utils.math.size
-import net.solidanchor.utils.math.toBlockBox
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.block.ChunkScanner
+import com.github.eedcd.solidanchor.utils.block.DIRECTIONS_EXCLUDING_UP
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.kotlin.getValue
+import com.github.eedcd.solidanchor.utils.math.expandToBoundingBox
+import com.github.eedcd.solidanchor.utils.math.iterator
+import com.github.eedcd.solidanchor.utils.math.size
+import com.github.eedcd.solidanchor.utils.math.toBlockBox
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.core.registries.BuiltInRegistries

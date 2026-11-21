@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.font
+package com.github.eedcd.solidanchor.render.engine.font
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.addon.AddonApi
 
 @AddonApi
 enum class VerticalAnchor(override val tag: String) : Tagged {

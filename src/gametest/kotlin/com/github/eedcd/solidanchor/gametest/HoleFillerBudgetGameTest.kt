@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.gametest
+package com.github.eedcd.solidanchor.gametest
 
 import com.google.gson.JsonArray
 import com.mojang.authlib.GameProfile
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.gson.util.GSON_DEFAULT
-import net.solidanchor.features.global.GlobalSettingsTarget
-import net.solidanchor.features.module.modules.world.ModuleHoleFiller
-import net.solidanchor.utils.block.hole.Hole
-import net.solidanchor.utils.combat.shouldBeAttacked
-import net.solidanchor.utils.world.nextLocalEntityId
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.gson.util.GSON_DEFAULT
+import com.github.eedcd.solidanchor.features.global.GlobalSettingsTarget
+import com.github.eedcd.solidanchor.features.module.modules.world.ModuleHoleFiller
+import com.github.eedcd.solidanchor.utils.block.hole.Hole
+import com.github.eedcd.solidanchor.utils.combat.shouldBeAttacked
+import com.github.eedcd.solidanchor.utils.world.nextLocalEntityId
 import net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest
 import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext
 import net.minecraft.client.Minecraft

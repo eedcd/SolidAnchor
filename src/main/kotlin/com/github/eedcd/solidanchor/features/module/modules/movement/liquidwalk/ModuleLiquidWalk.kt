@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.liquidwalk
+package com.github.eedcd.solidanchor.features.module.modules.movement.liquidwalk
 
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.movement.liquidwalk.modes.LiquidWalkNoCheatPlus
-import net.solidanchor.features.module.modules.movement.liquidwalk.modes.LiquidWalkVanilla
-import net.solidanchor.features.module.modules.movement.liquidwalk.modes.LiquidWalkVerusB3901
-import net.solidanchor.features.module.modules.movement.liquidwalk.modes.LiquidWalkVulcan291
-import net.solidanchor.utils.block.collideBlockIntersects
-import net.solidanchor.utils.block.isBlockAtPosition
-import net.solidanchor.utils.entity.box
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.movement.liquidwalk.modes.LiquidWalkNoCheatPlus
+import com.github.eedcd.solidanchor.features.module.modules.movement.liquidwalk.modes.LiquidWalkVanilla
+import com.github.eedcd.solidanchor.features.module.modules.movement.liquidwalk.modes.LiquidWalkVerusB3901
+import com.github.eedcd.solidanchor.features.module.modules.movement.liquidwalk.modes.LiquidWalkVulcan291
+import com.github.eedcd.solidanchor.utils.block.collideBlockIntersects
+import com.github.eedcd.solidanchor.utils.block.isBlockAtPosition
+import com.github.eedcd.solidanchor.utils.entity.box
 import net.minecraft.world.level.block.LiquidBlock
 
 /**

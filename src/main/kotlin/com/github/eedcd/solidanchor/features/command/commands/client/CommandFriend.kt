@@ -16,32 +16,32 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.commands.client
+package com.github.eedcd.solidanchor.features.command.commands.client
 
 import com.mojang.brigadier.CommandDispatcher
-import net.solidanchor.features.command.CommandException
-import net.solidanchor.features.command.CommandManager
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.arguments.ClientStringArgumentType
-import net.solidanchor.features.command.arguments.FriendArgumentType
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.brigadier.CmdI18n
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.features.command.brigadier.onlinePlayers
-import net.solidanchor.features.command.brigadier.register
-import net.solidanchor.features.misc.FriendManager
-import net.solidanchor.utils.client.MessageMetadata
-import net.solidanchor.utils.client.bold
-import net.solidanchor.utils.client.bypassNameProtection
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.copyable
-import net.solidanchor.utils.client.italic
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.onClick
-import net.solidanchor.utils.client.onHover
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.removeMessage
-import net.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.features.command.CommandException
+import com.github.eedcd.solidanchor.features.command.CommandManager
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.arguments.ClientStringArgumentType
+import com.github.eedcd.solidanchor.features.command.arguments.FriendArgumentType
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdI18n
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.features.command.brigadier.onlinePlayers
+import com.github.eedcd.solidanchor.features.command.brigadier.register
+import com.github.eedcd.solidanchor.features.misc.FriendManager
+import com.github.eedcd.solidanchor.utils.client.MessageMetadata
+import com.github.eedcd.solidanchor.utils.client.bold
+import com.github.eedcd.solidanchor.utils.client.bypassNameProtection
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.copyable
+import com.github.eedcd.solidanchor.utils.client.italic
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.onClick
+import com.github.eedcd.solidanchor.utils.client.onHover
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.removeMessage
+import com.github.eedcd.solidanchor.utils.client.variable
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.ClickEvent
 import net.minecraft.network.chat.HoverEvent

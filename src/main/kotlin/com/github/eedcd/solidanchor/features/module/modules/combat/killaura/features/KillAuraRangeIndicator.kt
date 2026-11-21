@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.killaura.features
+package com.github.eedcd.solidanchor.features.module.modules.combat.killaura.features
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawCircleOutline
-import net.solidanchor.render.drawGradientCircle
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.utils.rainbow
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.client.clientStartDurationMs
-import net.solidanchor.utils.entity.boxedDistanceTo
-import net.solidanchor.utils.entity.interpolateCurrentPosition
-import net.solidanchor.utils.inventory.InventoryManager.isInventoryOpen
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawCircleOutline
+import com.github.eedcd.solidanchor.render.drawGradientCircle
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.utils.rainbow
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.client.clientStartDurationMs
+import com.github.eedcd.solidanchor.utils.entity.boxedDistanceTo
+import com.github.eedcd.solidanchor.utils.entity.interpolateCurrentPosition
+import com.github.eedcd.solidanchor.utils.inventory.InventoryManager.isInventoryOpen
 import net.minecraft.client.gui.screens.inventory.ContainerScreen
 import net.minecraft.util.Mth
 import net.minecraft.world.entity.LivingEntity

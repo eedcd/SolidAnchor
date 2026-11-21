@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.block;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.block;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.BlockSlipperinessMultiplierEvent;
+import com.github.eedcd.solidanchor.event.events.BlockVelocityMultiplierEvent;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleXRay;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.BlockSlipperinessMultiplierEvent;
-import net.solidanchor.event.events.BlockVelocityMultiplierEvent;
-import net.solidanchor.features.module.modules.render.ModuleXRay;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;

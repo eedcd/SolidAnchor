@@ -17,33 +17,33 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.potionfx.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes
 
 import com.mojang.math.Axis
 import net.ccbluex.fastutil.enumSetAllOf
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.config.utils.TextureMode
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.render.potionfx.ModulePotionFX
-import net.solidanchor.features.module.modules.render.potionfx.ModulePotionFX.PresetTexture
-import net.solidanchor.features.module.modules.render.potionfx.ModulePotionFX.SecondaryPresetTexture
-import net.solidanchor.features.module.modules.render.potionfx.ModulePotionFX.glow
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash.MainEffect.fadeStart
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash.MainEffect.lifetime
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash.MainEffect.radius
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash.SecondEffects.Effect.animAcceleration
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash.SecondEffects.Effect.extraRadius
-import net.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash.SecondEffects.Effect.secondaryTextureMode
-import net.solidanchor.render.AnchorPoint
-import net.solidanchor.render.drawSquareTexture
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.collection.ExpiringList.Companion.ExpiringList
-import net.solidanchor.utils.math.Easing
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.config.utils.TextureMode
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.ModulePotionFX
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.ModulePotionFX.PresetTexture
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.ModulePotionFX.SecondaryPresetTexture
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.ModulePotionFX.glow
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash.MainEffect.fadeStart
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash.MainEffect.lifetime
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash.MainEffect.radius
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash.SecondEffects.Effect.animAcceleration
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash.SecondEffects.Effect.extraRadius
+import com.github.eedcd.solidanchor.features.module.modules.render.potionfx.modes.PotionFXSplash.SecondEffects.Effect.secondaryTextureMode
+import com.github.eedcd.solidanchor.render.AnchorPoint
+import com.github.eedcd.solidanchor.render.drawSquareTexture
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.collection.ExpiringList.Companion.ExpiringList
+import com.github.eedcd.solidanchor.utils.math.Easing
 import net.minecraft.network.protocol.game.ClientboundLevelEventPacket
 import net.minecraft.util.ARGB
 import net.minecraft.world.entity.EntityTypes

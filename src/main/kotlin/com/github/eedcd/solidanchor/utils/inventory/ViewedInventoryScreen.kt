@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.inventory
+package com.github.eedcd.solidanchor.utils.inventory
 
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.text.PlainText
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.text.PlainText
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.gui.render.GuiRenderer
 import net.minecraft.client.gui.screens.Screen

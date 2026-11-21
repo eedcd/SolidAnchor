@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.autofarm
+package com.github.eedcd.solidanchor.features.module.modules.world.autofarm
 
-import net.solidanchor.utils.block.AbstractBlockLocationTracker
-import net.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.block.AbstractBlockLocationTracker
+import com.github.eedcd.solidanchor.utils.block.state
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.world.level.block.state.BlockState

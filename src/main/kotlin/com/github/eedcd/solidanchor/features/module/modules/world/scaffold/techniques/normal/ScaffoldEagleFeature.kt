@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold.techniques.normal
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.techniques.normal
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.utils.asRefreshable
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.world.scaffold.techniques.ScaffoldNormalTechnique
-import net.solidanchor.utils.entity.isCloseToEdge
-import net.solidanchor.utils.kotlin.EventPriorityConvention
-import net.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.utils.asRefreshable
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.techniques.ScaffoldNormalTechnique
+import com.github.eedcd.solidanchor.utils.entity.isCloseToEdge
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
 
 object ScaffoldEagleFeature : ToggleableValueGroup(ScaffoldNormalTechnique, "Eagle", false) {
 

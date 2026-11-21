@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.command
+package com.github.eedcd.solidanchor.features.command
 
 import com.mojang.brigadier.CommandDispatcher
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
 
 /**
  * A command that registers itself onto a Brigadier [CommandDispatcher].

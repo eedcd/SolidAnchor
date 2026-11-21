@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.autoconfig
+package com.github.eedcd.solidanchor.config.autoconfig
 
-import net.solidanchor.config.OptionalInclusion
+import com.github.eedcd.solidanchor.config.OptionalInclusion
 
 @JvmRecord
 data class IncludeConfiguration(

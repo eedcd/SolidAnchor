@@ -17,19 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.event.events
+package com.github.eedcd.solidanchor.event.events
 
-import net.solidanchor.annotations.Tag
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.CancellableEvent
-import net.solidanchor.event.Event
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.block.bed.BedState
-import net.solidanchor.utils.inventory.InventoryAction
-import net.solidanchor.utils.inventory.InventoryConstraints
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.kotlin.unmodifiable
+import com.github.eedcd.solidanchor.annotations.Tag
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.CancellableEvent
+import com.github.eedcd.solidanchor.event.Event
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.block.bed.BedState
+import com.github.eedcd.solidanchor.utils.inventory.InventoryAction
+import com.github.eedcd.solidanchor.utils.inventory.InventoryConstraints
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.kotlin.unmodifiable
 import net.minecraft.client.multiplayer.ServerData
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.level.GameType

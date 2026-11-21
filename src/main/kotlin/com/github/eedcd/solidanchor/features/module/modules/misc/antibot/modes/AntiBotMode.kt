@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.misc.antibot.modes
+package com.github.eedcd.solidanchor.features.module.modules.misc.antibot.modes
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.misc.antibot.ModuleAntiBot
 
 sealed class AntiBotMode(name: String) : Mode(name), AntiBotPredicate {
     final override val parent: ModeValueGroup<*>

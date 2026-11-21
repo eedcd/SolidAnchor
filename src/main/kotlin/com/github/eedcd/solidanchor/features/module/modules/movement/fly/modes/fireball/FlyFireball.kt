@@ -17,18 +17,18 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.fly.modes.fireball
+package com.github.eedcd.solidanchor.features.module.modules.movement.fly.modes.fireball
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.modules.movement.fly.ModuleFly
-import net.solidanchor.features.module.modules.movement.fly.modes.fireball.techniques.FlyFireballCustomTechnique
-import net.solidanchor.features.module.modules.movement.fly.modes.fireball.techniques.FlyFireballLegitTechnique
-import net.solidanchor.features.module.modules.movement.fly.modes.fireball.trigger.FlyFireballInstantTrigger
-import net.solidanchor.features.module.modules.movement.fly.modes.fireball.trigger.FlyFireballOnEdgeTrigger
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.useHotbarSlotOrOffhand
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.movement.fly.ModuleFly
+import com.github.eedcd.solidanchor.features.module.modules.movement.fly.modes.fireball.techniques.FlyFireballCustomTechnique
+import com.github.eedcd.solidanchor.features.module.modules.movement.fly.modes.fireball.techniques.FlyFireballLegitTechnique
+import com.github.eedcd.solidanchor.features.module.modules.movement.fly.modes.fireball.trigger.FlyFireballInstantTrigger
+import com.github.eedcd.solidanchor.features.module.modules.movement.fly.modes.fireball.trigger.FlyFireballOnEdgeTrigger
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.useHotbarSlotOrOffhand
 import net.minecraft.world.item.Items
 
 internal object FlyFireball : Mode("Fireball") {

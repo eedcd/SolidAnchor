@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.lang
+package com.github.eedcd.solidanchor.lang
 
 import net.minecraft.network.chat.contents.TranslatableContents
 

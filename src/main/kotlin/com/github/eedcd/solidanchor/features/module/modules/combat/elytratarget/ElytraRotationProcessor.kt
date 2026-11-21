@@ -17,23 +17,23 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.elytratarget
+package com.github.eedcd.solidanchor.features.module.modules.combat.elytratarget
 
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.combat.elytratarget.ElytraRotationProcessor.ignoreKillAura
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationTarget
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.aiming.features.MovementCorrection
-import net.solidanchor.utils.aiming.features.processors.RotationProcessor
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.combat.elytratarget.ElytraRotationProcessor.ignoreKillAura
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationTarget
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.aiming.features.MovementCorrection
+import com.github.eedcd.solidanchor.utils.aiming.features.processors.RotationProcessor
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.minus
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.phys.Vec3
 import kotlin.math.abs

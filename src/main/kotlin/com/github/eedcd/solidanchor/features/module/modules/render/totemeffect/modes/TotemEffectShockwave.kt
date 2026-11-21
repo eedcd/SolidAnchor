@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.totemeffect.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.totemeffect.modes
 
-import net.solidanchor.features.module.modules.render.totemeffect.ModuleTotemEffect.TotemPopSnapshot
-import net.solidanchor.features.module.modules.render.totemeffect.TotemEffectColorSettings
-import net.solidanchor.features.module.modules.render.totemeffect.TotemEffectMode
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawGradientCircle
-import net.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.features.module.modules.render.totemeffect.ModuleTotemEffect.TotemPopSnapshot
+import com.github.eedcd.solidanchor.features.module.modules.render.totemeffect.TotemEffectColorSettings
+import com.github.eedcd.solidanchor.features.module.modules.render.totemeffect.TotemEffectMode
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawGradientCircle
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
 
 internal object TotemEffectShockwave : TotemEffectMode("Shockwave") {
 

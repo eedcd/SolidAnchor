@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.ui.multiplayer
+package com.github.eedcd.solidanchor.ui.multiplayer
 
-import net.solidanchor.features.account.AccountManager
-import net.solidanchor.features.spoofer.SpooferManager
-import net.solidanchor.ui.clickgui.ClickGuiScreen
-import net.solidanchor.utils.client.ServerObserver
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.randomUsername
+import com.github.eedcd.solidanchor.features.account.AccountManager
+import com.github.eedcd.solidanchor.features.spoofer.SpooferManager
+import com.github.eedcd.solidanchor.ui.clickgui.ClickGuiScreen
+import com.github.eedcd.solidanchor.utils.client.ServerObserver
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.randomUsername
 import net.minecraft.client.gui.screens.Screen
 import kotlin.concurrent.thread
 

@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
 import com.mojang.renderpearl.api.pipeline.RenderPipeline
 import com.mojang.blaze3d.vertex.BufferBuilder
 import com.mojang.blaze3d.vertex.ByteBufferBuilder
 import net.ccbluex.fastutil.Pool
-import net.solidanchor.utils.render.begin
+import com.github.eedcd.solidanchor.utils.render.begin
 
 object ClientTesselator {
 

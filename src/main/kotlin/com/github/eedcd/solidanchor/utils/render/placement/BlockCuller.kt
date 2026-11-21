@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.render.placement
+package com.github.eedcd.solidanchor.utils.render.placement
 
-import net.solidanchor.utils.math.longFrom32
+import com.github.eedcd.solidanchor.utils.math.longFrom32
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.core.Direction.DOWN

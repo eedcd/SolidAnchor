@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.wings
+package com.github.eedcd.solidanchor.features.module.modules.render.wings
 
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.wings.modes.WingsLines
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.wings.modes.WingsLines
 
 object ModuleWings : ClientModule("Wings", ModuleCategories.RENDER) {
 

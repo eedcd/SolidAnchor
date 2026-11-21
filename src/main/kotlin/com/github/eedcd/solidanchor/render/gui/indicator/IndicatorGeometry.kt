@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.gui.indicator
+package com.github.eedcd.solidanchor.render.gui.indicator
 
 import org.joml.Vector2f
 import kotlin.math.abs

@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autoqueue.trigger
+package com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.trigger
 
-import net.solidanchor.event.events.TitleEvent
-import net.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.events.TitleEvent
+import com.github.eedcd.solidanchor.event.handler
 
 object AutoQueueTriggerSubtitle : AutoQueueTrigger("Title") {
     override var isTriggered: Boolean = false

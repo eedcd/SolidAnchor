@@ -16,15 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.gui;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui;
 
-import net.solidanchor.SolidAnchor;
-import net.solidanchor.additions.ScreenAddition;
-import net.solidanchor.features.misc.SelfDestruct;
-import net.solidanchor.features.module.modules.player.cheststealer.features.FeatureSilentScreen;
-import net.solidanchor.features.module.modules.render.DoRender;
-import net.solidanchor.features.module.modules.render.ModuleAntiBlind;
-import net.solidanchor.utils.text.RunnableClickEvent;
+import com.github.eedcd.solidanchor.SolidAnchor;
+import com.github.eedcd.solidanchor.additions.ScreenAddition;
+import com.github.eedcd.solidanchor.features.module.modules.player.cheststealer.features.FeatureSilentScreen;
+import com.github.eedcd.solidanchor.features.module.modules.render.DoRender;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleAntiBlind;
+import com.github.eedcd.solidanchor.utils.text.RunnableClickEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
@@ -44,24 +43,34 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Screen.class)
 public abstract class MixinScreen implements ScreenAddition {
 
-    @Final
-    @Shadow
-    protected Font font;
     @Shadow
     public int height;
     @Shadow
     public int width;
-
+    @Final
     @Shadow
-    protected abstract <T extends GuiEventListener & Renderable> T addRenderableWidget(T drawableElement);
-
+    protected Font font;
     @Final
     @Shadow
     @Nullable
     protected Minecraft minecraft;
-
     @Shadow
     private boolean initialized;
+
+    /**
+     * Allows the execution of {@link RunnableClickEvent}.
+     * (default branch in switch pattern matching)
+     */
+    @Inject(method = "defaultHandleClickEvent", at = @At(value = "INVOKE", target = "Lorg/slf4j/Logger;error(Ljava/lang/String;Ljava/lang/Object;)V", ordinal = 0, shift = At.Shift.BEFORE, remap = false), cancellable = true)
+    private static void hookExecuteClickEvents(ClickEvent clickEvent, Minecraft client, Screen screenAfterRun, CallbackInfo ci) {
+        if (clickEvent instanceof RunnableClickEvent runnableClickEvent) {
+            runnableClickEvent.run();
+            ci.cancel();
+        }
+    }
+
+    @Shadow
+    protected abstract <T extends GuiEventListener & Renderable> T addRenderableWidget(T drawableElement);
 
     @Inject(method = "extractTransparentBackground", at = @At("HEAD"), cancellable = true)
     private void hookRenderInGameBackground(GuiGraphicsExtractor context, CallbackInfo ci) {
@@ -73,18 +82,6 @@ public abstract class MixinScreen implements ScreenAddition {
     @Inject(method = "extractRenderStateWithTooltipAndSubtitles", at = @At("HEAD"), cancellable = true)
     private void cancelRenderByChestStealer(CallbackInfo ci) {
         if (SolidAnchor.INSTANCE.isInitialized() && FeatureSilentScreen.INSTANCE.getShouldHide()) {
-            ci.cancel();
-        }
-    }
-
-    /**
-     * Allows the execution of {@link RunnableClickEvent}.
-     * (default branch in switch pattern matching)
-     */
-    @Inject(method = "defaultHandleClickEvent", at = @At(value = "INVOKE", target = "Lorg/slf4j/Logger;error(Ljava/lang/String;Ljava/lang/Object;)V", ordinal = 0, shift = At.Shift.BEFORE, remap = false), cancellable = true)
-    private static void hookExecuteClickEvents(ClickEvent clickEvent, Minecraft client, Screen screenAfterRun, CallbackInfo ci) {
-        if (clickEvent instanceof RunnableClickEvent runnableClickEvent) {
-            runnableClickEvent.run();
             ci.cancel();
         }
     }

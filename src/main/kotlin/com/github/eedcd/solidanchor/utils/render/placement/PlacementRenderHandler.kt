@@ -16,21 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.render.placement
+package com.github.eedcd.solidanchor.utils.render.placement
 
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap
 import it.unimi.dsi.fastutil.longs.LongArrayList
 import net.ccbluex.fastutil.fastIterator
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.render.EMPTY_BOX
-import net.solidanchor.render.FULL_BOX
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.math.expandToBoundingBox
-import net.solidanchor.utils.math.high32
-import net.solidanchor.utils.math.iterator
-import net.solidanchor.utils.math.low32
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.render.EMPTY_BOX
+import com.github.eedcd.solidanchor.render.FULL_BOX
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.math.expandToBoundingBox
+import com.github.eedcd.solidanchor.utils.math.high32
+import com.github.eedcd.solidanchor.utils.math.iterator
+import com.github.eedcd.solidanchor.utils.math.low32
 import net.minecraft.core.BlockPos
 import net.minecraft.util.Mth
 import net.minecraft.world.phys.AABB

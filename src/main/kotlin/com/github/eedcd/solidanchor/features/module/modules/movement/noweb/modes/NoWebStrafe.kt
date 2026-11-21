@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement.noweb.modes
+package com.github.eedcd.solidanchor.features.module.modules.movement.noweb.modes
 
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.features.module.modules.movement.noweb.ModuleNoWeb.modes
-import net.solidanchor.features.module.modules.movement.noweb.NoWebMode
-import net.solidanchor.utils.entity.moving
-import net.solidanchor.utils.entity.withStrafe
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.movement.noweb.ModuleNoWeb.modes
+import com.github.eedcd.solidanchor.features.module.modules.movement.noweb.NoWebMode
+import com.github.eedcd.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.utils.entity.withStrafe
 import net.minecraft.core.BlockPos
 
 /**

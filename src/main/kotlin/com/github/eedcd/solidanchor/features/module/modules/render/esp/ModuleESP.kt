@@ -16,24 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.esp
+package com.github.eedcd.solidanchor.features.module.modules.render.esp
 
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.features.misc.FriendManager
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.render.esp.modes.Esp2DMode
-import net.solidanchor.features.module.modules.render.esp.modes.EspBoxMode
-import net.solidanchor.features.module.modules.render.esp.modes.EspGlowMode
-import net.solidanchor.features.module.modules.render.esp.modes.EspLegacy2DMode
-import net.solidanchor.render.GenericDistanceHSBColorMode
-import net.solidanchor.render.GenericEntityHealthColorMode
-import net.solidanchor.render.GenericRainbowColorMode
-import net.solidanchor.render.GenericStaticColorMode
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.combat.EntityTaggingManager
-import net.solidanchor.utils.combat.shouldBeShown
-import net.solidanchor.utils.entity.RenderedEntities
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.features.misc.FriendManager
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.render.esp.modes.Esp2DMode
+import com.github.eedcd.solidanchor.features.module.modules.render.esp.modes.EspBoxMode
+import com.github.eedcd.solidanchor.features.module.modules.render.esp.modes.EspGlowMode
+import com.github.eedcd.solidanchor.features.module.modules.render.esp.modes.EspLegacy2DMode
+import com.github.eedcd.solidanchor.render.GenericDistanceHSBColorMode
+import com.github.eedcd.solidanchor.render.GenericEntityHealthColorMode
+import com.github.eedcd.solidanchor.render.GenericRainbowColorMode
+import com.github.eedcd.solidanchor.render.GenericStaticColorMode
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.combat.EntityTaggingManager
+import com.github.eedcd.solidanchor.utils.combat.shouldBeShown
+import com.github.eedcd.solidanchor.utils.entity.RenderedEntities
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.player.Player
 

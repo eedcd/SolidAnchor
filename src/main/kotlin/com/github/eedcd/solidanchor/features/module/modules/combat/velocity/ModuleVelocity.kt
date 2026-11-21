@@ -16,32 +16,32 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.velocity
+package com.github.eedcd.solidanchor.features.module.modules.combat.velocity
 
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.event.handler
-import net.solidanchor.event.sequenceHandler
-import net.solidanchor.event.tickUntil
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityAAC442
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityBlocksMC
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityDexland
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityGrim2344
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityGrim2371
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityHylex
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityHypixel
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityIntave
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityJumpReset
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityLag
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityModify
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityReduce
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityReversal
-import net.solidanchor.features.module.modules.combat.velocity.mode.VelocityStrafe
-import net.solidanchor.utils.network.isLocalPlayerVelocity
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.sequenceHandler
+import com.github.eedcd.solidanchor.event.tickUntil
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityAAC442
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityBlocksMC
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityDexland
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityGrim2344
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityGrim2371
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityHylex
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityHypixel
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityIntave
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityJumpReset
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityLag
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityModify
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityReduce
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityReversal
+import com.github.eedcd.solidanchor.features.module.modules.combat.velocity.mode.VelocityStrafe
+import com.github.eedcd.solidanchor.utils.network.isLocalPlayerVelocity
 import net.minecraft.network.protocol.Packet
 import net.minecraft.network.protocol.game.ClientGamePacketListener
 import net.minecraft.network.protocol.game.ClientboundPlayerPositionPacket

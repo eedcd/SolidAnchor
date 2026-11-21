@@ -17,16 +17,16 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.event.events
+package com.github.eedcd.solidanchor.event.events
 
 import com.mojang.blaze3d.pipeline.RenderTarget
 import com.mojang.blaze3d.vertex.PoseStack
-import net.solidanchor.annotations.Tag
-import net.solidanchor.event.Event
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.getDynamicTransformsUniform
-import net.solidanchor.render.mesh.BatchCollector
+import com.github.eedcd.solidanchor.annotations.Tag
+import com.github.eedcd.solidanchor.event.Event
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.getDynamicTransformsUniform
+import com.github.eedcd.solidanchor.render.mesh.BatchCollector
 import net.minecraft.client.Camera
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.renderer.SubmitNodeStorage

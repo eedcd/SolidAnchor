@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.global
+package com.github.eedcd.solidanchor.features.global
 
 import net.ccbluex.fastutil.enumSetAllOf
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.utils.combat.Targets
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.utils.combat.Targets
 import java.util.EnumSet
 
 object GlobalSettingsTarget : ValueGroup(

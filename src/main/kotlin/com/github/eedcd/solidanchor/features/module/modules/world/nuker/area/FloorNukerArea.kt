@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.world.nuker.area
+package com.github.eedcd.solidanchor.features.module.modules.world.nuker.area
 
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.kotlin.coerceIn
-import net.solidanchor.utils.kotlin.rangeAround
-import net.solidanchor.utils.kotlin.safeIntRangeOf
-import net.solidanchor.utils.math.component1
-import net.solidanchor.utils.math.component2
-import net.solidanchor.utils.math.component3
-import net.solidanchor.utils.math.iterate
-import net.solidanchor.utils.math.rangeTo
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.kotlin.coerceIn
+import com.github.eedcd.solidanchor.utils.kotlin.rangeAround
+import com.github.eedcd.solidanchor.utils.kotlin.safeIntRangeOf
+import com.github.eedcd.solidanchor.utils.math.component1
+import com.github.eedcd.solidanchor.utils.math.component2
+import com.github.eedcd.solidanchor.utils.math.component3
+import com.github.eedcd.solidanchor.utils.math.iterate
+import com.github.eedcd.solidanchor.utils.math.rangeTo
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Vec3i
 import net.minecraft.world.level.block.state.BlockState

@@ -16,29 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.combat
+package com.github.eedcd.solidanchor.utils.combat
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
 import net.ccbluex.fastutil.objectLinkedSetOf
-import net.solidanchor.config.types.RangedValue
-import net.solidanchor.config.types.ValueType.FLOAT
-import net.solidanchor.config.types.ValueType.FLOAT_RANGE
-import net.solidanchor.config.types.ValueType.INT
-import net.solidanchor.config.types.ValueType.INT_RANGE
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.config.types.mapReadOnly
-import net.solidanchor.utils.aiming.utils.RotationUtil
-import net.solidanchor.utils.client.DummyRangedValueProvider
-import net.solidanchor.utils.client.NoneRangedValueProvider
-import net.solidanchor.utils.client.RangedValueProvider
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.entity.getActualHealth
-import net.solidanchor.utils.entity.squaredBoxedDistanceTo
-import net.solidanchor.utils.math.sq
-import net.solidanchor.utils.math.toRadians
-import net.solidanchor.utils.sorting.ComparatorChain
+import com.github.eedcd.solidanchor.config.types.RangedValue
+import com.github.eedcd.solidanchor.config.types.ValueType.FLOAT
+import com.github.eedcd.solidanchor.config.types.ValueType.FLOAT_RANGE
+import com.github.eedcd.solidanchor.config.types.ValueType.INT
+import com.github.eedcd.solidanchor.config.types.ValueType.INT_RANGE
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.types.mapReadOnly
+import com.github.eedcd.solidanchor.utils.aiming.utils.RotationUtil
+import com.github.eedcd.solidanchor.utils.client.DummyRangedValueProvider
+import com.github.eedcd.solidanchor.utils.client.NoneRangedValueProvider
+import com.github.eedcd.solidanchor.utils.client.RangedValueProvider
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.entity.getActualHealth
+import com.github.eedcd.solidanchor.utils.entity.squaredBoxedDistanceTo
+import com.github.eedcd.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.utils.math.toRadians
+import com.github.eedcd.solidanchor.utils.sorting.ComparatorChain
 import net.minecraft.util.Mth
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.monster.Enemy

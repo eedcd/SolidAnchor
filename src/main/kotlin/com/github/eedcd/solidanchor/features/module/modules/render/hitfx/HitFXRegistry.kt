@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.hitfx
+package com.github.eedcd.solidanchor.features.module.modules.render.hitfx
 
-import net.solidanchor.SolidAnchor
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.misc.SelfDestruct
-import net.solidanchor.utils.client.clientIdentifier
-import net.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct
+import com.github.eedcd.solidanchor.utils.client.clientIdentifier
+import com.github.eedcd.solidanchor.utils.client.mc
 import net.minecraft.client.resources.sounds.Sound
 import net.minecraft.client.sounds.WeighedSoundEvents
 import net.minecraft.resources.Identifier

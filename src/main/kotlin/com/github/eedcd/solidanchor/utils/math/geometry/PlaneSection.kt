@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.math.geometry
+package com.github.eedcd.solidanchor.utils.math.geometry
 
-import net.solidanchor.utils.kotlin.IntIntValuePair
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.isLikelyZero
+import com.github.eedcd.solidanchor.utils.kotlin.IntIntValuePair
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.isLikelyZero
 import net.minecraft.world.phys.Vec3
 import kotlin.math.floor
 import kotlin.math.max

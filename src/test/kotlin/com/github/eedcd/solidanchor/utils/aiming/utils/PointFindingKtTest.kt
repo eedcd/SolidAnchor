@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.aiming.utils
+package com.github.eedcd.solidanchor.utils.aiming.utils
 
-import net.solidanchor.test.assertVec3Equals
-import net.solidanchor.utils.math.toVec3d
+import com.github.eedcd.solidanchor.test.assertVec3Equals
+import com.github.eedcd.solidanchor.utils.math.toVec3d
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3
 import kotlin.test.assertEquals

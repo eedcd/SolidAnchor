@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.network
+package com.github.eedcd.solidanchor.utils.network
 
 import com.viaversion.viaversion.api.Via
 import com.viaversion.viaversion.api.protocol.Protocol
 import com.viaversion.viaversion.api.protocol.packet.PacketType
 import com.viaversion.viaversion.api.protocol.packet.PacketWrapper
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.client.logger
 import net.fabricmc.loader.api.FabricLoader
 import net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl
 

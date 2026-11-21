@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.elytratarget
+package com.github.eedcd.solidanchor.features.module.modules.combat.elytratarget
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.utils.kotlin.random
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.utils.kotlin.random
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.minus
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.phys.Vec3
 

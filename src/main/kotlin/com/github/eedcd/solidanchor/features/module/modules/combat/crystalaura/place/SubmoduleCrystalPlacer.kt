@@ -16,28 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura.place
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place
 
 import it.unimi.dsi.fastutil.ints.IntCollection
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura
-import net.solidanchor.features.module.modules.combat.crystalaura.SubmoduleIdPredict
-import net.solidanchor.features.module.modules.combat.crystalaura.SwitchMode
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.aiming.NoRotationMode
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.aiming.data.RotationWithVector
-import net.solidanchor.utils.aiming.utils.findClosestPointOnBlockInLineWithCrystal
-import net.solidanchor.utils.aiming.utils.raytraceUpperBlockSide
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.block.stateOrEmpty
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.network.clickBlockWithSlot
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.findClosestSlot
-import net.solidanchor.utils.raytracing.raytraceBlock
-import net.solidanchor.utils.render.placement.PlacementRenderer
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.ModuleCrystalAura
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.SubmoduleIdPredict
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.SwitchMode
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.aiming.NoRotationMode
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.aiming.data.RotationWithVector
+import com.github.eedcd.solidanchor.utils.aiming.utils.findClosestPointOnBlockInLineWithCrystal
+import com.github.eedcd.solidanchor.utils.aiming.utils.raytraceUpperBlockSide
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.network.clickBlockWithSlot
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.findClosestSlot
+import com.github.eedcd.solidanchor.utils.raytracing.raytraceBlock
+import com.github.eedcd.solidanchor.utils.render.placement.PlacementRenderer
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.world.item.Items

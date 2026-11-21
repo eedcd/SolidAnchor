@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold.features
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.features
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
-import net.solidanchor.features.module.modules.world.scaffold.ScaffoldMovementPlanner
-import net.solidanchor.utils.entity.isCloseToEdge
-import net.solidanchor.utils.math.average
-import net.solidanchor.utils.math.copy
-import net.solidanchor.utils.math.geometry.Line
-import net.solidanchor.utils.math.minus
-import net.solidanchor.utils.math.plus
-import net.solidanchor.utils.math.withLength
-import net.solidanchor.utils.movement.findEdgeCollision
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug.debugParameter
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ScaffoldMovementPlanner
+import com.github.eedcd.solidanchor.utils.entity.isCloseToEdge
+import com.github.eedcd.solidanchor.utils.math.average
+import com.github.eedcd.solidanchor.utils.math.copy
+import com.github.eedcd.solidanchor.utils.math.geometry.Line
+import com.github.eedcd.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.utils.math.plus
+import com.github.eedcd.solidanchor.utils.math.withLength
+import com.github.eedcd.solidanchor.utils.movement.findEdgeCollision
 import net.minecraft.world.phys.Vec3
 import kotlin.math.atan2
 

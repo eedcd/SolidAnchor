@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.block;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.block;
 
+import com.github.eedcd.solidanchor.common.ShapeFlag;
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.BlockShapeEvent;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.common.ShapeFlag;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.BlockShapeEvent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockCollisions;
 import net.minecraft.world.level.block.state.BlockState;
@@ -46,8 +46,8 @@ public abstract class MixinBlockCollisions {
      * @return possibly modified voxel shape
      */
     @ModifyExpressionValue(method = "computeNext", at = @At(
-            value = "INVOKE",
-            target = "Lnet/minecraft/world/phys/shapes/CollisionContext;getCollisionShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/CollisionGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;"
+        value = "INVOKE",
+        target = "Lnet/minecraft/world/phys/shapes/CollisionContext;getCollisionShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/CollisionGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;"
     ))
     private VoxelShape hookCollisionShape(VoxelShape original, @Local(name = "blockState") BlockState blockState) {
         if (this.pos == null || ShapeFlag.noShapeChange) {

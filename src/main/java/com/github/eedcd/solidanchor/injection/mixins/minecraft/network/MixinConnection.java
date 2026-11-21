@@ -16,8 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.network;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.PacketEvent;
+import com.github.eedcd.solidanchor.event.events.PipelineEvent;
+import com.github.eedcd.solidanchor.event.events.TransferOrigin;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleNoSwing;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
@@ -25,11 +30,6 @@ import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelPipeline;
 import io.netty.resolver.NoopAddressResolverGroup;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.PacketEvent;
-import net.solidanchor.event.events.PipelineEvent;
-import net.solidanchor.event.events.TransferOrigin;
-import net.solidanchor.features.module.modules.render.ModuleNoSwing;
 import net.minecraft.network.BandwidthDebugMonitor;
 import net.minecraft.network.Connection;
 import net.minecraft.network.PacketListener;
@@ -52,28 +52,6 @@ public abstract class MixinConnection {
 
     @Shadow
     private static <T extends PacketListener> void genericsFtw(Packet<T> packet, PacketListener listener) {
-    }
-
-    /**
-     * Handle sending packets
-     *
-     * @param packet       packet to send
-     * @param callbackInfo callback
-     */
-    @Inject(method = "send(Lnet/minecraft/network/protocol/Packet;)V", at = @At("HEAD"), cancellable = true)
-    private void hookSendingPacket(Packet<?> packet, final CallbackInfo callbackInfo) {
-        if (packet instanceof ServerboundPunchPacket && ModuleNoSwing.INSTANCE.shouldHideForServer()) {
-            callbackInfo.cancel();
-            return;
-        }
-
-        final PacketEvent event = new PacketEvent(TransferOrigin.OUTGOING, packet, true);
-
-        EventManager.INSTANCE.callEvent(event);
-
-        if (event.isCancelled()) {
-            callbackInfo.cancel();
-        }
     }
 
     /**
@@ -131,6 +109,28 @@ public abstract class MixinConnection {
         }
 
         return original.call(bootstrap, host, port);
+    }
+
+    /**
+     * Handle sending packets
+     *
+     * @param packet       packet to send
+     * @param callbackInfo callback
+     */
+    @Inject(method = "send(Lnet/minecraft/network/protocol/Packet;)V", at = @At("HEAD"), cancellable = true)
+    private void hookSendingPacket(Packet<?> packet, final CallbackInfo callbackInfo) {
+        if (packet instanceof ServerboundPunchPacket && ModuleNoSwing.INSTANCE.shouldHideForServer()) {
+            callbackInfo.cancel();
+            return;
+        }
+
+        final PacketEvent event = new PacketEvent(TransferOrigin.OUTGOING, packet, true);
+
+        EventManager.INSTANCE.callEvent(event);
+
+        if (event.isCancelled()) {
+            callbackInfo.cancel();
+        }
     }
 
 }

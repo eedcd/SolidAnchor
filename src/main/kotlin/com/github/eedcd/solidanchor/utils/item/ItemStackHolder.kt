@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.item
+package com.github.eedcd.solidanchor.utils.item
 
 import net.minecraft.world.item.ItemStack
 

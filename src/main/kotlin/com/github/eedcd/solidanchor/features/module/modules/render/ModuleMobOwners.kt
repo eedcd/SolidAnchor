@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import net.solidanchor.api.core.HttpClient
-import net.solidanchor.event.eventListenerScope
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.kotlin.toUndashedString
-import net.solidanchor.utils.text.withFormat
+import com.github.eedcd.solidanchor.api.core.HttpClient
+import com.github.eedcd.solidanchor.event.eventListenerScope
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.kotlin.toUndashedString
+import com.github.eedcd.solidanchor.utils.text.withFormat
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.Style
 import net.minecraft.util.FormattedCharSequence

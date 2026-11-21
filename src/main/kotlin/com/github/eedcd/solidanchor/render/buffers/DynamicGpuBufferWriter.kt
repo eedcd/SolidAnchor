@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.buffers
+package com.github.eedcd.solidanchor.render.buffers
 
 import com.mojang.renderpearl.api.buffers.GpuBuffer
 import com.mojang.renderpearl.api.buffers.GpuBufferSlice
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.render.write
-import net.solidanchor.utils.text.formatAsCapacity
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.render.write
+import com.github.eedcd.solidanchor.utils.text.formatAsCapacity
 import net.minecraft.util.Mth
 import java.nio.ByteBuffer
 import kotlin.math.max

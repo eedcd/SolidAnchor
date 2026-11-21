@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.nametags
+package com.github.eedcd.solidanchor.features.module.modules.render.nametags
 
 import net.ccbluex.fastutil.Pool
-import net.solidanchor.config.types.CurveValue.Axis.Companion.axis
-import net.solidanchor.event.events.OverlayRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.render.FontManager
-import net.solidanchor.utils.combat.shouldBeShown
-import net.solidanchor.utils.entity.RenderedEntities
-import net.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
-import net.solidanchor.utils.render.entity
-import net.solidanchor.utils.render.isCustom
+import com.github.eedcd.solidanchor.config.types.CurveValue.Axis.Companion.axis
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.render.FontManager
+import com.github.eedcd.solidanchor.utils.combat.shouldBeShown
+import com.github.eedcd.solidanchor.utils.entity.RenderedEntities
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
+import com.github.eedcd.solidanchor.utils.render.entity
+import com.github.eedcd.solidanchor.utils.render.isCustom
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.renderer.entity.state.EntityRenderState
 import org.joml.Vector2f

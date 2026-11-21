@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
@@ -24,31 +24,31 @@ import it.unimi.dsi.fastutil.objects.Reference2ObjectOpenHashMap
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet
 import net.ccbluex.fastutil.fastIterator
 import net.ccbluex.fastutil.mapToArray
-import net.solidanchor.config.types.CurveValue.Axis.Companion.axis
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.computedOn
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.OverlayRenderEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.player.invcleaner.ItemAndComponents
-import net.solidanchor.render.gui.ItemStackListRenderer.BackgroundMode.backgroundChoices
-import net.solidanchor.render.gui.ItemStackListRenderState
-import net.solidanchor.utils.collection.Filter
-import net.solidanchor.utils.collection.itemSortedSetOf
-import net.solidanchor.utils.entity.cameraDistance
-import net.solidanchor.utils.entity.interpolateCurrentPosition
-import net.solidanchor.utils.item.COMPARING_DESCRIPTION_ID
-import net.solidanchor.utils.item.PreferStackSize
-import net.solidanchor.utils.kotlin.toTypedArray
-import net.solidanchor.utils.math.average
-import net.solidanchor.utils.math.sq
-import net.solidanchor.utils.render.WorldToScreen
-import net.solidanchor.utils.world.entityGetter
-import net.solidanchor.utils.world.filter
+import com.github.eedcd.solidanchor.config.types.CurveValue.Axis.Companion.axis
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.computedOn
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemAndComponents
+import com.github.eedcd.solidanchor.render.gui.ItemStackListRenderer.BackgroundMode.backgroundChoices
+import com.github.eedcd.solidanchor.render.gui.ItemStackListRenderState
+import com.github.eedcd.solidanchor.utils.collection.Filter
+import com.github.eedcd.solidanchor.utils.collection.itemSortedSetOf
+import com.github.eedcd.solidanchor.utils.entity.cameraDistance
+import com.github.eedcd.solidanchor.utils.entity.interpolateCurrentPosition
+import com.github.eedcd.solidanchor.utils.item.COMPARING_DESCRIPTION_ID
+import com.github.eedcd.solidanchor.utils.item.PreferStackSize
+import com.github.eedcd.solidanchor.utils.kotlin.toTypedArray
+import com.github.eedcd.solidanchor.utils.math.average
+import com.github.eedcd.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.utils.render.WorldToScreen
+import com.github.eedcd.solidanchor.utils.world.entityGetter
+import com.github.eedcd.solidanchor.utils.world.filter
 import net.minecraft.core.component.DataComponents
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityTypes

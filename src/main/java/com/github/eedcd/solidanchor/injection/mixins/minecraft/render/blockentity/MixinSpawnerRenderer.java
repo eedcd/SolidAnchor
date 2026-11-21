@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.render.blockentity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render.blockentity;
 
-import net.solidanchor.features.module.modules.render.DoRender;
-import net.solidanchor.features.module.modules.render.ModuleAntiBlind;
+import com.github.eedcd.solidanchor.features.module.modules.render.DoRender;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleAntiBlind;
 import net.minecraft.client.renderer.blockentity.SpawnerRenderer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -31,9 +31,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class MixinSpawnerRenderer {
     @Inject(
         method = "submit(Lnet/minecraft/client/renderer/blockentity/state/SpawnerRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/client/renderer/state/level/CameraRenderState;)V",
-            at = @At("HEAD"),
-            cancellable = true
-    ) private void onRender(CallbackInfo ci) {
+        at = @At("HEAD"),
+        cancellable = true
+    )
+    private void onRender(CallbackInfo ci) {
         if (!ModuleAntiBlind.canRender(DoRender.MOB_IN_SPAWNER)) {
             ci.cancel();
         }

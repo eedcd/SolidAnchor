@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.gui;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui;
 
+import com.github.eedcd.solidanchor.additions.GuiGraphicsExtractorAddition;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleBetterInventory;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.additions.GuiGraphicsExtractorAddition;
-import net.solidanchor.features.module.modules.render.ModuleBetterInventory;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
@@ -40,7 +40,7 @@ public abstract class MixinGuiGraphicsExtractor implements GuiGraphicsExtractorA
 
     @Shadow
     protected abstract void itemCount(Font textRenderer, ItemStack stack, int x, int y,
-        @Nullable String stackCountText);
+                                      @Nullable String stackCountText);
 
     @Shadow
     protected abstract void itemCooldown(ItemStack stack, int x, int y);
@@ -57,7 +57,7 @@ public abstract class MixinGuiGraphicsExtractor implements GuiGraphicsExtractorA
 
     @Override
     public void solidanchor$drawStackCount(Font textRenderer, ItemStack stack, int x, int y,
-            @Nullable String stackCountText) {
+                                           @Nullable String stackCountText) {
         itemCount(textRenderer, stack, x, y, stackCountText);
     }
 

@@ -16,24 +16,27 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.render;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render;
 
+import com.github.eedcd.solidanchor.SolidAnchor;
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.DrawOutlinesEvent;
+import com.github.eedcd.solidanchor.event.events.WorldFeatureSubmitEvent;
+import com.github.eedcd.solidanchor.features.module.modules.render.DoRender;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleAntiBlind;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleBlockOutline;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleChams;
+import com.github.eedcd.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience;
+import com.github.eedcd.solidanchor.utils.collection.Pools;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import com.llamalad7.mixinextras.sugar.Local;
-import com.mojang.blaze3d.resource.GraphicsResourceAllocator;
-import com.mojang.renderpearl.api.buffers.GpuBufferSlice;
 import com.mojang.blaze3d.framegraph.FrameGraphBuilder;
 import com.mojang.blaze3d.framegraph.FramePass;
 import com.mojang.blaze3d.pipeline.RenderTarget;
+import com.mojang.blaze3d.resource.GraphicsResourceAllocator;
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.solidanchor.SolidAnchor;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.DrawOutlinesEvent;
-import net.solidanchor.event.events.WorldFeatureSubmitEvent;
-import net.solidanchor.features.module.modules.render.*;
-import net.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience;
-import net.solidanchor.utils.collection.Pools;
+import com.mojang.renderpearl.api.buffers.GpuBufferSlice;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.SubmitNodeCollector;
@@ -91,7 +94,7 @@ public abstract class MixinLevelRenderer {
 
     /**
      * Clears the chams entity tracking once all level entity submissions are done.
-     *
+     * <p>
      * The entity context captured by {@code trackIfNeeded} during level entity submission must not
      * leak into the first-person held item submissions that happen afterwards (they are not chams
      * targets), otherwise the player's own hand and held item would be removed from the main render target.

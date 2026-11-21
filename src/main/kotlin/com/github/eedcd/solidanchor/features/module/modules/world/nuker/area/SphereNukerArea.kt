@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.world.nuker.area
+package com.github.eedcd.solidanchor.features.module.modules.world.nuker.area
 
-import net.solidanchor.features.module.modules.world.nuker.ModuleNuker.wasTarget
-import net.solidanchor.utils.block.searchBlocksInCuboid
-import net.solidanchor.utils.entity.box
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.ModuleNuker.wasTarget
+import com.github.eedcd.solidanchor.utils.block.searchBlocksInCuboid
+import com.github.eedcd.solidanchor.utils.entity.box
 import net.minecraft.core.BlockPos
 import net.minecraft.world.level.block.state.BlockState
 

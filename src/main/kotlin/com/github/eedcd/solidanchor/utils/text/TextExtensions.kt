@@ -18,16 +18,16 @@
  */
 @file:Suppress("NOTHING_TO_INLINE", "TooManyFunctions")
 
-package net.solidanchor.utils.text
+package com.github.eedcd.solidanchor.utils.text
 
 import com.google.common.base.CaseFormat
 import com.google.common.net.HostAndPort
 import com.google.common.net.InetAddresses
 import it.unimi.dsi.fastutil.chars.CharOpenHashSet
 import net.ccbluex.fastutil.unmodifiable
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.collection.Pools
-import net.solidanchor.utils.kotlin.unmodifiable
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.collection.Pools
+import com.github.eedcd.solidanchor.utils.kotlin.unmodifiable
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.ClickEvent
 import net.minecraft.network.chat.Component

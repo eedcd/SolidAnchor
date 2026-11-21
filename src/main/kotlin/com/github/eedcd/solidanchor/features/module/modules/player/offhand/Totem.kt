@@ -16,29 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.offhand
+package com.github.eedcd.solidanchor.features.module.modules.player.offhand
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.features.module.modules.player.nofall.ModuleNoFall
-import net.solidanchor.utils.block.getBlock
-import net.solidanchor.utils.block.getPotentialSecondBedBlock
-import net.solidanchor.utils.block.getSortedSphere
-import net.solidanchor.utils.block.isCharged
-import net.solidanchor.utils.block.fallDamageMultiplier
-import net.solidanchor.utils.block.stateOrEmpty
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.entity.FallingPlayer
-import net.solidanchor.utils.entity.getDamageFromExplosion
-import net.solidanchor.utils.entity.getEffectiveDamage
-import net.solidanchor.utils.entity.getExplosionDamageFromEntity
-import net.solidanchor.utils.entity.isBurrowed
-import net.solidanchor.utils.entity.isInHole
-import net.solidanchor.utils.inventory.ArmorItemSlot
-import net.solidanchor.utils.inventory.InventoryAction
-import net.solidanchor.utils.inventory.InventoryManager
-import net.solidanchor.utils.math.center
-import net.solidanchor.utils.world.bedRule
-import net.solidanchor.utils.world.respawnAnchorWorks
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.player.nofall.ModuleNoFall
+import com.github.eedcd.solidanchor.utils.block.getBlock
+import com.github.eedcd.solidanchor.utils.block.getPotentialSecondBedBlock
+import com.github.eedcd.solidanchor.utils.block.getSortedSphere
+import com.github.eedcd.solidanchor.utils.block.isCharged
+import com.github.eedcd.solidanchor.utils.block.fallDamageMultiplier
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.entity.FallingPlayer
+import com.github.eedcd.solidanchor.utils.entity.getDamageFromExplosion
+import com.github.eedcd.solidanchor.utils.entity.getEffectiveDamage
+import com.github.eedcd.solidanchor.utils.entity.getExplosionDamageFromEntity
+import com.github.eedcd.solidanchor.utils.entity.isBurrowed
+import com.github.eedcd.solidanchor.utils.entity.isInHole
+import com.github.eedcd.solidanchor.utils.inventory.ArmorItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.InventoryAction
+import com.github.eedcd.solidanchor.utils.inventory.InventoryManager
+import com.github.eedcd.solidanchor.utils.math.center
+import com.github.eedcd.solidanchor.utils.world.bedRule
+import com.github.eedcd.solidanchor.utils.world.respawnAnchorWorks
 import net.minecraft.core.BlockPos
 import net.minecraft.world.entity.Pose
 import net.minecraft.world.level.block.BedBlock

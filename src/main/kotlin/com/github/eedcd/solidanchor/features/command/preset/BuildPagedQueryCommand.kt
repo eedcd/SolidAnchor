@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command.preset
+package com.github.eedcd.solidanchor.features.command.preset
 
 import com.mojang.brigadier.arguments.IntegerArgumentType
-import net.solidanchor.features.command.CommandExecutor
-import net.solidanchor.features.command.CommandManager
-import net.solidanchor.features.command.brigadier.CmdLiteralScope
-import net.solidanchor.features.command.brigadier.get
-import net.solidanchor.utils.client.MessageMetadata
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.text.asPlainText
-import net.solidanchor.utils.text.asText
-import net.solidanchor.utils.client.bold
-import net.solidanchor.utils.text.joinToText
-import net.solidanchor.utils.client.onClickRun
-import net.solidanchor.utils.client.onHover
-import net.solidanchor.utils.client.removeMessage
-import net.solidanchor.utils.client.withColor
-import net.solidanchor.utils.text.PlainText
+import com.github.eedcd.solidanchor.features.command.CommandExecutor
+import com.github.eedcd.solidanchor.features.command.CommandManager
+import com.github.eedcd.solidanchor.features.command.brigadier.CmdLiteralScope
+import com.github.eedcd.solidanchor.features.command.brigadier.get
+import com.github.eedcd.solidanchor.utils.client.MessageMetadata
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.utils.text.asText
+import com.github.eedcd.solidanchor.utils.client.bold
+import com.github.eedcd.solidanchor.utils.text.joinToText
+import com.github.eedcd.solidanchor.utils.client.onClickRun
+import com.github.eedcd.solidanchor.utils.client.onHover
+import com.github.eedcd.solidanchor.utils.client.removeMessage
+import com.github.eedcd.solidanchor.utils.client.withColor
+import com.github.eedcd.solidanchor.utils.text.PlainText
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.HoverEvent

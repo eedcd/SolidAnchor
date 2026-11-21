@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.text;
+package com.github.eedcd.solidanchor.utils.text;
 
 import net.ccbluex.fastutil.Pool;
 import net.minecraft.network.chat.Style;
@@ -28,6 +28,10 @@ public record AppenderCharSink(StringBuilder builder) implements FormattedCharSi
 
     private static final Pool<AppenderCharSink> POOL = Pool.create(AppenderCharSink::new, AppenderCharSink::clear).sync();
 
+    public AppenderCharSink() {
+        this(new StringBuilder(128));
+    }
+
     public static String codePointsToString(final FormattedCharSequence input) {
         var sink = POOL.borrow();
         try {
@@ -36,10 +40,6 @@ public record AppenderCharSink(StringBuilder builder) implements FormattedCharSi
         } finally {
             POOL.recycle(sink);
         }
-    }
-
-    public AppenderCharSink() {
-        this(new StringBuilder(128));
     }
 
     @Override

@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.entity;
 
+import com.github.eedcd.solidanchor.additions.InventoryAddition;
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import net.solidanchor.additions.InventoryAddition;
-import net.solidanchor.utils.client.SilentHotbar;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -36,10 +36,10 @@ import org.spongepowered.asm.mixin.injection.At;
 public abstract class MixinInventory implements InventoryAddition {
 
     @Shadow
-    private int selected;
-    @Shadow
     @Final
     public Player player;
+    @Shadow
+    private int selected;
 
     /**
      * Override the original slot based on the server-side slot information.
@@ -48,8 +48,8 @@ public abstract class MixinInventory implements InventoryAddition {
      * @see net.minecraft.world.entity.player.Inventory#setSelectedItem(net.minecraft.world.item.ItemStack)
      */
     @ModifyExpressionValue(
-            method = {"removeFromSelected", "tick", "getSelectedItem", "setSelectedItem"},
-            at = @At(value = "FIELD", target = "Lnet/minecraft/world/entity/player/Inventory;selected:I", opcode = Opcodes.GETFIELD)
+        method = {"removeFromSelected", "tick", "getSelectedItem", "setSelectedItem"},
+        at = @At(value = "FIELD", target = "Lnet/minecraft/world/entity/player/Inventory;selected:I", opcode = Opcodes.GETFIELD)
     )
     private int hookOverrideOriginalSlot(int original) {
         return ((Inventory) (Object) this).player == Minecraft.getInstance().player ? SilentHotbar.INSTANCE.getServersideSlot() : original;

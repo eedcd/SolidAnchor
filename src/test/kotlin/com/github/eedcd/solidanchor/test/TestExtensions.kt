@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.test
+package com.github.eedcd.solidanchor.test
 
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue

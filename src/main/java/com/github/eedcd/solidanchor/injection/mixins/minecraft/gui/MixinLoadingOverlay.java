@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.gui;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui;
 
+import com.github.eedcd.solidanchor.common.ClientLogoTexture;
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.ScreenRenderEvent;
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct;
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.renderpearl.api.pipeline.RenderPipeline;
-import net.solidanchor.common.ClientLogoTexture;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.ScreenRenderEvent;
-import net.solidanchor.features.misc.SelfDestruct;
-import net.solidanchor.render.ClientRenderPipelines;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.LoadingOverlay;
 import net.minecraft.client.renderer.texture.TextureManager;
@@ -68,12 +68,12 @@ public abstract class MixinLoadingOverlay {
 
     @Inject(method = "extractRenderState", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/packs/resources/ReloadInstance;getActualProgress()F"))
     private void drawClientLogo(
-            GuiGraphicsExtractor graphics,
-            int mouseX,
-            int mouseY,
-            float a,
-            CallbackInfo ci,
-            @Local(name = "color") int color
+        GuiGraphicsExtractor graphics,
+        int mouseX,
+        int mouseY,
+        float a,
+        CallbackInfo ci,
+        @Local(name = "color") int color
     ) {
         if (SelfDestruct.INSTANCE.isDestructed()) {
             return;
@@ -84,8 +84,8 @@ public abstract class MixinLoadingOverlay {
 
         float scaleFactor = Math.min(screenWidth * 0.4f / ClientLogoTexture.WIDTH, screenHeight * 0.25f / ClientLogoTexture.HEIGHT);
 
-        int displayWidth = (int)(ClientLogoTexture.WIDTH * scaleFactor);
-        int displayHeight = (int)(ClientLogoTexture.HEIGHT * scaleFactor);
+        int displayWidth = (int) (ClientLogoTexture.WIDTH * scaleFactor);
+        int displayHeight = (int) (ClientLogoTexture.HEIGHT * scaleFactor);
 
         int x = (screenWidth - displayWidth) / 2;
         int y = (screenHeight - displayHeight) / 2;
@@ -93,18 +93,18 @@ public abstract class MixinLoadingOverlay {
         // TODO: Draw as SVG instead of PNG
         graphics.blit(
             ClientRenderPipelines.GUI.SmoothTexture,
-                ClientLogoTexture.CLIENT_LOGO,
-                x,
-                y,
-                0.0F,
-                0.0F,
-                displayWidth,
-                displayHeight,
-                ClientLogoTexture.WIDTH,
-                ClientLogoTexture.HEIGHT,
-                ClientLogoTexture.WIDTH,
-                ClientLogoTexture.HEIGHT,
-                color
+            ClientLogoTexture.CLIENT_LOGO,
+            x,
+            y,
+            0.0F,
+            0.0F,
+            displayWidth,
+            displayHeight,
+            ClientLogoTexture.WIDTH,
+            ClientLogoTexture.HEIGHT,
+            ClientLogoTexture.WIDTH,
+            ClientLogoTexture.HEIGHT,
+            color
         );
     }
 

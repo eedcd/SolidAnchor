@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.autoshop.serializable.conditions
+package com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable.conditions
 
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonParseException

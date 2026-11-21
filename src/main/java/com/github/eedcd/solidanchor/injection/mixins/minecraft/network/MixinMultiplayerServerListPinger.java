@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.network;
 
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.ServerPingedEvent;
 import com.llamalad7.mixinextras.injector.ModifyReceiver;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.ServerPingedEvent;
 import net.minecraft.client.multiplayer.ServerData;
 import net.minecraft.client.multiplayer.ServerStatusPinger;
 import net.minecraft.client.multiplayer.resolver.ServerAddress;
@@ -37,7 +37,7 @@ import java.net.InetSocketAddress;
 public abstract class MixinMultiplayerServerListPinger {
 
     @ModifyReceiver(method = "handlePongResponse",
-            at = @At(value = "FIELD", target = "Lnet/minecraft/client/multiplayer/ServerData;ping:J", opcode = Opcodes.PUTFIELD))
+        at = @At(value = "FIELD", target = "Lnet/minecraft/client/multiplayer/ServerData;ping:J", opcode = Opcodes.PUTFIELD))
     private ServerData onPingResult$onPingResult(ServerData instance, long value) {
         instance.ping = value;
         EventManager.INSTANCE.callEvent(new ServerPingedEvent(instance));
@@ -49,7 +49,7 @@ public abstract class MixinMultiplayerServerListPinger {
      * proxy to resolve.
      */
     @WrapWithCondition(method = "onDisconnect", at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/client/multiplayer/ServerStatusPinger;pingLegacyServer(Ljava/net/InetSocketAddress;Lnet/minecraft/client/multiplayer/resolver/ServerAddress;Lnet/minecraft/client/multiplayer/ServerData;Lnet/minecraft/server/network/EventLoopGroupHolder;)V"))
+        target = "Lnet/minecraft/client/multiplayer/ServerStatusPinger;pingLegacyServer(Ljava/net/InetSocketAddress;Lnet/minecraft/client/multiplayer/resolver/ServerAddress;Lnet/minecraft/client/multiplayer/ServerData;Lnet/minecraft/server/network/EventLoopGroupHolder;)V"))
     private boolean skipUnresolvedLegacyPing(ServerStatusPinger instance, InetSocketAddress address,
                                              ServerAddress rawAddress, ServerData data,
                                              EventLoopGroupHolder eventLoopGroupHolder) {

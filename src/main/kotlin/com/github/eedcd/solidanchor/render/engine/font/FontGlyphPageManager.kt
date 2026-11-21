@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.font
+package com.github.eedcd.solidanchor.render.engine.font
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap
@@ -28,15 +28,15 @@ import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import net.solidanchor.annotations.ValueClassCandidate
-import net.solidanchor.api.core.ioScope
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.GameRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.render.FontFace
-import net.solidanchor.render.engine.font.dynamic.DynamicFontCacheManager
-import net.solidanchor.render.engine.font.dynamic.DynamicGlyphPage
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.annotations.ValueClassCandidate
+import com.github.eedcd.solidanchor.api.core.ioScope
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.GameRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.render.FontFace
+import com.github.eedcd.solidanchor.render.engine.font.dynamic.DynamicFontCacheManager
+import com.github.eedcd.solidanchor.render.engine.font.dynamic.DynamicGlyphPage
+import com.github.eedcd.solidanchor.utils.client.logger
 import java.util.concurrent.atomic.AtomicBoolean
 import kotlin.math.ceil
 

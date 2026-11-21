@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold.tower
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.tower
 
-import net.solidanchor.event.events.PlayerJumpEvent
-import net.solidanchor.event.sequenceHandler
-import net.solidanchor.event.tickUntil
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.isBlockBelow
-import net.solidanchor.utils.kotlin.EventPriorityConvention.READ_FINAL_STATE
+import com.github.eedcd.solidanchor.event.events.PlayerJumpEvent
+import com.github.eedcd.solidanchor.event.sequenceHandler
+import com.github.eedcd.solidanchor.event.tickUntil
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.isBlockBelow
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.READ_FINAL_STATE
 
 object ScaffoldTowerPulldown : ScaffoldTower("Pulldown") {
 

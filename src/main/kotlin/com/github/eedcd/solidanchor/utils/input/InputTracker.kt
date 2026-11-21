@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.input
+package com.github.eedcd.solidanchor.utils.input
 
 import com.mojang.blaze3d.platform.InputConstants
 import it.unimi.dsi.fastutil.ints.Int2LongOpenHashMap
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.MouseButtonEvent
-import net.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.MouseButtonEvent
+import com.github.eedcd.solidanchor.event.handler
 import net.minecraft.client.KeyMapping
 
 /**

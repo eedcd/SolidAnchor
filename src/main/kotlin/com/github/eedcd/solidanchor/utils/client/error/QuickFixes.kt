@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.client.error
+package com.github.eedcd.solidanchor.utils.client.error
 
-import net.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.addon.AddonApi
 import java.util.concurrent.CopyOnWriteArrayList
 
 /**

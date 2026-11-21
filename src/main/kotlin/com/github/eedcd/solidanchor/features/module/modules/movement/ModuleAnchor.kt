@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement
+package com.github.eedcd.solidanchor.features.module.modules.movement
 
 import net.ccbluex.fastutil.weightedMinByOrNullAtMost
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PlayerMoveEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.block.hole.HoleManager
-import net.solidanchor.utils.block.hole.HoleManagerSubscriber
-import net.solidanchor.utils.block.hole.HoleTracker
-import net.solidanchor.utils.input.InputBind
-import net.solidanchor.utils.math.boundingBox
-import net.solidanchor.utils.math.centerOnSide
-import net.solidanchor.utils.math.copy
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PlayerMoveEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.block.hole.HoleManager
+import com.github.eedcd.solidanchor.utils.block.hole.HoleManagerSubscriber
+import com.github.eedcd.solidanchor.utils.block.hole.HoleTracker
+import com.github.eedcd.solidanchor.utils.input.InputBind
+import com.github.eedcd.solidanchor.utils.math.boundingBox
+import com.github.eedcd.solidanchor.utils.math.centerOnSide
+import com.github.eedcd.solidanchor.utils.math.copy
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.core.Direction
 import net.minecraft.world.phys.Vec3
 import kotlin.math.abs

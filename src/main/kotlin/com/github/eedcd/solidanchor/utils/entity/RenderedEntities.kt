@@ -16,22 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.entity
+package com.github.eedcd.solidanchor.utils.entity
 
 import it.unimi.dsi.fastutil.objects.ReferenceArrayList
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PerspectiveEvent
-import net.solidanchor.event.events.WorldChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.global.GlobalSettingsTarget
-import net.solidanchor.features.module.modules.render.ModuleCombineMobs
-import net.solidanchor.utils.client.inGame
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.combat.Targets
-import net.solidanchor.utils.combat.shouldBeShown
-import net.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PerspectiveEvent
+import com.github.eedcd.solidanchor.event.events.WorldChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.global.GlobalSettingsTarget
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleCombineMobs
+import com.github.eedcd.solidanchor.utils.client.inGame
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.combat.Targets
+import com.github.eedcd.solidanchor.utils.combat.shouldBeShown
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
 import net.minecraft.world.entity.LivingEntity
 
 private val entities = ReferenceArrayList<LivingEntity>()

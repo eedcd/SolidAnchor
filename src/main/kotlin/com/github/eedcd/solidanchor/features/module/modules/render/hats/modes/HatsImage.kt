@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.hats.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.hats.modes
 
-import net.solidanchor.config.types.toTextureProperty
-import net.solidanchor.features.module.modules.render.hats.HatsMode
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawTexQuad
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.withPush
-import net.solidanchor.utils.io.PNG_AND_JPG
+import com.github.eedcd.solidanchor.config.types.toTextureProperty
+import com.github.eedcd.solidanchor.features.module.modules.render.hats.HatsMode
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawTexQuad
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.withPush
+import com.github.eedcd.solidanchor.utils.io.PNG_AND_JPG
 import net.minecraft.util.Mth
 import org.joml.Quaternionf
 import org.joml.Vector2f

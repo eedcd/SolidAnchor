@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.command
+package com.github.eedcd.solidanchor.features.command
 
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.MutableComponent

@@ -17,12 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.interfaces;
+package com.github.eedcd.solidanchor.interfaces;
 
 import net.minecraft.network.chat.TextColor;
 
 public interface TextColorAddition {
     boolean solid_anchor$doesBypassingNameProtect();
+
     TextColor solid_anchor$withNameProtectionBypass();
 
     /**

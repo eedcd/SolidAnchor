@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.types
+package com.github.eedcd.solidanchor.config.types
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -25,14 +25,14 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import net.solidanchor.api.core.ioScope
-import net.solidanchor.event.EventListener
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.inGame
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.render.asTexture
-import net.solidanchor.utils.render.readNativeImage
-import net.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.api.core.ioScope
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.inGame
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.render.asTexture
+import com.github.eedcd.solidanchor.utils.render.readNativeImage
+import com.github.eedcd.solidanchor.utils.text.asPlainText
 import net.minecraft.ChatFormatting
 import net.minecraft.client.renderer.texture.DynamicTexture
 import kotlin.properties.ReadOnlyProperty

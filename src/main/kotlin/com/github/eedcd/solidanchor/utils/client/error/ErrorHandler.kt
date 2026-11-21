@@ -18,12 +18,12 @@
  */
 @file:Suppress("NOTHING_TO_INLINE")
 
-package net.solidanchor.utils.client.error
+package com.github.eedcd.solidanchor.utils.client.error
 
-import net.solidanchor.SolidAnchor
-import net.solidanchor.utils.client.error.errors.ClientError
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.SolidAnchor
+import com.github.eedcd.solidanchor.utils.client.error.errors.ClientError
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.client.mc
 import net.minecraft.util.Util
 import net.minecraft.util.Util.OS.WINDOWS
 import org.lwjgl.sdl.SDLMessageBox.SDL_MESSAGEBOX_ERROR

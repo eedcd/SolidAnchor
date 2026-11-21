@@ -17,20 +17,20 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.thirdparty.translator.providers
+package com.github.eedcd.solidanchor.api.thirdparty.translator.providers
 
 import com.google.gson.JsonArray
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import net.solidanchor.api.core.HttpClient
-import net.solidanchor.api.core.HttpMethod
-import net.solidanchor.api.core.bodyAsJson
-import net.solidanchor.api.thirdparty.translator.TranslateLanguage
-import net.solidanchor.api.thirdparty.translator.TranslationResult
-import net.solidanchor.api.thirdparty.translator.TranslatorMode
-import net.solidanchor.config.gson.util.array
-import net.solidanchor.config.gson.util.string
-import net.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.api.core.HttpClient
+import com.github.eedcd.solidanchor.api.core.HttpMethod
+import com.github.eedcd.solidanchor.api.core.bodyAsJson
+import com.github.eedcd.solidanchor.api.thirdparty.translator.TranslateLanguage
+import com.github.eedcd.solidanchor.api.thirdparty.translator.TranslationResult
+import com.github.eedcd.solidanchor.api.thirdparty.translator.TranslatorMode
+import com.github.eedcd.solidanchor.config.gson.util.array
+import com.github.eedcd.solidanchor.config.gson.util.string
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
 import okhttp3.HttpUrl.Companion.toHttpUrl
 
 class GoogleTranslateApi(

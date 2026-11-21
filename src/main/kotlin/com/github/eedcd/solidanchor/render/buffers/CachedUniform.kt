@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.buffers
+package com.github.eedcd.solidanchor.render.buffers
 
 import com.mojang.renderpearl.api.buffers.GpuBufferSlice
 import com.mojang.blaze3d.buffers.Std140Builder
-import net.solidanchor.render.ClientUniformDefine
-import net.solidanchor.utils.render.writeStd140
+import com.github.eedcd.solidanchor.render.ClientUniformDefine
+import com.github.eedcd.solidanchor.utils.render.writeStd140
 
 /**
  * Retains the last uniform slice across frames and uploads a new one only when [T] changes.

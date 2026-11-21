@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.event.events
+package com.github.eedcd.solidanchor.event.events
 
 import com.mojang.blaze3d.platform.InputConstants
-import net.solidanchor.annotations.Tag
-import net.solidanchor.event.CancellableEvent
-import net.solidanchor.event.Event
-import net.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.annotations.Tag
+import com.github.eedcd.solidanchor.event.CancellableEvent
+import com.github.eedcd.solidanchor.event.Event
+import com.github.eedcd.solidanchor.features.addon.AddonApi
 import net.minecraft.client.gui.screens.Screen
 
 @Tag("windowResize")

@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.api.thirdparty.ai
+package com.github.eedcd.solidanchor.api.thirdparty.ai
 
-import net.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.types.list.Tagged
 
 /**
  * Wire protocols supported for AI chat completions.

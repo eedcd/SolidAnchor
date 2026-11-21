@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.module.modules.misc.nameprotect.sanitizeForeignInput
-import net.solidanchor.render.engine.font.HorizontalAnchor
-import net.solidanchor.render.engine.font.VerticalAnchor
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.module.modules.misc.nameprotect.sanitizeForeignInput
+import com.github.eedcd.solidanchor.render.engine.font.HorizontalAnchor
+import com.github.eedcd.solidanchor.render.engine.font.VerticalAnchor
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.client.mc
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.network.chat.Component
 import net.minecraft.util.FormattedCharSequence

@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.world.automobheal
+package com.github.eedcd.solidanchor.features.module.modules.world.automobheal
 
 import net.minecraft.core.component.DataComponents
 import net.minecraft.tags.TagKey

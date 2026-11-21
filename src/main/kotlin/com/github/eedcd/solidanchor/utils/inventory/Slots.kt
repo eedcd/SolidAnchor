@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.inventory
+package com.github.eedcd.solidanchor.utils.inventory
 
 import net.ccbluex.fastutil.mapToArray
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.client.mc
 import net.minecraft.tags.TagKey
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.ItemStack

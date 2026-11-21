@@ -19,7 +19,7 @@
 
 @file:Suppress("FunctionName", "PropertyName", "NOTHING_TO_INLINE", "CAST_NEVER_SUCCEEDS")
 
-package net.solidanchor.additions
+package com.github.eedcd.solidanchor.additions
 
 import net.minecraft.network.protocol.game.ServerboundPlayerInputPacket
 import net.minecraft.world.entity.player.Input

@@ -17,21 +17,21 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.types.group
+package com.github.eedcd.solidanchor.config.types.group
 
 import com.google.gson.JsonArray
 import com.google.gson.JsonNull
 import com.google.gson.JsonObject
 import com.google.gson.JsonPrimitive
 import net.ccbluex.fastutil.mapToArray
-import net.solidanchor.config.gson.publicGson
-import net.solidanchor.config.types.FileDialogMode
-import net.solidanchor.config.types.ValueType
-import net.solidanchor.config.types.group.ValueGroup.ModeBuilder
-import net.solidanchor.config.types.list.Tagged.Companion.asTagged
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.collection.blockSortedSetOf
-import net.solidanchor.utils.collection.itemSortedSetOf
+import com.github.eedcd.solidanchor.config.gson.publicGson
+import com.github.eedcd.solidanchor.config.types.FileDialogMode
+import com.github.eedcd.solidanchor.config.types.ValueType
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup.ModeBuilder
+import com.github.eedcd.solidanchor.config.types.list.Tagged.Companion.asTagged
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.collection.blockSortedSetOf
+import com.github.eedcd.solidanchor.utils.collection.itemSortedSetOf
 import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.Block
 import java.io.File

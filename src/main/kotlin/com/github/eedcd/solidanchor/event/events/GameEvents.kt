@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.event.events
+package com.github.eedcd.solidanchor.event.events
 
 import com.mojang.blaze3d.platform.InputConstants
-import net.solidanchor.annotations.Tag
-import net.solidanchor.config.gson.stategies.ProtocolExclude
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.CancellableEvent
-import net.solidanchor.event.Event
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.entity.cameraDistance
-import net.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.annotations.Tag
+import com.github.eedcd.solidanchor.config.gson.stategies.ProtocolExclude
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.CancellableEvent
+import com.github.eedcd.solidanchor.event.Event
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.entity.cameraDistance
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
 import net.minecraft.client.CameraType
 import net.minecraft.client.KeyMapping
 import net.minecraft.client.Minecraft

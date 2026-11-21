@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.world.autofarm
+package com.github.eedcd.solidanchor.features.module.modules.world.autofarm
 
 import net.ccbluex.fastutil.enumSetOf
 import net.ccbluex.fastutil.objectArraySetOf
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.utils.client.world
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.world.item.Item

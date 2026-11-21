@@ -17,32 +17,32 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.cheststealer.features
+package com.github.eedcd.solidanchor.features.module.modules.player.cheststealer.features
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.OverlayRenderEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.ScreenEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.player.cheststealer.ModuleChestStealer
-import net.solidanchor.features.module.modules.player.cheststealer.ModuleChestStealer.canBeStolen
-import net.solidanchor.render.gui.ItemStackListRenderer.BackgroundMode.backgroundChoices
-import net.solidanchor.render.engine.type.Vec3f
-import net.solidanchor.render.gui.ItemStackListRenderState
-import net.solidanchor.utils.block.anotherChestPartDirection
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.inventory.getSlotsInContainer
-import net.solidanchor.utils.math.center
-import net.solidanchor.utils.math.toVec3d
-import net.solidanchor.utils.render.WorldToScreen
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.ScreenEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.player.cheststealer.ModuleChestStealer
+import com.github.eedcd.solidanchor.features.module.modules.player.cheststealer.ModuleChestStealer.canBeStolen
+import com.github.eedcd.solidanchor.render.gui.ItemStackListRenderer.BackgroundMode.backgroundChoices
+import com.github.eedcd.solidanchor.render.engine.type.Vec3f
+import com.github.eedcd.solidanchor.render.gui.ItemStackListRenderState
+import com.github.eedcd.solidanchor.utils.block.anotherChestPartDirection
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.inventory.getSlotsInContainer
+import com.github.eedcd.solidanchor.utils.math.center
+import com.github.eedcd.solidanchor.utils.math.toVec3d
+import com.github.eedcd.solidanchor.utils.render.WorldToScreen
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
 import net.minecraft.core.BlockPos
 import net.minecraft.network.protocol.game.ServerboundUseItemOnPacket
 import net.minecraft.world.phys.HitResult
 
 /**
- * @see net.solidanchor.injection.mixins.minecraft.client.MixinMinecraft
- * @see net.solidanchor.injection.mixins.minecraft.gui.MixinAbstractContainerScreen
+ * @see com.github.eedcd.solidanchor.injection.mixins.minecraft.client.MixinMinecraft
+ * @see com.github.eedcd.solidanchor.injection.mixins.minecraft.gui.MixinAbstractContainerScreen
  */
 object FeatureSilentScreen : ToggleableValueGroup(ModuleChestStealer, "SilentScreen", false) {
 

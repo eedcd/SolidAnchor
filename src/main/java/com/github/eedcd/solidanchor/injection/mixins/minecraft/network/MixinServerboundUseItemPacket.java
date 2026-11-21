@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.network;
 
+import com.github.eedcd.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedInvalidHand;
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager;
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation;
+import com.github.eedcd.solidanchor.utils.network.UseItemPacketRotation;
 import io.netty.buffer.ByteBuf;
-import net.solidanchor.features.module.modules.movement.noslow.modes.shared.NoSlowSharedInvalidHand;
-import net.solidanchor.utils.aiming.RotationManager;
-import net.solidanchor.utils.aiming.data.Rotation;
-import net.solidanchor.utils.network.UseItemPacketRotation;
 import net.minecraft.network.VarInt;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.game.ServerboundUseItemPacket;
@@ -50,24 +50,9 @@ public abstract class MixinServerboundUseItemPacket {
     @Final
     private float xRot;
 
-    @Inject(method = "<init>(Lnet/minecraft/world/InteractionHand;IFF)V", at = @At("RETURN"))
-    private void modifyRotation(InteractionHand hand, int sequence, float yRot, float xRot, CallbackInfo ci) {
-        if (!UseItemPacketRotation.shouldOverride()) {
-            return;
-        }
-
-        Rotation rotation = RotationManager.INSTANCE.getCurrentRotation();
-        if (rotation == null) {
-            return;
-        }
-
-        this.yRot = rotation.yRot();
-        this.xRot = rotation.xRot();
-    }
-
     /**
-     * @see NoSlowSharedInvalidHand
      * @param original {@link InteractionHand#STREAM_CODEC}
+     * @see NoSlowSharedInvalidHand
      */
     @ModifyArg(
         method = "<clinit>",
@@ -90,6 +75,21 @@ public abstract class MixinServerboundUseItemPacket {
                 }
             }
         };
+    }
+
+    @Inject(method = "<init>(Lnet/minecraft/world/InteractionHand;IFF)V", at = @At("RETURN"))
+    private void modifyRotation(InteractionHand hand, int sequence, float yRot, float xRot, CallbackInfo ci) {
+        if (!UseItemPacketRotation.shouldOverride()) {
+            return;
+        }
+
+        Rotation rotation = RotationManager.INSTANCE.getCurrentRotation();
+        if (rotation == null) {
+            return;
+        }
+
+        this.yRot = rotation.yRot();
+        this.xRot = rotation.xRot();
     }
 
 }

@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.math
+package com.github.eedcd.solidanchor.utils.math
 
-import net.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.client.world
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.world.level.ChunkPos

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.client
+package com.github.eedcd.solidanchor.utils.client
 
 import com.mojang.authlib.GameProfileRepository
 import com.mojang.authlib.minecraft.SessionService
@@ -24,7 +24,7 @@ import com.mojang.authlib.services.ServicesKeySet
 import com.mojang.blaze3d.platform.Window
 import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.renderpearl.api.device.GpuDevice
-import net.solidanchor.utils.kotlin.IntIntValuePair
+import com.github.eedcd.solidanchor.utils.kotlin.IntIntValuePair
 import net.minecraft.client.Minecraft
 import net.minecraft.client.multiplayer.ClientLevel
 import net.minecraft.client.multiplayer.ClientPacketListener

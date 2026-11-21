@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.gui.indicator
+package com.github.eedcd.solidanchor.render.gui.indicator
 
-import net.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
 import net.minecraft.client.gui.GuiGraphicsExtractor
 
 /**

@@ -17,22 +17,19 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.network;
 
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleSkinChanger;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.mojang.authlib.GameProfile;
-import net.solidanchor.features.misc.SelfDestruct;
-import net.solidanchor.features.module.modules.render.ModuleSkinChanger;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.PlayerInfo;
-import net.minecraft.core.ClientAsset;
-import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.PlayerSkin;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(PlayerInfo.class)
@@ -41,6 +38,11 @@ public abstract class MixinPlayerInfo {
     @Shadow
     @Final
     private GameProfile profile;
+
+    @ModifyExpressionValue(method = "createSkinLookup", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;isLocalPlayer(Ljava/util/UUID;)Z"))
+    private static boolean solid_anchor$allow_custom_skin(boolean b) {
+        return b || ModuleSkinChanger.INSTANCE.getRunning();
+    }
 
     @ModifyReturnValue(method = "getSkin", at = @At("RETURN"))
     @SuppressWarnings({"ConstantConditions", "EqualsBetweenInconvertibleTypes", "RedundantCast"})
@@ -63,11 +65,6 @@ public abstract class MixinPlayerInfo {
         }
 
         return original;
-    }
-
-    @ModifyExpressionValue(method = "createSkinLookup", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;isLocalPlayer(Ljava/util/UUID;)Z"))
-    private static boolean solid_anchor$allow_custom_skin(boolean b) {
-        return b || ModuleSkinChanger.INSTANCE.getRunning();
     }
 
 }

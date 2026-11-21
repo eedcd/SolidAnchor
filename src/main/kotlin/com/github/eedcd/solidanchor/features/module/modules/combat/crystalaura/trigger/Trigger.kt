@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura.trigger
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger
 
-import net.solidanchor.config.types.Value
-import net.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.event.EventListener
 import net.minecraft.network.protocol.Packet
 
 /**

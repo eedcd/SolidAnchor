@@ -17,16 +17,16 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.inventory
+package com.github.eedcd.solidanchor.utils.inventory
 
 import kotlinx.coroutines.flow.MutableStateFlow
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.DisconnectEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.ScreenEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.network.isC2SContainerPacket
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.DisconnectEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.ScreenEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.network.isC2SContainerPacket
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.client.gui.screens.inventory.ContainerScreen
 import net.minecraft.network.chat.Component

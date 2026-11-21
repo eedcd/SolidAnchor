@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.entity
+package com.github.eedcd.solidanchor.utils.entity
 
 import net.minecraft.core.BlockPos
 import net.minecraft.world.phys.AABB

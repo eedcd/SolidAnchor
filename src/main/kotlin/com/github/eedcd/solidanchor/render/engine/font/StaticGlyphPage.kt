@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.font
+package com.github.eedcd.solidanchor.render.engine.font
 
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet
-import net.solidanchor.render.engine.font.GlyphPage.Companion.PendingGlyph
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.render.engine.font.GlyphPage.Companion.PendingGlyph
+import com.github.eedcd.solidanchor.utils.client.logger
 import java.awt.Dimension
 import java.awt.Point
 import java.awt.image.BufferedImage

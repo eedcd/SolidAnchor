@@ -18,27 +18,27 @@
  */
 @file:Suppress("WildcardImport")
 
-package net.solidanchor.features.module.modules.movement.autododge
+package com.github.eedcd.solidanchor.features.module.modules.movement.autododge
 
 import net.ccbluex.fastutil.mapToArray
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.once
-import net.solidanchor.features.blink.BlinkManager
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.player.ModuleBlink
-import net.solidanchor.features.module.modules.render.murdermystery.ModuleMurderMystery
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
-import net.solidanchor.utils.client.Timer
-import net.solidanchor.utils.entity.CachedPlayerSimulation
-import net.solidanchor.utils.entity.PlayerSimulation
-import net.solidanchor.utils.entity.PlayerSimulationCache
-import net.solidanchor.utils.entity.SimulatedArrow
-import net.solidanchor.utils.inventory.InventoryManager
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.once
+import com.github.eedcd.solidanchor.features.blink.BlinkManager
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleBlink
+import com.github.eedcd.solidanchor.features.module.modules.render.murdermystery.ModuleMurderMystery
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
+import com.github.eedcd.solidanchor.utils.client.Timer
+import com.github.eedcd.solidanchor.utils.entity.CachedPlayerSimulation
+import com.github.eedcd.solidanchor.utils.entity.PlayerSimulation
+import com.github.eedcd.solidanchor.utils.entity.PlayerSimulationCache
+import com.github.eedcd.solidanchor.utils.entity.SimulatedArrow
+import com.github.eedcd.solidanchor.utils.inventory.InventoryManager
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 import net.minecraft.client.gui.screens.inventory.ContainerScreen
 import net.minecraft.client.multiplayer.ClientLevel
 import net.minecraft.world.entity.Entity

@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.client.vfp;
+package com.github.eedcd.solidanchor.utils.client.vfp;
 
+import com.github.eedcd.solidanchor.SolidAnchor;
+import com.github.eedcd.solidanchor.utils.client.ClientProtocolVersion;
 import com.viaversion.viafabricplus.ViaFabricPlus;
 import com.viaversion.viaversion.api.protocol.version.ProtocolVersion;
 import com.viaversion.viaversion.api.protocol.version.VersionType;
-import net.solidanchor.SolidAnchor;
-import net.solidanchor.utils.client.ClientProtocolVersion;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.apache.commons.lang3.ArrayUtils;
@@ -51,10 +51,10 @@ public enum VfpCompatibility {
     public ClientProtocolVersion[] unsafeGetProtocolVersions() {
         try {
             var protocols = ProtocolVersion.getProtocols()
-                    .stream()
-                    .filter(version -> version.getVersionType() == VersionType.RELEASE)
-                    .map(version -> new ClientProtocolVersion(version.getName(), version.getVersion()))
-                    .toArray(ClientProtocolVersion[]::new);
+                .stream()
+                .filter(version -> version.getVersionType() == VersionType.RELEASE)
+                .map(version -> new ClientProtocolVersion(version.getName(), version.getVersion()))
+                .toArray(ClientProtocolVersion[]::new);
 
             ArrayUtils.reverse(protocols);
             return protocols;

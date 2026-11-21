@@ -16,21 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.command
+package com.github.eedcd.solidanchor.features.command
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.tree.LiteralCommandNode
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.command.commands.ingame.CommandPing
-import net.solidanchor.features.command.commands.ingame.CommandTps
-import net.solidanchor.features.command.commands.ingame.CommandUsername
-import net.solidanchor.features.command.commands.ingame.creative.CommandItemEnchant
-import net.solidanchor.features.command.commands.ingame.creative.CommandItemGive
-import net.solidanchor.features.command.commands.ingame.creative.CommandItemRename
-import net.solidanchor.features.command.commands.ingame.creative.CommandItemSkull
-import net.solidanchor.features.command.commands.ingame.creative.CommandItemStack
-import net.solidanchor.features.command.commands.module.CommandAutoAccount
-import net.solidanchor.test.MinecraftBootstrap
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.command.commands.ingame.CommandPing
+import com.github.eedcd.solidanchor.features.command.commands.ingame.CommandTps
+import com.github.eedcd.solidanchor.features.command.commands.ingame.CommandUsername
+import com.github.eedcd.solidanchor.features.command.commands.ingame.creative.CommandItemEnchant
+import com.github.eedcd.solidanchor.features.command.commands.ingame.creative.CommandItemGive
+import com.github.eedcd.solidanchor.features.command.commands.ingame.creative.CommandItemRename
+import com.github.eedcd.solidanchor.features.command.commands.ingame.creative.CommandItemSkull
+import com.github.eedcd.solidanchor.features.command.commands.ingame.creative.CommandItemStack
+import com.github.eedcd.solidanchor.features.command.commands.module.CommandAutoAccount
+import com.github.eedcd.solidanchor.test.MinecraftBootstrap
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 import kotlin.test.assertTrue

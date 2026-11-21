@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.jumpeffect.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.jumpeffect.modes
 
-import net.solidanchor.features.module.modules.render.jumpeffect.JumpEffectColorSettings
-import net.solidanchor.features.module.modules.render.jumpeffect.JumpEffectMode
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.drawGradientCircle
+import com.github.eedcd.solidanchor.features.module.modules.render.jumpeffect.JumpEffectColorSettings
+import com.github.eedcd.solidanchor.features.module.modules.render.jumpeffect.JumpEffectMode
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.drawGradientCircle
 
 internal object JumpEffectSimple : JumpEffectMode("Simple") {
 

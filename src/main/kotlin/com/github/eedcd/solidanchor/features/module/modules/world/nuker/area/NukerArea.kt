@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.world.nuker.area
+package com.github.eedcd.solidanchor.features.module.modules.world.nuker.area
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.modules.world.nuker.ModuleNuker
-import net.solidanchor.features.module.modules.world.nuker.ModuleNuker.areaMode
-import net.solidanchor.utils.block.isNotBreakable
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.ModuleNuker
+import com.github.eedcd.solidanchor.features.module.modules.world.nuker.ModuleNuker.areaMode
+import com.github.eedcd.solidanchor.utils.block.isNotBreakable
 import net.minecraft.core.BlockPos
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.phys.Vec3

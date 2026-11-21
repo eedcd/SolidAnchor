@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.nofall.modes
+package com.github.eedcd.solidanchor.features.module.modules.player.nofall.modes
 
 import net.ccbluex.fastutil.weightedMinByOrNullAtMost
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.once
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.entity.interactEntity
-import net.solidanchor.utils.entity.squaredBoxedDistanceTo
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.once
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.entity.interactEntity
+import com.github.eedcd.solidanchor.utils.entity.squaredBoxedDistanceTo
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.PlayerRideable
 import net.minecraft.world.entity.animal.happyghast.HappyGhast

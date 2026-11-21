@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.entity
+package com.github.eedcd.solidanchor.utils.entity
 
 import it.unimi.dsi.fastutil.floats.FloatArraySet
 import it.unimi.dsi.fastutil.floats.FloatArrays
-import net.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.client.world
 import net.minecraft.client.player.LocalPlayer
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction

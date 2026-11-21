@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.kotlin
+package com.github.eedcd.solidanchor.utils.kotlin
 
 import com.mojang.blaze3d.systems.RenderSystem
 import kotlinx.coroutines.Dispatchers
@@ -25,7 +25,7 @@ import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.MainCoroutineDispatcher
 import kotlinx.coroutines.Runnable
 import kotlinx.coroutines.internal.MainDispatcherFactory
-import net.solidanchor.utils.client.NullableBypass.mc
+import com.github.eedcd.solidanchor.utils.client.NullableBypass.mc
 import kotlin.coroutines.CoroutineContext
 
 /**

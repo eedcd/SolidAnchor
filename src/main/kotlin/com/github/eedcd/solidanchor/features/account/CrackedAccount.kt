@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.account
+package com.github.eedcd.solidanchor.features.account
 
 import com.google.gson.JsonObject
 import com.mojang.authlib.GameProfile
 import kotlinx.coroutines.runBlocking
-import net.solidanchor.api.thirdparty.lookupUuidByName
-import net.solidanchor.config.gson.util.boolean
+import com.github.eedcd.solidanchor.api.thirdparty.lookupUuidByName
+import com.github.eedcd.solidanchor.config.gson.util.boolean
 import net.minecraft.core.UUIDUtil
 
 /**

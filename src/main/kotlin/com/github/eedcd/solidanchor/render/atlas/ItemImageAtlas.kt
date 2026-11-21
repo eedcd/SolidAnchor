@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.atlas
+package com.github.eedcd.solidanchor.render.atlas
 
 import com.mojang.blaze3d.platform.Lighting
 import com.mojang.blaze3d.systems.RenderSystem
 import kotlinx.coroutines.future.await
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.SuspendHandlerBehavior
-import net.solidanchor.event.events.ResourceReloadEvent
-import net.solidanchor.event.suspendHandler
-import net.solidanchor.event.tickUntil
-import net.solidanchor.utils.client.inGame
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.SuspendHandlerBehavior
+import com.github.eedcd.solidanchor.event.events.ResourceReloadEvent
+import com.github.eedcd.solidanchor.event.suspendHandler
+import com.github.eedcd.solidanchor.event.tickUntil
+import com.github.eedcd.solidanchor.utils.client.inGame
 import net.minecraft.client.gui.render.GuiRenderer
 import net.minecraft.client.renderer.texture.OverlayTexture
 import net.minecraft.client.renderer.Rect2i

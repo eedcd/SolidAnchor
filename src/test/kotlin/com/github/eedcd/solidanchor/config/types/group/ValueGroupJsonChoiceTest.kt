@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.types.group
+package com.github.eedcd.solidanchor.config.types.group
 
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonParser
 import com.google.gson.JsonSerializer
-import net.solidanchor.config.gson.serializer.ValueGroupSerializer
-import net.solidanchor.config.types.ValueType
-import net.solidanchor.test.MinecraftBootstrap
+import com.github.eedcd.solidanchor.config.gson.serializer.ValueGroupSerializer
+import com.github.eedcd.solidanchor.config.types.ValueType
+import com.github.eedcd.solidanchor.test.MinecraftBootstrap
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertIs

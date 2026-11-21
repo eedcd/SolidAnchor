@@ -16,21 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.misc
+package com.github.eedcd.solidanchor.features.misc
 
 import com.mojang.blaze3d.platform.IconSet
 import kotlinx.coroutines.cancel
-import net.solidanchor.api.core.ioScope
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.features.addon.AddonManager
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.EventManager.callEvent
-import net.solidanchor.event.events.ClientShutdownEvent
-import net.solidanchor.features.command.CommandManager
-import net.solidanchor.features.module.ModuleManager
-import net.solidanchor.features.module.modules.render.hitfx.HitFXRegistry
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.modmenu.ModMenuCompatibility
+import com.github.eedcd.solidanchor.api.core.ioScope
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.features.addon.AddonManager
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.EventManager.callEvent
+import com.github.eedcd.solidanchor.event.events.ClientShutdownEvent
+import com.github.eedcd.solidanchor.features.command.CommandManager
+import com.github.eedcd.solidanchor.features.module.ModuleManager
+import com.github.eedcd.solidanchor.features.module.modules.render.hitfx.HitFXRegistry
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.modmenu.ModMenuCompatibility
 import net.fabricmc.loader.impl.FabricLoaderImpl
 import net.minecraft.SharedConstants
 import java.lang.Thread.sleep

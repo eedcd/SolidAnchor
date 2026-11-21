@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.invcleaner.items
+package com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.items
 
-import net.solidanchor.features.module.modules.player.invcleaner.ItemCategory
-import net.solidanchor.features.module.modules.player.invcleaner.ItemType
-import net.solidanchor.utils.inventory.ItemSlot
-import net.solidanchor.utils.item.PreferStackSize
-import net.solidanchor.utils.item.asHolderComparator
-import net.solidanchor.utils.sorting.ComparatorChain
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemCategory
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.ItemType
+import com.github.eedcd.solidanchor.utils.inventory.ItemSlot
+import com.github.eedcd.solidanchor.utils.item.PreferStackSize
+import com.github.eedcd.solidanchor.utils.item.asHolderComparator
+import com.github.eedcd.solidanchor.utils.sorting.ComparatorChain
 
 class ThrowableItemFacet(itemSlot: ItemSlot) : ItemFacet(itemSlot) {
     companion object {

@@ -17,9 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.interfaces;
+package com.github.eedcd.solidanchor.interfaces;
 
 public interface LocalPlayerAddition {
     int solid_anchor$getAirTicks();
+
     int solid_anchor$getOnGroundTicks();
 }

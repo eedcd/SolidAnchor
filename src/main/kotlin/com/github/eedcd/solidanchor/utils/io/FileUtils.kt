@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.io
+package com.github.eedcd.solidanchor.utils.io
 
 import it.unimi.dsi.fastutil.objects.ObjectArraySet
 import kotlinx.coroutines.Dispatchers

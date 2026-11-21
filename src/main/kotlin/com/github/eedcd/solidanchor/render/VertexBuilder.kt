@@ -19,19 +19,19 @@
 
 @file:Suppress("NOTHING_TO_INLINE", "detekt:TooManyFunctions")
 
-package net.solidanchor.render
+package com.github.eedcd.solidanchor.render
 
 import com.mojang.renderpearl.api.pipeline.RenderPipeline
 import com.mojang.blaze3d.vertex.PoseStack
 import com.mojang.blaze3d.vertex.VertexConsumer
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.engine.type.Vec3f
-import net.solidanchor.utils.math.fastCos
-import net.solidanchor.utils.math.fastSin
-import net.solidanchor.utils.math.forAllFaces
-import net.solidanchor.utils.math.forAllSideFaces
-import net.solidanchor.utils.math.forAllSideOutlineEdges
-import net.solidanchor.utils.render.begin
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.engine.type.Vec3f
+import com.github.eedcd.solidanchor.utils.math.fastCos
+import com.github.eedcd.solidanchor.utils.math.fastSin
+import com.github.eedcd.solidanchor.utils.math.forAllFaces
+import com.github.eedcd.solidanchor.utils.math.forAllSideFaces
+import com.github.eedcd.solidanchor.utils.math.forAllSideOutlineEdges
+import com.github.eedcd.solidanchor.utils.render.begin
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.util.Mth

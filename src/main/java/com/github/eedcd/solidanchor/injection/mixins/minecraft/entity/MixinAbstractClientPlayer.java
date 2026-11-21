@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.entity;
 
+import com.github.eedcd.solidanchor.features.module.modules.exploit.disabler.ModuleDisabler;
+import com.github.eedcd.solidanchor.features.module.modules.exploit.disabler.disablers.DisablerVulcanScaffold;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleNoFov;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleSkinChanger;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.mojang.authlib.GameProfile;
-import net.solidanchor.features.module.modules.exploit.disabler.ModuleDisabler;
-import net.solidanchor.features.module.modules.exploit.disabler.disablers.DisablerVulcanScaffold;
-import net.solidanchor.features.module.modules.render.ModuleNoFov;
-import net.solidanchor.features.module.modules.render.ModuleSkinChanger;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.world.entity.player.Player;
@@ -69,11 +69,11 @@ public abstract class MixinAbstractClientPlayer extends Player {
                 PlayerSkin original = cir.getReturnValue();
                 PlayerSkin customTextures = customSupplier.get();
                 cir.setReturnValue(new PlayerSkin(
-                        customTextures.body(),
-                        original.cape(),
-                        customTextures.elytra(),
-                        customTextures.model(),
-                        customTextures.secure()
+                    customTextures.body(),
+                    original.cape(),
+                    customTextures.elytra(),
+                    customTextures.model(),
+                    customTextures.secure()
                 ));
             }
         }

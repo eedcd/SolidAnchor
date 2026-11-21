@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.creativetab
+package com.github.eedcd.solidanchor.features.creativetab
 
-import net.solidanchor.features.creativetab.tabs.ExploitsCreativeModeTab
-import net.solidanchor.features.creativetab.tabs.HeadsCreativeModeTab
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.features.creativetab.tabs.ExploitsCreativeModeTab
+import com.github.eedcd.solidanchor.features.creativetab.tabs.HeadsCreativeModeTab
+import com.github.eedcd.solidanchor.utils.client.logger
 
 /**
  * SolidAnchor Creative Item Groups with useful items and blocks

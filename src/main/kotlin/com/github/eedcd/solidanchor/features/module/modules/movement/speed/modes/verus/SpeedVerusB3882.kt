@@ -16,21 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.speed.modes.verus
+package com.github.eedcd.solidanchor.features.module.modules.movement.speed.modes.verus
 
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.PlayerAfterJumpEvent
-import net.solidanchor.event.events.PlayerMoveEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.movement.speed.ModuleSpeed
-import net.solidanchor.features.module.modules.movement.speed.modes.SpeedBHopBase
-import net.solidanchor.utils.client.Timer
-import net.solidanchor.utils.entity.moving
-import net.solidanchor.utils.entity.withStrafe
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.math.multiply
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.PlayerAfterJumpEvent
+import com.github.eedcd.solidanchor.event.events.PlayerMoveEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.movement.speed.ModuleSpeed
+import com.github.eedcd.solidanchor.features.module.modules.movement.speed.modes.SpeedBHopBase
+import com.github.eedcd.solidanchor.utils.client.Timer
+import com.github.eedcd.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.utils.entity.withStrafe
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.math.multiply
 import net.minecraft.world.entity.MoverType
 
 /**

@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.font.dynamic
+package com.github.eedcd.solidanchor.render.engine.font.dynamic
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
 import it.unimi.dsi.fastutil.objects.ObjectImmutableList
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet
 import kotlinx.atomicfu.locks.ReentrantLock
 import kotlinx.atomicfu.locks.withLock
-import net.solidanchor.annotations.ValueClassCandidate
-import net.solidanchor.render.engine.font.FontGlyph
-import net.solidanchor.render.engine.font.GlyphDescriptor
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.annotations.ValueClassCandidate
+import com.github.eedcd.solidanchor.render.engine.font.FontGlyph
+import com.github.eedcd.solidanchor.render.engine.font.GlyphDescriptor
+import com.github.eedcd.solidanchor.utils.client.logger
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicInteger

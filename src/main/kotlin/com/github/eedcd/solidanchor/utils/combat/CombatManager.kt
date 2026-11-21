@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.combat
+package com.github.eedcd.solidanchor.utils.combat
 
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.AttackEntityEvent
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.TargetChangeEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.AttackEntityEvent
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.TargetChangeEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.player.Player
 

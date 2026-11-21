@@ -19,32 +19,32 @@
 
 @file:Suppress("TooManyFunctions")
 
-package net.solidanchor.utils.entity
+package com.github.eedcd.solidanchor.utils.entity
 
-import net.solidanchor.common.ShapeFlag
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.interfaces.ClientInputAddition
-import net.solidanchor.interfaces.LocalPlayerAddition
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.block.DIRECTIONS_EXCLUDING_UP
-import net.solidanchor.utils.block.isBlastResistant
-import net.solidanchor.utils.block.raycast
-import net.solidanchor.utils.client.isBlocksAttacksExisting
-import net.solidanchor.utils.client.isOlderThanOrEqual1_8
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.item.getEnchantment
-import net.solidanchor.utils.item.isSword
-import net.solidanchor.utils.math.allEmpty
-import net.solidanchor.utils.math.anyNotEmpty
-import net.solidanchor.utils.math.copy
-import net.solidanchor.utils.math.fma
-import net.solidanchor.utils.math.intersects
-import net.solidanchor.utils.math.minus
-import net.solidanchor.utils.movement.DirectionalInput
-import net.solidanchor.utils.movement.findEdgeCollision
-import net.solidanchor.utils.world.anyMatched
+import com.github.eedcd.solidanchor.common.ShapeFlag
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.interfaces.ClientInputAddition
+import com.github.eedcd.solidanchor.interfaces.LocalPlayerAddition
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.block.DIRECTIONS_EXCLUDING_UP
+import com.github.eedcd.solidanchor.utils.block.isBlastResistant
+import com.github.eedcd.solidanchor.utils.block.raycast
+import com.github.eedcd.solidanchor.utils.client.isBlocksAttacksExisting
+import com.github.eedcd.solidanchor.utils.client.isOlderThanOrEqual1_8
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.item.getEnchantment
+import com.github.eedcd.solidanchor.utils.item.isSword
+import com.github.eedcd.solidanchor.utils.math.allEmpty
+import com.github.eedcd.solidanchor.utils.math.anyNotEmpty
+import com.github.eedcd.solidanchor.utils.math.copy
+import com.github.eedcd.solidanchor.utils.math.fma
+import com.github.eedcd.solidanchor.utils.math.intersects
+import com.github.eedcd.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.utils.movement.findEdgeCollision
+import com.github.eedcd.solidanchor.utils.world.anyMatched
 import net.minecraft.client.player.ClientInput
 import net.minecraft.client.player.LocalPlayer
 import net.minecraft.core.BlockPos

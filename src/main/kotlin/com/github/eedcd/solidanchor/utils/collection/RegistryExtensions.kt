@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.collection
+package com.github.eedcd.solidanchor.utils.collection
 
 import it.unimi.dsi.fastutil.objects.ObjectRBTreeSet
 import net.minecraft.core.Registry

@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.item
+package com.github.eedcd.solidanchor.utils.item
 
 import com.google.common.base.Predicates
-import net.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.types.list.Tagged
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.MaceItem
 import net.minecraft.world.item.enchantment.Enchantments

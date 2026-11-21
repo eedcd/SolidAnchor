@@ -16,30 +16,30 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.addon
+package com.github.eedcd.solidanchor.features.addon
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.tree.LiteralCommandNode
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.types.Config
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.RefreshArrayListEvent
-import net.solidanchor.features.command.CommandManager
-import net.solidanchor.features.command.CommandRegistrar
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.ModuleCategory
-import net.solidanchor.features.module.ModuleManager
-import net.solidanchor.features.module.modules.render.ModuleClickGui
-import net.solidanchor.utils.client.clientLogger
-import net.solidanchor.utils.client.error.QuickFix
-import net.solidanchor.utils.client.error.QuickFixes
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.types.Config
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.RefreshArrayListEvent
+import com.github.eedcd.solidanchor.features.command.CommandManager
+import com.github.eedcd.solidanchor.features.command.CommandRegistrar
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.ModuleCategory
+import com.github.eedcd.solidanchor.features.module.ModuleManager
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleClickGui
+import com.github.eedcd.solidanchor.utils.client.clientLogger
+import com.github.eedcd.solidanchor.utils.client.error.QuickFix
+import com.github.eedcd.solidanchor.utils.client.error.QuickFixes
 import net.fabricmc.loader.api.ModContainer
 
 @AddonApi

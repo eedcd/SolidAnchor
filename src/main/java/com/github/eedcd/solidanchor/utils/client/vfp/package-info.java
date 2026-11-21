@@ -18,4 +18,4 @@
  */
 
 @org.jspecify.annotations.NullMarked
-package net.solidanchor.utils.client.vfp;
+package com.github.eedcd.solidanchor.utils.client.vfp;

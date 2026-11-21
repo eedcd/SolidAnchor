@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.misc
+package com.github.eedcd.solidanchor.features.misc
 
 interface Toggleable {
 

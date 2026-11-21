@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.event
+package com.github.eedcd.solidanchor.event
 
+import com.github.eedcd.solidanchor.SolidAnchor.CLIENT_NAME
+import com.github.eedcd.solidanchor.utils.client.mc
 import it.unimi.dsi.fastutil.objects.ReferenceArrayList
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.suspendCancellableCoroutine
-import net.solidanchor.SolidAnchor.CLIENT_NAME
-import net.solidanchor.utils.client.mc
 import net.minecraft.ReportedException
 import org.slf4j.LoggerFactory
 import java.util.function.BooleanSupplier

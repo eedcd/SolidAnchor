@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.longjump
+package com.github.eedcd.solidanchor.features.module.modules.movement.longjump
 
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.PlayerJumpEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.movement.longjump.modes.Matrix7145FlagLongJump
-import net.solidanchor.features.module.modules.movement.longjump.modes.VulcanLongJump
-import net.solidanchor.features.module.modules.movement.longjump.modes.nocheatplus.NoCheatPlusBoost
-import net.solidanchor.features.module.modules.movement.longjump.modes.nocheatplus.NoCheatPlusBow
-import net.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.PlayerJumpEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.movement.longjump.modes.Matrix7145FlagLongJump
+import com.github.eedcd.solidanchor.features.module.modules.movement.longjump.modes.VulcanLongJump
+import com.github.eedcd.solidanchor.features.module.modules.movement.longjump.modes.nocheatplus.NoCheatPlusBoost
+import com.github.eedcd.solidanchor.features.module.modules.movement.longjump.modes.nocheatplus.NoCheatPlusBow
+import com.github.eedcd.solidanchor.utils.entity.moving
 
 object ModuleLongJump : ClientModule("LongJump", ModuleCategories.MOVEMENT) {
 

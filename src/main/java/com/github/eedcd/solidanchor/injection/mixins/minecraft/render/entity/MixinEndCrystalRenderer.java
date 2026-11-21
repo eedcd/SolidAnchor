@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.render.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render.entity;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleCrystalView;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.solidanchor.features.module.modules.render.ModuleCrystalView;
 import net.minecraft.client.renderer.entity.EndCrystalRenderer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module
+package com.github.eedcd.solidanchor.features.module
 
 import com.mojang.renderpearl.api.device.GpuDevice
 import com.mojang.blaze3d.systems.RenderSystem
-import net.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.addon.AddonApi
 import net.minecraft.client.Minecraft
 import net.minecraft.client.multiplayer.ClientLevel
 import net.minecraft.client.multiplayer.ClientPacketListener
@@ -38,7 +38,7 @@ import net.minecraft.client.player.LocalPlayer
 @AddonApi
 interface MinecraftShortcuts {
     val mc: Minecraft
-        get() = net.solidanchor.utils.client.mc
+        get() = com.github.eedcd.solidanchor.utils.client.mc
     val player: LocalPlayer
         get() = requireNotNull(mc.player) { "mc.player is null" }
     val world: ClientLevel
@@ -51,5 +51,5 @@ interface MinecraftShortcuts {
         get() = RenderSystem.getDevice()
 
     val inGame: Boolean
-        get() = net.solidanchor.utils.client.inGame
+        get() = com.github.eedcd.solidanchor.utils.client.inGame
 }

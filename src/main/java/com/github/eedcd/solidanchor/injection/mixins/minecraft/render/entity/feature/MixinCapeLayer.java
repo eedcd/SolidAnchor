@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.render.entity.feature;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render.entity.feature;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleChams;
+import com.github.eedcd.solidanchor.interfaces.EntityRenderStateAddition;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.features.module.modules.render.ModuleChams;
-import net.solidanchor.interfaces.EntityRenderStateAddition;
 import net.minecraft.client.renderer.entity.layers.CapeLayer;
 import net.minecraft.client.renderer.entity.state.AvatarRenderState;
 import net.minecraft.client.renderer.rendertype.RenderType;

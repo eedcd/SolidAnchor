@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.render.customambience.worldeffects
+package com.github.eedcd.solidanchor.features.module.modules.render.customambience.worldeffects
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience
-import net.solidanchor.features.module.modules.render.customambience.worldeffects.modes.WorldParticlesSimple
-import net.solidanchor.utils.collection.ExpiringList.Companion.ExpiringList
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.render.customambience.ModuleCustomAmbience
+import com.github.eedcd.solidanchor.features.module.modules.render.customambience.worldeffects.modes.WorldParticlesSimple
+import com.github.eedcd.solidanchor.utils.collection.ExpiringList.Companion.ExpiringList
 import net.minecraft.world.phys.Vec3
 
 object WorldParticles : ToggleableValueGroup(ModuleCustomAmbience, "WorldParticles", false) {

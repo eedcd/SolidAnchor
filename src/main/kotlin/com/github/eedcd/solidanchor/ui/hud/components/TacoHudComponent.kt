@@ -17,13 +17,13 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.ui.hud.components
+package com.github.eedcd.solidanchor.ui.hud.components
 
-import net.solidanchor.event.events.OverlayRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.ui.hud.NativeHudComponent
-import net.solidanchor.utils.kotlin.EventPriorityConvention
-import net.solidanchor.utils.render.Alignment
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.ui.hud.NativeHudComponent
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.utils.render.Alignment
 import net.minecraft.client.gui.GuiGraphicsExtractor
 
 object TacoHudComponent : NativeHudComponent(

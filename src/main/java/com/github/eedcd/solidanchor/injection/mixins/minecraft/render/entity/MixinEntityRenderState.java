@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.render.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render.entity;
 
-import net.solidanchor.interfaces.EntityRenderStateAddition;
+import com.github.eedcd.solidanchor.interfaces.EntityRenderStateAddition;
 import net.minecraft.client.renderer.entity.state.EntityRenderState;
 import net.minecraft.world.entity.Entity;
 import org.spongepowered.asm.mixin.Mixin;

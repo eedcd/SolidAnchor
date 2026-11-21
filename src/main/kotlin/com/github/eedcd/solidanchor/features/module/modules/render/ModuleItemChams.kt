@@ -16,28 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
 import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.renderpearl.api.GpuFormat
 import com.mojang.renderpearl.api.textures.FilterMode
 import com.mojang.renderpearl.api.textures.GpuTexture
 import com.mojang.renderpearl.api.textures.GpuTextureView
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.injection.mixins.minecraft.render.MixinGameRenderer
-import net.solidanchor.render.ClientRenderPipelines
-import net.solidanchor.render.ClientUniformDefine
-import net.solidanchor.render.createRenderPass
-import net.solidanchor.render.engine.ItemChamsEffectRenderer
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.setPipeline
-import net.solidanchor.utils.render.asView
-import net.solidanchor.utils.render.putVec4
-import net.solidanchor.utils.render.writeStd140
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.render.MixinGameRenderer
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines
+import com.github.eedcd.solidanchor.render.ClientUniformDefine
+import com.github.eedcd.solidanchor.render.createRenderPass
+import com.github.eedcd.solidanchor.render.engine.ItemChamsEffectRenderer
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.setPipeline
+import com.github.eedcd.solidanchor.utils.render.asView
+import com.github.eedcd.solidanchor.utils.render.putVec4
+import com.github.eedcd.solidanchor.utils.render.writeStd140
 import net.minecraft.util.ARGB
 import org.joml.Vector2f
 

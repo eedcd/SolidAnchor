@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.types.group
+package com.github.eedcd.solidanchor.config.types.group
 
-import net.solidanchor.features.misc.Toggleable
+import com.github.eedcd.solidanchor.features.misc.Toggleable
 import kotlin.test.assertEquals
 import kotlin.test.BeforeTest
 import kotlin.test.Test

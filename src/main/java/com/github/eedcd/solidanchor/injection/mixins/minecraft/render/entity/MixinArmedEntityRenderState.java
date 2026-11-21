@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.render.entity;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render.entity;
 
+import com.github.eedcd.solidanchor.features.module.modules.combat.ModuleSwordBlock;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.features.module.modules.combat.ModuleSwordBlock;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.state.ArmedEntityRenderState;
 import net.minecraft.world.entity.HumanoidArm;

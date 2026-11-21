@@ -17,14 +17,14 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.gui.custom;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui.custom;
 
-import net.solidanchor.api.thirdparty.IpInfoApi;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.ServerConnectEvent;
-import net.solidanchor.features.misc.SelfDestruct;
-import net.solidanchor.injection.mixins.minecraft.gui.MixinScreen;
-import net.solidanchor.utils.text.PlainText;
+import com.github.eedcd.solidanchor.api.thirdparty.IpInfoApi;
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.ServerConnectEvent;
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct;
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.gui.MixinScreen;
+import com.github.eedcd.solidanchor.utils.text.PlainText;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
@@ -47,20 +47,40 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
 
-import static net.solidanchor.utils.text.TextExtensionsKt.hideSensitiveAddress;
+import static com.github.eedcd.solidanchor.utils.text.TextExtensionsKt.hideSensitiveAddress;
 
 @Mixin(ConnectScreen.class)
 public abstract class MixinConnectScreen extends MixinScreen {
 
     @Shadow
     private volatile @Nullable Connection connection;
+    @Unique
+    private ServerAddress serverAddress = null;
+
+    @Unique
+    private static String getSocketAddress(Connection clientConnection, ServerAddress serverAddress) {
+        String socketAddr;
+        if (clientConnection.getRemoteAddress() instanceof InetSocketAddress address) {
+            // In this we do not redact the host string - it is usually not sensitive
+            var hostString = address.getHostString();
+            var hostAddress = address.isUnresolved() ?
+                "<unresolved>" :
+                address.getAddress().getHostAddress();
+
+            if (hostString.equals(serverAddress.getHost())) {
+                socketAddr = String.format("%s:%s", hostAddress, address.getPort());
+            } else {
+                socketAddr = String.format("%s/%s:%s", hostString, hostAddress, address.getPort());
+            }
+        } else {
+            socketAddr = "<unknown>";
+        }
+        return socketAddr;
+    }
 
     @Shadow
     public abstract void connect(
         Minecraft client, ServerAddress address, ServerData info, @Nullable TransferState cookieStorage);
-
-    @Unique
-    private ServerAddress serverAddress = null;
 
     @Inject(method = "extractRenderState", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphicsExtractor;centeredText(Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;III)V"))
     private void injectRender(GuiGraphicsExtractor context, int mouseX, int mouseY, float delta, final CallbackInfo callback) {
@@ -86,7 +106,6 @@ public abstract class MixinConnectScreen extends MixinScreen {
         context.centeredText(this.font, connectionDetails, this.width / 2,
             this.height / 2 - 60, -1);
     }
-
 
     @Inject(method = "connect(Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/multiplayer/resolver/ServerAddress;Lnet/minecraft/client/multiplayer/ServerData;Lnet/minecraft/client/multiplayer/TransferState;)V", at = @At("HEAD"), cancellable = true)
     private void injectConnect(Minecraft client, ServerAddress address, ServerData info, TransferState cookieStorage, CallbackInfo ci) {
@@ -136,27 +155,6 @@ public abstract class MixinConnectScreen extends MixinScreen {
         textParts.add(server);
 
         return FormattedCharSequence.fromList(textParts);
-    }
-
-    @Unique
-    private static String getSocketAddress(Connection clientConnection, ServerAddress serverAddress) {
-        String socketAddr;
-        if (clientConnection.getRemoteAddress() instanceof InetSocketAddress address) {
-            // In this we do not redact the host string - it is usually not sensitive
-            var hostString = address.getHostString();
-            var hostAddress = address.isUnresolved() ?
-                    "<unresolved>" :
-                    address.getAddress().getHostAddress();
-
-            if (hostString.equals(serverAddress.getHost())) {
-                socketAddr = String.format("%s:%s", hostAddress, address.getPort());
-            } else {
-                socketAddr = String.format("%s/%s:%s", hostString, hostAddress, address.getPort());
-            }
-        } else {
-            socketAddr = "<unknown>";
-        }
-        return socketAddr;
     }
 
 }

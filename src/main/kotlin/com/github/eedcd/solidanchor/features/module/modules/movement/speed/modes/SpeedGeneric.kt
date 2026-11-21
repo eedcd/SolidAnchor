@@ -16,26 +16,26 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.speed.modes
+package com.github.eedcd.solidanchor.features.module.modules.movement.speed.modes
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.MovementInputEvent
-import net.solidanchor.event.events.PlayerAfterJumpEvent
-import net.solidanchor.event.handler
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.features.module.modules.movement.speed.ModuleSpeed.doOptimizationsPreventJump
-import net.solidanchor.features.module.modules.player.invcleaner.items.SpearItemFacet.Companion.COMPARING_LUNGE_AND_SPEED
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.entity.moving
-import net.solidanchor.utils.entity.withStrafe
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.item.attackSpeed
-import net.solidanchor.utils.item.durability
-import net.solidanchor.utils.item.getEnchantment
-import net.solidanchor.utils.math.copy
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.MovementInputEvent
+import com.github.eedcd.solidanchor.event.events.PlayerAfterJumpEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.features.module.modules.movement.speed.ModuleSpeed.doOptimizationsPreventJump
+import com.github.eedcd.solidanchor.features.module.modules.player.invcleaner.items.SpearItemFacet.Companion.COMPARING_LUNGE_AND_SPEED
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.utils.entity.withStrafe
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.item.attackSpeed
+import com.github.eedcd.solidanchor.utils.item.durability
+import com.github.eedcd.solidanchor.utils.item.getEnchantment
+import com.github.eedcd.solidanchor.utils.math.copy
 import net.minecraft.core.component.DataComponents
 import net.minecraft.world.item.enchantment.Enchantments
 import kotlin.math.roundToInt

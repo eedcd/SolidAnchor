@@ -17,20 +17,18 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.input;
+package com.github.eedcd.solidanchor.utils.input;
 
+import com.github.eedcd.solidanchor.test.MinecraftBootstrap;
 import com.mojang.blaze3d.platform.InputConstants;
-import net.solidanchor.test.MinecraftBootstrap;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.lwjgl.sdl.SDLEvents;
 import org.lwjgl.sdl.SDLKeycode;
-import org.lwjgl.sdl.SDL_KeyboardEvent;
 import org.lwjgl.sdl.SDL_Event;
+import org.lwjgl.sdl.SDL_KeyboardEvent;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * TODO(26.4): remove this after 26.4-snapshot-2

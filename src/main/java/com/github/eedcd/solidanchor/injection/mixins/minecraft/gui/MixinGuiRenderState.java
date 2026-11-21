@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.gui;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui;
 
-import net.solidanchor.render.gui.element.RecyclableGuiElementRenderState;
+import com.github.eedcd.solidanchor.render.gui.element.RecyclableGuiElementRenderState;
 import net.minecraft.client.renderer.state.gui.GuiRenderState;
 import net.minecraft.client.renderer.state.gui.ScreenArea;
 import org.spongepowered.asm.mixin.Final;
@@ -34,12 +34,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-import static net.solidanchor.utils.collection.GenericPools.ARRAY_LIST;
+import static com.github.eedcd.solidanchor.utils.collection.GenericPools.ARRAY_LIST;
 
 @SuppressWarnings("rawtypes")
 @Mixin(GuiRenderState.class)
 public abstract class MixinGuiRenderState {
 
+    @Unique
+    private static final Consumer<ScreenArea> solid_anchor$tryRecycle = element -> {
+        if (element instanceof RecyclableGuiElementRenderState recyclable) {
+            recyclable.recycle();
+        }
+    };
     @Shadow
     @Final
     private List<GuiRenderState.Node> strata;
@@ -75,12 +81,5 @@ public abstract class MixinGuiRenderState {
             }
         }
     }
-
-    @Unique
-    private static final Consumer<ScreenArea> solid_anchor$tryRecycle = element -> {
-        if (element instanceof RecyclableGuiElementRenderState recyclable) {
-            recyclable.recycle();
-        }
-    };
 
 }

@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.aiming.features.processors.anglesmooth.impl
+package com.github.eedcd.solidanchor.utils.aiming.features.processors.anglesmooth.impl
 
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.features.module.modules.render.ModuleDebug
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationTarget
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.aiming.features.processors.anglesmooth.FactorAngleSmooth
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleDebug
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationTarget
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.aiming.features.processors.anglesmooth.FactorAngleSmooth
 import net.minecraft.world.phys.Vec2
 import kotlin.math.abs
 import kotlin.math.exp

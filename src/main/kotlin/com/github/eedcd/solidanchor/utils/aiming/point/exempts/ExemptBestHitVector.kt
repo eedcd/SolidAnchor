@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.aiming.point.exempts
+package com.github.eedcd.solidanchor.utils.aiming.point.exempts
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.EventListener
 import net.minecraft.world.phys.Vec3
 
 internal class ExemptBestHitVector(parent: EventListener) :

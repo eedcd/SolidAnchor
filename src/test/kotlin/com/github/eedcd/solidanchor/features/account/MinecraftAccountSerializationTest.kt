@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.account
+package com.github.eedcd.solidanchor.features.account
 
-import net.solidanchor.config.gson.util.readJson
-import net.solidanchor.test.MinecraftBootstrap
+import com.github.eedcd.solidanchor.config.gson.util.readJson
+import com.github.eedcd.solidanchor.test.MinecraftBootstrap
 import com.google.gson.JsonObject
 import kotlin.test.BeforeTest
 import kotlin.test.Test

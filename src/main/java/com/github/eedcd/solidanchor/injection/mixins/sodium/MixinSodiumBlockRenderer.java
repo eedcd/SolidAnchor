@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.sodium;
+package com.github.eedcd.solidanchor.injection.mixins.sodium;
 
+import com.github.eedcd.solidanchor.common.XRayBlockRenderContext;
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleXRay;
+import com.github.eedcd.solidanchor.interfaces.AbstractBlockRenderContextAddition;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import net.caffeinemc.mods.sodium.client.render.chunk.compile.pipeline.BlockRenderer;
 import net.caffeinemc.mods.sodium.client.render.model.MutableQuadViewImpl;
-import net.solidanchor.common.XRayBlockRenderContext;
-import net.solidanchor.features.module.modules.render.ModuleXRay;
-import net.solidanchor.interfaces.AbstractBlockRenderContextAddition;
-import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.renderer.block.dispatch.BlockStateModel;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
 import org.objectweb.asm.Opcodes;
@@ -44,7 +44,7 @@ public abstract class MixinSodiumBlockRenderer {
 
     @WrapMethod(method = "renderModel")
     private void wrapXRayTransparentBackground(BlockStateModel model, BlockState state, BlockPos pos, BlockPos origin,
-            Operation<Void> original) {
+                                               Operation<Void> original) {
         AbstractBlockRenderContextAddition context = solidAnchor$context();
         // Resolving the module state per block keeps the face decisions below down to a field read.
         boolean active = ModuleXRay.renderActive();
@@ -64,7 +64,7 @@ public abstract class MixinSodiumBlockRenderer {
 
     @Inject(method = "renderModel", at = @At("HEAD"), cancellable = true)
     private void injectXRaySkipHiddenBlocks(BlockStateModel model, BlockState state, BlockPos pos, BlockPos origin,
-            CallbackInfo ci) {
+                                            CallbackInfo ci) {
         if (!solidAnchor$context().solidAnchor$xrayActive()) {
             return;
         }

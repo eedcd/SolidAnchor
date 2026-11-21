@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.MouseScrollInHotbarEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.injection.mixins.minecraft.client.MixinMouseHandler
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.input.InputBind
-import net.solidanchor.utils.math.Easing
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.MouseScrollInHotbarEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.client.MixinMouseHandler
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.input.InputBind
+import com.github.eedcd.solidanchor.utils.math.Easing
 import net.minecraft.util.Mth
 import kotlin.math.abs
 import kotlin.math.round

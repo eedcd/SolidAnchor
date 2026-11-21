@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.engine.font.dynamic
+package com.github.eedcd.solidanchor.render.engine.font.dynamic
 
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

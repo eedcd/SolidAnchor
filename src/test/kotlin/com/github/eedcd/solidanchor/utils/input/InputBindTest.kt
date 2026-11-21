@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.input
+package com.github.eedcd.solidanchor.utils.input
 
 import com.mojang.blaze3d.platform.InputConstants
-import net.solidanchor.test.MinecraftBootstrap
+import com.github.eedcd.solidanchor.test.MinecraftBootstrap
 import net.minecraft.network.chat.ClickEvent
 import kotlin.test.BeforeTest
 import kotlin.test.Test

@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.kotlin
+package com.github.eedcd.solidanchor.utils.kotlin
 
 fun safeIntRangeOf(a: Int, b: Int) = minOf(a, b)..maxOf(a, b)
 fun Int.rangeAround(radius: Int) = this - radius..this + radius

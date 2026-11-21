@@ -17,22 +17,22 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.combat.elytratarget
+package com.github.eedcd.solidanchor.features.module.modules.combat.elytratarget
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.tickHandler
-import net.solidanchor.event.waitTicks
-import net.solidanchor.utils.client.Chronometer
-import net.solidanchor.utils.network.sendHeldItemChange
-import net.solidanchor.utils.entity.squaredBoxedDistanceTo
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.useHotbarSlotOrOffhand
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.tickHandler
+import com.github.eedcd.solidanchor.event.waitTicks
+import com.github.eedcd.solidanchor.utils.client.Chronometer
+import com.github.eedcd.solidanchor.utils.network.sendHeldItemChange
+import com.github.eedcd.solidanchor.utils.entity.squaredBoxedDistanceTo
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.useHotbarSlotOrOffhand
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.network.protocol.game.ServerboundUseItemPacket
 import net.minecraft.world.item.Items
-import net.solidanchor.features.module.modules.combat.killaura.ModuleKillAura as KillAura
+import com.github.eedcd.solidanchor.features.module.modules.combat.killaura.ModuleKillAura as KillAura
 
 internal object AutoFirework : ToggleableValueGroup(ModuleElytraTarget, "AutoFirework", true) {
     private val useMode by enumChoice("UseMode", FireworkUseMode.NORMAL)

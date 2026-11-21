@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers
+package com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers
 
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.combat.crystalaura.place.SubmoduleCrystalPlacer
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer.player
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer.runPlace
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer.world
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.PostPacketTrigger
-import net.solidanchor.interfaces.ClientboundRemoveEntitiesPacketAddition
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.place.SubmoduleCrystalPlacer
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer.player
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer.runPlace
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.CrystalAuraTriggerer.world
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.PostPacketTrigger
+import com.github.eedcd.solidanchor.interfaces.ClientboundRemoveEntitiesPacketAddition
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.network.protocol.game.ClientboundRemoveEntitiesPacket
 import net.minecraft.world.entity.boss.enderdragon.EndCrystal
 

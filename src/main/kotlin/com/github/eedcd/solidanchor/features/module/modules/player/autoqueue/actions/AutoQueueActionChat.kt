@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autoqueue.actions
+package com.github.eedcd.solidanchor.features.module.modules.player.autoqueue.actions
 
 import kotlinx.coroutines.delay
-import net.solidanchor.utils.network.sendChatOrCommand
+import com.github.eedcd.solidanchor.utils.network.sendChatOrCommand
 import kotlin.time.Duration.Companion.milliseconds
 
 object AutoQueueActionChat : AutoQueueAction("Chat") {

@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.event
+package com.github.eedcd.solidanchor.event
 
 import it.unimi.dsi.fastutil.objects.ObjectArrays
 import kotlinx.atomicfu.atomic

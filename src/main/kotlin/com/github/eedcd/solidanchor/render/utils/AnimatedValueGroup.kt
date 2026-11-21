@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.render.utils
+package com.github.eedcd.solidanchor.render.utils
 
-import net.solidanchor.config.types.CurveValue
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.utils.client.clientStartDurationMs
+import com.github.eedcd.solidanchor.config.types.CurveValue
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.utils.client.clientStartDurationMs
 
 abstract class AnimatedValueGroup(name: String) : ValueGroup(name) {
     protected abstract val curve: CurveValue

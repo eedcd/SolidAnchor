@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.api.thirdparty.mojang.model
+package com.github.eedcd.solidanchor.api.thirdparty.mojang.model
 
 import com.google.gson.JsonElement
 import com.google.gson.JsonNull

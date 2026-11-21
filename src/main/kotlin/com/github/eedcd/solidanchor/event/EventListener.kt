@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.event
+package com.github.eedcd.solidanchor.event
 
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.misc.DebuggedOwner
+import com.github.eedcd.solidanchor.features.misc.SelfDestruct.isDestructed
+import com.github.eedcd.solidanchor.utils.text.plus
+import com.github.eedcd.solidanchor.utils.text.withFormat
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import net.solidanchor.features.misc.DebuggedOwner
-import net.solidanchor.features.misc.SelfDestruct.isDestructed
-import net.solidanchor.utils.text.plus
-import net.solidanchor.utils.text.withFormat
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.Style
 import net.minecraft.util.FormattedCharSequence

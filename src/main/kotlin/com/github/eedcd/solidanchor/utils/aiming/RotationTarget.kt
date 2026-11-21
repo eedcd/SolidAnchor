@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.aiming
+package com.github.eedcd.solidanchor.utils.aiming
 
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.aiming.data.Rotation
-import net.solidanchor.utils.aiming.features.MovementCorrection
-import net.solidanchor.utils.aiming.features.processors.RotationProcessor
-import net.solidanchor.utils.aiming.features.processors.ShortStopRotationProcessor
-import net.solidanchor.utils.client.RestrictedSingleUseAction
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation
+import com.github.eedcd.solidanchor.utils.aiming.features.MovementCorrection
+import com.github.eedcd.solidanchor.utils.aiming.features.processors.RotationProcessor
+import com.github.eedcd.solidanchor.utils.aiming.features.processors.ShortStopRotationProcessor
+import com.github.eedcd.solidanchor.utils.client.RestrictedSingleUseAction
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.entity.rotation
 import net.minecraft.world.entity.Entity
 
 /**
@@ -42,7 +42,7 @@ class RotationTarget @JvmOverloads constructor(
     var entity: Entity? = null,
     /**
      * The rotation processors which are being used to calculate the next rotation.
-     * This list should start with [net.solidanchor.utils.aiming.features.processors.anglesmooth.AngleSmooth]
+     * This list should start with [com.github.eedcd.solidanchor.utils.aiming.features.processors.anglesmooth.AngleSmooth]
      * and then continue with other processors like [ShortStopRotationProcessor] and [FailFocus].
      */
     val processors: List<RotationProcessor> = emptyList(),

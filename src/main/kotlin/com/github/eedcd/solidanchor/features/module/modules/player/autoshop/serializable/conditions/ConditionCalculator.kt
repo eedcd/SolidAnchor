@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.player.autoshop.serializable.conditions
+package com.github.eedcd.solidanchor.features.module.modules.player.autoshop.serializable.conditions
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap
-import net.solidanchor.features.module.modules.player.autoshop.ModuleAutoShop
-import net.solidanchor.features.module.modules.player.autoshop.autoShopItemTier
-import net.solidanchor.features.module.modules.player.autoshop.getAllTierItems
-import net.solidanchor.features.module.modules.player.autoshop.hasBetterTierItem
-import net.solidanchor.features.module.modules.player.autoshop.isItemWithTiers
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.ModuleAutoShop
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.autoShopItemTier
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.getAllTierItems
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.hasBetterTierItem
+import com.github.eedcd.solidanchor.features.module.modules.player.autoshop.isItemWithTiers
 
 class ConditionCalculator(
     private val items: Object2IntMap<String>,

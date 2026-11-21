@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.account
+package com.github.eedcd.solidanchor.features.account
 
 import com.mojang.authlib.GameProfile
 import com.mojang.authlib.HttpDiscoveryService
@@ -33,8 +33,8 @@ import com.mojang.authlib.services.response.HasJoinedMinecraftServerResponse
 import com.mojang.authlib.services.response.MinecraftProfilePropertiesResponse
 import com.mojang.authlib.services.response.ProfileAction
 import net.ccbluex.fastutil.enumSetOf
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.kotlin.toUndashedString
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.kotlin.toUndashedString
 import java.net.InetAddress
 import java.net.Proxy
 import java.net.URI

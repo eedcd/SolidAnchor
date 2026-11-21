@@ -17,17 +17,17 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.misc.betterchat
+package com.github.eedcd.solidanchor.features.module.modules.misc.betterchat
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.ChatReceiveEvent
-import net.solidanchor.event.handler
-import net.solidanchor.interfaces.GuiMessageAddition
-import net.solidanchor.interfaces.GuiMessageLineAddition
-import net.solidanchor.utils.client.MessageMetadata
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.text.TextBuilder
-import net.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.ChatReceiveEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.interfaces.GuiMessageAddition
+import com.github.eedcd.solidanchor.interfaces.GuiMessageLineAddition
+import com.github.eedcd.solidanchor.utils.client.MessageMetadata
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.text.TextBuilder
+import com.github.eedcd.solidanchor.utils.text.asPlainText
 import net.minecraft.ChatFormatting
 import net.minecraft.util.StringDecomposer
 

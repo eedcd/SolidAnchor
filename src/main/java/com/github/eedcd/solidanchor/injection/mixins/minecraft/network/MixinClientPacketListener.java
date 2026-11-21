@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.minecraft.network;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.network;
 
+import com.github.eedcd.solidanchor.common.ChunkUpdateFlag;
+import com.github.eedcd.solidanchor.event.EventManager;
+import com.github.eedcd.solidanchor.event.events.*;
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.*;
+import com.github.eedcd.solidanchor.features.module.modules.exploit.disabler.disablers.DisablerSpigotSpam;
+import com.github.eedcd.solidanchor.features.module.modules.misc.betterchat.ModuleBetterChat;
+import com.github.eedcd.solidanchor.features.module.modules.player.Limit;
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleAntiExploit;
+import com.github.eedcd.solidanchor.features.module.modules.player.ModuleNoRotateSet;
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager;
+import com.github.eedcd.solidanchor.utils.aiming.data.Rotation;
+import com.github.eedcd.solidanchor.utils.kotlin.Priority;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.sugar.Cancellable;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.common.ChunkUpdateFlag;
-import net.solidanchor.event.EventManager;
-import net.solidanchor.event.events.*;
-import net.solidanchor.features.module.modules.combat.crystalaura.trigger.triggers.*;
-import net.solidanchor.features.module.modules.exploit.disabler.disablers.DisablerSpigotSpam;
-import net.solidanchor.features.module.modules.misc.betterchat.ModuleBetterChat;
-import net.solidanchor.features.module.modules.player.Limit;
-import net.solidanchor.features.module.modules.player.ModuleAntiExploit;
-import net.solidanchor.features.module.modules.player.ModuleNoRotateSet;
-import net.solidanchor.utils.aiming.RotationManager;
-import net.solidanchor.utils.aiming.data.Rotation;
-import net.solidanchor.utils.kotlin.Priority;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.LevelLoadingScreen;
 import net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl;
@@ -63,8 +63,37 @@ import java.util.Optional;
 @Mixin(ClientPacketListener.class)
 public abstract class MixinClientPacketListener extends ClientCommonPacketListenerImpl {
 
+    @Unique
+    private final ThreadLocal<Rotation> rotationThreadLocal = ThreadLocal.withInitial(() -> null);
+
     protected MixinClientPacketListener(Minecraft client, Connection connection, CommonListenerCookie connectionState) {
         super(client, connection, connectionState);
+    }
+
+    /**
+     * Restores the rotation the player was looking at before the server changed it.
+     * <p>
+     * Both handlers also move the old rotation to the server-side values, so the restored angle has to be
+     * written to the old rotation too, otherwise the camera interpolates back to the server-side angle.
+     */
+    @Unique
+    private static void applyNoRotateSet(Rotation prevRotation, Player player) {
+        if (ModuleNoRotateSet.INSTANCE.getMode().getActiveMode() == ModuleNoRotateSet.ResetRotation.INSTANCE) {
+            // Changes your server side rotation and then resets it with provided settings
+            var rotationTarget = ModuleNoRotateSet.ResetRotation.INSTANCE.getRotations().toRotationTarget(
+                new Rotation(player.getYRot(), player.getXRot(), true),
+                null,
+                true,
+                null
+            );
+            RotationManager.INSTANCE.setRotationTarget(rotationTarget, Priority.NOT_IMPORTANT, ModuleNoRotateSet.INSTANCE);
+        }
+
+        // Increase yaw and pitch by a value so small that the difference cannot be seen,
+        // just to update the rotation server-side.
+        player.setYRot(prevRotation.yRot() + 0.000001f);
+        player.setXRot(prevRotation.xRot() + 0.000001f);
+        player.setOldRot();
     }
 
     @Inject(method = "handleLevelChunkWithLight", at = @At("RETURN"))
@@ -235,9 +264,6 @@ public abstract class MixinClientPacketListener extends ClientCommonPacketListen
         }
     }
 
-    @Unique
-    private final ThreadLocal<Rotation> rotationThreadLocal = ThreadLocal.withInitial(() -> null);
-
     @Inject(method = "handleMovePlayer", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/multiplayer/ClientPacketListener;setValuesFromPositionPacket(Lnet/minecraft/world/entity/PositionMoveRotation;Ljava/util/Set;Lnet/minecraft/world/entity/Entity;Z)Z"))
     private void injectPlayerPositionLook(
         ClientboundPlayerPositionPacket packet, CallbackInfo ci, @Local(name = "player") Player player) {
@@ -263,7 +289,7 @@ public abstract class MixinClientPacketListener extends ClientCommonPacketListen
     private void wrapNoRotateSet(ClientboundPlayerRotationPacket packet, Operation<Void> original) {
         var player = Minecraft.getInstance().player;
         if (player == null || !ModuleNoRotateSet.INSTANCE.getRunning()
-                || Minecraft.getInstance().gui.screen() instanceof LevelLoadingScreen) {
+            || Minecraft.getInstance().gui.screen() instanceof LevelLoadingScreen) {
             original.call(packet);
             return;
         }
@@ -271,32 +297,6 @@ public abstract class MixinClientPacketListener extends ClientCommonPacketListen
         var prevRotation = new Rotation(player.getYRot(), player.getXRot(), true);
         original.call(packet);
         applyNoRotateSet(prevRotation, player);
-    }
-
-    /**
-     * Restores the rotation the player was looking at before the server changed it.
-     *
-     * Both handlers also move the old rotation to the server-side values, so the restored angle has to be
-     * written to the old rotation too, otherwise the camera interpolates back to the server-side angle.
-     */
-    @Unique
-    private static void applyNoRotateSet(Rotation prevRotation, Player player) {
-        if (ModuleNoRotateSet.INSTANCE.getMode().getActiveMode() == ModuleNoRotateSet.ResetRotation.INSTANCE) {
-            // Changes your server side rotation and then resets it with provided settings
-            var rotationTarget = ModuleNoRotateSet.ResetRotation.INSTANCE.getRotations().toRotationTarget(
-                    new Rotation(player.getYRot(), player.getXRot(), true),
-                    null,
-                    true,
-                    null
-            );
-            RotationManager.INSTANCE.setRotationTarget(rotationTarget, Priority.NOT_IMPORTANT, ModuleNoRotateSet.INSTANCE);
-        }
-
-        // Increase yaw and pitch by a value so small that the difference cannot be seen,
-        // just to update the rotation server-side.
-        player.setYRot(prevRotation.yRot() + 0.000001f);
-        player.setXRot(prevRotation.xRot() + 0.000001f);
-        player.setOldRot();
     }
 
     @ModifyVariable(method = "sendChat", at = @At("HEAD"), argsOnly = true, name = "content")

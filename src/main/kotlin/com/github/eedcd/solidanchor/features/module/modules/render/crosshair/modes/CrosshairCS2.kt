@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render.crosshair.modes
+package com.github.eedcd.solidanchor.features.module.modules.render.crosshair.modes
 
-import net.solidanchor.config.types.group.ValueGroup
-import net.solidanchor.event.events.OverlayRenderEvent
-import net.solidanchor.features.module.modules.render.crosshair.CrosshairColorSettings
-import net.solidanchor.features.module.modules.render.crosshair.CrosshairMode
-import net.solidanchor.render.drawQuad
+import com.github.eedcd.solidanchor.config.types.group.ValueGroup
+import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
+import com.github.eedcd.solidanchor.features.module.modules.render.crosshair.CrosshairColorSettings
+import com.github.eedcd.solidanchor.features.module.modules.render.crosshair.CrosshairMode
+import com.github.eedcd.solidanchor.render.drawQuad
 import net.minecraft.util.Mth
 
 object CrosshairCS2 : CrosshairMode("CS2") {

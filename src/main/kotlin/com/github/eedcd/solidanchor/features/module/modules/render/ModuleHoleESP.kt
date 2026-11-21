@@ -16,25 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.event.events.WorldRenderEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.render.drawBox
-import net.solidanchor.render.drawBoxSide
-import net.solidanchor.render.drawGradientSides
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.renderEnvironment
-import net.solidanchor.render.withPositionRelativeToCamera
-import net.solidanchor.utils.block.hole.Hole
-import net.solidanchor.utils.block.hole.HoleManager
-import net.solidanchor.utils.block.hole.HoleManagerSubscriber
-import net.solidanchor.utils.block.hole.HoleTracker
-import net.solidanchor.utils.math.box
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.event.events.WorldRenderEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.render.drawBox
+import com.github.eedcd.solidanchor.render.drawBoxSide
+import com.github.eedcd.solidanchor.render.drawGradientSides
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.renderEnvironment
+import com.github.eedcd.solidanchor.render.withPositionRelativeToCamera
+import com.github.eedcd.solidanchor.utils.block.hole.Hole
+import com.github.eedcd.solidanchor.utils.block.hole.HoleManager
+import com.github.eedcd.solidanchor.utils.block.hole.HoleManagerSubscriber
+import com.github.eedcd.solidanchor.utils.block.hole.HoleTracker
+import com.github.eedcd.solidanchor.utils.math.box
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.world.phys.Vec3

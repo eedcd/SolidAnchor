@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.gametest
+package com.github.eedcd.solidanchor.gametest
 
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.features.module.modules.exploit.disabler.ModuleDisabler
-import net.solidanchor.features.module.modules.movement.ModuleTeleport
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.features.module.modules.exploit.disabler.ModuleDisabler
+import com.github.eedcd.solidanchor.features.module.modules.movement.ModuleTeleport
 import net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest
 import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext
 

@@ -16,29 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world
+package com.github.eedcd.solidanchor.features.module.modules.world
 
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.RotationsValueGroup
-import net.solidanchor.utils.aiming.utils.raytraceBox
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.clicking.Clicker
-import net.solidanchor.utils.combat.attackEntity
-import net.solidanchor.utils.entity.box
-import net.solidanchor.utils.entity.isWithinWorldBorder
-import net.solidanchor.utils.entity.lastPos
-import net.solidanchor.utils.entity.squaredBoxedDistanceTo
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.math.isLikelyZero
-import net.solidanchor.utils.math.minus
-import net.solidanchor.utils.math.plus
-import net.solidanchor.utils.math.times
-import net.solidanchor.utils.raytracing.isLookingAtEntity
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.RotationsValueGroup
+import com.github.eedcd.solidanchor.utils.aiming.utils.raytraceBox
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.clicking.Clicker
+import com.github.eedcd.solidanchor.utils.combat.attackEntity
+import com.github.eedcd.solidanchor.utils.entity.box
+import com.github.eedcd.solidanchor.utils.entity.isWithinWorldBorder
+import com.github.eedcd.solidanchor.utils.entity.lastPos
+import com.github.eedcd.solidanchor.utils.entity.squaredBoxedDistanceTo
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.math.isLikelyZero
+import com.github.eedcd.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.utils.math.plus
+import com.github.eedcd.solidanchor.utils.math.times
+import com.github.eedcd.solidanchor.utils.raytracing.isLookingAtEntity
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.projectile.ShulkerBullet
 import net.minecraft.world.entity.projectile.hurtingprojectile.LargeFireball

@@ -16,19 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.addon
+package com.github.eedcd.solidanchor.features.addon
 
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.config.gson.util.readJson
-import net.solidanchor.event.EventManager
-import net.solidanchor.event.events.RefreshArrayListEvent
-import net.solidanchor.features.command.CommandManager
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.ModuleManager
-import net.solidanchor.features.module.modules.render.ModuleClickGui
-import net.solidanchor.lang.LanguageManager
-import net.solidanchor.utils.client.clientLogger
-import net.solidanchor.utils.client.error.QuickFixes
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.config.gson.util.readJson
+import com.github.eedcd.solidanchor.event.EventManager
+import com.github.eedcd.solidanchor.event.events.RefreshArrayListEvent
+import com.github.eedcd.solidanchor.features.command.CommandManager
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.ModuleManager
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleClickGui
+import com.github.eedcd.solidanchor.lang.LanguageManager
+import com.github.eedcd.solidanchor.utils.client.clientLogger
+import com.github.eedcd.solidanchor.utils.client.error.QuickFixes
 import net.fabricmc.loader.api.FabricLoader
 import kotlin.io.path.inputStream
 import kotlin.io.path.isRegularFile

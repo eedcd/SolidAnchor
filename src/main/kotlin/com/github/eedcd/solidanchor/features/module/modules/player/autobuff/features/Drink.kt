@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autobuff.features
+package com.github.eedcd.solidanchor.features.module.modules.player.autobuff.features
 
-import net.solidanchor.features.module.modules.player.autobuff.StatusEffectBasedBuff
-import net.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.features.module.modules.player.autobuff.StatusEffectBasedBuff
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.PotionItem
 import net.minecraft.world.item.SplashPotionItem

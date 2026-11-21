@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world.scaffold.tower
+package com.github.eedcd.solidanchor.features.module.modules.world.scaffold.tower
 
-import net.solidanchor.event.events.GameTickEvent
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
-import net.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.isBlockBelow
-import net.solidanchor.utils.entity.moving
+import com.github.eedcd.solidanchor.event.events.GameTickEvent
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold
+import com.github.eedcd.solidanchor.features.module.modules.world.scaffold.ModuleScaffold.isBlockBelow
+import com.github.eedcd.solidanchor.utils.entity.moving
 import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket
 import net.minecraft.stats.Stats
 

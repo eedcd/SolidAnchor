@@ -18,26 +18,26 @@
  */
 @file:Suppress("FunctionName", "TooManyFunctions")
 
-package net.solidanchor.utils.network
+package com.github.eedcd.solidanchor.utils.network
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.TickLoopTaskExecutor
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.TransferOrigin
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.module.modules.combat.crystalaura.SwitchMode
-import net.solidanchor.features.module.modules.misc.ModulePacketLogger
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.block.SwingMode
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.interaction
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.client.usesViaFabricPlus
-import net.solidanchor.utils.client.world
-import net.solidanchor.utils.entity.shouldSwingHand
-import net.solidanchor.utils.inventory.InventoryManager
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.TickLoopTaskExecutor
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.TransferOrigin
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.module.modules.combat.crystalaura.SwitchMode
+import com.github.eedcd.solidanchor.features.module.modules.misc.ModulePacketLogger
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.block.SwingMode
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.interaction
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.client.usesViaFabricPlus
+import com.github.eedcd.solidanchor.utils.client.world
+import com.github.eedcd.solidanchor.utils.entity.shouldSwingHand
+import com.github.eedcd.solidanchor.utils.inventory.InventoryManager
 import net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl
 import net.minecraft.client.multiplayer.ClientPacketListener
 import net.minecraft.client.multiplayer.MultiPlayerGameMode

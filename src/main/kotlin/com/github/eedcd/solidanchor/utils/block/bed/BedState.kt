@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.block.bed
+package com.github.eedcd.solidanchor.utils.block.bed
 
 import it.unimi.dsi.fastutil.ints.IntIntMutablePair
 import it.unimi.dsi.fastutil.objects.Reference2ObjectOpenHashMap

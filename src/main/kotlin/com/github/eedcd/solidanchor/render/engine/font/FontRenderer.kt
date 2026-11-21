@@ -16,21 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.render.engine.font
+package com.github.eedcd.solidanchor.render.engine.font
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
-import net.solidanchor.render.AbstractFontRenderer
-import net.solidanchor.render.ClientRenderPipelines
-import net.solidanchor.render.FontFace
-import net.solidanchor.render.FontManager.DEFAULT_FONT_SIZE
-import net.solidanchor.render.WorldRenderEnvironment
-import net.solidanchor.render.copyPosePooled
-import net.solidanchor.render.drawCustomMesh
-import net.solidanchor.render.drawCustomMeshTextured
-import net.solidanchor.render.drawHorizontalLine
-import net.solidanchor.render.engine.font.MinecraftTextProcessor.RecyclingProcessedText
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.render.gui.element.TextRunGuiElementRenderState
+import com.github.eedcd.solidanchor.render.AbstractFontRenderer
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines
+import com.github.eedcd.solidanchor.render.FontFace
+import com.github.eedcd.solidanchor.render.FontManager.DEFAULT_FONT_SIZE
+import com.github.eedcd.solidanchor.render.WorldRenderEnvironment
+import com.github.eedcd.solidanchor.render.copyPosePooled
+import com.github.eedcd.solidanchor.render.drawCustomMesh
+import com.github.eedcd.solidanchor.render.drawCustomMeshTextured
+import com.github.eedcd.solidanchor.render.drawHorizontalLine
+import com.github.eedcd.solidanchor.render.engine.font.MinecraftTextProcessor.RecyclingProcessedText
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.render.gui.element.TextRunGuiElementRenderState
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.util.ARGB
 import net.minecraft.util.FormattedCharSequence

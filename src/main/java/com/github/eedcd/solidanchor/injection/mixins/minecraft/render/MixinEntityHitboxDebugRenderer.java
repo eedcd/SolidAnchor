@@ -17,12 +17,12 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.render;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render;
 
+import com.github.eedcd.solidanchor.features.module.modules.combat.ModuleHitbox;
+import com.github.eedcd.solidanchor.utils.combat.CombatExtensionsKt;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import net.solidanchor.features.module.modules.combat.ModuleHitbox;
-import net.solidanchor.utils.combat.CombatExtensionsKt;
 import net.minecraft.client.renderer.debug.EntityHitboxDebugRenderer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.AABB;

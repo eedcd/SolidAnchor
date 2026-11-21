@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.entity
+package com.github.eedcd.solidanchor.utils.entity
 
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.math.plus
-import net.solidanchor.utils.math.times
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.math.plus
+import com.github.eedcd.solidanchor.utils.math.times
 import net.minecraft.world.entity.projectile.ProjectileUtil
 import net.minecraft.world.entity.projectile.arrow.Arrow
 import net.minecraft.world.item.Items

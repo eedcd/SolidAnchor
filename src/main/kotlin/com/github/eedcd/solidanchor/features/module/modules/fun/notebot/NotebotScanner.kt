@@ -16,20 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.`fun`.notebot
+package com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap
 import net.ccbluex.fastutil.enumMapOf
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.features.module.modules.`fun`.notebot.nbs.InstrumentNote
-import net.solidanchor.features.module.modules.`fun`.notebot.nbs.SongData
-import net.solidanchor.utils.block.getSortedSphere
-import net.solidanchor.utils.block.state
-import net.solidanchor.utils.block.stateOrEmpty
-import net.solidanchor.utils.text.asPlainText
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.math.toBlockPos
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.nbs.InstrumentNote
+import com.github.eedcd.solidanchor.features.module.modules.`fun`.notebot.nbs.SongData
+import com.github.eedcd.solidanchor.utils.block.getSortedSphere
+import com.github.eedcd.solidanchor.utils.block.state
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.math.toBlockPos
 import net.minecraft.ChatFormatting
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument

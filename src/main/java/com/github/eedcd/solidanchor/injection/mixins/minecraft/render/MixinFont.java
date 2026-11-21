@@ -17,10 +17,10 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.render;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.render;
 
+import com.github.eedcd.solidanchor.features.module.modules.misc.nameprotect.ModuleNameProtect;
 import com.llamalad7.mixinextras.injector.ModifyReceiver;
-import net.solidanchor.features.module.modules.misc.nameprotect.ModuleNameProtect;
 import net.minecraft.client.gui.Font;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.FormattedCharSink;
@@ -61,8 +61,8 @@ public abstract class MixinFont {
     }
 
     @ModifyArg(method = "width(Lnet/minecraft/util/FormattedCharSequence;)I",
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/client/StringSplitter;stringWidth(Lnet/minecraft/util/FormattedCharSequence;)F"),
-            index = 0)
+        at = @At(value = "INVOKE", target = "Lnet/minecraft/client/StringSplitter;stringWidth(Lnet/minecraft/util/FormattedCharSequence;)F"),
+        index = 0)
     private FormattedCharSequence injectNameProtectWidthB(FormattedCharSequence text) {
         return ModuleNameProtect.INSTANCE.wrap(text);
     }

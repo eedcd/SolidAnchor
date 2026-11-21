@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.math
+package com.github.eedcd.solidanchor.utils.math
 
 import org.joml.Vector2f
 import kotlin.test.assertEquals

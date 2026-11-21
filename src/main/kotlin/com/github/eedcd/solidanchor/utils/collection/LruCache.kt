@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.collection
+package com.github.eedcd.solidanchor.utils.collection
 
 /**
  * @param maxSize Maximum number of entries to retain. Zero disables caching.

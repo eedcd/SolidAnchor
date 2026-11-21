@@ -16,31 +16,31 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world
+package com.github.eedcd.solidanchor.features.module.modules.world
 
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.BlockBreakingProgressEvent
-import net.solidanchor.event.events.CancelBlockBreakingEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.block.bed.BedBlockTracker
-import net.solidanchor.utils.block.getCenterDistanceSquaredEyes
-import net.solidanchor.utils.block.stateOrEmpty
-import net.solidanchor.utils.client.SilentHotbar
-import net.solidanchor.utils.collection.Filter
-import net.solidanchor.utils.collection.blockSortedSetOf
-import net.solidanchor.utils.combat.CombatManager
-import net.solidanchor.utils.inventory.AnchoredHotbarSwapController
-import net.solidanchor.utils.inventory.HotbarItemSlot
-import net.solidanchor.utils.inventory.InventoryConstraints
-import net.solidanchor.utils.inventory.ItemSlot
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.inventory.findBestToolToMineBlock
-import net.solidanchor.utils.item.getEnchantment
-import net.solidanchor.utils.math.sq
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.BlockBreakingProgressEvent
+import com.github.eedcd.solidanchor.event.events.CancelBlockBreakingEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.block.bed.BedBlockTracker
+import com.github.eedcd.solidanchor.utils.block.getCenterDistanceSquaredEyes
+import com.github.eedcd.solidanchor.utils.block.stateOrEmpty
+import com.github.eedcd.solidanchor.utils.client.SilentHotbar
+import com.github.eedcd.solidanchor.utils.collection.Filter
+import com.github.eedcd.solidanchor.utils.collection.blockSortedSetOf
+import com.github.eedcd.solidanchor.utils.combat.CombatManager
+import com.github.eedcd.solidanchor.utils.inventory.AnchoredHotbarSwapController
+import com.github.eedcd.solidanchor.utils.inventory.HotbarItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.InventoryConstraints
+import com.github.eedcd.solidanchor.utils.inventory.ItemSlot
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.inventory.findBestToolToMineBlock
+import com.github.eedcd.solidanchor.utils.item.getEnchantment
+import com.github.eedcd.solidanchor.utils.math.sq
 import net.minecraft.core.BlockPos
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.enchantment.Enchantments

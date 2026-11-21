@@ -17,11 +17,11 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.injection.mixins.minecraft.gui;
+package com.github.eedcd.solidanchor.injection.mixins.minecraft.gui;
 
+import com.github.eedcd.solidanchor.features.command.CommandManager;
 import com.mojang.brigadier.ParseResults;
 import com.mojang.brigadier.suggestion.Suggestions;
-import net.solidanchor.features.command.CommandManager;
 import net.minecraft.client.gui.components.CommandSuggestions;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.commands.SharedSuggestionProvider;
@@ -45,10 +45,10 @@ public abstract class MixinCommandSuggestions {
     @Shadow
     private ParseResults<SharedSuggestionProvider> currentParse;
     @Shadow
-    public abstract void showSuggestions(boolean narrateFirstSuggestion);
+    private CommandSuggestions.@Nullable SuggestionsList suggestions;
 
     @Shadow
-    private CommandSuggestions.@Nullable SuggestionsList suggestions;
+    public abstract void showSuggestions(boolean narrateFirstSuggestion);
 
     @Inject(method = "updateCommandInfo", at = @At(value = "INVOKE", target = "Lcom/mojang/brigadier/StringReader;canRead()Z", remap = false), cancellable = true)
     private void injectAutoCompletionB(CallbackInfo ci) {

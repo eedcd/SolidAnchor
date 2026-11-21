@@ -17,9 +17,9 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.client
+package com.github.eedcd.solidanchor.utils.client
 
-import net.solidanchor.SolidAnchor.CLIENT_NAME
+import com.github.eedcd.solidanchor.SolidAnchor.CLIENT_NAME
 import net.minecraft.resources.Identifier
 import java.util.Locale
 

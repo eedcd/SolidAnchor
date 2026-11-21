@@ -17,23 +17,23 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.movement
+package com.github.eedcd.solidanchor.features.module.modules.movement
 
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.command.commands.module.teleport.CommandPlayerTeleport
-import net.solidanchor.features.command.commands.module.teleport.CommandTeleport
-import net.solidanchor.features.command.commands.module.teleport.CommandVClip
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.features.module.modules.exploit.disabler.ModuleDisabler
-import net.solidanchor.utils.network.MovePacketType
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.network.sendPacketSilently
-import net.solidanchor.utils.client.variable
-import net.solidanchor.utils.client.warning
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.command.commands.module.teleport.CommandPlayerTeleport
+import com.github.eedcd.solidanchor.features.command.commands.module.teleport.CommandTeleport
+import com.github.eedcd.solidanchor.features.command.commands.module.teleport.CommandVClip
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.modules.exploit.disabler.ModuleDisabler
+import com.github.eedcd.solidanchor.utils.network.MovePacketType
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.network.sendPacketSilently
+import com.github.eedcd.solidanchor.utils.client.variable
+import com.github.eedcd.solidanchor.utils.client.warning
 import net.minecraft.network.protocol.game.ClientboundPlayerPositionPacket
 import net.minecraft.world.phys.Vec3
 import java.text.DecimalFormat

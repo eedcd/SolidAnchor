@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.math.geometry
+package com.github.eedcd.solidanchor.utils.math.geometry
 
 import it.unimi.dsi.fastutil.doubles.DoubleDoubleImmutablePair
 import net.ccbluex.fastutil.component1
 import net.ccbluex.fastutil.component2
-import net.solidanchor.utils.math.getNearestPoint
-import net.solidanchor.utils.math.isLikelyZero
-import net.solidanchor.utils.math.minus
-import net.solidanchor.utils.math.plus
+import com.github.eedcd.solidanchor.utils.math.getNearestPoint
+import com.github.eedcd.solidanchor.utils.math.isLikelyZero
+import com.github.eedcd.solidanchor.utils.math.minus
+import com.github.eedcd.solidanchor.utils.math.plus
 import net.minecraft.core.Direction
 import net.minecraft.core.Vec3i
 import net.minecraft.util.Mth

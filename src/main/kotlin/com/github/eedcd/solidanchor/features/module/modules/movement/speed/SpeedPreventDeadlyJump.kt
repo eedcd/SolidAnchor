@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.movement.speed
+package com.github.eedcd.solidanchor.features.module.modules.movement.speed
 
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.entity.SimulatedPlayer
-import net.solidanchor.utils.movement.DirectionalInput
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.entity.SimulatedPlayer
+import com.github.eedcd.solidanchor.utils.movement.DirectionalInput
 import net.minecraft.client.player.LocalPlayer
 import net.minecraft.world.phys.Vec3
 

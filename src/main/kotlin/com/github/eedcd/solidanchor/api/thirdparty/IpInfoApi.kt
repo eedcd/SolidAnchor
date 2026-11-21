@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.api.thirdparty
+package com.github.eedcd.solidanchor.api.thirdparty
 
-import net.solidanchor.api.core.AsyncLazy
-import net.solidanchor.api.core.apiRetrofit
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.api.core.AsyncLazy
+import com.github.eedcd.solidanchor.api.core.apiRetrofit
+import com.github.eedcd.solidanchor.utils.client.logger
 import retrofit2.create
 import retrofit2.http.GET
 import retrofit2.http.Path

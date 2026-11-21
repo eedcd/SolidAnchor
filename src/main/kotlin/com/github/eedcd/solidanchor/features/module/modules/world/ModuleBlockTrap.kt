@@ -16,28 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.world
+package com.github.eedcd.solidanchor.features.module.modules.world
 
 import net.ccbluex.fastutil.enumSetAllOf
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.event.events.PacketEvent
-import net.solidanchor.event.events.RotationUpdateEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.utils.block.placer.BlockPlacer
-import net.solidanchor.utils.block.placer.placeInstantOnBlockUpdate
-import net.solidanchor.utils.client.FloatValueProvider
-import net.solidanchor.utils.collection.Filter
-import net.solidanchor.utils.collection.blockSortedSetOf
-import net.solidanchor.utils.collection.getSlot
-import net.solidanchor.utils.combat.TargetPriority
-import net.solidanchor.utils.combat.TargetTracker
-import net.solidanchor.utils.kotlin.Priority
-import net.solidanchor.utils.kotlin.range
-import net.solidanchor.utils.math.BY_Y
-import net.solidanchor.utils.math.BY_Y_DESC
-import net.solidanchor.utils.render.TargetRenderer
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.event.events.PacketEvent
+import com.github.eedcd.solidanchor.event.events.RotationUpdateEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.utils.block.placer.BlockPlacer
+import com.github.eedcd.solidanchor.utils.block.placer.placeInstantOnBlockUpdate
+import com.github.eedcd.solidanchor.utils.client.FloatValueProvider
+import com.github.eedcd.solidanchor.utils.collection.Filter
+import com.github.eedcd.solidanchor.utils.collection.blockSortedSetOf
+import com.github.eedcd.solidanchor.utils.collection.getSlot
+import com.github.eedcd.solidanchor.utils.combat.TargetPriority
+import com.github.eedcd.solidanchor.utils.combat.TargetTracker
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.utils.kotlin.range
+import com.github.eedcd.solidanchor.utils.math.BY_Y
+import com.github.eedcd.solidanchor.utils.math.BY_Y_DESC
+import com.github.eedcd.solidanchor.utils.render.TargetRenderer
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Vec3i
 import net.minecraft.util.Mth

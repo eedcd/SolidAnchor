@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.command
+package com.github.eedcd.solidanchor.features.command
 
 import com.mojang.brigadier.Command
 import kotlinx.coroutines.CancellationException
@@ -26,25 +26,25 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
-import net.solidanchor.config.ConfigSystem
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.events.ChatSendEvent
-import net.solidanchor.event.events.ClientShutdownEvent
-import net.solidanchor.event.handler
-import net.solidanchor.features.command.brigadier.ClientCommandSource
-import net.solidanchor.lang.translation
-import net.solidanchor.utils.client.MessageMetadata
-import net.solidanchor.utils.text.asPlainText
-import net.solidanchor.utils.client.bold
-import net.solidanchor.utils.client.chat
-import net.solidanchor.utils.client.highlight
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.client.markAsError
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.client.onClick
-import net.solidanchor.utils.client.regular
-import net.solidanchor.utils.client.removeMessage
-import net.solidanchor.utils.kotlin.EventPriorityConvention
+import com.github.eedcd.solidanchor.config.ConfigSystem
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.events.ChatSendEvent
+import com.github.eedcd.solidanchor.event.events.ClientShutdownEvent
+import com.github.eedcd.solidanchor.event.handler
+import com.github.eedcd.solidanchor.features.command.brigadier.ClientCommandSource
+import com.github.eedcd.solidanchor.lang.translation
+import com.github.eedcd.solidanchor.utils.client.MessageMetadata
+import com.github.eedcd.solidanchor.utils.text.asPlainText
+import com.github.eedcd.solidanchor.utils.client.bold
+import com.github.eedcd.solidanchor.utils.client.chat
+import com.github.eedcd.solidanchor.utils.client.highlight
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.client.markAsError
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.onClick
+import com.github.eedcd.solidanchor.utils.client.regular
+import com.github.eedcd.solidanchor.utils.client.removeMessage
+import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.ClickEvent
 import okio.appendingSink

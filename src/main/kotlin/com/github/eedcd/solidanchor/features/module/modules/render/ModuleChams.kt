@@ -16,27 +16,27 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.features.module.modules.render
+package com.github.eedcd.solidanchor.features.module.modules.render
 
 import com.mojang.blaze3d.pipeline.RenderTarget
 import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.renderpearl.api.textures.FilterMode
-import net.solidanchor.annotations.ValueClassCandidate
-import net.solidanchor.config.types.list.Tagged
-import net.solidanchor.config.types.group.Mode
-import net.solidanchor.config.types.group.ModeValueGroup
-import net.solidanchor.config.types.toTextureProperty
-import net.solidanchor.features.module.ClientModule
-import net.solidanchor.features.module.ModuleCategories
-import net.solidanchor.injection.mixins.minecraft.render.MixinRenderTypeAccessor
-import net.solidanchor.render.ClientRenderPipelines
-import net.solidanchor.render.ClientUniformDefine
-import net.solidanchor.render.buffers.CachedUniform
-import net.solidanchor.render.createRenderPass
-import net.solidanchor.render.engine.LazyRenderTargetHolder
-import net.solidanchor.render.setPipeline
-import net.solidanchor.utils.combat.shouldBeShown
-import net.solidanchor.utils.io.PNG_AND_JPG
+import com.github.eedcd.solidanchor.annotations.ValueClassCandidate
+import com.github.eedcd.solidanchor.config.types.list.Tagged
+import com.github.eedcd.solidanchor.config.types.group.Mode
+import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
+import com.github.eedcd.solidanchor.config.types.toTextureProperty
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.injection.mixins.minecraft.render.MixinRenderTypeAccessor
+import com.github.eedcd.solidanchor.render.ClientRenderPipelines
+import com.github.eedcd.solidanchor.render.ClientUniformDefine
+import com.github.eedcd.solidanchor.render.buffers.CachedUniform
+import com.github.eedcd.solidanchor.render.createRenderPass
+import com.github.eedcd.solidanchor.render.engine.LazyRenderTargetHolder
+import com.github.eedcd.solidanchor.render.setPipeline
+import com.github.eedcd.solidanchor.utils.combat.shouldBeShown
+import com.github.eedcd.solidanchor.utils.io.PNG_AND_JPG
 import net.minecraft.client.renderer.RenderBuffers
 import net.minecraft.client.renderer.SubmitNodeStorage
 import net.minecraft.client.renderer.feature.FeatureRenderDispatcher

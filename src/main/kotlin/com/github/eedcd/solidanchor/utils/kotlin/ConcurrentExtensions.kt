@@ -18,9 +18,9 @@
  */
 @file:Suppress("NOTHING_TO_INLINE")
 
-package net.solidanchor.utils.kotlin
+package com.github.eedcd.solidanchor.utils.kotlin
 
-import net.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.client.mc
 import net.minecraft.server.packs.resources.PreparableReloadListener
 import net.minecraft.util.Util
 import java.util.concurrent.CompletableFuture

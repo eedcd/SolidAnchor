@@ -17,7 +17,7 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.utils.sorting
+package com.github.eedcd.solidanchor.utils.sorting
 
 enum class Tier: Comparable<Tier> {
     F, E, D, C, B, A, S;

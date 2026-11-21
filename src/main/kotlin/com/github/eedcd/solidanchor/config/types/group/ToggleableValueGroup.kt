@@ -17,18 +17,18 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.config.types.group
+package com.github.eedcd.solidanchor.config.types.group
 
-import net.solidanchor.config.gson.stategies.Exclude
-import net.solidanchor.config.gson.stategies.ProtocolExclude
-import net.solidanchor.config.types.Value
-import net.solidanchor.config.types.ValueType
-import net.solidanchor.event.EventListener
-import net.solidanchor.event.removeEventListenerScope
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.features.misc.Toggleable
-import net.solidanchor.features.module.MinecraftShortcuts
-import net.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.config.gson.stategies.Exclude
+import com.github.eedcd.solidanchor.config.gson.stategies.ProtocolExclude
+import com.github.eedcd.solidanchor.config.types.Value
+import com.github.eedcd.solidanchor.config.types.ValueType
+import com.github.eedcd.solidanchor.event.EventListener
+import com.github.eedcd.solidanchor.event.removeEventListenerScope
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.features.misc.Toggleable
+import com.github.eedcd.solidanchor.features.module.MinecraftShortcuts
+import com.github.eedcd.solidanchor.utils.client.logger
 
 /**
  * A [ToggleableValueGroup] has a state that can be toggled on and off. It also allows you

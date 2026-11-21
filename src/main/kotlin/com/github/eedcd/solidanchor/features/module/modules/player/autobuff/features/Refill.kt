@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.module.modules.player.autobuff.features
+package com.github.eedcd.solidanchor.features.module.modules.player.autobuff.features
 
-import net.solidanchor.config.types.group.ToggleableValueGroup
-import net.solidanchor.event.events.ScheduleInventoryActionEvent
-import net.solidanchor.features.module.modules.player.autobuff.ModuleAutoBuff
-import net.solidanchor.utils.inventory.InventoryAction
-import net.solidanchor.utils.inventory.PlayerInventoryConstraints
-import net.solidanchor.utils.inventory.Slots
-import net.solidanchor.utils.kotlin.Priority
+import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
+import com.github.eedcd.solidanchor.event.events.ScheduleInventoryActionEvent
+import com.github.eedcd.solidanchor.features.module.modules.player.autobuff.ModuleAutoBuff
+import com.github.eedcd.solidanchor.utils.inventory.InventoryAction
+import com.github.eedcd.solidanchor.utils.inventory.PlayerInventoryConstraints
+import com.github.eedcd.solidanchor.utils.inventory.Slots
+import com.github.eedcd.solidanchor.utils.kotlin.Priority
 
 object Refill : ToggleableValueGroup(ModuleAutoBuff, "Refill", true) {
 

@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.injection.mixins.sodium;
+package com.github.eedcd.solidanchor.injection.mixins.sodium;
 
+import com.github.eedcd.solidanchor.features.module.modules.render.ModuleXRay;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import net.caffeinemc.mods.sodium.client.render.chunk.compile.ChunkBuildContext;
 import net.caffeinemc.mods.sodium.client.render.chunk.compile.ChunkBuildOutput;
 import net.caffeinemc.mods.sodium.client.render.chunk.compile.tasks.ChunkBuilderMeshingTask;
 import net.caffeinemc.mods.sodium.client.util.task.CancellationToken;
-import net.solidanchor.features.module.modules.render.ModuleXRay;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;
 
@@ -43,7 +43,7 @@ public abstract class MixinChunkBuilderMeshingTask {
      */
     @WrapMethod(method = "execute(Lnet/caffeinemc/mods/sodium/client/render/chunk/compile/ChunkBuildContext;Lnet/caffeinemc/mods/sodium/client/util/task/CancellationToken;)Lnet/caffeinemc/mods/sodium/client/render/chunk/compile/ChunkBuildOutput;")
     private ChunkBuildOutput solidanchor$xrayScope(ChunkBuildContext buildContext, CancellationToken cancellationToken,
-            Operation<ChunkBuildOutput> original) {
+                                                   Operation<ChunkBuildOutput> original) {
         return ScopedValue.where(ModuleXRay.RENDER_ACTIVE, ModuleXRay.INSTANCE.getRunning())
             .call(() -> original.call(buildContext, cancellationToken));
     }

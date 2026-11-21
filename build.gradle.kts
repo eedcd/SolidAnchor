@@ -18,10 +18,10 @@
  */
 
 import dev.detekt.gradle.DetektCreateBaselineTask
-import java.time.Duration
 import org.gradle.jvm.tasks.Jar
 import org.jetbrains.dokka.gradle.workers.ProcessIsolation
 import org.jetbrains.kotlin.gradle.dsl.abi.ExperimentalAbiValidation
+import java.time.Duration
 
 plugins {
     alias(libs.plugins.fabric.loom)
@@ -113,7 +113,7 @@ fabricApi {
 
 loom.runs.named("clientGameTest") {
     // Keeps the vanilla screens the test API waits for.
-    systemProperties.put("net.solidanchor.ui.basicMode", "true")
+    systemProperties.put("com.github.eedcd.solidanchor.ui.basicMode", "true")
 }
 
 tasks.named("runClientGameTest") {
@@ -289,7 +289,7 @@ tasks.register<JavaExec>("liquidInstruction") {
     description = "Run SolidInstruction class."
 
     classpath = sourceSets.main.get().runtimeClasspath
-    mainClass.set("net.solidanchor.SolidInstruction")
+    mainClass.set("com.github.eedcd.solidanchor.SolidInstruction")
 }
 
 tasks.runClient {
@@ -320,7 +320,7 @@ kotlin {
     abiValidation {
         filters {
             include {
-                annotatedWith.add("net.solidanchor.features.addon.AddonApi")
+                annotatedWith.add("com.github.eedcd.solidanchor.features.addon.AddonApi")
             }
         }
     }
@@ -336,7 +336,7 @@ tasks.jar {
     inputs.property("maven_group", mavenGroup)
 
     manifest {
-        attributes["Main-Class"] = "net.solidanchor.SolidInstruction"
+        attributes["Main-Class"] = "com.github.eedcd.solidanchor.SolidInstruction"
         attributes["Implementation-Title"] = archivesBaseName.get()
         attributes["Implementation-Version"] = modVersion.get()
         attributes["Implementation-Vendor"] = mavenGroup.get()

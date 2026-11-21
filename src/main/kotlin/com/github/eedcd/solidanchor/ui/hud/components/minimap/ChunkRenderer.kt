@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.ui.hud.components.minimap
+package com.github.eedcd.solidanchor.ui.hud.components.minimap
 
-import net.solidanchor.render.engine.type.Color4b
-import net.solidanchor.utils.block.ChunkScanner
-import net.solidanchor.utils.client.logger
-import net.solidanchor.utils.client.mc
-import net.solidanchor.utils.math.contains
-import net.solidanchor.utils.math.dotProduct
-import net.solidanchor.utils.math.similarity
-import net.solidanchor.utils.world.getChunk
+import com.github.eedcd.solidanchor.render.engine.type.Color4b
+import com.github.eedcd.solidanchor.utils.block.ChunkScanner
+import com.github.eedcd.solidanchor.utils.client.logger
+import com.github.eedcd.solidanchor.utils.client.mc
+import com.github.eedcd.solidanchor.utils.math.contains
+import com.github.eedcd.solidanchor.utils.math.dotProduct
+import com.github.eedcd.solidanchor.utils.math.similarity
+import com.github.eedcd.solidanchor.utils.world.getChunk
 import net.minecraft.client.gui.render.TextureSetup
 import net.minecraft.core.BlockPos
 import net.minecraft.util.ARGB

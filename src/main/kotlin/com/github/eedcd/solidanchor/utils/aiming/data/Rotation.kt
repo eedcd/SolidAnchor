@@ -16,17 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
-package net.solidanchor.utils.aiming.data
+package com.github.eedcd.solidanchor.utils.aiming.data
 
-import net.solidanchor.annotations.ValueClassCandidate
-import net.solidanchor.features.addon.AddonApi
-import net.solidanchor.utils.aiming.RotationManager
-import net.solidanchor.utils.aiming.utils.RotationUtil
-import net.solidanchor.utils.aiming.utils.RotationUtil.angleDifference
-import net.solidanchor.utils.client.player
-import net.solidanchor.utils.math.toDegrees
-import net.solidanchor.utils.math.toRadians
-import net.solidanchor.utils.entity.rotation
+import com.github.eedcd.solidanchor.annotations.ValueClassCandidate
+import com.github.eedcd.solidanchor.features.addon.AddonApi
+import com.github.eedcd.solidanchor.utils.aiming.RotationManager
+import com.github.eedcd.solidanchor.utils.aiming.utils.RotationUtil
+import com.github.eedcd.solidanchor.utils.aiming.utils.RotationUtil.angleDifference
+import com.github.eedcd.solidanchor.utils.client.player
+import com.github.eedcd.solidanchor.utils.math.toDegrees
+import com.github.eedcd.solidanchor.utils.math.toRadians
+import com.github.eedcd.solidanchor.utils.entity.rotation
 import net.minecraft.util.Mth
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.phys.Vec3

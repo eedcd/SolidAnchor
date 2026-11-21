@@ -17,15 +17,15 @@
  * along with SolidAnchor. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.solidanchor.features.account
+package com.github.eedcd.solidanchor.features.account
 
 import com.google.gson.annotations.SerializedName
 import com.mojang.authlib.GameProfile
 import com.mojang.util.UndashedUuid
-import net.solidanchor.api.core.HttpClient
-import net.solidanchor.api.core.bodyAsJson
-import net.solidanchor.api.core.makeRequestBody
-import net.solidanchor.config.gson.util.GSON_DEFAULT
+import com.github.eedcd.solidanchor.api.core.HttpClient
+import com.github.eedcd.solidanchor.api.core.bodyAsJson
+import com.github.eedcd.solidanchor.api.core.makeRequestBody
+import com.github.eedcd.solidanchor.config.gson.util.GSON_DEFAULT
 import okhttp3.Request
 
 data class YggdrasilSession(val profile: GameProfile, val accessToken: String)
