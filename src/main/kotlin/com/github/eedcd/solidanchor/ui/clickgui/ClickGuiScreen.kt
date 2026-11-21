@@ -19,9 +19,6 @@
 
 package com.github.eedcd.solidanchor.ui.clickgui
 
-import com.google.gson.JsonObject
-import com.google.gson.JsonParser
-import com.mojang.blaze3d.platform.InputConstants
 import com.github.eedcd.solidanchor.config.ConfigSystem
 import com.github.eedcd.solidanchor.config.types.RangedValue
 import com.github.eedcd.solidanchor.config.types.Value
@@ -29,20 +26,23 @@ import com.github.eedcd.solidanchor.config.types.ValueType
 import com.github.eedcd.solidanchor.config.types.group.ModeValueGroup
 import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
 import com.github.eedcd.solidanchor.config.types.group.ValueGroup
-import com.github.eedcd.solidanchor.config.types.list.MultiChoiceListValue
 import com.github.eedcd.solidanchor.config.types.list.ChoiceListValue
+import com.github.eedcd.solidanchor.config.types.list.MultiChoiceListValue
 import com.github.eedcd.solidanchor.config.types.list.Tagged
-import com.github.eedcd.solidanchor.features.module.ClientModule
-import com.github.eedcd.solidanchor.features.module.ModuleCategory
-import com.github.eedcd.solidanchor.features.module.ModuleCategories
-import com.github.eedcd.solidanchor.features.module.ModuleManager
 import com.github.eedcd.solidanchor.features.global.GlobalManager
+import com.github.eedcd.solidanchor.features.module.ClientModule
+import com.github.eedcd.solidanchor.features.module.ModuleCategories
+import com.github.eedcd.solidanchor.features.module.ModuleCategory
+import com.github.eedcd.solidanchor.features.module.ModuleManager
 import com.github.eedcd.solidanchor.render.engine.type.Color4b
 import com.github.eedcd.solidanchor.render.getBounds
 import com.github.eedcd.solidanchor.ui.hud.HudEditorScreen
 import com.github.eedcd.solidanchor.utils.client.mc
 import com.github.eedcd.solidanchor.utils.input.InputBind
-import com.github.eedcd.solidanchor.utils.text.asPlainText
+import com.google.gson.JsonArray
+import com.google.gson.JsonObject
+import com.google.gson.JsonParser
+import com.mojang.blaze3d.platform.InputConstants
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.client.input.CharacterEvent
@@ -71,6 +71,15 @@ class ClickGuiScreen(
         var y: Float = 0F,
         var scroll: Float = 0F,
         var collapsed: Boolean = true,
+    )
+
+    /** One independently movable module detail window; several of them can be open at once. */
+    private class SettingsWindow(
+        var group: ValueGroup,
+        var title: String,
+        var x: Float,
+        var y: Float,
+        var scroll: Float = 0F,
     )
 
     private class PanelDrag(
@@ -103,6 +112,7 @@ class ClickGuiScreen(
     )
 
     private class SettingsDrag(
+        val window: SettingsWindow,
         val startMouseX: Double,
         val startMouseY: Double,
         val startX: Float,
@@ -113,19 +123,32 @@ class ClickGuiScreen(
 
     private val hits = ArrayList<HitArea>()
 
-    private var settingsGroup: ValueGroup? = null
-    private var settingsTitle = ""
-    private var settingsPlaced = false
+    private val settingsWindows = ArrayList<SettingsWindow>()
     private var layoutLoaded = false
-    private var settingsScroll = 0F
-    private var settingsX = 0F
-    private var settingsY = 0F
 
     private var drag: SliderDrag? = null
     private var panelDrag: PanelDrag? = null
     private var settingsDrag: SettingsDrag? = null
 
     private var openDropdown: Value<*>? = null
+
+    /** A dropdown that is drawn as a floating overlay, so it never shifts the settings layout. */
+    private class PendingDropdown(
+        val x: Float,
+        val y: Float,
+        val w: Float,
+        val options: List<String>,
+        val selected: String?,
+        val checked: Set<String>? = null,
+        val onSelect: (String) -> Unit,
+    )
+
+    private val pendingDropdowns = ArrayList<PendingDropdown>()
+    private val dropdownBounds = ArrayList<FloatArray>()
+    private var dropdownScroll = 0F
+
+    private val panelModuleCache = HashMap<ModuleCategory, List<ClientModule>>()
+    private val moduleLabelCache = HashMap<ClientModule, Component>()
 
     private var tooltipText: String? = null
     private var tooltipX = 0
@@ -137,7 +160,6 @@ class ClickGuiScreen(
     private var textBuffer = ""
     private var bindingValue: Value<*>? = null
 
-    private val expandedLists = HashSet<Value<*>>()
     private val expandedColors = HashSet<Value<*>>()
 
     override fun init() {
@@ -145,12 +167,9 @@ class ClickGuiScreen(
             layoutLoaded = true
             val group = initialSettings
             if (group != null) {
-                settingsGroup = group
-                settingsTitle = initialSettingsTitle
-                settingsScroll = 0F
-                settingsX = ((width - settingsWidth()) / 2F).coerceIn(4F, (width - 4F).coerceAtLeast(4F))
-                settingsY = 40F
-                settingsPlaced = true
+                val window = SettingsWindow(group, initialSettingsTitle, 0F, 40F)
+                window.x = ((width - settingsWidth(window)) / 2F).coerceIn(4F, (width - 4F).coerceAtLeast(4F))
+                settingsWindows += window
             }
             return
         }
@@ -167,6 +186,10 @@ class ClickGuiScreen(
         for (panel in panels) {
             panel.x = panel.x.coerceIn(0F, (width - PANEL_WIDTH).coerceAtLeast(0F))
             panel.y = panel.y.coerceIn(0F, (height - HEADER_HEIGHT).coerceAtLeast(0F))
+        }
+
+        for (window in settingsWindows) {
+            clampSettingsWindow(window)
         }
     }
 
@@ -201,13 +224,15 @@ class ClickGuiScreen(
     override fun extractRenderState(context: GuiGraphicsExtractor, mouseX: Int, mouseY: Int, partialTick: Float) {
         hits.clear()
         tooltipText = null
+        pendingDropdowns.clear()
+        dropdownBounds.clear()
 
         // Only the topmost layer under the mouse may show a tooltip, otherwise the description
         // of a module in a panel behind another panel would be drawn through it.
         val overTopButton = mouseX.toDouble() in (width - 176F).toDouble()..(width - 10F).toDouble() &&
             mouseY.toDouble() in 8.0..24.0
 
-        val topPanel = if (settingsOnly || overTopButton || isInsideSettings(mouseX.toDouble(), mouseY.toDouble())) {
+        val topPanel = if (settingsOnly || overTopButton || isInsideAnySettings(mouseX.toDouble(), mouseY.toDouble())) {
             null
         } else {
             panels.lastOrNull { panel ->
@@ -225,12 +250,11 @@ class ClickGuiScreen(
         context.fill(0, 0, width, height, BACKGROUND)
 
         if (!settingsOnly) {
-            val title = Component.literal("SolidAnchor")
-            context.centeredText(font, title, width / 2, 10, ACCENT)
+            context.centeredText(font, "SolidAnchor", width / 2, 10, ACCENT)
 
             context.centeredText(
                 font,
-                Component.literal("Right click a module to configure it"),
+                "Right click a module to configure it",
                 width / 2,
                 22,
                 HINT,
@@ -242,16 +266,19 @@ class ClickGuiScreen(
 
             drawTopButtons(context, mouseX.toDouble(), mouseY.toDouble())
         } else {
-            context.centeredText(font, Component.literal(settingsTitle), width / 2, 10, ACCENT)
+            context.centeredText(font, initialSettingsTitle, width / 2, 10, ACCENT)
         }
 
-        val group = settingsGroup
-        if (group != null) {
-            drawSettings(context, group, settingsTitle, mouseX.toDouble(), mouseY.toDouble())
+        for (window in settingsWindows) {
+            drawSettings(context, window, mouseX.toDouble(), mouseY.toDouble())
         }
+
+        // Dropdowns are drawn last as floating overlays: they must not shift the settings layout
+        // and must not be clipped by the settings panel scissor.
+        drawPendingDropdowns(context, mouseX.toDouble(), mouseY.toDouble())
 
         if (bindingValue != null) {
-            context.centeredText(font, Component.literal("Press a key or mouse button"), width / 2, height - 20, ACCENT)
+            context.centeredText(font, "Press a key or mouse button", width / 2, height - 20, ACCENT)
         }
 
         drawTooltip(context)
@@ -262,7 +289,15 @@ class ClickGuiScreen(
     // ---------------------------------------------------------------- panels
 
     private fun panelModules(panel: Panel): List<ClientModule> =
-        ModuleManager.filter { it.category == panel.category }.sortedBy { it.name }
+        panelModuleCache.getOrPut(panel.category) {
+            ModuleManager.filter { it.category == panel.category }.sortedBy { it.name }
+        }
+
+    private fun moduleLabel(module: ClientModule): Component =
+        moduleLabelCache.getOrPut(module) {
+            val tag = module.tag
+            Component.literal(if (tag != null && tag.isNotBlank()) "${module.name} ($tag)" else module.name)
+        }
 
     private fun panelContentHeight(modules: List<ClientModule>): Float = modules.size * ROW_HEIGHT + 6F
 
@@ -288,14 +323,24 @@ class ClickGuiScreen(
         val contentHeight = panelContentHeight(modules)
         val h = panelHeight(panel, modules)
 
-        context.fill(x.toInt(), y.toInt(), (x + w).toInt(), (y + h).toInt(), PANEL_BG)
-        context.fill(x.toInt(), y.toInt(), (x + w).toInt(), (y + HEADER_HEIGHT).toInt(), PANEL_HEADER)
-        context.text(font, Component.literal(panel.category.tag), (x + 6).toInt(), (y + 4).toInt(), ACCENT, false)
+        val left = x.toInt()
+        val top = y.toInt()
+        val right = (x + w).toInt()
+        val bottom = (y + h).toInt()
+        val headerBottom = (y + HEADER_HEIGHT).toInt()
+
+        // A single offset rectangle is used for the shadow; rounded corners were removed.
+        context.fill(left + 2, top + 2, right + 3, bottom + 3, SHADOW)
+        context.fill(left, top, right, bottom, PANEL_BG)
+        context.fill(left, top, right, headerBottom, PANEL_HEADER)
+        context.fill(left + 1, headerBottom - 1, right - 1, headerBottom, OUTLINE)
+        drawOutline(context, left, top, right, bottom, OUTLINE)
+        context.text(font, panel.category.tag, (x + 6).toInt(), (y + 4).toInt(), ACCENT, false)
 
         // Collapse / expand button
         context.text(
             font,
-            Component.literal(if (panel.collapsed) "▼" else "▲"),
+            if (panel.collapsed) "▼" else "▲",
             (x + w - 10).toInt(),
             (y + 4).toInt(),
             TEXT_OFF,
@@ -364,11 +409,11 @@ class ClickGuiScreen(
         mouseY: Double,
     ) {
         val enabled = module.enabled
-        val hovered = panel === hoveredPanel && !isInsideSettings(mouseX, mouseY) &&
+        val hovered = panel === hoveredPanel && !isInsideAnySettings(mouseX, mouseY) &&
             mouseX in x.toDouble()..(x + w).toDouble() && mouseY in y.toDouble()..(y + ROW_HEIGHT - 1).toDouble()
 
         if (hovered) {
-            context.fill(x.toInt(), y.toInt(), (x + w).toInt(), (y + ROW_HEIGHT - 1).toInt(), ROW_HOVER)
+            context.fill((x + 2).toInt(), y.toInt(), (x + w - 2).toInt(), (y + ROW_HEIGHT - 1).toInt(), ROW_HOVER)
             if (panel === tooltipPanel) {
                 tooltipText = module.description.get()?.takeIf { it.isNotBlank() && !it.startsWith("solidanchor.") }
                 tooltipX = mouseX.toInt()
@@ -376,14 +421,11 @@ class ClickGuiScreen(
             }
         }
 
-        context.fill((x + 4).toInt(), (y + 4).toInt(), (x + 10).toInt(), (y + 10).toInt(),
+        context.fill((x + 5).toInt(), (y + 4).toInt(), (x + 11).toInt(), (y + 10).toInt(),
             if (enabled) ACCENT else OFF)
 
         val color = if (enabled) TEXT_ON else TEXT_OFF
-        val label = module.name
-        val tag = module.tag
-        val text = if (tag != null && tag.isNotBlank()) "$label ($tag)" else label
-        context.text(font, Component.literal(text), (x + 14).toInt(), y.toInt() + 2, color, false)
+        context.text(font, moduleLabel(module), (x + 15).toInt(), y.toInt() + 2, color, false)
 
         hits += HitArea(x, y, x + w, y + ROW_HEIGHT - 1, {
             focusPanel(panel)
@@ -392,21 +434,9 @@ class ClickGuiScreen(
             }
         }, {
             focusPanel(panel)
-            settingsGroup = module
-            settingsTitle = module.name
-            settingsScroll = 0F
+            openSettingsWindow(module, panel)
             openDropdown = null
             editingText = null
-            if (!settingsPlaced) {
-                settingsX = if (panel.x + PANEL_WIDTH + settingsWidth() + 12 < width) {
-                    panel.x + PANEL_WIDTH + 6
-                } else {
-                    (panel.x - settingsWidth() - 6).coerceAtLeast(4F)
-                }
-                settingsY = maxOf(panel.y, 34F)
-                settingsPlaced = true
-            }
-            clampSettingsPosition()
         })
     }
 
@@ -443,30 +473,66 @@ class ClickGuiScreen(
         val y = 8F
         val hovered = mouseX in x.toDouble()..(x + w).toDouble() && mouseY in y.toDouble()..(y + 16).toDouble()
 
-        context.fill(x.toInt(), y.toInt(), (x + w).toInt(), (y + 16).toInt(), if (hovered) PANEL_HEADER else PANEL_BG)
-        context.centeredText(font, Component.literal(label), (x + w / 2).toInt(), (y + 4).toInt(), TEXT_ON)
+        context.fill(
+            x.toInt(), y.toInt(), (x + w).toInt(), (y + 16).toInt(),
+            if (hovered) PANEL_HEADER else PANEL_BG,
+        )
+        drawOutline(context, x.toInt(), y.toInt(), (x + w).toInt(), (y + 16).toInt(), OUTLINE)
+        context.centeredText(font, label, (x + w / 2).toInt(), (y + 4).toInt(), TEXT_ON)
 
         hits += HitArea(x, y, x + w, y + 16, onClick)
     }
 
     private fun openGlobalSettings() {
-        settingsGroup = GlobalManager
-        settingsTitle = "Global Settings"
-        settingsScroll = 0F
         openDropdown = null
         editingText = null
-
-        if (!settingsPlaced) {
-            settingsX = ((width - settingsWidth()) / 2F).coerceAtLeast(4F)
-            settingsY = 40F
-            settingsPlaced = true
-        }
-        clampSettingsPosition()
+        openSettingsWindow(GlobalManager, null)
     }
 
-    private fun clampSettingsPosition() {
-        settingsX = settingsX.coerceIn(0F, (width - settingsWidth()).coerceAtLeast(0F))
-        settingsY = settingsY.coerceIn(0F, (height - 40F).coerceAtLeast(0F))
+    /**
+     * Opens a detail window for [group], or brings the existing one to the front. Windows cascade
+     * so opening several modules at once does not stack them exactly on top of each other.
+     */
+    private fun openSettingsWindow(group: ValueGroup, sourcePanel: Panel?) {
+        val existing = settingsWindows.firstOrNull { it.group === group }
+        if (existing != null) {
+            focusSettings(existing)
+            return
+        }
+
+        val title = if (group === GlobalManager) "Global Settings" else group.name
+        val window = SettingsWindow(group, title, 0F, 0F)
+        val w = settingsWidth(window)
+
+        val baseX = if (sourcePanel == null) {
+            (width - w) / 2F
+        } else if (sourcePanel.x + PANEL_WIDTH + w + 12 < width) {
+            sourcePanel.x + PANEL_WIDTH + 6
+        } else {
+            (sourcePanel.x - w - 6).coerceAtLeast(4F)
+        }
+        val baseY = sourcePanel?.let { maxOf(it.y, 34F) } ?: 40F
+
+        val offset = settingsWindows.size * 14F
+        window.x = (baseX + offset).coerceIn(0F, (width - w).coerceAtLeast(0F))
+        window.y = (baseY + offset).coerceIn(0F, (height - 40F).coerceAtLeast(0F))
+
+        settingsWindows += window
+        clampSettingsWindow(window)
+    }
+
+    /** Brings a detail window to the front so overlapping windows stay usable. */
+    private fun focusSettings(window: SettingsWindow) {
+        if (settingsWindows.lastOrNull() === window) {
+            return
+        }
+        settingsWindows.remove(window)
+        settingsWindows += window
+    }
+
+    private fun clampSettingsWindow(window: SettingsWindow) {
+        window.x = window.x.coerceIn(0F, (width - settingsWidth(window)).coerceAtLeast(0F))
+        window.y = window.y.coerceIn(0F, (height - 40F).coerceAtLeast(0F))
     }
 
     private fun drawTooltip(context: GuiGraphicsExtractor) {
@@ -479,10 +545,11 @@ class ClickGuiScreen(
         val x = tooltipX.coerceAtMost(width - w - 4).coerceAtLeast(4)
         val y = tooltipY.coerceAtMost(height - h - 4).coerceAtLeast(4)
 
+        context.fill(x + 2, y + 2, x + w + 3, y + h + 3, SHADOW)
         context.fill(x, y, x + w, y + h, PANEL_BG)
-        context.fill(x, y, x + w, y + 1, ACCENT)
+        context.fill(x + 1, y, x + w - 1, y + 1, ACCENT)
         lines.forEachIndexed { index, line ->
-            context.text(font, Component.literal(line), x + 4, y + 4 + index * 10, TEXT_ON, false)
+            context.text(font, line, x + 4, y + 4 + index * 10, TEXT_ON, false)
         }
     }
 
@@ -510,84 +577,104 @@ class ClickGuiScreen(
 
     // -------------------------------------------------------------- settings
 
-    private fun settingsWidth(): Float {
+    private fun settingsWidth(window: SettingsWindow): Float {
         val preferred = when {
-            settingsGroup === GlobalManager -> GLOBAL_SETTINGS_WIDTH
+            window.group === GlobalManager -> GLOBAL_SETTINGS_WIDTH
             settingsOnly -> 260F
             else -> SETTINGS_WIDTH
         }
         return minOf(preferred, (width - 16F).toFloat()).coerceAtLeast(SETTINGS_WIDTH)
     }
 
-    private fun settingsHeight(): Float {
-        if (settingsGroup == null) {
-            return 0F
-        }
+    private fun settingsHeight(window: SettingsWindow): Float {
         val maxHeight = when {
-            settingsOnly -> height - settingsY - 10F
-            settingsGroup === GlobalManager -> height - 60F
+            settingsOnly -> height - window.y - 10F
+            window.group === GlobalManager -> height - 60F
             else -> 260F
         }
-        return minOf((height - settingsY - 10).toFloat(), maxHeight)
+        return minOf((height - window.y - 10).toFloat(), maxHeight)
     }
 
-    private fun isInsideSettings(x: Double, y: Double): Boolean =
-        settingsGroup != null &&
-            x >= settingsX && x <= settingsX + settingsWidth() &&
-            y >= settingsY && y <= settingsY + settingsHeight()
+    private fun isInsideAnySettings(x: Double, y: Double): Boolean =
+        settingsWindows.any { window ->
+            x >= window.x && x <= window.x + settingsWidth(window) &&
+                y >= window.y && y <= window.y + settingsHeight(window)
+        }
 
     private fun drawSettings(
         context: GuiGraphicsExtractor,
-        group: ValueGroup,
-        title: String,
+        window: SettingsWindow,
         mouseX: Double,
         mouseY: Double,
     ) {
-        val x = settingsX
-        val y = settingsY
-        val w = settingsWidth()
-        val h = settingsHeight()
+        val x = window.x
+        val y = window.y
+        val w = settingsWidth(window)
+        val h = settingsHeight(window)
         val hitStart = hits.size
 
-        context.fill(x.toInt(), y.toInt(), (x + w).toInt(), (y + h).toInt(), PANEL_BG)
-        context.fill(x.toInt(), y.toInt(), (x + w).toInt(), (y + HEADER_HEIGHT).toInt(), PANEL_HEADER)
-        context.text(font, Component.literal(title), (x + 6).toInt(), (y + 4).toInt(), ACCENT, false)
+        val left = x.toInt()
+        val top = y.toInt()
+        val right = (x + w).toInt()
+        val bottom = (y + h).toInt()
+        val headerBottom = (y + HEADER_HEIGHT).toInt()
+
+        // A single offset rectangle is used for the shadow; rounded corners were removed.
+        context.fill(left + 2, top + 2, right + 3, bottom + 3, SHADOW)
+        context.fill(left, top, right, bottom, PANEL_BG)
+        context.fill(left, top, right, headerBottom, PANEL_HEADER)
+        context.fill(left + 1, headerBottom - 1, right - 1, headerBottom, OUTLINE)
+        drawOutline(context, left, top, right, bottom, OUTLINE)
+        context.text(font, window.title, (x + 6).toInt(), (y + 4).toInt(), ACCENT, false)
 
         // Swallow clicks on the empty parts of the settings panel so they do not reach the
         // modules of a panel that happens to be underneath it.
-        hits += HitArea(x, y, x + w, y + h, { openDropdown = null })
+        hits += HitArea(x, y, x + w, y + h, {
+            openDropdown = null
+            focusSettings(window)
+        })
 
         val closeX = x + w - 14
 
-        // Dragging the header moves the settings panel.
+        // Dragging the header moves this window. Bringing it to the front is deferred to the
+        // next frame, otherwise the hit order of the current frame would no longer match.
         hits += HitArea(x, y, closeX, y + HEADER_HEIGHT, {
-            settingsDrag = SettingsDrag(mouseX, mouseY, settingsX, settingsY)
+            focusSettings(window)
+            settingsDrag = SettingsDrag(window, mouseX, mouseY, window.x, window.y)
         })
 
-        context.text(font, Component.literal("x"), closeX.toInt(), (y + 4).toInt(), TEXT_OFF, false)
+        context.text(font, "x", closeX.toInt(), (y + 4).toInt(), TEXT_OFF, false)
         hits += HitArea(closeX, y, x + w, y + HEADER_HEIGHT, {
             openDropdown = null
+            editingText = null
             if (settingsOnly) {
                 mc.gui.setScreen(parent)
             } else {
-                settingsGroup = null
+                settingsWindows.remove(window)
             }
         })
 
         context.scissorStack.push(context.getBounds(x, y + HEADER_HEIGHT, x + w, y + h))
 
-        val values = collectSettings(group)
-        var cursorY = y + HEADER_HEIGHT + 4F - settingsScroll
+        val values = collectSettings(window.group)
+        var cursorY = y + HEADER_HEIGHT + 4F - window.scroll
+        val viewTop = y + HEADER_HEIGHT
+        val viewBottom = y + h
 
         for (value in values) {
-            val consumed = drawValue(context, value, x + 4F, cursorY, w - 8F, mouseX, mouseY)
-            cursorY += consumed
+            val height = valueHeight(value)
+            // Rows outside the viewport are not drawn at all: they would still submit text and
+            // rectangle quads (clipped by the scissor) and register hit areas every frame.
+            if (cursorY + height > viewTop && cursorY < viewBottom) {
+                drawValue(context, value, x + 4F, cursorY, w - 8F, mouseX, mouseY)
+            }
+            cursorY += height
         }
 
-        val contentHeight = cursorY - (y + HEADER_HEIGHT + 4F) + settingsScroll
+        val contentHeight = cursorY - (y + HEADER_HEIGHT + 4F) + window.scroll
         val viewport = h - HEADER_HEIGHT
         val maxScroll = (contentHeight - viewport).coerceAtLeast(0F)
-        settingsScroll = settingsScroll.coerceIn(0F, maxScroll)
+        window.scroll = window.scroll.coerceIn(0F, maxScroll)
 
         // Settings rows that are scrolled out of the panel still register hit areas while they
         // are drawn. Drop those so they cannot be clicked through another panel below the popup.
@@ -630,6 +717,20 @@ class ClickGuiScreen(
         return result
     }
 
+    /**
+     * Height a settings row consumes. Mirrors the values returned by [drawValue] so rows outside
+     * the viewport can be skipped without drawing them first.
+     */
+    private fun valueHeight(value: Value<*>): Float = when {
+        value is ModeValueGroup<*> || value is ToggleableValueGroup -> ROW_HEIGHT + 2F
+        value.valueType == ValueType.FLOAT || value.valueType == ValueType.INT ||
+            value.valueType == ValueType.FLOAT_RANGE || value.valueType == ValueType.INT_RANGE -> ROW_HEIGHT + 6F
+        value.valueType == ValueType.COLOR ->
+            ROW_HEIGHT + 2F + if (value in expandedColors) 50F else 0F
+        value.valueType == ValueType.CONFIGURABLE || value.valueType == ValueType.CHOICE -> ROW_HEIGHT
+        else -> ROW_HEIGHT + 2F
+    }
+
     private fun drawValue(
         context: GuiGraphicsExtractor,
         value: Value<*>,
@@ -644,21 +745,18 @@ class ClickGuiScreen(
                 drawChoiceRow(context, value, x, y, w, "${value.name}: ${value.activeMode.name} ▾")
                 hits += HitArea(x, y, x + w, y + ROW_HEIGHT, { toggleDropdown(value) })
 
-                var consumed = ROW_HEIGHT + 2F
-
                 if (openDropdown === value) {
-                    consumed += drawDropdown(
-                        context, x, y + consumed, w,
+                    pendingDropdowns += PendingDropdown(
+                        x, y + ROW_HEIGHT + 2F, w,
                         value.modes.map { it.tag },
                         value.activeMode.tag,
-                        mouseX, mouseY,
                     ) { tag ->
                         value.setByString(tag)
                         openDropdown = null
                     }
                 }
 
-                return consumed
+                return ROW_HEIGHT + 2F
             }
 
             is ToggleableValueGroup -> {
@@ -705,39 +803,30 @@ class ClickGuiScreen(
                 val keyText = if (bind.isUnbound) "None" else bind.boundKey.displayName.string
                 val actionX = x + w * 0.55F
 
-                context.text(font, Component.literal("${value.name}: $keyText"), x.toInt(), y.toInt() + 2, TEXT_ON, false)
-                context.fill(actionX.toInt(), (y + 1).toInt(), (x + w).toInt(), (y + ROW_HEIGHT - 2).toInt(), PANEL_HEADER)
-                context.text(font, Component.literal("${bind.action.tag} ▾"), (actionX + 4).toInt(), y.toInt() + 2, ACCENT, false)
+                context.text(font, "${value.name}: $keyText", x.toInt(), y.toInt() + 2, TEXT_ON, false)
+                context.fill(actionX.toInt(), (y + 1).toInt(), (x + w).toInt(), (y + ROW_HEIGHT - 2).toInt(), FIELD_BG)
+                context.text(font, "${bind.action.tag} ▾", (actionX + 4).toInt(), y.toInt() + 2, ACCENT, false)
 
                 // Clicking the key part starts rebinding, the action box opens the action dropdown.
                 hits += HitArea(x, y, actionX - 2, y + ROW_HEIGHT, { bindingValue = value })
                 hits += HitArea(actionX, y, x + w, y + ROW_HEIGHT, { toggleDropdown(value) })
 
-                var consumed = ROW_HEIGHT + 2F
-
                 if (openDropdown === value) {
-                    consumed += drawDropdown(
-                        context, x, y + consumed, w,
-                        InputBind.BindAction.entries.map { it.tag },
+                    pendingDropdowns += PendingDropdown(
+                        actionX, y + ROW_HEIGHT + 2F, x + w - actionX,
+                        InputBind.BindAction.entries.map { it.tag } + UNBIND_ACTION,
                         bind.action.tag,
-                        mouseX, mouseY,
                     ) { tag ->
-                        InputBind.BindAction.of(tag)?.let { setRaw(value, bind.copy(action = it)) }
-                        openDropdown = null
-                    }
-
-                    consumed += drawDropdown(
-                        context, x, y + consumed, w,
-                        listOf("Unbind"),
-                        null,
-                        mouseX, mouseY,
-                    ) {
-                        setRaw(value, bind.copy(boundKey = InputConstants.UNKNOWN))
+                        if (tag == UNBIND_ACTION) {
+                            setRaw(value, bind.copy(boundKey = InputConstants.UNKNOWN))
+                        } else {
+                            InputBind.BindAction.of(tag)?.let { setRaw(value, bind.copy(action = it)) }
+                        }
                         openDropdown = null
                     }
                 }
 
-                return consumed
+                return ROW_HEIGHT + 2F
             }
 
             ValueType.CHOOSE -> drawChoiceValue(context, value, x, y, w, mouseX, mouseY)
@@ -745,7 +834,7 @@ class ClickGuiScreen(
             ValueType.MULTI_CHOOSE -> drawMultiChoiceValue(context, value, x, y, w)
 
             ValueType.CONFIGURABLE, ValueType.CHOICE -> {
-                context.text(font, Component.literal(value.name), x.toInt(), y.toInt(), GROUP_HEADER, false)
+                context.text(font, value.name, x.toInt(), y.toInt(), GROUP_HEADER, false)
                 ROW_HEIGHT
             }
 
@@ -766,7 +855,7 @@ class ClickGuiScreen(
         checked: Boolean,
     ) {
         context.fill((x + 1).toInt(), (y + 3).toInt(), (x + 8).toInt(), (y + 10).toInt(), if (checked) ACCENT else OFF)
-        context.text(font, Component.literal(name), (x + 12).toInt(), y.toInt() + 2, if (checked) TEXT_ON else TEXT_OFF, false)
+        context.text(font, name, (x + 12).toInt(), y.toInt() + 2, if (checked) TEXT_ON else TEXT_OFF, false)
     }
 
     private fun drawChoiceRow(
@@ -777,7 +866,8 @@ class ClickGuiScreen(
         w: Float,
         label: String,
     ) {
-        context.text(font, Component.literal(label), x.toInt(), y.toInt() + 2, TEXT_ON, false)
+        context.fill(x.toInt(), (y + 1).toInt(), (x + w).toInt(), (y + 11).toInt(), FIELD_BG)
+        context.text(font, label, (x + 3).toInt(), y.toInt() + 2, TEXT_ON, false)
     }
 
     private fun drawChoiceValue(
@@ -794,111 +884,137 @@ class ClickGuiScreen(
         drawChoiceRow(context, value, x, y, w, "${value.name}: ${choice.get().tag} ▾")
         hits += HitArea(x, y, x + w, y + ROW_HEIGHT, { toggleDropdown(value) })
 
-        var consumed = ROW_HEIGHT + 2F
-
         if (openDropdown === value) {
-            consumed += drawDropdown(
-                context, x, y + consumed, w,
+            pendingDropdowns += PendingDropdown(
+                x, y + ROW_HEIGHT + 2F, w,
                 choice.choices.map { it.tag },
                 choice.get().tag,
-                mouseX, mouseY,
             ) { tag ->
                 choice.choices.firstOrNull { it.tag == tag }?.let { setRaw(value, it) }
                 openDropdown = null
             }
         }
 
-        return consumed
+        return ROW_HEIGHT + 2F
     }
 
     /**
-     * Renders a dropdown list below [y] and registers the option hit areas.
-     * Returns the height that was consumed.
+     * Draws all open dropdowns as floating overlays above the settings panel and registers their
+     * option hit areas last, so they always win over the content underneath.
      */
-    private fun drawDropdown(
-        context: GuiGraphicsExtractor,
-        x: Float,
-        y: Float,
-        w: Float,
-        options: List<String>,
-        selected: String?,
-        mouseX: Double,
-        mouseY: Double,
-        onSelect: (String) -> Unit,
-    ): Float {
-        val height = options.size * OPTION_HEIGHT + 3F
+    private fun drawPendingDropdowns(context: GuiGraphicsExtractor, mouseX: Double, mouseY: Double) {
+        for (dropdown in pendingDropdowns) {
+            val contentHeight = dropdown.options.size * OPTION_HEIGHT + 6F
+            val listHeight = contentHeight.coerceAtMost(OPTION_MAX_HEIGHT)
+            val boxX = dropdown.x.coerceIn(4F, (width - dropdown.w - 4F).coerceAtLeast(4F))
+            val boxY = if (dropdown.y + listHeight + 4F > height) {
+                (dropdown.y - ROW_HEIGHT - 4F - listHeight).coerceAtLeast(4F)
+            } else {
+                dropdown.y
+            }
+            val boxH = listHeight + 4F
 
-        context.fill(x.toInt(), (y + 1).toInt(), (x + w).toInt(), (y + height).toInt(), DROPDOWN_BG)
+            val maxScroll = (contentHeight - listHeight).coerceAtLeast(0F)
+            dropdownScroll = dropdownScroll.coerceIn(0F, maxScroll)
 
-        var rowY = y + 2F
-        for (option in options) {
-            val hovered = mouseX in (x + 3).toDouble()..(x + w - 3).toDouble() &&
-                mouseY in rowY.toDouble()..(rowY + OPTION_HEIGHT).toDouble()
+            drawPopupBox(context, boxX, boxY, dropdown.w, boxH)
+            dropdownBounds += floatArrayOf(boxX, boxY, boxX + dropdown.w, boxY + boxH)
 
-            if (hovered) {
-                context.fill((x + 3).toInt(), rowY.toInt(), (x + w - 3).toInt(), (rowY + OPTION_HEIGHT).toInt(), ROW_HOVER)
+            context.scissorStack.push(context.getBounds(boxX, boxY + 2F, boxX + dropdown.w, boxY + boxH - 2F))
+
+            var rowY = boxY + 2F - dropdownScroll
+            for (option in dropdown.options) {
+                val hovered = mouseX in (boxX + 3).toDouble()..(boxX + dropdown.w - 3).toDouble() &&
+                    mouseY in rowY.toDouble()..(rowY + OPTION_HEIGHT).toDouble()
+                val checked = dropdown.checked?.contains(option)
+                val active = checked ?: (option == dropdown.selected)
+                val rowBottom = (rowY + OPTION_HEIGHT).toInt()
+                val middleY = (rowY + OPTION_HEIGHT / 2F).toInt()
+
+                if (hovered) {
+                    context.fill((boxX + 3).toInt(), rowY.toInt(), (boxX + dropdown.w - 3).toInt(), rowBottom, ROW_HOVER)
+                }
+
+                if (checked != null) {
+                    context.fill(
+                        (boxX + 8).toInt(), middleY - 3, (boxX + 14).toInt(), middleY + 3,
+                        if (checked) ACCENT else OFF,
+                    )
+                    context.text(font, option, (boxX + 18).toInt(), (rowY + 2).toInt(), TEXT_ON, false)
+                } else {
+                    if (active) {
+                        context.fill(
+                            (boxX + 6).toInt(), middleY - 3, (boxX + 9).toInt(), middleY + 3,
+                            ACCENT,
+                        )
+                    }
+                    context.text(
+                        font,
+                        option,
+                        (boxX + 13).toInt(),
+                        (rowY + 2).toInt(),
+                        if (active) ACCENT else TEXT_ON,
+                        false,
+                    )
+                }
+
+                // Rows scrolled out of the visible area must not keep an invisible hit area.
+                if (rowY + OPTION_HEIGHT > boxY + 2F && rowY < boxY + boxH - 2F) {
+                    hits += HitArea(
+                        boxX + 3,
+                        maxOf(rowY, boxY + 2F),
+                        boxX + dropdown.w - 3,
+                        minOf(rowY + OPTION_HEIGHT, boxY + boxH - 2F),
+                        left = { dropdown.onSelect(option) },
+                    )
+                }
+
+                rowY += OPTION_HEIGHT
             }
 
-            if (option == selected) {
-                context.fill((x + 5).toInt(), (rowY + 3).toInt(), (x + 7).toInt(), (rowY + 6).toInt(), ACCENT)
+            context.scissorStack.pop()
+
+            if (maxScroll > 0F) {
+                val trackY = boxY + 3F
+                val trackH = listHeight - 2F
+                val thumbH = (trackH * (listHeight / contentHeight)).coerceAtLeast(10F)
+                val thumbY = trackY + (trackH - thumbH) * (dropdownScroll / maxScroll).coerceIn(0F, 1F)
+                context.fill((boxX + dropdown.w - 3F).toInt(), thumbY.toInt(), (boxX + dropdown.w - 1F).toInt(), (thumbY + thumbH).toInt(), SCROLLBAR)
             }
-
-            context.text(
-                font,
-                Component.literal(option),
-                (x + 10).toInt(),
-                (rowY + 1).toInt(),
-                if (option == selected) ACCENT else TEXT_ON,
-                false,
-            )
-
-            hits += HitArea(x + 3, rowY, x + w - 3, rowY + OPTION_HEIGHT, { onSelect(option) })
-
-            rowY += OPTION_HEIGHT
         }
-
-        return height
     }
 
     private fun drawMultiChoiceValue(context: GuiGraphicsExtractor, value: Value<*>, x: Float, y: Float, w: Float): Float {
         @Suppress("UNCHECKED_CAST")
         val multi = (value as? MultiChoiceListValue<*>) as? MultiChoiceListValue<Tagged> ?: return ROW_HEIGHT + 2F
         val active = multi.get()
-        val expanded = value in expandedLists
 
-        drawChoiceRow(context, value, x, y, w, "${value.name}: ${active.size}/${multi.choices.size}")
+        drawChoiceRow(context, value, x, y, w, "${value.name}: ${active.size}/${multi.choices.size} ▾")
+        hits += HitArea(x, y, x + w, y + ROW_HEIGHT, { toggleDropdown(value) })
 
-        hits += HitArea(x, y, x + w, y + ROW_HEIGHT, {
-            if (expanded) expandedLists.remove(value) else expandedLists.add(value)
-        })
-
-        var consumed = ROW_HEIGHT + 2F
-
-        if (expanded) {
-            for (choice in multi.choices) {
-                val checked = choice in active
-                context.fill((x + 6).toInt(), (y + consumed + 2).toInt(), (x + 12).toInt(), (y + consumed + 8).toInt(),
-                    if (checked) ACCENT else OFF)
-                context.text(font, Component.literal(choice.tag), (x + 16).toInt(), (y + consumed).toInt(), TEXT_ON, false)
-                hits += HitArea(x + 4, y + consumed, x + w, y + consumed + 10, {
-                    multi.toggle(choice)
-                })
-                consumed += 12F
+        if (openDropdown === value) {
+            pendingDropdowns += PendingDropdown(
+                x, y + ROW_HEIGHT + 2F, w,
+                multi.choices.map { it.tag },
+                null,
+                active.map { it.tag }.toSet(),
+            ) { tag ->
+                multi.choices.firstOrNull { it.tag == tag }?.let { multi.toggle(it) }
             }
-            consumed += 2F
         }
 
-        return consumed
+        return ROW_HEIGHT + 2F
     }
 
     private fun drawTextRow(context: GuiGraphicsExtractor, value: Value<*>, x: Float, y: Float, w: Float) {
         val editing = editingText === value
         val shown = if (editing) textBuffer else value.get().toString()
 
-        context.text(font, Component.literal(value.name), x.toInt(), y.toInt() + 2, TEXT_OFF, false)
+        context.text(font, value.name, x.toInt(), y.toInt() + 2, TEXT_OFF, false)
         val boxX = x + w * 0.5F
-        context.fill(boxX.toInt(), (y + 1).toInt(), (x + w).toInt(), (y + 11).toInt(), if (editing) PANEL_HEADER else OFF)
-        context.text(font, Component.literal(shown), (boxX + 3).toInt(), (y + 2).toInt(), TEXT_ON, false)
+        context.fill(boxX.toInt(), (y + 1).toInt(), (x + w).toInt(), (y + 11).toInt(),
+            if (editing) PANEL_HEADER else FIELD_BG)
+        context.text(font, shown, (boxX + 3).toInt(), (y + 2).toInt(), TEXT_ON, false)
 
         hits += HitArea(boxX, y, x + w, y + ROW_HEIGHT, {
             editingText = value
@@ -910,10 +1026,10 @@ class ClickGuiScreen(
         val color = value.get() as? Color4b ?: Color4b.WHITE
         val expanded = value in expandedColors
 
-        context.text(font, Component.literal(value.name), x.toInt(), y.toInt() + 2, TEXT_OFF, false)
+        context.text(font, value.name, x.toInt(), y.toInt() + 2, TEXT_OFF, false)
         val swatchX = x + w * 0.5F
         context.fill(swatchX.toInt(), (y + 1).toInt(), (x + w).toInt(), (y + 11).toInt(), color.argb)
-        context.fill(swatchX.toInt(), (y + 1).toInt(), (x + w).toInt(), (y + 2).toInt(), OUTLINE)
+        drawOutline(context, swatchX.toInt(), (y + 1).toInt(), (x + w).toInt(), (y + 11).toInt(), OUTLINE)
 
         hits += HitArea(swatchX, y, x + w, y + ROW_HEIGHT, {
             if (expanded) expandedColors.remove(value) else expandedColors.add(value)
@@ -922,17 +1038,19 @@ class ClickGuiScreen(
         var consumed = ROW_HEIGHT + 2F
 
         if (expanded) {
-            val channels = listOf("R" to color.r, "G" to color.g, "B" to color.b, "A" to color.a)
-            for ((index, channel) in channels.withIndex()) {
-                val (name, level) = channel
+            val levels = intArrayOf(color.r, color.g, color.b, color.a)
+            for (index in levels.indices) {
+                val name = COLOR_CHANNELS[index]
+                val level = levels[index]
                 val rowY = y + consumed
-                context.text(font, Component.literal(name), x.toInt(), rowY.toInt() + 2, TEXT_OFF, false)
+                context.text(font, name, x.toInt(), rowY.toInt() + 2, TEXT_OFF, false)
 
                 val startX = x + 16F
                 val endX = x + w
                 context.fill(startX.toInt(), (rowY + 2).toInt(), endX.toInt(), (rowY + 8).toInt(), OFF)
                 context.fill(startX.toInt(), (rowY + 2).toInt(),
-                    (startX + (endX - startX) * (level / 255F)).toInt(), (rowY + 8).toInt(), ACCENT)
+                    (startX + (endX - startX) * (level / 255F)).toInt().coerceAtLeast(startX.toInt()),
+                    (rowY + 8).toInt(), ACCENT)
 
                 val channelIndex = index
                 hits += HitArea(startX, rowY, endX, rowY + 10, {
@@ -960,7 +1078,7 @@ class ClickGuiScreen(
         val ranged = value as? RangedValue<*>
         val label = "${value.name}: ${formatValue(value)}"
 
-        context.text(font, Component.literal(label), x.toInt(), y.toInt(), TEXT_ON, false)
+        context.text(font, label, x.toInt(), y.toInt(), TEXT_ON, false)
 
         val barX = x
         val barW = w
@@ -983,9 +1101,9 @@ class ClickGuiScreen(
                 val second = current.endInclusive as Float
                 val firstX = barX + barW * ((first - min) / span).toFloat()
                 val secondX = barX + barW * ((second - min) / span).toFloat()
-                context.fill(firstX.toInt(), (barY).toInt(), secondX.toInt(), (barY + 5).toInt(), ACCENT)
-                context.fill(firstX.toInt(), (barY - 2).toInt(), (firstX + 2).toInt(), (barY + 7).toInt(), TEXT_ON)
-                context.fill(secondX.toInt(), (barY - 2).toInt(), (secondX + 2).toInt(), (barY + 7).toInt(), TEXT_ON)
+                context.fill(firstX.toInt(), barY.toInt(), secondX.toInt(), (barY + 5).toInt(), ACCENT)
+                context.fill(firstX.toInt(), (barY - 2).toInt(), (firstX + 3).toInt(), (barY + 7).toInt(), TEXT_ON)
+                context.fill(secondX.toInt(), (barY - 2).toInt(), (secondX + 3).toInt(), (barY + 7).toInt(), TEXT_ON)
 
                 hits += HitArea(barX, barY - 4, barX + barW, barY + 8, {
                     val pickSecond = mouseX > (firstX + secondX) / 2
@@ -997,8 +1115,8 @@ class ClickGuiScreen(
                 val firstX = barX + barW * ((current.first - min) / span).toFloat()
                 val secondX = barX + barW * ((current.last - min) / span).toFloat()
                 context.fill(firstX.toInt(), barY.toInt(), secondX.toInt(), (barY + 5).toInt(), ACCENT)
-                context.fill(firstX.toInt(), (barY - 2).toInt(), (firstX + 2).toInt(), (barY + 7).toInt(), TEXT_ON)
-                context.fill(secondX.toInt(), (barY - 2).toInt(), (secondX + 2).toInt(), (barY + 7).toInt(), TEXT_ON)
+                context.fill(firstX.toInt(), (barY - 2).toInt(), (firstX + 3).toInt(), (barY + 7).toInt(), TEXT_ON)
+                context.fill(secondX.toInt(), (barY - 2).toInt(), (secondX + 3).toInt(), (barY + 7).toInt(), TEXT_ON)
 
                 hits += HitArea(barX, barY - 4, barX + barW, barY + 8, {
                     val pickSecond = mouseX > (firstX + secondX) / 2
@@ -1010,7 +1128,7 @@ class ClickGuiScreen(
                 val number = (current as? Number)?.toDouble() ?: 0.0
                 val handleX = barX + barW * ((number - min) / span).toFloat()
                 context.fill(barX.toInt(), barY.toInt(), handleX.toInt(), (barY + 5).toInt(), ACCENT)
-                context.fill(handleX.toInt(), (barY - 2).toInt(), (handleX + 2).toInt(), (barY + 7).toInt(), TEXT_ON)
+                context.fill(handleX.toInt(), (barY - 2).toInt(), (handleX + 3).toInt(), (barY + 7).toInt(), TEXT_ON)
 
                 hits += HitArea(barX, barY - 4, barX + barW, barY + 8, {
                     drag = SliderDrag(value, barX, barX + barW, min, max, false)
@@ -1039,8 +1157,9 @@ class ClickGuiScreen(
         val y = click.y
         val button = click.button()
 
-        // A click anywhere outside the settings popup closes an open dropdown.
-        if (!isInsideSettings(x, y)) {
+        // A click outside the settings popup and outside an open dropdown overlay closes it.
+        // Clicks inside the overlay are kept, otherwise every option of a multi choice would close it.
+        if (!isInsideAnySettings(x, y) && !isInsideAnyDropdown(x, y)) {
             openDropdown = null
         }
 
@@ -1063,9 +1182,9 @@ class ClickGuiScreen(
 
     override fun mouseDragged(click: MouseButtonEvent, offsetX: Double, offsetY: Double): Boolean {
         settingsDrag?.let { active ->
-            settingsX = (active.startX + (click.x - active.startMouseX).toFloat())
-                .coerceIn(0F, (width - settingsWidth()).coerceAtLeast(0F))
-            settingsY = (active.startY + (click.y - active.startMouseY).toFloat())
+            active.window.x = (active.startX + (click.x - active.startMouseX).toFloat())
+                .coerceIn(0F, (width - settingsWidth(active.window)).coerceAtLeast(0F))
+            active.window.y = (active.startY + (click.y - active.startMouseY).toFloat())
                 .coerceIn(0F, (height - 40F).coerceAtLeast(0F))
             return true
         }
@@ -1148,11 +1267,23 @@ class ClickGuiScreen(
     }
 
     override fun mouseScrolled(mouseX: Double, mouseY: Double, horizontalAmount: Double, verticalAmount: Double): Boolean {
-        // The settings popup is drawn on top of the panels, so it has to consume the scroll first,
-        // otherwise a panel underneath it would scroll instead.
-        if (isInsideSettings(mouseX, mouseY)) {
-            settingsScroll = (settingsScroll - verticalAmount.toFloat() * 12F).coerceAtLeast(0F)
+        // An open dropdown floats above everything else, so it gets the scroll first.
+        if (isInsideAnyDropdown(mouseX, mouseY)) {
+            dropdownScroll = (dropdownScroll - verticalAmount.toFloat() * 8F).coerceAtLeast(0F)
             return true
+        }
+
+        // The settings windows are drawn on top of the panels, so they have to consume the scroll
+        // first, otherwise a panel underneath them would scroll instead.
+        for (window in settingsWindows.asReversed()) {
+            val w = settingsWidth(window)
+            val h = settingsHeight(window)
+            if (mouseX in window.x.toDouble()..(window.x + w).toDouble() &&
+                mouseY in window.y.toDouble()..(window.y + h).toDouble()
+            ) {
+                window.scroll = (window.scroll - verticalAmount.toFloat() * 12F).coerceAtLeast(0F)
+                return true
+            }
         }
 
         // Topmost panel first: when two panels overlap, the one drawn in front has to consume the scroll.
@@ -1228,7 +1359,6 @@ class ClickGuiScreen(
     }
 
     override fun onClose() {
-        settingsGroup = null
         openDropdown = null
         if (!settingsOnly) {
             saveLayout()
@@ -1264,20 +1394,22 @@ class ClickGuiScreen(
             }
         }
 
-        root.getAsJsonObject("settings")?.let { stored ->
-            settingsX = stored.get("x")?.asFloat ?: settingsX
-            settingsY = stored.get("y")?.asFloat ?: settingsY
-            settingsPlaced = true
-
-            // Reopen the module detail that was expanded when the GUI was closed.
-            when (val target = stored.get("module")?.asString) {
-                "Global" -> openGlobalSettings()
-                null, "" -> {}
-                else -> ModuleManager.firstOrNull { it.name == target }?.let { module ->
-                    settingsGroup = module
-                    settingsTitle = module.name
-                }
+        root.getAsJsonArray("windows")?.forEach { element ->
+            val entry = element.asJsonObject
+            val x = entry.get("x")?.asFloat ?: return@forEach
+            val y = entry.get("y")?.asFloat ?: return@forEach
+            val group = when (val target = entry.get("module")?.asString) {
+                "Global" -> GlobalManager
+                null, "" -> return@forEach
+                else -> ModuleManager.firstOrNull { it.name == target } ?: return@forEach
             }
+            if (settingsWindows.any { it.group === group }) {
+                return@forEach
+            }
+            val title = if (group === GlobalManager) "Global Settings" else group.name
+            val window = SettingsWindow(group, title, x, y)
+            clampSettingsWindow(window)
+            settingsWindows += window
         }
 
         // A partial or outdated file would leave panels stacked at the top left, so fall back to a layout.
@@ -1302,18 +1434,18 @@ class ClickGuiScreen(
 
         root.add("panels", storedPanels)
 
-        root.add("settings", JsonObject().apply {
-            addProperty("x", settingsX)
-            addProperty("y", settingsY)
-            addProperty(
-                "module",
-                when {
-                    settingsGroup === GlobalManager -> "Global"
-                    settingsGroup != null -> (settingsGroup as? ClientModule)?.name ?: ""
-                    else -> ""
-                },
-            )
-        })
+        val storedWindows = JsonArray()
+        for (window in settingsWindows) {
+            storedWindows.add(JsonObject().apply {
+                addProperty(
+                    "module",
+                    if (window.group === GlobalManager) "Global" else (window.group as? ClientModule)?.name ?: "",
+                )
+                addProperty("x", window.x)
+                addProperty("y", window.y)
+            })
+        }
+        root.add("windows", storedWindows)
 
         layoutFile().writeText(root.toString())
     }
@@ -1329,6 +1461,30 @@ class ClickGuiScreen(
 
     private fun toggleDropdown(value: Value<*>) {
         openDropdown = if (openDropdown === value) null else value
+        dropdownScroll = 0F
+    }
+
+    /** True when the cursor is over an open dropdown overlay, which must survive a click. */
+    private fun isInsideAnyDropdown(x: Double, y: Double): Boolean =
+        dropdownBounds.any { x >= it[0] && x <= it[2] && y >= it[1] && y <= it[3] }
+
+    /** Draws a 1px outline plus a soft shadow so the floating layers stay readable. */
+    private fun drawOutline(context: GuiGraphicsExtractor, x1: Int, y1: Int, x2: Int, y2: Int, color: Int) {
+        context.fill(x1, y2 - 1, x2, y2, color)
+        context.fill(x1, y1, x1 + 1, y2, color)
+        context.fill(x2 - 1, y1, x2, y2, color)
+    }
+
+    private fun drawPopupBox(context: GuiGraphicsExtractor, x: Float, y: Float, w: Float, h: Float) {
+        val left = x.toInt()
+        val top = y.toInt()
+        val right = (x + w).toInt()
+        val bottom = (y + h).toInt()
+
+        context.fill(left + 2, top + 2, right + 3, bottom + 3, SHADOW)
+        context.fill(left, top, right, bottom, DROPDOWN_BG)
+        context.fill(left, top, right, top + 3, PANEL_HEADER)
+        drawOutline(context, left, top, right, bottom, OUTLINE)
     }
 
     @Suppress("UNCHECKED_CAST")
@@ -1343,13 +1499,17 @@ class ClickGuiScreen(
         const val HEADER_HEIGHT = 16F
         const val ROW_HEIGHT = 13F
         const val OPTION_HEIGHT = 11F
+        const val OPTION_MAX_HEIGHT = 132F
         const val MAX_PANEL_HEIGHT = 260F
         const val TOOLTIP_WIDTH = 200
+        const val UNBIND_ACTION = "None"
 
+        val SHADOW = 0x50000000
         val BACKGROUND = 0xC0101014.toInt()
         val PANEL_BG = 0xE01A1A20.toInt()
         val PANEL_HEADER = 0xFF26262E.toInt()
         val ROW_HOVER = 0xFF30303A.toInt()
+        val FIELD_BG = 0xFF20202A.toInt()
         val DROPDOWN_BG = 0xF016161C.toInt()
         val SCROLLBAR = 0xFF3A3A46.toInt()
         val OFF = 0xFF3A3A46.toInt()
@@ -1360,6 +1520,7 @@ class ClickGuiScreen(
         val TEXT_OFF = 0xFF9A9AA6.toInt()
         val HINT = 0xFF7A7A86.toInt()
         val GROUP_HEADER = 0xFF9FC3FF.toInt()
+        val COLOR_CHANNELS = arrayOf("R", "G", "B", "A")
     }
 
 }

@@ -24,8 +24,6 @@ import com.github.eedcd.solidanchor.event.handler
 import com.github.eedcd.solidanchor.render.engine.type.BoundingBox2f
 import com.github.eedcd.solidanchor.ui.hud.HudComponentTweak
 import com.github.eedcd.solidanchor.ui.hud.NativeHudComponent
-import com.github.eedcd.solidanchor.utils.client.mc
-import com.github.eedcd.solidanchor.utils.client.player
 import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention
 import com.github.eedcd.solidanchor.utils.render.Alignment
 import net.minecraft.world.item.ItemStack
@@ -82,6 +80,9 @@ object HotbarHudComponent : NativeHudComponent(
                 fill(slotX, y, slotX + SLOT_SIZE, y + SLOT_SIZE, HudStyle.BACKGROUND_LIGHT)
                 hudBorder(slotBounds, if (index == selectedSlot) HudStyle.ACCENT else HudStyle.BORDER)
 
+                // Items are drawn here, centred inside this component's own slots. The vanilla
+                // hotbar pass only draws the offhand slot now (see MixinHud), so there is no
+                // second, differently positioned item per slot anymore.
                 val stack = stacks.getOrNull(index) ?: ItemStack.EMPTY
                 if (!stack.isEmpty) {
                     item(stack, slotX + ITEM_OFFSET, y + ITEM_OFFSET)

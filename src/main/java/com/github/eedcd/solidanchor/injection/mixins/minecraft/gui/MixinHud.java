@@ -45,7 +45,6 @@ import net.minecraft.client.multiplayer.MultiPlayerGameMode;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.AttackRange;
@@ -59,8 +58,6 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
-import java.util.List;
 
 @Mixin(Hud.class)
 public abstract class MixinHud {
@@ -206,25 +203,18 @@ public abstract class MixinHud {
 
         // All values are measured, not calculated (with scale 2)
         // TODO: fix scaled positions
-        final float guiScale = this.minecraft.getWindow().getGuiScale();
-
-        float slotWidth = 22.5F;
         int offset = 98;
         var bounds = hudComponent.getAlignment().getBounds(203f, 25f);
 
         int xCenter = (int) bounds.xCenter();
         float y = bounds.yMin() + 5f;
 
-        int seed = 1;
-        List<ItemStack> items = playerEntity.getInventory().getNonEquipmentItems();
-        for (int m = 0; m < Inventory.SELECTION_SIZE; ++m) {
-            float x = xCenter - offset + m * slotWidth;
-            this.extractSlot(context, (int) x, (int) y, tickCounter, playerEntity, items.get(m), seed++);
-        }
-
+        // The nine hotbar slots are drawn (and centred in their own slots) by the Hotbar HUD
+        // component, so only the offhand slot is left to the vanilla slot renderer here. Drawing
+        // the hotbar items here as well produced a second, offset item in every slot.
         ItemStack offHandStack = playerEntity.getOffhandItem();
         if (!hookOffhandItem(offHandStack.isEmpty())) {
-            this.extractSlot(context, xCenter - offset - 32, (int) y, tickCounter, playerEntity, offHandStack, seed);
+            this.extractSlot(context, xCenter - offset - 32, (int) y, tickCounter, playerEntity, offHandStack, 1);
         }
     }
 
