@@ -19,31 +19,23 @@
 
 package com.github.eedcd.solidanchor.render.gui
 
-import com.github.eedcd.solidanchor.render.drawRoundedRect
+import com.github.eedcd.solidanchor.render.drawQuad
 import com.github.eedcd.solidanchor.render.engine.type.Color4b
 import net.minecraft.client.gui.GuiGraphicsExtractor
 
 /**
- * Rounded panel drawn behind GUI content.
+ * Square panel drawn behind GUI content.
  *
- * @param radius Corner radius in GUI units, the shader clamps it to half of the smaller side.
- * @param gradient How far the bottom edge of the fill is darkened towards black.
- * @param glow Alpha of the outer glow layer, `0` disables the glow.
+ * @param margin Space the panel takes around the content.
  */
 data class GuiPanel(
     val fillColor: Color4b = Color4b.DEFAULT_BG_COLOR,
     val outlineColor: Color4b = Color4b.TRANSPARENT,
     val margin: Float = DEFAULT_PANEL_MARGIN,
-    val radius: Float = DEFAULT_PANEL_RADIUS,
-    val gradient: Float = DEFAULT_PANEL_GRADIENT,
-    val glow: Float = DEFAULT_PANEL_GLOW,
 ) : ItemStackListBackground {
 
-    /**
-     * Space the panel takes around the content, including the glow.
-     */
     override val padding: Float
-        get() = margin + if (glow > 0.0F) BACKGROUND_GLOW_SPREAD else 0.0F
+        get() = margin
 
     override fun withOutline(color: Color4b) = copy(outlineColor = color)
 
@@ -63,52 +55,16 @@ internal fun GuiGraphicsExtractor.drawPanel(width: Float, height: Float, panel: 
         return false
     }
 
-    val x1 = -panel.margin
-    val y1 = -panel.margin
-    val x2 = width + panel.margin
-    val y2 = height + panel.margin
-
-    if (panel.glow > 0.0F) {
-        val glowColor = if (panel.outlineColor.isTransparent) panel.fillColor else panel.outlineColor
-        for (layer in BACKGROUND_GLOW_LAYERS downTo 1) {
-            val spread = BACKGROUND_GLOW_SPREAD * layer / BACKGROUND_GLOW_LAYERS
-            drawRoundedRect(
-                x1 = x1 - spread,
-                y1 = y1 - spread,
-                x2 = x2 + spread,
-                y2 = y2 + spread,
-                radius = panel.radius + spread,
-                fillColor = glowColor.fade(panel.glow / layer),
-            )
-        }
-    }
-
-    val darken = panel.gradient.toDouble()
-    drawRoundedRect(
-        x1 = x1,
-        y1 = y1,
-        x2 = x2,
-        y2 = y2,
-        radius = panel.radius,
+    // Plain quad on the regular GUI pipeline: no rounded-rect shader, no glow layers.
+    drawQuad(
+        x1 = -panel.margin,
+        y1 = -panel.margin,
+        x2 = width + panel.margin,
+        y2 = height + panel.margin,
         fillColor = panel.fillColor,
-        fillBottomColor = panel.fillColor.interpolateTo(
-            Color4b.BLACK,
-            tR = darken,
-            tG = darken,
-            tB = darken,
-            tA = 0.0,
-        ),
         outlineColor = panel.outlineColor,
-        outlineWidth = BACKGROUND_OUTLINE_WIDTH,
     )
     return true
 }
 
 internal const val DEFAULT_PANEL_MARGIN = 2.0F
-internal const val DEFAULT_PANEL_RADIUS = 4.0F
-internal const val DEFAULT_PANEL_GRADIENT = 0.3F
-internal const val DEFAULT_PANEL_GLOW = 0.3F
-internal const val BACKGROUND_GLOW_SPREAD = 3.0F
-
-private const val BACKGROUND_OUTLINE_WIDTH = 1.0F
-private const val BACKGROUND_GLOW_LAYERS = 3

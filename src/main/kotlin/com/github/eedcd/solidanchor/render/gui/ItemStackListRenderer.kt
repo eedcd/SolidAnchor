@@ -171,9 +171,6 @@ object ItemStackListRenderer : EventListener {
             private val fillColor by color("Color", Color4b.DEFAULT_BG_COLOR).onChanged(invalidate)
             private val outlineColor by color("OutlineColor", Color4b.TRANSPARENT).onChanged(invalidate)
             private val margin by float("Margin", DEFAULT_PANEL_MARGIN, 0F..100F).onChanged(invalidate)
-            private val radius by float("Radius", DEFAULT_PANEL_RADIUS, 0F..16F).onChanged(invalidate)
-            private val gradient by float("Gradient", DEFAULT_PANEL_GRADIENT, 0F..1F).onChanged(invalidate)
-            private val glow by float("Glow", DEFAULT_PANEL_GLOW, 0F..1F).onChanged(invalidate)
 
             private var snapshot: GuiPanel? = null
 
@@ -183,9 +180,6 @@ object ItemStackListRenderer : EventListener {
                     fillColor = fillColor,
                     outlineColor = outlineColor,
                     margin = margin,
-                    radius = radius,
-                    gradient = gradient,
-                    glow = glow,
                 ).also { snapshot = it }
         }
 

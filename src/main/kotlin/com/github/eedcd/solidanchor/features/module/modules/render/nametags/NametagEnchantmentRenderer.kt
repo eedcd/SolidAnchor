@@ -18,16 +18,16 @@
  */
 package com.github.eedcd.solidanchor.features.module.modules.render.nametags
 
-import it.unimi.dsi.fastutil.objects.ObjectArrayList
-import net.ccbluex.fastutil.mapToArray
 import com.github.eedcd.solidanchor.config.types.group.ToggleableValueGroup
-import com.github.eedcd.solidanchor.render.drawRoundedRect
+import com.github.eedcd.solidanchor.render.drawQuad
 import com.github.eedcd.solidanchor.render.engine.type.Color4b
 import com.github.eedcd.solidanchor.utils.collection.Filter
-import com.github.eedcd.solidanchor.utils.item.getEnchantmentCount
 import com.github.eedcd.solidanchor.utils.collection.LruCache
+import com.github.eedcd.solidanchor.utils.item.getEnchantmentCount
 import com.github.eedcd.solidanchor.utils.kotlin.mapString
 import com.github.eedcd.solidanchor.utils.text.withFormat
+import it.unimi.dsi.fastutil.objects.ObjectArrayList
+import net.ccbluex.fastutil.mapToArray
 import net.minecraft.ChatFormatting
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.gui.render.GuiRenderer
@@ -118,7 +118,6 @@ internal object NametagEnchantmentRenderer : ToggleableValueGroup(ModuleNametags
 
     private val scale by float("Scale", 0.8f, 0.25f..4f)
     private val maxCountPerItem by int("MaxCountPerItem", 4, 1..16)
-    private val backgroundRadius by float("BackgroundRadius", 1.0f, 0f..8f)
     private val enchantments by enchantments("Enchantments", sortedSetOf())
     private val filter by enumChoice("Filter", Filter.BLACKLIST)
 
@@ -132,7 +131,6 @@ internal object NametagEnchantmentRenderer : ToggleableValueGroup(ModuleNametags
     private val BG_COLOR_CURSE = Color4b.RED.darker().alpha(150)
 
     private val labelTextScale get() = scale * ModuleNametags.fontRenderer.scaleToVanillaFont
-    private val labelBackgroundRadius get() = backgroundRadius * scale
 
     private val enchantmentInfoComparator = Comparator
         .comparingInt<EnchantmentInfo> { -it.level }
@@ -234,19 +232,18 @@ internal object NametagEnchantmentRenderer : ToggleableValueGroup(ModuleNametags
         val x1 = centerX - width * 0.5f
         val x2 = centerX + width * 0.5f
 
-        guiGraphics.drawRoundedRect(
+        guiGraphics.drawQuad(
             x1 = x1,
             y1 = y,
             x2 = x2,
             y2 = y + rowHeight,
-            radius = labelBackgroundRadius,
             fillColor = if (cell.isCurse) BG_COLOR_CURSE else BG_COLOR_NORMAL,
         )
 
         ModuleNametags.fontRenderer.draw(cell.text) {
             this.x = centerX - textWidth * 0.5f
             this.y = y + LABEL_PADDING_Y
-            shadow = true
+            shadow = false
             scale = labelTextScale
         }
     }

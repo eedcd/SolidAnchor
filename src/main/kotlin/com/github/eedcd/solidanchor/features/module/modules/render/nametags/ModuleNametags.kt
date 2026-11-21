@@ -18,7 +18,6 @@
  */
 package com.github.eedcd.solidanchor.features.module.modules.render.nametags
 
-import net.ccbluex.fastutil.Pool
 import com.github.eedcd.solidanchor.config.types.CurveValue.Axis.Companion.axis
 import com.github.eedcd.solidanchor.event.events.OverlayRenderEvent
 import com.github.eedcd.solidanchor.event.handler
@@ -30,6 +29,7 @@ import com.github.eedcd.solidanchor.utils.entity.RenderedEntities
 import com.github.eedcd.solidanchor.utils.kotlin.EventPriorityConvention.FIRST_PRIORITY
 import com.github.eedcd.solidanchor.utils.render.entity
 import com.github.eedcd.solidanchor.utils.render.isCustom
+import net.ccbluex.fastutil.Pool
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.renderer.entity.state.EntityRenderState
 import org.joml.Vector2f
@@ -46,8 +46,6 @@ object ModuleNametags : ClientModule("Nametags", ModuleCategories.RENDER) {
         tree(NametagEquipment)
     }
 
-    internal val borderWidth by float("BorderWidth", 1f, 0f..8f)
-    internal val backgroundRadius by float("BackgroundRadius", 2f, 0f..16f)
     internal val scale = curve(
         "Scale",
         mutableListOf(Vector2f(0f, 1f), Vector2f(200f, 1f)),

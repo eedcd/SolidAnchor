@@ -19,7 +19,7 @@
 package com.github.eedcd.solidanchor.features.module.modules.render.nametags
 
 import com.github.eedcd.solidanchor.render.FontManager
-import com.github.eedcd.solidanchor.render.drawRoundedRect
+import com.github.eedcd.solidanchor.render.drawQuad
 import com.github.eedcd.solidanchor.render.engine.type.Color4b
 import net.minecraft.client.gui.GuiGraphicsExtractor
 
@@ -53,7 +53,7 @@ internal fun GuiGraphicsExtractor.drawNametag(nametag: NametagRenderState, posX:
     pose().scale(scale, scale)
 
     val text = nametag.text
-    val textWidth = fontRenderer.getStringWidth(text, shadow = true)
+    val textWidth = fontRenderer.getStringWidth(text, shadow = false)
 
     // Make the model view matrix center the text when rendering
     pose().translate(-textWidth * 0.5f, -fontRenderer.height * 0.5f)
@@ -63,21 +63,20 @@ internal fun GuiGraphicsExtractor.drawNametag(nametag: NametagRenderState, posX:
     val x2 = textWidth + BACKGROUND_X_PADDING
     val y2 = fontRenderer.height * BACKGROUND_Y_OFFSET_BOTTOM
 
-    // Background
-    drawRoundedRect(
+    // Background: a plain rectangle on the regular GUI pipeline. The rounded-rect shader costs a
+    // lot per nametag, and the square look is what this client uses everywhere now.
+    drawQuad(
         x1 = x1,
         y1 = y1,
         x2 = x2,
         y2 = y2,
-        radius = ModuleNametags.backgroundRadius / fontScale,
         fillColor = Color4b.DEFAULT_BG_COLOR,
         outlineColor = Color4b.BLACK,
-        outlineWidth = ModuleNametags.borderWidth / fontScale,
     )
 
     // Text
     fontRenderer.draw(text) {
-        shadow = true
+        shadow = false
     }
 
     pose().popMatrix()
